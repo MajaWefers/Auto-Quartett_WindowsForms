@@ -107,123 +107,6 @@ namespace Auto_Quartett_WindowsForms
             cbAuswahl_Wert.Visible            = true;
         }
 
-        public bool Vergleiche_Wert( Autokarte auto_x, Autokarte auto_y, string vergleichsfeld )
-        {
-            //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
-            //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
-            bool auto_x_groesser = true;
-
-            switch ( vergleichsfeld )
-            {
-                case "g":
-                    if ( auto_x.geschwindigkeit > auto_y.geschwindigkeit )
-                    {
-                        lbl_g_wert1.BackColor = Color.Chartreuse;
-                        lbl_g_wert2.BackColor = Color.LightCoral;
-                    }
-                    //Wenn else-Zweig erreicht wird ist auto_y grösser und somit ist "auto_x_groesser" "false".
-                    else
-                    {
-                        lbl_g_wert1.BackColor = Color.LightCoral;
-                        lbl_g_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                case "l":
-                    if ( auto_x.leistung > auto_y.leistung)
-                    {
-                        lbl_l_wert1.BackColor = Color.Chartreuse;
-                        lbl_l_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_l_wert1.BackColor = Color.LightCoral;
-                        lbl_l_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                case "v":
-                    if ( auto_x.verbrauch > auto_y.verbrauch )
-                    {
-                        lbl_v_wert1.BackColor = Color.Chartreuse;
-                        lbl_v_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_v_wert1.BackColor = Color.LightCoral;
-                        lbl_v_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                 case "zy":
-                    if ( auto_x.zylinder > auto_y.zylinder )
-                    {
-                        lbl_zy_wert1.BackColor = Color.Chartreuse;
-                        lbl_zy_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_zy_wert1.BackColor = Color.LightCoral;
-                        lbl_zy_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                 case "h":
-                    if ( auto_x.hubraum > auto_y.hubraum )
-                    {
-                        lbl_h_wert1.BackColor = Color.Chartreuse;
-                        lbl_h_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_h_wert1.BackColor = Color.LightCoral;
-                        lbl_h_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                case "b":
-                    if (auto_x.beschleunigung > auto_y.beschleunigung)
-                    {
-                        lbl_b_wert1.BackColor = Color.Chartreuse;
-                        lbl_b_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_b_wert1.BackColor = Color.LightCoral;
-                        lbl_b_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                case "zu":
-                    if ( auto_x.zuladung > auto_y.zuladung )
-                    {
-                        lbl_zu_wert1.BackColor = Color.Chartreuse;
-                        lbl_zu_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_zu_wert1.BackColor = Color.LightCoral;
-                        lbl_zu_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-                case "la":
-                    if ( auto_x.ladevolumen > auto_y.ladevolumen )
-                    {
-                        lbl_la_wert1.BackColor = Color.Chartreuse;
-                        lbl_la_wert2.BackColor = Color.LightCoral;
-                    }
-                    else
-                    {
-                        lbl_la_wert1.BackColor = Color.LightCoral;
-                        lbl_la_wert2.BackColor = Color.Chartreuse;
-                        auto_x_groesser = false;
-                    }
-                    break;
-            }
-            return auto_x_groesser;
-        }
-
         private void cbAuswahl_Wert_SelectedIndexChanged(object sender, EventArgs e)
         {
             Vergleichswert_ermitteln();
@@ -265,6 +148,122 @@ namespace Auto_Quartett_WindowsForms
             { vergleichsfeld = "la"; }
         }
 
+        public bool Vergleiche_Wert(Autokarte auto_x, Autokarte auto_y, string vergleichsfeld)
+        {
+            //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
+            //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
+            bool auto_x_groesser = true;
+
+            switch (vergleichsfeld)
+            {
+                case "g":
+                    if (auto_x.geschwindigkeit > auto_y.geschwindigkeit)
+                    {
+                        lbl_g_wert1.BackColor = Color.Chartreuse;
+                        lbl_g_wert2.BackColor = Color.LightCoral;
+                    }
+                    //Wenn else-Zweig erreicht wird ist auto_y grösser und somit ist "auto_x_groesser" "false".
+                    else
+                    {
+                        lbl_g_wert1.BackColor = Color.LightCoral;
+                        lbl_g_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "l":
+                    if (auto_x.leistung > auto_y.leistung)
+                    {
+                        lbl_l_wert1.BackColor = Color.Chartreuse;
+                        lbl_l_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_l_wert1.BackColor = Color.LightCoral;
+                        lbl_l_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "v":
+                    if (auto_x.verbrauch > auto_y.verbrauch)
+                    {
+                        lbl_v_wert1.BackColor = Color.Chartreuse;
+                        lbl_v_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_v_wert1.BackColor = Color.LightCoral;
+                        lbl_v_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "zy":
+                    if (auto_x.zylinder > auto_y.zylinder)
+                    {
+                        lbl_zy_wert1.BackColor = Color.Chartreuse;
+                        lbl_zy_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_zy_wert1.BackColor = Color.LightCoral;
+                        lbl_zy_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "h":
+                    if (auto_x.hubraum > auto_y.hubraum)
+                    {
+                        lbl_h_wert1.BackColor = Color.Chartreuse;
+                        lbl_h_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_h_wert1.BackColor = Color.LightCoral;
+                        lbl_h_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "b":
+                    if (auto_x.beschleunigung > auto_y.beschleunigung)
+                    {
+                        lbl_b_wert1.BackColor = Color.Chartreuse;
+                        lbl_b_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_b_wert1.BackColor = Color.LightCoral;
+                        lbl_b_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "zu":
+                    if (auto_x.zuladung > auto_y.zuladung)
+                    {
+                        lbl_zu_wert1.BackColor = Color.Chartreuse;
+                        lbl_zu_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_zu_wert1.BackColor = Color.LightCoral;
+                        lbl_zu_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "la":
+                    if (auto_x.ladevolumen > auto_y.ladevolumen)
+                    {
+                        lbl_la_wert1.BackColor = Color.Chartreuse;
+                        lbl_la_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_la_wert1.BackColor = Color.LightCoral;
+                        lbl_la_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+            }
+            return auto_x_groesser;
+        }
         //Wenn auf den jeweiligen Button geklickt wird, dann wird das "vergleichsfeld" gesetzt
 
         /*public bool Farbe_setzen( bool groesser)
