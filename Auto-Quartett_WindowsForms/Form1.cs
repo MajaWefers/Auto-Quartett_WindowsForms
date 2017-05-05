@@ -22,8 +22,13 @@ namespace Auto_Quartett_WindowsForms
         Autokarte auto1 = new Autokarte();
         Autokarte auto2 = new Autokarte();
         Autokarte auto3 = new Autokarte();
-        
+
+
+        //Label[] VglWert1 = new Label[8] { lbl_g_wert1, lbl_l_wert1, lbl_v_wert1, lbl_zy_wert1, lbl_h_wert1, lbl_b_wert1, lbl_zu_wert1, lbl_la_wert1 };
+        //Label[] VglWert2 = new Label[8] { lbl_g_wert2, lbl_l_wert2, lbl_v_wert2, lbl_zy_wert2, lbl_h_wert2, lbl_b_wert2, lbl_zu_wert2, lbl_la_wert2 };
+
         string vergleichsfeld = "";
+        string[] vergleich = new string[8] { "g", "l", "v", "zy", "h", "b", "zu", "la" };
 
         public struct Autokarte
         {
@@ -130,22 +135,13 @@ namespace Auto_Quartett_WindowsForms
 
         public void Vergleichswert_ermitteln()
         {
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[0]) //.ToString() == "Geschwindigkeit"
-            { vergleichsfeld = "g"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[1]) //.ToString() == "Leistung"
-            { vergleichsfeld = "l"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[2]) //.ToString() == "Verbrauch"
-            { vergleichsfeld = "v"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[3]) //.ToString() == "Zylinder"
-            { vergleichsfeld = "zy"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[4]) //.ToString() == "Hubraum"
-            { vergleichsfeld = "h"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[5]) //.ToString() == "Beschleunigung"
-            { vergleichsfeld = "b"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[6]) //.ToString() == "Zuladung"
-            { vergleichsfeld = "zu"; }
-            if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[7]) //.ToString() == "Ladevolumen"
-            { vergleichsfeld = "la"; }
+            int feld = 0;
+            for (int i = 0; i < vergleich.Length-1 ; i++)
+            {
+                if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[i])
+                { vergleichsfeld = vergleich[feld]; }
+                feld++;
+            }
         }
 
         public bool Vergleiche_Wert(Autokarte auto_x, Autokarte auto_y, string vergleichsfeld)
@@ -154,6 +150,10 @@ namespace Auto_Quartett_WindowsForms
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto_x_groesser = true;
 
+            //
+            //Label[] VglWert1 = new Label[8] { lbl_g_wert1, lbl_l_wert1, lbl_v_wert1, lbl_zy_wert1, lbl_h_wert1, lbl_b_wert1, lbl_zu_wert1, lbl_la_wert1 };
+            //Label[] VglWert2 = new Label[8] { lbl_g_wert2, lbl_l_wert2, lbl_v_wert2, lbl_zy_wert2, lbl_h_wert2, lbl_b_wert2, lbl_zu_wert2, lbl_la_wert2 };
+ 
             switch (vergleichsfeld)
             {
                 case "g":
@@ -264,6 +264,20 @@ namespace Auto_Quartett_WindowsForms
             }
             return auto_x_groesser;
         }
+        //Farbe_setzen(auto_x_groesser, 1);
+        //public void farbe_setzen(label vglwert1, label vglwert2, bool x_gr_y, int i)
+        //{
+        //    if (x_gr_y)
+        //    {
+        //        vglwert1[i].backcolor = color.chartreuse;
+        //        vglwert2[i].backcolor = color.lightcoral;
+        //    }
+        //    else
+        //    {
+        //        vglwert1[i].backcolor = color.lightcoral;
+        //        vglwert2[i].backcolor = color.chartreuse;
+        //    }
+        //}
         //Wenn auf den jeweiligen Button geklickt wird, dann wird das "vergleichsfeld" gesetzt
 
         /*public bool Farbe_setzen( bool groesser)
