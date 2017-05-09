@@ -31,19 +31,19 @@
             this.panelAuto1 = new System.Windows.Forms.Panel();
             this.lblModell1 = new System.Windows.Forms.Label();
             this.lbl_la_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_la_wert1 = new System.Windows.Forms.Label();
+            this.lblLadevolumenWert1 = new System.Windows.Forms.Label();
             this.lbl_zu_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_zu_wert1 = new System.Windows.Forms.Label();
+            this.lblZuladungWert1 = new System.Windows.Forms.Label();
             this.lbl_b_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_b_wert1 = new System.Windows.Forms.Label();
+            this.lblBeschleunigungWert1 = new System.Windows.Forms.Label();
             this.lbl_h_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_h_wert1 = new System.Windows.Forms.Label();
+            this.lblHubraumWert1 = new System.Windows.Forms.Label();
             this.lbl_zy_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_zy_wert1 = new System.Windows.Forms.Label();
+            this.lblZylinderWert1 = new System.Windows.Forms.Label();
             this.lbl_v_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_v_wert1 = new System.Windows.Forms.Label();
+            this.lblVerbrauchWert1 = new System.Windows.Forms.Label();
             this.lbl_l_einheit1 = new System.Windows.Forms.Label();
-            this.lbl_l_wert1 = new System.Windows.Forms.Label();
+            this.lblLeistungWert1 = new System.Windows.Forms.Label();
             this.lbl_g_einheit1 = new System.Windows.Forms.Label();
             this.lblLadevolumen1 = new System.Windows.Forms.Label();
             this.lblZuladung1 = new System.Windows.Forms.Label();
@@ -52,24 +52,24 @@
             this.lblZylinder1 = new System.Windows.Forms.Label();
             this.lblVerbrauch1 = new System.Windows.Forms.Label();
             this.lblLeistung1 = new System.Windows.Forms.Label();
-            this.lbl_g_wert1 = new System.Windows.Forms.Label();
+            this.lblGeschwindigkeitWert1 = new System.Windows.Forms.Label();
             this.lblGeschwindigkeit1 = new System.Windows.Forms.Label();
             this.panelAuto2 = new System.Windows.Forms.Panel();
             this.lblModell2 = new System.Windows.Forms.Label();
             this.lbl_la_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_la_wert2 = new System.Windows.Forms.Label();
+            this.lblLadevolumenWert2 = new System.Windows.Forms.Label();
             this.lbl_zu_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_zu_wert2 = new System.Windows.Forms.Label();
+            this.lblZuladungWert2 = new System.Windows.Forms.Label();
             this.lbl_b_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_b_wert2 = new System.Windows.Forms.Label();
+            this.lblBeschleunigungWert2 = new System.Windows.Forms.Label();
             this.lbl_h_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_h_wert2 = new System.Windows.Forms.Label();
+            this.lblHubraumWert2 = new System.Windows.Forms.Label();
             this.lbl_zy_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_zy_wert2 = new System.Windows.Forms.Label();
+            this.lblZylinderWert2 = new System.Windows.Forms.Label();
             this.lbl_v_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_v_wert2 = new System.Windows.Forms.Label();
+            this.lblVerbrauchWert2 = new System.Windows.Forms.Label();
             this.lbl_l_einheit2 = new System.Windows.Forms.Label();
-            this.lbl_l_wert2 = new System.Windows.Forms.Label();
+            this.lblLeistungWert2 = new System.Windows.Forms.Label();
             this.lbl_g_einheit2 = new System.Windows.Forms.Label();
             this.lblLadevolumen2 = new System.Windows.Forms.Label();
             this.lblZuladung2 = new System.Windows.Forms.Label();
@@ -78,38 +78,38 @@
             this.lblZylinder2 = new System.Windows.Forms.Label();
             this.lblVerbrauch2 = new System.Windows.Forms.Label();
             this.lblLeistung2 = new System.Windows.Forms.Label();
-            this.lbl_g_wert2 = new System.Windows.Forms.Label();
+            this.lblGeschwindigkeitWert2 = new System.Windows.Forms.Label();
             this.lblGeschwindigkeit2 = new System.Windows.Forms.Label();
-            this.lbleinzeln_vgl = new System.Windows.Forms.Label();
+            this.lblEinzelnVgl = new System.Windows.Forms.Label();
             this.btnEinzeln = new System.Windows.Forms.Button();
             this.btnVergleichen = new System.Windows.Forms.Button();
-            this.lblAuswahl_Vergleichswert = new System.Windows.Forms.Label();
-            this.lblGewonnen_Verloren = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbAuswahl_Wert = new System.Windows.Forms.ComboBox();
+            this.lblAuswahlVergleichswert = new System.Windows.Forms.Label();
+            this.lblGewonnenVerloren = new System.Windows.Forms.Label();
+            this.btnNeu = new System.Windows.Forms.Button();
+            this.cbAuswahlWert = new System.Windows.Forms.ComboBox();
             this.panelAuto1.SuspendLayout();
             this.panelAuto2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAuto1
             // 
-            this.panelAuto1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelAuto1.BackColor = System.Drawing.Color.White;
             this.panelAuto1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAuto1.Controls.Add(this.lblModell1);
             this.panelAuto1.Controls.Add(this.lbl_la_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_la_wert1);
+            this.panelAuto1.Controls.Add(this.lblLadevolumenWert1);
             this.panelAuto1.Controls.Add(this.lbl_zu_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_zu_wert1);
+            this.panelAuto1.Controls.Add(this.lblZuladungWert1);
             this.panelAuto1.Controls.Add(this.lbl_b_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_b_wert1);
+            this.panelAuto1.Controls.Add(this.lblBeschleunigungWert1);
             this.panelAuto1.Controls.Add(this.lbl_h_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_h_wert1);
+            this.panelAuto1.Controls.Add(this.lblHubraumWert1);
             this.panelAuto1.Controls.Add(this.lbl_zy_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_zy_wert1);
+            this.panelAuto1.Controls.Add(this.lblZylinderWert1);
             this.panelAuto1.Controls.Add(this.lbl_v_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_v_wert1);
+            this.panelAuto1.Controls.Add(this.lblVerbrauchWert1);
             this.panelAuto1.Controls.Add(this.lbl_l_einheit1);
-            this.panelAuto1.Controls.Add(this.lbl_l_wert1);
+            this.panelAuto1.Controls.Add(this.lblLeistungWert1);
             this.panelAuto1.Controls.Add(this.lbl_g_einheit1);
             this.panelAuto1.Controls.Add(this.lblLadevolumen1);
             this.panelAuto1.Controls.Add(this.lblZuladung1);
@@ -118,7 +118,7 @@
             this.panelAuto1.Controls.Add(this.lblZylinder1);
             this.panelAuto1.Controls.Add(this.lblVerbrauch1);
             this.panelAuto1.Controls.Add(this.lblLeistung1);
-            this.panelAuto1.Controls.Add(this.lbl_g_wert1);
+            this.panelAuto1.Controls.Add(this.lblGeschwindigkeitWert1);
             this.panelAuto1.Controls.Add(this.lblGeschwindigkeit1);
             this.panelAuto1.Location = new System.Drawing.Point(12, 89);
             this.panelAuto1.Name = "panelAuto1";
@@ -144,14 +144,14 @@
             this.lbl_la_einheit1.TabIndex = 23;
             this.lbl_la_einheit1.Text = "Liter";
             // 
-            // lbl_la_wert1
+            // lblLadevolumenWert1
             // 
-            this.lbl_la_wert1.AutoSize = true;
-            this.lbl_la_wert1.Location = new System.Drawing.Point(108, 285);
-            this.lbl_la_wert1.Name = "lbl_la_wert1";
-            this.lbl_la_wert1.Size = new System.Drawing.Size(21, 13);
-            this.lbl_la_wert1.TabIndex = 22;
-            this.lbl_la_wert1.Text = "la1";
+            this.lblLadevolumenWert1.AutoSize = true;
+            this.lblLadevolumenWert1.Location = new System.Drawing.Point(108, 285);
+            this.lblLadevolumenWert1.Name = "lblLadevolumenWert1";
+            this.lblLadevolumenWert1.Size = new System.Drawing.Size(21, 13);
+            this.lblLadevolumenWert1.TabIndex = 22;
+            this.lblLadevolumenWert1.Text = "la1";
             // 
             // lbl_zu_einheit1
             // 
@@ -162,14 +162,14 @@
             this.lbl_zu_einheit1.TabIndex = 21;
             this.lbl_zu_einheit1.Text = "kg";
             // 
-            // lbl_zu_wert1
+            // lblZuladungWert1
             // 
-            this.lbl_zu_wert1.AutoSize = true;
-            this.lbl_zu_wert1.Location = new System.Drawing.Point(108, 261);
-            this.lbl_zu_wert1.Name = "lbl_zu_wert1";
-            this.lbl_zu_wert1.Size = new System.Drawing.Size(24, 13);
-            this.lbl_zu_wert1.TabIndex = 20;
-            this.lbl_zu_wert1.Text = "zu1";
+            this.lblZuladungWert1.AutoSize = true;
+            this.lblZuladungWert1.Location = new System.Drawing.Point(108, 261);
+            this.lblZuladungWert1.Name = "lblZuladungWert1";
+            this.lblZuladungWert1.Size = new System.Drawing.Size(24, 13);
+            this.lblZuladungWert1.TabIndex = 20;
+            this.lblZuladungWert1.Text = "zu1";
             // 
             // lbl_b_einheit1
             // 
@@ -180,14 +180,14 @@
             this.lbl_b_einheit1.TabIndex = 19;
             this.lbl_b_einheit1.Text = "sec";
             // 
-            // lbl_b_wert1
+            // lblBeschleunigungWert1
             // 
-            this.lbl_b_wert1.AutoSize = true;
-            this.lbl_b_wert1.Location = new System.Drawing.Point(108, 237);
-            this.lbl_b_wert1.Name = "lbl_b_wert1";
-            this.lbl_b_wert1.Size = new System.Drawing.Size(19, 13);
-            this.lbl_b_wert1.TabIndex = 18;
-            this.lbl_b_wert1.Text = "b1";
+            this.lblBeschleunigungWert1.AutoSize = true;
+            this.lblBeschleunigungWert1.Location = new System.Drawing.Point(108, 237);
+            this.lblBeschleunigungWert1.Name = "lblBeschleunigungWert1";
+            this.lblBeschleunigungWert1.Size = new System.Drawing.Size(19, 13);
+            this.lblBeschleunigungWert1.TabIndex = 18;
+            this.lblBeschleunigungWert1.Text = "b1";
             // 
             // lbl_h_einheit1
             // 
@@ -198,14 +198,14 @@
             this.lbl_h_einheit1.TabIndex = 17;
             this.lbl_h_einheit1.Text = "Liter";
             // 
-            // lbl_h_wert1
+            // lblHubraumWert1
             // 
-            this.lbl_h_wert1.AutoSize = true;
-            this.lbl_h_wert1.Location = new System.Drawing.Point(108, 214);
-            this.lbl_h_wert1.Name = "lbl_h_wert1";
-            this.lbl_h_wert1.Size = new System.Drawing.Size(19, 13);
-            this.lbl_h_wert1.TabIndex = 16;
-            this.lbl_h_wert1.Text = "h1";
+            this.lblHubraumWert1.AutoSize = true;
+            this.lblHubraumWert1.Location = new System.Drawing.Point(108, 214);
+            this.lblHubraumWert1.Name = "lblHubraumWert1";
+            this.lblHubraumWert1.Size = new System.Drawing.Size(19, 13);
+            this.lblHubraumWert1.TabIndex = 16;
+            this.lblHubraumWert1.Text = "h1";
             // 
             // lbl_zy_einheit1
             // 
@@ -216,14 +216,14 @@
             this.lbl_zy_einheit1.TabIndex = 15;
             this.lbl_zy_einheit1.Text = "Zyl";
             // 
-            // lbl_zy_wert1
+            // lblZylinderWert1
             // 
-            this.lbl_zy_wert1.AutoSize = true;
-            this.lbl_zy_wert1.Location = new System.Drawing.Point(108, 187);
-            this.lbl_zy_wert1.Name = "lbl_zy_wert1";
-            this.lbl_zy_wert1.Size = new System.Drawing.Size(23, 13);
-            this.lbl_zy_wert1.TabIndex = 14;
-            this.lbl_zy_wert1.Text = "zy1";
+            this.lblZylinderWert1.AutoSize = true;
+            this.lblZylinderWert1.Location = new System.Drawing.Point(108, 187);
+            this.lblZylinderWert1.Name = "lblZylinderWert1";
+            this.lblZylinderWert1.Size = new System.Drawing.Size(23, 13);
+            this.lblZylinderWert1.TabIndex = 14;
+            this.lblZylinderWert1.Text = "zy1";
             // 
             // lbl_v_einheit1
             // 
@@ -234,14 +234,14 @@
             this.lbl_v_einheit1.TabIndex = 13;
             this.lbl_v_einheit1.Text = "Liter";
             // 
-            // lbl_v_wert1
+            // lblVerbrauchWert1
             // 
-            this.lbl_v_wert1.AutoSize = true;
-            this.lbl_v_wert1.Location = new System.Drawing.Point(108, 163);
-            this.lbl_v_wert1.Name = "lbl_v_wert1";
-            this.lbl_v_wert1.Size = new System.Drawing.Size(19, 13);
-            this.lbl_v_wert1.TabIndex = 12;
-            this.lbl_v_wert1.Text = "v1";
+            this.lblVerbrauchWert1.AutoSize = true;
+            this.lblVerbrauchWert1.Location = new System.Drawing.Point(108, 163);
+            this.lblVerbrauchWert1.Name = "lblVerbrauchWert1";
+            this.lblVerbrauchWert1.Size = new System.Drawing.Size(19, 13);
+            this.lblVerbrauchWert1.TabIndex = 12;
+            this.lblVerbrauchWert1.Text = "v1";
             // 
             // lbl_l_einheit1
             // 
@@ -252,14 +252,14 @@
             this.lbl_l_einheit1.TabIndex = 11;
             this.lbl_l_einheit1.Text = "kW";
             // 
-            // lbl_l_wert1
+            // lblLeistungWert1
             // 
-            this.lbl_l_wert1.AutoSize = true;
-            this.lbl_l_wert1.Location = new System.Drawing.Point(108, 137);
-            this.lbl_l_wert1.Name = "lbl_l_wert1";
-            this.lbl_l_wert1.Size = new System.Drawing.Size(15, 13);
-            this.lbl_l_wert1.TabIndex = 10;
-            this.lbl_l_wert1.Text = "l1";
+            this.lblLeistungWert1.AutoSize = true;
+            this.lblLeistungWert1.Location = new System.Drawing.Point(108, 137);
+            this.lblLeistungWert1.Name = "lblLeistungWert1";
+            this.lblLeistungWert1.Size = new System.Drawing.Size(15, 13);
+            this.lblLeistungWert1.TabIndex = 10;
+            this.lblLeistungWert1.Text = "l1";
             // 
             // lbl_g_einheit1
             // 
@@ -333,14 +333,14 @@
             this.lblLeistung1.TabIndex = 2;
             this.lblLeistung1.Text = "Leistung:";
             // 
-            // lbl_g_wert1
+            // lblGeschwindigkeitWert1
             // 
-            this.lbl_g_wert1.AutoSize = true;
-            this.lbl_g_wert1.Location = new System.Drawing.Point(108, 113);
-            this.lbl_g_wert1.Name = "lbl_g_wert1";
-            this.lbl_g_wert1.Size = new System.Drawing.Size(19, 13);
-            this.lbl_g_wert1.TabIndex = 1;
-            this.lbl_g_wert1.Text = "g1";
+            this.lblGeschwindigkeitWert1.AutoSize = true;
+            this.lblGeschwindigkeitWert1.Location = new System.Drawing.Point(108, 113);
+            this.lblGeschwindigkeitWert1.Name = "lblGeschwindigkeitWert1";
+            this.lblGeschwindigkeitWert1.Size = new System.Drawing.Size(19, 13);
+            this.lblGeschwindigkeitWert1.TabIndex = 1;
+            this.lblGeschwindigkeitWert1.Text = "g1";
             // 
             // lblGeschwindigkeit1
             // 
@@ -353,23 +353,23 @@
             // 
             // panelAuto2
             // 
-            this.panelAuto2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelAuto2.BackColor = System.Drawing.Color.White;
             this.panelAuto2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAuto2.Controls.Add(this.lblModell2);
             this.panelAuto2.Controls.Add(this.lbl_la_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_la_wert2);
+            this.panelAuto2.Controls.Add(this.lblLadevolumenWert2);
             this.panelAuto2.Controls.Add(this.lbl_zu_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_zu_wert2);
+            this.panelAuto2.Controls.Add(this.lblZuladungWert2);
             this.panelAuto2.Controls.Add(this.lbl_b_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_b_wert2);
+            this.panelAuto2.Controls.Add(this.lblBeschleunigungWert2);
             this.panelAuto2.Controls.Add(this.lbl_h_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_h_wert2);
+            this.panelAuto2.Controls.Add(this.lblHubraumWert2);
             this.panelAuto2.Controls.Add(this.lbl_zy_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_zy_wert2);
+            this.panelAuto2.Controls.Add(this.lblZylinderWert2);
             this.panelAuto2.Controls.Add(this.lbl_v_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_v_wert2);
+            this.panelAuto2.Controls.Add(this.lblVerbrauchWert2);
             this.panelAuto2.Controls.Add(this.lbl_l_einheit2);
-            this.panelAuto2.Controls.Add(this.lbl_l_wert2);
+            this.panelAuto2.Controls.Add(this.lblLeistungWert2);
             this.panelAuto2.Controls.Add(this.lbl_g_einheit2);
             this.panelAuto2.Controls.Add(this.lblLadevolumen2);
             this.panelAuto2.Controls.Add(this.lblZuladung2);
@@ -378,7 +378,7 @@
             this.panelAuto2.Controls.Add(this.lblZylinder2);
             this.panelAuto2.Controls.Add(this.lblVerbrauch2);
             this.panelAuto2.Controls.Add(this.lblLeistung2);
-            this.panelAuto2.Controls.Add(this.lbl_g_wert2);
+            this.panelAuto2.Controls.Add(this.lblGeschwindigkeitWert2);
             this.panelAuto2.Controls.Add(this.lblGeschwindigkeit2);
             this.panelAuto2.Location = new System.Drawing.Point(242, 89);
             this.panelAuto2.Name = "panelAuto2";
@@ -404,14 +404,14 @@
             this.lbl_la_einheit2.TabIndex = 23;
             this.lbl_la_einheit2.Text = "Liter";
             // 
-            // lbl_la_wert2
+            // lblLadevolumenWert2
             // 
-            this.lbl_la_wert2.AutoSize = true;
-            this.lbl_la_wert2.Location = new System.Drawing.Point(108, 285);
-            this.lbl_la_wert2.Name = "lbl_la_wert2";
-            this.lbl_la_wert2.Size = new System.Drawing.Size(21, 13);
-            this.lbl_la_wert2.TabIndex = 22;
-            this.lbl_la_wert2.Text = "la2";
+            this.lblLadevolumenWert2.AutoSize = true;
+            this.lblLadevolumenWert2.Location = new System.Drawing.Point(108, 285);
+            this.lblLadevolumenWert2.Name = "lblLadevolumenWert2";
+            this.lblLadevolumenWert2.Size = new System.Drawing.Size(21, 13);
+            this.lblLadevolumenWert2.TabIndex = 22;
+            this.lblLadevolumenWert2.Text = "la2";
             // 
             // lbl_zu_einheit2
             // 
@@ -422,14 +422,14 @@
             this.lbl_zu_einheit2.TabIndex = 21;
             this.lbl_zu_einheit2.Text = "kg";
             // 
-            // lbl_zu_wert2
+            // lblZuladungWert2
             // 
-            this.lbl_zu_wert2.AutoSize = true;
-            this.lbl_zu_wert2.Location = new System.Drawing.Point(108, 261);
-            this.lbl_zu_wert2.Name = "lbl_zu_wert2";
-            this.lbl_zu_wert2.Size = new System.Drawing.Size(24, 13);
-            this.lbl_zu_wert2.TabIndex = 20;
-            this.lbl_zu_wert2.Text = "zu2";
+            this.lblZuladungWert2.AutoSize = true;
+            this.lblZuladungWert2.Location = new System.Drawing.Point(108, 261);
+            this.lblZuladungWert2.Name = "lblZuladungWert2";
+            this.lblZuladungWert2.Size = new System.Drawing.Size(24, 13);
+            this.lblZuladungWert2.TabIndex = 20;
+            this.lblZuladungWert2.Text = "zu2";
             // 
             // lbl_b_einheit2
             // 
@@ -440,14 +440,14 @@
             this.lbl_b_einheit2.TabIndex = 19;
             this.lbl_b_einheit2.Text = "sec";
             // 
-            // lbl_b_wert2
+            // lblBeschleunigungWert2
             // 
-            this.lbl_b_wert2.AutoSize = true;
-            this.lbl_b_wert2.Location = new System.Drawing.Point(108, 237);
-            this.lbl_b_wert2.Name = "lbl_b_wert2";
-            this.lbl_b_wert2.Size = new System.Drawing.Size(19, 13);
-            this.lbl_b_wert2.TabIndex = 18;
-            this.lbl_b_wert2.Text = "b2";
+            this.lblBeschleunigungWert2.AutoSize = true;
+            this.lblBeschleunigungWert2.Location = new System.Drawing.Point(108, 237);
+            this.lblBeschleunigungWert2.Name = "lblBeschleunigungWert2";
+            this.lblBeschleunigungWert2.Size = new System.Drawing.Size(19, 13);
+            this.lblBeschleunigungWert2.TabIndex = 18;
+            this.lblBeschleunigungWert2.Text = "b2";
             // 
             // lbl_h_einheit2
             // 
@@ -458,14 +458,14 @@
             this.lbl_h_einheit2.TabIndex = 17;
             this.lbl_h_einheit2.Text = "Liter";
             // 
-            // lbl_h_wert2
+            // lblHubraumWert2
             // 
-            this.lbl_h_wert2.AutoSize = true;
-            this.lbl_h_wert2.Location = new System.Drawing.Point(108, 214);
-            this.lbl_h_wert2.Name = "lbl_h_wert2";
-            this.lbl_h_wert2.Size = new System.Drawing.Size(19, 13);
-            this.lbl_h_wert2.TabIndex = 16;
-            this.lbl_h_wert2.Text = "h2";
+            this.lblHubraumWert2.AutoSize = true;
+            this.lblHubraumWert2.Location = new System.Drawing.Point(108, 214);
+            this.lblHubraumWert2.Name = "lblHubraumWert2";
+            this.lblHubraumWert2.Size = new System.Drawing.Size(19, 13);
+            this.lblHubraumWert2.TabIndex = 16;
+            this.lblHubraumWert2.Text = "h2";
             // 
             // lbl_zy_einheit2
             // 
@@ -476,14 +476,14 @@
             this.lbl_zy_einheit2.TabIndex = 15;
             this.lbl_zy_einheit2.Text = "Zyl";
             // 
-            // lbl_zy_wert2
+            // lblZylinderWert2
             // 
-            this.lbl_zy_wert2.AutoSize = true;
-            this.lbl_zy_wert2.Location = new System.Drawing.Point(108, 187);
-            this.lbl_zy_wert2.Name = "lbl_zy_wert2";
-            this.lbl_zy_wert2.Size = new System.Drawing.Size(23, 13);
-            this.lbl_zy_wert2.TabIndex = 14;
-            this.lbl_zy_wert2.Text = "zy2";
+            this.lblZylinderWert2.AutoSize = true;
+            this.lblZylinderWert2.Location = new System.Drawing.Point(108, 187);
+            this.lblZylinderWert2.Name = "lblZylinderWert2";
+            this.lblZylinderWert2.Size = new System.Drawing.Size(23, 13);
+            this.lblZylinderWert2.TabIndex = 14;
+            this.lblZylinderWert2.Text = "zy2";
             // 
             // lbl_v_einheit2
             // 
@@ -494,14 +494,14 @@
             this.lbl_v_einheit2.TabIndex = 13;
             this.lbl_v_einheit2.Text = "Liter";
             // 
-            // lbl_v_wert2
+            // lblVerbrauchWert2
             // 
-            this.lbl_v_wert2.AutoSize = true;
-            this.lbl_v_wert2.Location = new System.Drawing.Point(108, 163);
-            this.lbl_v_wert2.Name = "lbl_v_wert2";
-            this.lbl_v_wert2.Size = new System.Drawing.Size(19, 13);
-            this.lbl_v_wert2.TabIndex = 12;
-            this.lbl_v_wert2.Text = "v2";
+            this.lblVerbrauchWert2.AutoSize = true;
+            this.lblVerbrauchWert2.Location = new System.Drawing.Point(108, 163);
+            this.lblVerbrauchWert2.Name = "lblVerbrauchWert2";
+            this.lblVerbrauchWert2.Size = new System.Drawing.Size(19, 13);
+            this.lblVerbrauchWert2.TabIndex = 12;
+            this.lblVerbrauchWert2.Text = "v2";
             // 
             // lbl_l_einheit2
             // 
@@ -512,14 +512,14 @@
             this.lbl_l_einheit2.TabIndex = 11;
             this.lbl_l_einheit2.Text = "kW";
             // 
-            // lbl_l_wert2
+            // lblLeistungWert2
             // 
-            this.lbl_l_wert2.AutoSize = true;
-            this.lbl_l_wert2.Location = new System.Drawing.Point(108, 137);
-            this.lbl_l_wert2.Name = "lbl_l_wert2";
-            this.lbl_l_wert2.Size = new System.Drawing.Size(15, 13);
-            this.lbl_l_wert2.TabIndex = 10;
-            this.lbl_l_wert2.Text = "l2";
+            this.lblLeistungWert2.AutoSize = true;
+            this.lblLeistungWert2.Location = new System.Drawing.Point(108, 137);
+            this.lblLeistungWert2.Name = "lblLeistungWert2";
+            this.lblLeistungWert2.Size = new System.Drawing.Size(15, 13);
+            this.lblLeistungWert2.TabIndex = 10;
+            this.lblLeistungWert2.Text = "l2";
             // 
             // lbl_g_einheit2
             // 
@@ -593,32 +593,34 @@
             this.lblLeistung2.TabIndex = 2;
             this.lblLeistung2.Text = "Leistung:";
             // 
-            // lbl_g_wert2
+            // lblGeschwindigkeitWert2
             // 
-            this.lbl_g_wert2.AutoSize = true;
-            this.lbl_g_wert2.Location = new System.Drawing.Point(108, 113);
-            this.lbl_g_wert2.Name = "lbl_g_wert2";
-            this.lbl_g_wert2.Size = new System.Drawing.Size(19, 13);
-            this.lbl_g_wert2.TabIndex = 1;
-            this.lbl_g_wert2.Text = "g2";
+            this.lblGeschwindigkeitWert2.AutoSize = true;
+            this.lblGeschwindigkeitWert2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblGeschwindigkeitWert2.Location = new System.Drawing.Point(108, 113);
+            this.lblGeschwindigkeitWert2.Name = "lblGeschwindigkeitWert2";
+            this.lblGeschwindigkeitWert2.Size = new System.Drawing.Size(19, 13);
+            this.lblGeschwindigkeitWert2.TabIndex = 1;
+            this.lblGeschwindigkeitWert2.Text = "g2";
             // 
             // lblGeschwindigkeit2
             // 
             this.lblGeschwindigkeit2.AutoSize = true;
+            this.lblGeschwindigkeit2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblGeschwindigkeit2.Location = new System.Drawing.Point(14, 113);
             this.lblGeschwindigkeit2.Name = "lblGeschwindigkeit2";
             this.lblGeschwindigkeit2.Size = new System.Drawing.Size(88, 13);
             this.lblGeschwindigkeit2.TabIndex = 0;
             this.lblGeschwindigkeit2.Text = "Geschwindigkeit:";
             // 
-            // lbleinzeln_vgl
+            // lblEinzelnVgl
             // 
-            this.lbleinzeln_vgl.AutoSize = true;
-            this.lbleinzeln_vgl.Location = new System.Drawing.Point(12, 14);
-            this.lbleinzeln_vgl.Name = "lbleinzeln_vgl";
-            this.lbleinzeln_vgl.Size = new System.Drawing.Size(269, 13);
-            this.lbleinzeln_vgl.TabIndex = 2;
-            this.lbleinzeln_vgl.Text = "Möchten Sie Karten einzeln ansehen oder vergleichen?";
+            this.lblEinzelnVgl.AutoSize = true;
+            this.lblEinzelnVgl.Location = new System.Drawing.Point(12, 14);
+            this.lblEinzelnVgl.Name = "lblEinzelnVgl";
+            this.lblEinzelnVgl.Size = new System.Drawing.Size(269, 13);
+            this.lblEinzelnVgl.TabIndex = 2;
+            this.lblEinzelnVgl.Text = "Möchten Sie Karten einzeln ansehen oder vergleichen?";
             // 
             // btnEinzeln
             // 
@@ -639,41 +641,42 @@
             this.btnVergleichen.UseVisualStyleBackColor = true;
             this.btnVergleichen.Click += new System.EventHandler(this.btnVergleichen_Click);
             // 
-            // lblAuswahl_Vergleichswert
+            // lblAuswahlVergleichswert
             // 
-            this.lblAuswahl_Vergleichswert.AutoSize = true;
-            this.lblAuswahl_Vergleichswert.Location = new System.Drawing.Point(12, 41);
-            this.lblAuswahl_Vergleichswert.Name = "lblAuswahl_Vergleichswert";
-            this.lblAuswahl_Vergleichswert.Size = new System.Drawing.Size(202, 13);
-            this.lblAuswahl_Vergleichswert.TabIndex = 5;
-            this.lblAuswahl_Vergleichswert.Text = "Welchen Wert möchten Sie vergleichen?";
-            this.lblAuswahl_Vergleichswert.Visible = false;
+            this.lblAuswahlVergleichswert.AutoSize = true;
+            this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(12, 41);
+            this.lblAuswahlVergleichswert.Name = "lblAuswahlVergleichswert";
+            this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(202, 13);
+            this.lblAuswahlVergleichswert.TabIndex = 5;
+            this.lblAuswahlVergleichswert.Text = "Welchen Wert möchten Sie vergleichen?";
+            this.lblAuswahlVergleichswert.Visible = false;
             // 
-            // lblGewonnen_Verloren
+            // lblGewonnenVerloren
             // 
-            this.lblGewonnen_Verloren.AutoSize = true;
-            this.lblGewonnen_Verloren.Location = new System.Drawing.Point(167, 67);
-            this.lblGewonnen_Verloren.Name = "lblGewonnen_Verloren";
-            this.lblGewonnen_Verloren.Size = new System.Drawing.Size(103, 13);
-            this.lblGewonnen_Verloren.TabIndex = 14;
-            this.lblGewonnen_Verloren.Text = "Gewonnen/Verloren";
-            this.lblGewonnen_Verloren.Visible = false;
+            this.lblGewonnenVerloren.AutoSize = true;
+            this.lblGewonnenVerloren.Location = new System.Drawing.Point(167, 67);
+            this.lblGewonnenVerloren.Name = "lblGewonnenVerloren";
+            this.lblGewonnenVerloren.Size = new System.Drawing.Size(103, 13);
+            this.lblGewonnenVerloren.TabIndex = 14;
+            this.lblGewonnenVerloren.Text = "Gewonnen/Verloren";
+            this.lblGewonnenVerloren.Visible = false;
             // 
-            // button1
+            // btnNeu
             // 
-            this.button1.Location = new System.Drawing.Point(413, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Neu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNeu.Location = new System.Drawing.Point(413, 9);
+            this.btnNeu.Name = "btnNeu";
+            this.btnNeu.Size = new System.Drawing.Size(36, 23);
+            this.btnNeu.TabIndex = 15;
+            this.btnNeu.Text = "Neu";
+            this.btnNeu.UseVisualStyleBackColor = true;
+            this.btnNeu.Click += new System.EventHandler(this.btnNeu_Click);
             // 
-            // cbAuswahl_Wert
+            // cbAuswahlWert
             // 
-            this.cbAuswahl_Wert.AllowDrop = true;
-            this.cbAuswahl_Wert.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAuswahl_Wert.FormattingEnabled = true;
-            this.cbAuswahl_Wert.Items.AddRange(new object[] {
+            this.cbAuswahlWert.AllowDrop = true;
+            this.cbAuswahlWert.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAuswahlWert.FormattingEnabled = true;
+            this.cbAuswahlWert.Items.AddRange(new object[] {
             "Geschwindigkeit",
             "Leistung",
             "Verbrauch",
@@ -682,12 +685,12 @@
             "Beschleunigung",
             "Zuladung",
             "Ladevolumen"});
-            this.cbAuswahl_Wert.Location = new System.Drawing.Point(220, 38);
-            this.cbAuswahl_Wert.Name = "cbAuswahl_Wert";
-            this.cbAuswahl_Wert.Size = new System.Drawing.Size(104, 21);
-            this.cbAuswahl_Wert.TabIndex = 16;
-            this.cbAuswahl_Wert.Visible = false;
-            this.cbAuswahl_Wert.SelectedIndexChanged += new System.EventHandler(this.cbAuswahl_Wert_SelectedIndexChanged);
+            this.cbAuswahlWert.Location = new System.Drawing.Point(220, 38);
+            this.cbAuswahlWert.Name = "cbAuswahlWert";
+            this.cbAuswahlWert.Size = new System.Drawing.Size(104, 21);
+            this.cbAuswahlWert.TabIndex = 16;
+            this.cbAuswahlWert.Visible = false;
+            this.cbAuswahlWert.SelectedIndexChanged += new System.EventHandler(this.cbAuswahl_Wert_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -695,13 +698,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(461, 417);
-            this.Controls.Add(this.cbAuswahl_Wert);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblGewonnen_Verloren);
-            this.Controls.Add(this.lblAuswahl_Vergleichswert);
+            this.Controls.Add(this.cbAuswahlWert);
+            this.Controls.Add(this.btnNeu);
+            this.Controls.Add(this.lblGewonnenVerloren);
+            this.Controls.Add(this.lblAuswahlVergleichswert);
             this.Controls.Add(this.btnVergleichen);
             this.Controls.Add(this.btnEinzeln);
-            this.Controls.Add(this.lbleinzeln_vgl);
+            this.Controls.Add(this.lblEinzelnVgl);
             this.Controls.Add(this.panelAuto2);
             this.Controls.Add(this.panelAuto1);
             this.Name = "Form1";
@@ -719,19 +722,19 @@
 
         private System.Windows.Forms.Panel panelAuto1;
         private System.Windows.Forms.Label lbl_la_einheit1;
-        private System.Windows.Forms.Label lbl_la_wert1;
+        private System.Windows.Forms.Label lblLadevolumenWert1;
         private System.Windows.Forms.Label lbl_zu_einheit1;
-        private System.Windows.Forms.Label lbl_zu_wert1;
+        private System.Windows.Forms.Label lblZuladungWert1;
         private System.Windows.Forms.Label lbl_b_einheit1;
-        private System.Windows.Forms.Label lbl_b_wert1;
+        private System.Windows.Forms.Label lblBeschleunigungWert1;
         private System.Windows.Forms.Label lbl_h_einheit1;
-        private System.Windows.Forms.Label lbl_h_wert1;
+        private System.Windows.Forms.Label lblHubraumWert1;
         private System.Windows.Forms.Label lbl_zy_einheit1;
-        private System.Windows.Forms.Label lbl_zy_wert1;
+        private System.Windows.Forms.Label lblZylinderWert1;
         private System.Windows.Forms.Label lbl_v_einheit1;
-        private System.Windows.Forms.Label lbl_v_wert1;
+        private System.Windows.Forms.Label lblVerbrauchWert1;
         private System.Windows.Forms.Label lbl_l_einheit1;
-        private System.Windows.Forms.Label lbl_l_wert1;
+        private System.Windows.Forms.Label lblLeistungWert1;
         private System.Windows.Forms.Label lbl_g_einheit1;
         private System.Windows.Forms.Label lblLadevolumen1;
         private System.Windows.Forms.Label lblZuladung1;
@@ -740,23 +743,23 @@
         private System.Windows.Forms.Label lblZylinder1;
         private System.Windows.Forms.Label lblVerbrauch1;
         private System.Windows.Forms.Label lblLeistung1;
-        private System.Windows.Forms.Label lbl_g_wert1;
+        private System.Windows.Forms.Label lblGeschwindigkeitWert1;
         private System.Windows.Forms.Label lblGeschwindigkeit1;
         private System.Windows.Forms.Panel panelAuto2;
         private System.Windows.Forms.Label lbl_la_einheit2;
-        private System.Windows.Forms.Label lbl_la_wert2;
+        private System.Windows.Forms.Label lblLadevolumenWert2;
         private System.Windows.Forms.Label lbl_zu_einheit2;
-        private System.Windows.Forms.Label lbl_zu_wert2;
+        private System.Windows.Forms.Label lblZuladungWert2;
         private System.Windows.Forms.Label lbl_b_einheit2;
-        private System.Windows.Forms.Label lbl_b_wert2;
+        private System.Windows.Forms.Label lblBeschleunigungWert2;
         private System.Windows.Forms.Label lbl_h_einheit2;
-        private System.Windows.Forms.Label lbl_h_wert2;
+        private System.Windows.Forms.Label lblHubraumWert2;
         private System.Windows.Forms.Label lbl_zy_einheit2;
-        private System.Windows.Forms.Label lbl_zy_wert2;
+        private System.Windows.Forms.Label lblZylinderWert2;
         private System.Windows.Forms.Label lbl_v_einheit2;
-        private System.Windows.Forms.Label lbl_v_wert2;
+        private System.Windows.Forms.Label lblVerbrauchWert2;
         private System.Windows.Forms.Label lbl_l_einheit2;
-        private System.Windows.Forms.Label lbl_l_wert2;
+        private System.Windows.Forms.Label lblLeistungWert2;
         private System.Windows.Forms.Label lbl_g_einheit2;
         private System.Windows.Forms.Label lblLadevolumen2;
         private System.Windows.Forms.Label lblZuladung2;
@@ -765,17 +768,17 @@
         private System.Windows.Forms.Label lblZylinder2;
         private System.Windows.Forms.Label lblVerbrauch2;
         private System.Windows.Forms.Label lblLeistung2;
-        private System.Windows.Forms.Label lbl_g_wert2;
+        private System.Windows.Forms.Label lblGeschwindigkeitWert2;
         private System.Windows.Forms.Label lblGeschwindigkeit2;
         private System.Windows.Forms.Label lblModell1;
         private System.Windows.Forms.Label lblModell2;
-        private System.Windows.Forms.Label lbleinzeln_vgl;
+        private System.Windows.Forms.Label lblEinzelnVgl;
         private System.Windows.Forms.Button btnEinzeln;
         private System.Windows.Forms.Button btnVergleichen;
-        private System.Windows.Forms.Label lblAuswahl_Vergleichswert;
-        private System.Windows.Forms.Label lblGewonnen_Verloren;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cbAuswahl_Wert;
+        private System.Windows.Forms.Label lblAuswahlVergleichswert;
+        private System.Windows.Forms.Label lblGewonnenVerloren;
+        private System.Windows.Forms.Button btnNeu;
+        private System.Windows.Forms.ComboBox cbAuswahlWert;
     }
 }
 
