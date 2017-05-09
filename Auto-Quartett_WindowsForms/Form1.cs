@@ -107,7 +107,7 @@ namespace Auto_Quartett_WindowsForms
             }
             else
             {
-                //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden
+                //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden.
                 cbAuswahlWert.Enabled = true;
             }
             
@@ -143,7 +143,7 @@ namespace Auto_Quartett_WindowsForms
 
         public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {            
-            //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
+            //Ob der Wert von auto1 grösser als von auto_y ist, wird mit "auto1_groesser" zurückgegeben.
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto1_groesser = true;
 
@@ -154,7 +154,7 @@ namespace Auto_Quartett_WindowsForms
                     {
                         Farbe_setzen(lblGeschwindigkeitWert1, lblGeschwindigkeitWert2);
                     }
-                    //Wenn else-Zweig erreicht wird, ist auto_y grösser, und somit ist "auto_x_groesser" "false".
+                    //Wenn else-Zweig erreicht wird, ist auto1 grösser, und somit ist "auto1_groesser" "false".
                     else if (auto1.geschwindigkeit < auto2.geschwindigkeit)
                     {
                         Farbe_setzen(lblGeschwindigkeitWert2, lblGeschwindigkeitWert1);
@@ -177,7 +177,7 @@ namespace Auto_Quartett_WindowsForms
                     }
                     break;
                 case 2:
-                    //"Verbrauch" ist die Ausnahme: Der kleiner Wert gewinnt.
+                    //"Verbrauch" ist die Ausnahme: Der kleinere Wert gewinnt.
                     if (auto1.verbrauch < auto2.verbrauch)
                     {
                         Farbe_setzen(lblVerbrauchWert1, lblVerbrauchWert2);
@@ -266,7 +266,7 @@ namespace Auto_Quartett_WindowsForms
             lblGewonnenVerloren.Visible = false;
             btnVergleichen.Enabled = true;
 
-            //Zwei Arrays der Wert-Labels werden erstellt, um die Farben in einer Schleife zurücksetzen zu können
+            //Zwei Arrays der Wert-Labels werden erstellt, um die Farben in einer Schleife zurücksetzen zu können.
             Label[] auto1 = new Label[8] { lblGeschwindigkeitWert1, lblLeistungWert1, lblVerbrauchWert1, lblZylinderWert1,
             lblHubraumWert1,lblBeschleunigungWert1,lblZuladungWert1,lblLadevolumenWert1 };
             Label[] auto2 = new Label[8] { lblGeschwindigkeitWert2, lblLeistungWert2, lblVerbrauchWert2, lblZylinderWert2,
