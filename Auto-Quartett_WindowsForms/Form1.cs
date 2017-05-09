@@ -15,61 +15,30 @@ namespace Auto_Quartett_WindowsForms
         public Form1()
         {
             InitializeComponent();
-            autokarten_erstellen();
         }
 
+        //TODO Random-Auswahl mit autos[i]
+        //TODO Variablennamen ausformulieren/angleichen
 
         Autokarte auto1 = new Autokarte();
         Autokarte auto2 = new Autokarte();
         Autokarte auto3 = new Autokarte();
 
-
-        //Label[] VglWert1 = new Label[8] { lbl_g_wert1, lbl_l_wert1, lbl_v_wert1, lbl_zy_wert1, lbl_h_wert1, lbl_b_wert1, lbl_zu_wert1, lbl_la_wert1 };
-        //Label[] VglWert2 = new Label[8] { lbl_g_wert2, lbl_l_wert2, lbl_v_wert2, lbl_zy_wert2, lbl_h_wert2, lbl_b_wert2, lbl_zu_wert2, lbl_la_wert2 };
+        Autokarte[] autos = new Autokarte[] 
+        {
+            new Autokarte("VW Phaeton", 250, 309, 15.7, 12, 6, 6.7, 600, 500),
+            new Autokarte("VW New Beetle", 185, 85, 8.7, 4, 2, 10.9, 419, 527),
+            new Autokarte("VW Touareg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555),
+            new Autokarte()
+        };
 
         string vergleichsfeld = "";
-        string[] vergleich = new string[8] { "g", "l", "v", "zy", "h", "b", "zu", "la" };
-
-        public struct Autokarte
-        {
-            public string modell;
-            public int    geschwindigkeit;
-            public int    leistung;
-            public double verbrauch;
-            public int    zylinder;
-            public double hubraum;
-            public double beschleunigung;
-            public int    zuladung;
-            public int    ladevolumen;
-        }
-
-        public void autokarten_erstellen()
-        {
-            //Autokarten werden erstellt
-            Autokarte_fuellen( ref auto1, "VW Phaeton", 250, 309, 15.7, 12, 6, 6.7, 600, 500 );
-            Autokarte_fuellen( ref auto2, "VW New Beetle", 185, 85, 8.7, 4, 2, 10.9, 419, 527 );
-            Autokarte_fuellen( ref auto3, "VW Touareg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555 );
-        }
-        
+        string[] vergleich = new string[8] { "g", "l", "v", "zy", "h", "b", "zu", "la" };       
 
         public void autokarten_anzeigen( Autokarte auto_x, Autokarte auto_y )
         {
             Autokarte1_anzeigen(auto_x);
             Autokarte2_anzeigen(auto_y);
-        }
-
-        public void Autokarte_fuellen( ref Autokarte auto_x, string name, int speed, int leist, double verbr,
-                                       int zyl, double hubr, double beschl, int zulad, int ladevol )
-        {
-            auto_x.modell          = name;
-            auto_x.geschwindigkeit = speed;
-            auto_x.leistung        = leist;
-            auto_x.verbrauch       = verbr;
-            auto_x.zylinder        = zyl;
-            auto_x.hubraum         = hubr;
-            auto_x.beschleunigung  = beschl;
-            auto_x.zuladung        = zulad;
-            auto_x.ladevolumen     = ladevol;
         }
 
         public void Autokarte1_anzeigen( Autokarte auto_x )
@@ -150,23 +119,17 @@ namespace Auto_Quartett_WindowsForms
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto_x_groesser = true;
 
-            //
-            //Label[] VglWert1 = new Label[8] { lbl_g_wert1, lbl_l_wert1, lbl_v_wert1, lbl_zy_wert1, lbl_h_wert1, lbl_b_wert1, lbl_zu_wert1, lbl_la_wert1 };
-            //Label[] VglWert2 = new Label[8] { lbl_g_wert2, lbl_l_wert2, lbl_v_wert2, lbl_zy_wert2, lbl_h_wert2, lbl_b_wert2, lbl_zu_wert2, lbl_la_wert2 };
- 
             switch (vergleichsfeld)
             {
                 case "g":
                     if (auto_x.geschwindigkeit > auto_y.geschwindigkeit)
                     {
-                        lbl_g_wert1.BackColor = Color.Chartreuse;
-                        lbl_g_wert2.BackColor = Color.LightCoral;
+                        Farbe_setzen(lbl_g_wert1, lbl_g_wert2);
                     }
                     //Wenn else-Zweig erreicht wird ist auto_y grösser und somit ist "auto_x_groesser" "false".
                     else
                     {
-                        lbl_g_wert1.BackColor = Color.LightCoral;
-                        lbl_g_wert2.BackColor = Color.Chartreuse;
+                        Farbe_setzen(lbl_g_wert2, lbl_g_wert1);
                         auto_x_groesser = false;
                     }
                     break;
@@ -263,6 +226,12 @@ namespace Auto_Quartett_WindowsForms
                     break;
             }
             return auto_x_groesser;
+        }
+
+        private void Farbe_setzen(Label lblGewonnen, Label lblVerloren )
+        {
+            lblGewonnen.BackColor = Color.Chartreuse;
+            lblVerloren.BackColor = Color.LightCoral;
         }
         //Farbe_setzen(auto_x_groesser, 1);
         //public void farbe_setzen(label vglwert1, label vglwert2, bool x_gr_y, int i)
