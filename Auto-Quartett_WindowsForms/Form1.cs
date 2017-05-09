@@ -17,7 +17,12 @@ namespace Auto_Quartett_WindowsForms
             InitializeComponent();
         }
 
+        //TODO Random-Auswahl mit autos[i]
         //TODO Variablennamen ausformulieren/angleichen
+
+        Autokarte auto1 = new Autokarte();
+        Autokarte auto2 = new Autokarte();
+        Autokarte auto3 = new Autokarte();
 
         Autokarte[] autos = new Autokarte[] 
         {
@@ -27,223 +32,201 @@ namespace Auto_Quartett_WindowsForms
             new Autokarte()
         };
 
-        //Variablen für den VERGLEICH
-        //Zufallszahlen für die beim Vergleich angezeigten Autos
-        public static Random nr = new Random();
-        public static int zufall1;
-        public static int zufall2;
+        string vergleichsfeld = "";
+        string[] vergleich = new string[8] { "g", "l", "v", "zy", "h", "b", "zu", "la" };       
 
-        public static int vergleichsfeld = 0;
-        public static int[] vergleich = new int[8];
-
-        public void autokarten_anzeigen( Autokarte auto1, Autokarte auto2 )
+        public void autokarten_anzeigen( Autokarte auto_x, Autokarte auto_y )
         {
-            Autokarte1_anzeigen(auto1);
-            Autokarte2_anzeigen(auto2);
+            Autokarte1_anzeigen(auto_x);
+            Autokarte2_anzeigen(auto_y);
         }
 
-        public void Autokarte1_anzeigen( Autokarte auto1 )
+        public void Autokarte1_anzeigen( Autokarte auto_x )
         {
             panelAuto1.Visible = true;
-            lblModell1.Text = auto1.modell.ToUpper();
-            lblGeschwindigkeitWert1.Text = auto1.geschwindigkeit.ToString();
-            lblLeistungWert1.Text = auto1.leistung.ToString();
-            lblVerbrauchWert1.Text = auto1.verbrauch.ToString();
-            lblZylinderWert1.Text = auto1.zylinder.ToString();
-            lblHubraumWert1.Text = auto1.hubraum.ToString();
-            lblBeschleunigungWert1.Text = auto1.beschleunigung.ToString();
-            lblZuladungWert1.Text = auto1.zuladung.ToString();
-            lblLadevolumenWert1.Text = auto1.ladevolumen.ToString();
+            lblModell1.Text    = auto_x.modell.ToUpper();
+            lbl_g_wert1.Text   = auto_x.geschwindigkeit.ToString();
+            lbl_l_wert1.Text   = auto_x.leistung.ToString();
+            lbl_v_wert1.Text   = auto_x.verbrauch.ToString();
+            lbl_zy_wert1.Text  = auto_x.zylinder.ToString();
+            lbl_h_wert1.Text   = auto_x.hubraum.ToString();
+            lbl_b_wert1.Text   = auto_x.beschleunigung.ToString();
+            lbl_zu_wert1.Text  = auto_x.zuladung.ToString();
+            lbl_la_wert1.Text  = auto_x.ladevolumen.ToString();
         }
 
-        public void Autokarte2_anzeigen( Autokarte auto2 )
+        public void Autokarte2_anzeigen( Autokarte auto_x )
         {
             panelAuto2.Visible = true;
-            lblModell2.Text = auto2.modell.ToUpper();
-            lblGeschwindigkeitWert2.Text = auto2.geschwindigkeit.ToString();
-            lblLeistungWert2.Text = auto2.leistung.ToString();
-            lblVerbrauchWert2.Text = auto2.verbrauch.ToString();
-            lblZylinderWert2.Text = auto2.zylinder.ToString();
-            lblHubraumWert2.Text = auto2.hubraum.ToString();
-            lblBeschleunigungWert2.Text = auto2.beschleunigung.ToString();
-            lblZuladungWert2.Text = auto2.zuladung.ToString();
-            lblLadevolumenWert2.Text = auto2.ladevolumen.ToString();
+            lblModell2.Text    = auto_x.modell.ToUpper();
+            lbl_g_wert2.Text   = auto_x.geschwindigkeit.ToString();
+            lbl_l_wert2.Text   = auto_x.leistung.ToString();
+            lbl_v_wert2.Text   = auto_x.verbrauch.ToString();
+            lbl_zy_wert2.Text  = auto_x.zylinder.ToString();
+            lbl_h_wert2.Text   = auto_x.hubraum.ToString();
+            lbl_b_wert2.Text   = auto_x.beschleunigung.ToString();
+            lbl_zu_wert2.Text  = auto_x.zuladung.ToString();
+            lbl_la_wert2.Text  = auto_x.ladevolumen.ToString();
         }
 
         private void btnVergleichen_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; i++)
-            {
-                //Zahl pro Eigenschaft
-                vergleich[i] = i;
-            }
             Auswahl_anzeigen();
-            zufall1 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
-            Autokarte1_anzeigen( autos[zufall1] );
-            btnVergleichen.Enabled = false;
+            Autokarte1_anzeigen( auto1 );
         }
 
         public void Auswahl_anzeigen()
         {
-            lblAuswahlVergleichswert.Visible = true;
-            cbAuswahlWert.Visible            = true;
+            lblAuswahl_Vergleichswert.Visible = true;
+            cbAuswahl_Wert.Visible            = true;
         }
 
         private void cbAuswahl_Wert_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vergleichsfeld = Vergleichswert_ermitteln();
+            Vergleichswert_ermitteln();
 
-            do
-            {
-                zufall2 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
-            } while (zufall1 == zufall2);
+            Autokarte2_anzeigen(auto2);
+            //Vergleichen der Werte
+            bool groesser = Vergleiche_Wert(auto1, auto2, vergleichsfeld);
 
-            cbAuswahlWert.Enabled = false;
-
-            if (cbAuswahlWert.SelectedIndex != -1)
-            {
-                Autokarte2_anzeigen(autos[zufall2]);
-            }
-            else
-            {
-                cbAuswahlWert.Enabled = true;
-            }
-            
-            //Vergleich der Werte
-            bool groesser = Vergleiche_Wert(autos[zufall1], autos[zufall2], vergleichsfeld);
-
-            lblGewonnenVerloren.Visible = true;
+            lblGewonnen_Verloren.Visible = true;
             if (groesser)
             {
-                lblGewonnenVerloren.ForeColor = Color.Blue;
-                lblGewonnenVerloren.Text = "Sie haben GEWONNEN!";
+                lblGewonnen_Verloren.ForeColor = Color.Blue;
+                lblGewonnen_Verloren.Text = "Sie haben gewonnen!";
             }
             else
             {
-                lblGewonnenVerloren.ForeColor = Color.Red;
-                lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
+                lblGewonnen_Verloren.ForeColor = Color.Red;
+                lblGewonnen_Verloren.Text = "Sie haben verloren!";
             }
         }
 
-        public int Vergleichswert_ermitteln()
+        public void Vergleichswert_ermitteln()
         {
             int feld = 0;
-            vergleichsfeld = -1;
             for (int i = 0; i < vergleich.Length-1 ; i++)
             {
-                if (cbAuswahlWert.SelectedItem == cbAuswahlWert.Items[i])
+                if (cbAuswahl_Wert.SelectedItem == cbAuswahl_Wert.Items[i])
                 { vergleichsfeld = vergleich[feld]; }
                 feld++;
             }
-            return vergleichsfeld;
         }
-
-        //private void vergleichen<T>(Autokarte autoX, Func<Autokarte, T> eigenschaft) { }
-        public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
+        private void vergleichen<T>(Autokarte auto1, Func<Autokarte, T> eigenschaft) { }
+        public bool Vergleiche_Wert(Autokarte auto_x, Autokarte auto_y, string vergleichsfeld)
         {
-            //vergleichen(autos[0], a => a.geschwindigkeit);
+            vergleichen(auto1, a => a.geschwindigkeit);
             //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
-            bool auto1_groesser = true;
+            bool auto_x_groesser = true;
 
             switch (vergleichsfeld)
             {
-                case 0:
-                    if (auto1.geschwindigkeit > auto2.geschwindigkeit)
+                case "g":
+                    if (auto_x.geschwindigkeit > auto_y.geschwindigkeit)
                     {
-                        Farbe_setzen(lblGeschwindigkeitWert1, lblGeschwindigkeitWert2);
+                        Farbe_setzen(lbl_g_wert1, lbl_g_wert2);
                     }
-                    //Wenn else-Zweig erreicht wird, ist auto_y grösser, und somit ist "auto_x_groesser" "false".
-                    else if (auto1.geschwindigkeit < auto2.geschwindigkeit)
+                    //Wenn else-Zweig erreicht wird ist auto_y grösser und somit ist "auto_x_groesser" "false".
+                    else
                     {
-                        Farbe_setzen(lblGeschwindigkeitWert2, lblGeschwindigkeitWert1);
-                        auto1_groesser = false;
+                        Farbe_setzen(lbl_g_wert2, lbl_g_wert1);
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "l":
+                    if (auto_x.leistung > auto_y.leistung)
+                    {
+                        lbl_l_wert1.BackColor = Color.Chartreuse;
+                        lbl_l_wert2.BackColor = Color.LightCoral;
                     }
                     else
                     {
-                        //gleichstand = true;
+                        lbl_l_wert1.BackColor = Color.LightCoral;
+                        lbl_l_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
                     }
                     break;
-                case 1:
-                    if (auto1.leistung > auto2.leistung)
+                case "v":
+                    if (auto_x.verbrauch > auto_y.verbrauch)
                     {
-                        Farbe_setzen(lblLeistungWert1, lblLeistungWert2);
+                        lbl_v_wert1.BackColor = Color.Chartreuse;
+                        lbl_v_wert2.BackColor = Color.LightCoral;
                     }
-                    else if (auto1.leistung < auto2.leistung)
+                    else
                     {
-                        Farbe_setzen(lblLeistungWert2, lblLeistungWert1); ;
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 2:
-                    //"Verbrauch" ist die Ausnahme: Der kleiner Wert gewinnt.
-                    if (auto1.verbrauch < auto2.verbrauch)
-                    {
-                        Farbe_setzen(lblVerbrauchWert1, lblVerbrauchWert2);
-                    }
-                    else if (auto1.verbrauch > auto2.verbrauch)
-                    {
-                        Farbe_setzen(lblVerbrauchWert2, lblVerbrauchWert1);
-                        auto1_groesser = false;
+                        lbl_v_wert1.BackColor = Color.LightCoral;
+                        lbl_v_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
                     }
                     break;
-                case 3:
-                    if (auto1.zylinder > auto2.zylinder)
+                case "zy":
+                    if (auto_x.zylinder > auto_y.zylinder)
                     {
-                        Farbe_setzen(lblZylinderWert1, lblZylinderWert2);
+                        lbl_zy_wert1.BackColor = Color.Chartreuse;
+                        lbl_zy_wert2.BackColor = Color.LightCoral;
                     }
-                    else if (auto1.zylinder < auto2.zylinder)
+                    else
                     {
-                        Farbe_setzen(lblZylinderWert2, lblZylinderWert1);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 4:
-                    if (auto1.hubraum > auto2.hubraum)
-                    {
-                        Farbe_setzen(lblHubraumWert1, lblHubraumWert2);
-                    }
-                    else if (auto1.hubraum < auto2.hubraum)
-                    {
-                        Farbe_setzen(lblHubraumWert2, lblHubraumWert1);
-                        auto1_groesser = false;
+                        lbl_zy_wert1.BackColor = Color.LightCoral;
+                        lbl_zy_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
                     }
                     break;
-                case 5:
-                    if (auto1.beschleunigung > auto2.beschleunigung)
+                case "h":
+                    if (auto_x.hubraum > auto_y.hubraum)
                     {
-                        Farbe_setzen(lblBeschleunigungWert1, lblBeschleunigungWert2);
+                        lbl_h_wert1.BackColor = Color.Chartreuse;
+                        lbl_h_wert2.BackColor = Color.LightCoral;
                     }
-                    else if (auto1.beschleunigung < auto2.beschleunigung)
+                    else
                     {
-                        Farbe_setzen(lblBeschleunigungWert2, lblBeschleunigungWert1);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 6:
-                    if (auto1.zuladung > auto2.zuladung)
-                    {
-                        Farbe_setzen(lblZuladungWert1, lblZuladungWert2);
-                    }
-                    else if (auto1.zuladung < auto2.zuladung)
-                    {
-                        Farbe_setzen(lblBeschleunigungWert2, lblBeschleunigungWert1);
-                        auto1_groesser = false;
+                        lbl_h_wert1.BackColor = Color.LightCoral;
+                        lbl_h_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
                     }
                     break;
-                case 7:
-                    if (auto1.ladevolumen > auto2.ladevolumen)
+                case "b":
+                    if (auto_x.beschleunigung > auto_y.beschleunigung)
                     {
-                        Farbe_setzen(lblLadevolumenWert1, lblLadevolumenWert2);
+                        lbl_b_wert1.BackColor = Color.Chartreuse;
+                        lbl_b_wert2.BackColor = Color.LightCoral;
                     }
-                    else if (auto1.ladevolumen < auto2.ladevolumen)
+                    else
                     {
-                        Farbe_setzen(lblLadevolumenWert2, lblLadevolumenWert1);
-                        auto1_groesser = false;
+                        lbl_b_wert1.BackColor = Color.LightCoral;
+                        lbl_b_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "zu":
+                    if (auto_x.zuladung > auto_y.zuladung)
+                    {
+                        lbl_zu_wert1.BackColor = Color.Chartreuse;
+                        lbl_zu_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_zu_wert1.BackColor = Color.LightCoral;
+                        lbl_zu_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
+                    }
+                    break;
+                case "la":
+                    if (auto_x.ladevolumen > auto_y.ladevolumen)
+                    {
+                        lbl_la_wert1.BackColor = Color.Chartreuse;
+                        lbl_la_wert2.BackColor = Color.LightCoral;
+                    }
+                    else
+                    {
+                        lbl_la_wert1.BackColor = Color.LightCoral;
+                        lbl_la_wert2.BackColor = Color.Chartreuse;
+                        auto_x_groesser = false;
                     }
                     break;
             }
-            return auto1_groesser;
+            return auto_x_groesser;
         }
 
         private void Farbe_setzen(Label lblGewonnen, Label lblVerloren )
@@ -251,34 +234,21 @@ namespace Auto_Quartett_WindowsForms
             lblGewonnen.BackColor = Color.Chartreuse;
             lblVerloren.BackColor = Color.LightCoral;
         }
-
-        private void btnNeu_Click(object sender, EventArgs e)
-        {
-            panelAuto1.Visible = false;
-            panelAuto2.Visible = false;
-
-            Label[] auto1 = new Label[8] { lblGeschwindigkeitWert1, lblLeistungWert1, lblVerbrauchWert1, lblZylinderWert1,
-            lblHubraumWert1,lblBeschleunigungWert1,lblZuladungWert1,lblLadevolumenWert1 };
-            Label[] auto2 = new Label[8] { lblGeschwindigkeitWert2, lblLeistungWert2, lblVerbrauchWert2, lblZylinderWert2,
-            lblHubraumWert2,lblBeschleunigungWert2,lblZuladungWert2,lblLadevolumenWert2 };
-            for (int i = 0; i < 8; i++)
-            {
-                LabelFarbe_zuruecksetzen(auto1[i]);
-                LabelFarbe_zuruecksetzen(auto2[i]);
-            }
-
-            cbAuswahlWert.Enabled = true;
-            cbAuswahlWert.SelectedIndex = -1;
-            cbAuswahlWert.Visible = false;
-            lblAuswahlVergleichswert.Visible = false;
-            lblGewonnenVerloren.Visible = false;
-            btnVergleichen.Enabled = true;
-        }
-
-        private void LabelFarbe_zuruecksetzen(Label lblZurücksetzen)
-        {
-            lblZurücksetzen.BackColor = Color.White;
-        }
+        //Farbe_setzen(auto_x_groesser, 1);
+        //public void farbe_setzen(label vglwert1, label vglwert2, bool x_gr_y, int i)
+        //{
+        //    if (x_gr_y)
+        //    {
+        //        vglwert1[i].backcolor = color.chartreuse;
+        //        vglwert2[i].backcolor = color.lightcoral;
+        //    }
+        //    else
+        //    {
+        //        vglwert1[i].backcolor = color.lightcoral;
+        //        vglwert2[i].backcolor = color.chartreuse;
+        //    }
+        //}
+        //Wenn auf den jeweiligen Button geklickt wird, dann wird das "vergleichsfeld" gesetzt
 
         /*public bool Farbe_setzen( bool groesser)
         {
