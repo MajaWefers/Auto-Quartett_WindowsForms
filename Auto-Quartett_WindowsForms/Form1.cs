@@ -112,9 +112,10 @@ namespace Auto_Quartett_WindowsForms
                 feld++;
             }
         }
-
+        private void vergleichen<T>(Autokarte auto1, Func<Autokarte, T> eigenschaft) { }
         public bool Vergleiche_Wert(Autokarte auto_x, Autokarte auto_y, string vergleichsfeld)
         {
+            vergleichen(auto1, a => a.geschwindigkeit);
             //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto_x_groesser = true;
