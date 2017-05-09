@@ -1,9 +1,0 @@
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\bin\Debug\Auto-Quartett_WindowsForms.exe.config
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto-Quartett_WindowsForms.csprojResolveAssemblyReference.cache
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto_Quartett_WindowsForms.Form1.resources
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto_Quartett_WindowsForms.Properties.Resources.resources
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto-Quartett_WindowsForms.csproj.GenerateResource.Cache
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\bin\Debug\Auto-Quartett_WindowsForms.exe
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\bin\Debug\Auto-Quartett_WindowsForms.pdb
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto-Quartett_WindowsForms.exe
-C:\Users\M_Wb\Desktop\C#_Projekte\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms\obj\Debug\Auto-Quartett_WindowsForms.pdb
