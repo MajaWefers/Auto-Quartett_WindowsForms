@@ -138,10 +138,8 @@ namespace Auto_Quartett_WindowsForms
             return vergleichsfeld;
         }
 
-        //private void vergleichen<T>(Autokarte autoX, Func<Autokarte, T> eigenschaft) { }
         public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
-        {
-            //vergleichen(autos[0], a => a.geschwindigkeit);
+        {            
             //Ob der Wert von auto_x grösser als von auto_y ist, wird mit "auto_x_groesser" zurückgegeben.
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto1_groesser = true;
@@ -279,24 +277,6 @@ namespace Auto_Quartett_WindowsForms
         {
             lblZurücksetzen.BackColor = Color.White;
         }
-
-        /*public bool Farbe_setzen( bool groesser)
-        {
-            if (groesser)
-            {
-                if (groesser)
-                { Console.ForegroundColor = ConsoleColor.Green; }
-                else
-                { Console.ForegroundColor = ConsoleColor.Red; }
-            }
-            if (auto_xy == "auto_y")
-            {
-                if (groesser)
-                { Console.ForegroundColor = ConsoleColor.Red; }
-                else
-                { Console.ForegroundColor = ConsoleColor.Green; }
-            }
-            return groesser;
-        }*/
+        
     }
 }
