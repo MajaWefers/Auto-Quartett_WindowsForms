@@ -17,7 +17,7 @@ namespace Auto_Quartett_WindowsForms
             InitializeComponent();
         }
 
-        //TODO Variablennamen ausformulieren/angleichen
+        //TODO MB: Gleichstand
 
         Autokarte[] autos = new Autokarte[] 
         {
@@ -98,6 +98,7 @@ namespace Auto_Quartett_WindowsForms
                 zufall2 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
             } while (zufall1 == zufall2);
 
+            //Vorsorglich einen (weiteren) Vergleich verhindern
             cbAuswahlWert.Enabled = false;
 
             if (cbAuswahlWert.SelectedIndex != -1)
@@ -106,6 +107,7 @@ namespace Auto_Quartett_WindowsForms
             }
             else
             {
+                //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden
                 cbAuswahlWert.Enabled = true;
             }
             
@@ -128,11 +130,12 @@ namespace Auto_Quartett_WindowsForms
         public int Vergleichswert_ermitteln()
         {
             int feld = 0;
-            vergleichsfeld = -1;
             for (int i = 0; i < vergleich.Length-1 ; i++)
             {
                 if (cbAuswahlWert.SelectedItem == cbAuswahlWert.Items[i])
-                { vergleichsfeld = vergleich[feld]; }
+                {
+                    vergleichsfeld = vergleich[feld];
+                }
                 feld++;
             }
             return vergleichsfeld;
@@ -252,28 +255,30 @@ namespace Auto_Quartett_WindowsForms
 
         private void btnNeu_Click(object sender, EventArgs e)
         {
+            //Zurücksetzen von relevanten Eigenschaften
             panelAuto1.Visible = false;
             panelAuto2.Visible = false;
 
+            cbAuswahlWert.Enabled = true;
+            cbAuswahlWert.SelectedIndex = -1; //keine Auswahl in der ComboBox
+            cbAuswahlWert.Visible = false;
+            lblAuswahlVergleichswert.Visible = false;
+            lblGewonnenVerloren.Visible = false;
+            btnVergleichen.Enabled = true;
+
+            //Zwei Arrays der Wert-Labels werden erstellt, um die Farben in einer Schleife zurücksetzen zu können
             Label[] auto1 = new Label[8] { lblGeschwindigkeitWert1, lblLeistungWert1, lblVerbrauchWert1, lblZylinderWert1,
             lblHubraumWert1,lblBeschleunigungWert1,lblZuladungWert1,lblLadevolumenWert1 };
             Label[] auto2 = new Label[8] { lblGeschwindigkeitWert2, lblLeistungWert2, lblVerbrauchWert2, lblZylinderWert2,
             lblHubraumWert2,lblBeschleunigungWert2,lblZuladungWert2,lblLadevolumenWert2 };
             for (int i = 0; i < 8; i++)
             {
-                LabelFarbe_zuruecksetzen(auto1[i]);
-                LabelFarbe_zuruecksetzen(auto2[i]);
+                LabelFarbeZuruecksetzen(auto1[i]);
+                LabelFarbeZuruecksetzen(auto2[i]);
             }
-
-            cbAuswahlWert.Enabled = true;
-            cbAuswahlWert.SelectedIndex = -1;
-            cbAuswahlWert.Visible = false;
-            lblAuswahlVergleichswert.Visible = false;
-            lblGewonnenVerloren.Visible = false;
-            btnVergleichen.Enabled = true;
         }
 
-        private void LabelFarbe_zuruecksetzen(Label lblZurücksetzen)
+        private void LabelFarbeZuruecksetzen(Label lblZurücksetzen)
         {
             lblZurücksetzen.BackColor = Color.White;
         }
