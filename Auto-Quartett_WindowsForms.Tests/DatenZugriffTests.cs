@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Auto_Quartett_WindowsForms.Tests
 {
@@ -21,6 +22,30 @@ namespace Auto_Quartett_WindowsForms.Tests
             Assert.AreEqual(3, ergebnis[0].verbrauch);
             Assert.AreEqual(8, ergebnis[0].ladevolumen);
             Assert.AreEqual(123, ergebnis[1].geschwindigkeit);
+        }
+
+        [TestMethod]
+        public void SpeichereKartenTest()
+        {
+            //Arrange
+            string dateiPfad = Path.Combine(Path.GetTempPath(), "SchreibTest.xml");
+            DatenZugriff datenZugriff = new DatenZugriff(dateiPfad);
+            Autokarte[] kartenZumSpeichern = new[]
+            {
+                new Autokarte("Smart", 1, 2, 3, 4, 5, 6, 7, 8),
+                new Autokarte("bla", 1, 2, 3, 4, 5, 6, 7, 8),
+            };
+            string erwarteterDateiInhalt = File.ReadAllText(@"..\..\TestDateien\ErwarteteKartenDatei.xml");
+
+            //Act
+            datenZugriff.SpeichereKarten(kartenZumSpeichern);
+
+            //Assert
+            string tatsächlicherDateiInhalt = File.ReadAllText(dateiPfad);
+            Assert.AreEqual(erwarteterDateiInhalt, tatsächlicherDateiInhalt);
+
+            //Clean up
+            File.Delete(dateiPfad);
         }
     }
 }

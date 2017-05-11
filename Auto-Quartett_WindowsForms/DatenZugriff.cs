@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Text;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace Auto_Quartett_WindowsForms
@@ -19,6 +21,14 @@ namespace Auto_Quartett_WindowsForms
             using (var reader = new StreamReader(this.dateiPfad))
             {
                 return (Autokarte[]) this.xmlSerializer.Deserialize(reader);
+            }
+        }
+
+        public void SpeichereKarten(Autokarte[] karten)
+        {
+            using (var streamWriter= new StreamWriter(this.dateiPfad))
+            {
+                this.xmlSerializer.Serialize(streamWriter, karten);
             }
         }
     }

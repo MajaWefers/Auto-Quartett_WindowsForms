@@ -55,7 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestDateien\TestKartenDatei.xml" />
+    <Content Include="TestDateien\ErwarteteKartenDatei.xml" />
+    <Content Include="TestDateien\TestKartenDatei.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Auto-Quartett_WindowsForms\Auto-Quartett_WindowsForms.csproj">

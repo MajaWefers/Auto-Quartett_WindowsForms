@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Autokarten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Autokarte>
-    <modell>Mini</modell>
+    <modell>Smart</modell>
     <geschwindigkeit>1</geschwindigkeit>
     <leistung>2</leistung>
     <verbrauch>3</verbrauch>
@@ -12,7 +12,14 @@
     <ladevolumen>8</ladevolumen>
   </Autokarte>
   <Autokarte>
-    <modell>Hummer</modell>
-    <geschwindigkeit>123</geschwindigkeit>
+    <modell>bla</modell>
+    <geschwindigkeit>1</geschwindigkeit>
+    <leistung>2</leistung>
+    <verbrauch>3</verbrauch>
+    <zylinder>4</zylinder>
+    <hubraum>5</hubraum>
+    <beschleunigung>6</beschleunigung>
+    <zuladung>7</zuladung>
+    <ladevolumen>8</ladevolumen>
   </Autokarte>
 </Autokarten>
