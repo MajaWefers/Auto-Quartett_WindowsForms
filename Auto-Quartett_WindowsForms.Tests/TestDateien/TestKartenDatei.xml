@@ -1,0 +1,17 @@
+﻿<Autokarten version="1.0" encoding="utf-8">
+  <Autokarte>
+    <modell>Mini</modell>
+    <geschwindigkeit>1</geschwindigkeit>
+    <leistung>2</leistung>
+    <verbrauch>3</verbrauch>
+    <zylinder>4</zylinder>
+    <hubraum>5</hubraum>
+    <beschleunigung>6</beschleunigung>
+    <zuladung>7</zuladung>
+    <ladevolumen>8</ladevolumen>
+  </Autokarte>
+  <Autokarte>
+    <modell>Hummer</modell>
+    <geschwindigkeit>123</geschwindigkeit>
+  </Autokarte>
+</Autokarten>
