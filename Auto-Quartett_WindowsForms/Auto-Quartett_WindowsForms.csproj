@@ -48,7 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autokarte.cs" />
+    <Compile Include="AutokartenVergleich.cs" />
     <Compile Include="DatenZugriff.cs" />
+    <Compile Include="EigenschaftVergleich.cs" />
+    <Compile Include="Ergebnis.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,12 +14,14 @@ namespace Auto_Quartett_WindowsForms
     {
         private Autokarte[] autos;
         private readonly DatenZugriff datenZugriff;
+        private readonly AutokartenVergleich vergleich;
         private readonly Label[] LabelsAuto1;
         private readonly Label[] LabelsAuto2;
 
-        public Form1(DatenZugriff datenZugriff)
+        public Form1(DatenZugriff datenZugriff, AutokartenVergleich vergleich)
         {
             this.datenZugriff = datenZugriff;
+            this.vergleich = vergleich;
             this.initialisiereAutos();
 
             InitializeComponent();
@@ -115,128 +117,28 @@ namespace Auto_Quartett_WindowsForms
             {
                 //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden.
                 cbAuswahlWert.Enabled = true;
+                //Der Vergleich soll erst bei einer gültigen Auswahl ausgefhrt werden
+                return;
             }
 
             //Vergleich der Werte
-            bool groesser = Vergleiche_Wert(autos[zufall1], autos[zufall2], vergleichsfeld);
-
-            lblGewonnenVerloren.Visible = true;
-            if (groesser)
+            Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
+            switch (vergleichsErgebnis)
             {
-                lblGewonnenVerloren.ForeColor = Color.Blue;
-                lblGewonnenVerloren.Text = "Sie haben GEWONNEN!";
-            }
-            else
-            {
-                lblGewonnenVerloren.ForeColor = Color.Red;
-                lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
-            }
-        }
-
-        public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
-        {
-            //Ob der Wert von auto1 grösser als von auto_y ist, wird mit "auto1_groesser" zurückgegeben.
-            //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
-            bool auto1_groesser = true;
-
-            switch (vergleichsfeld)
-            {
-                case 0:
-                    if (auto1.geschwindigkeit > auto2.geschwindigkeit)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    //Wenn else-Zweig erreicht wird, ist auto1 grösser, und somit ist "auto1_groesser" "false".
-                    else if (auto1.geschwindigkeit < auto2.geschwindigkeit)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    else
-                    {
-                        //gleichstand = true;
-                    }
+                case Ergebnis.Gleichstand:
+                    //TODO: Bei Gleichstand irgendwie die Eigenschaften färben und in lblGewonnenVerloren anzeigen (und dieses Label umbenennen)
                     break;
-                case 1:
-                    if (auto1.leistung > auto2.leistung)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.leistung < auto2.leistung)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
+                case Ergebnis.Gewinn:
+                    Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
+                    lblGewonnenVerloren.ForeColor = Color.Blue;
+                    lblGewonnenVerloren.Text = "Sie haben GEWONNEN!";
                     break;
-                case 2:
-                    //"Verbrauch" ist die Ausnahme: Der kleinere Wert gewinnt.
-                    if (auto1.verbrauch < auto2.verbrauch)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.verbrauch > auto2.verbrauch)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 3:
-                    if (auto1.zylinder > auto2.zylinder)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.zylinder < auto2.zylinder)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 4:
-                    if (auto1.hubraum > auto2.hubraum)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.hubraum < auto2.hubraum)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 5:
-                    if (auto1.beschleunigung > auto2.beschleunigung)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.beschleunigung < auto2.beschleunigung)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 6:
-                    if (auto1.zuladung > auto2.zuladung)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.zuladung < auto2.zuladung)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
-                    break;
-                case 7:
-                    if (auto1.ladevolumen > auto2.ladevolumen)
-                    {
-                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
-                    }
-                    else if (auto1.ladevolumen < auto2.ladevolumen)
-                    {
-                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
-                        auto1_groesser = false;
-                    }
+                case Ergebnis.Niederlage:
+                    Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
+                    lblGewonnenVerloren.ForeColor = Color.Red;
+                    lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
                     break;
             }
-            return auto1_groesser;
         }
 
         private void Farbe_setzen(Label lblGewonnen, Label lblVerloren)
@@ -270,6 +172,5 @@ namespace Auto_Quartett_WindowsForms
         {
             lblZurücksetzen.BackColor = Color.White;
         }
-
     }
 }
