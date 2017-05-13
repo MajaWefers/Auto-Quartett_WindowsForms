@@ -13,8 +13,9 @@ namespace Auto_Quartett_WindowsForms
     public partial class Form1 : Form
     {
         private Autokarte[] autos;
-
         private readonly DatenZugriff datenZugriff;
+        private readonly Label[] LabelsAuto1;
+        private readonly Label[] LabelsAuto2;
 
         public Form1(DatenZugriff datenZugriff)
         {
@@ -22,6 +23,11 @@ namespace Auto_Quartett_WindowsForms
             this.initialisiereAutos();
 
             InitializeComponent();
+
+            LabelsAuto1 = new Label[8] { lblGeschwindigkeitWert1, lblLeistungWert1, lblVerbrauchWert1, lblZylinderWert1,
+                lblHubraumWert1,lblBeschleunigungWert1,lblZuladungWert1,lblLadevolumenWert1 };
+            LabelsAuto2 = new Label[8] { lblGeschwindigkeitWert2, lblLeistungWert2, lblVerbrauchWert2, lblZylinderWert2,
+                lblHubraumWert2,lblBeschleunigungWert2,lblZuladungWert2,lblLadevolumenWert2 };
         }
 
         private void initialisiereAutos()
@@ -30,7 +36,7 @@ namespace Auto_Quartett_WindowsForms
 
             //TODO: Da wir wahrscheinlich das Array bei jeder neuen Karte vergrößern (also neu erstellen)
             //wollen, kann das dann raus
-            this.autos = gespeicherteKarten.Concat(new[] {new Autokarte()}).ToArray();
+            this.autos = gespeicherteKarten.Concat(new[] { new Autokarte() }).ToArray();
         }
 
         //TODO MB: Gleichstand
@@ -41,13 +47,13 @@ namespace Auto_Quartett_WindowsForms
         public static int zufall1;
         public static int zufall2;
 
-        public void autokarten_anzeigen( Autokarte auto1, Autokarte auto2 )
+        public void autokarten_anzeigen(Autokarte auto1, Autokarte auto2)
         {
             Autokarte1_anzeigen(auto1);
             Autokarte2_anzeigen(auto2);
         }
 
-        public void Autokarte1_anzeigen( Autokarte auto1 )
+        public void Autokarte1_anzeigen(Autokarte auto1)
         {
             panelAuto1.Visible = true;
             lblModell1.Text = auto1.modell.ToUpper();
@@ -61,7 +67,7 @@ namespace Auto_Quartett_WindowsForms
             lblLadevolumenWert1.Text = auto1.ladevolumen.ToString();
         }
 
-        public void Autokarte2_anzeigen( Autokarte auto2 )
+        public void Autokarte2_anzeigen(Autokarte auto2)
         {
             panelAuto2.Visible = true;
             lblModell2.Text = auto2.modell.ToUpper();
@@ -79,14 +85,14 @@ namespace Auto_Quartett_WindowsForms
         {
             Auswahl_anzeigen();
             zufall1 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
-            Autokarte1_anzeigen( autos[zufall1] );
+            Autokarte1_anzeigen(autos[zufall1]);
             btnVergleichen.Enabled = false;
         }
 
         public void Auswahl_anzeigen()
         {
             lblAuswahlVergleichswert.Visible = true;
-            cbAuswahlWert.Visible            = true;
+            cbAuswahlWert.Visible = true;
         }
 
         private void cbAuswahl_Wert_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,7 +116,7 @@ namespace Auto_Quartett_WindowsForms
                 //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden.
                 cbAuswahlWert.Enabled = true;
             }
-            
+
             //Vergleich der Werte
             bool groesser = Vergleiche_Wert(autos[zufall1], autos[zufall2], vergleichsfeld);
 
@@ -126,9 +132,9 @@ namespace Auto_Quartett_WindowsForms
                 lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
             }
         }
-        
+
         public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
-        {            
+        {
             //Ob der Wert von auto1 grösser als von auto_y ist, wird mit "auto1_groesser" zurückgegeben.
             //So kann gleichzeitig ermittelt werden, ob der Spieler gewonnen/verloren hat.
             bool auto1_groesser = true;
@@ -138,12 +144,12 @@ namespace Auto_Quartett_WindowsForms
                 case 0:
                     if (auto1.geschwindigkeit > auto2.geschwindigkeit)
                     {
-                        Farbe_setzen(lblGeschwindigkeitWert1, lblGeschwindigkeitWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     //Wenn else-Zweig erreicht wird, ist auto1 grösser, und somit ist "auto1_groesser" "false".
                     else if (auto1.geschwindigkeit < auto2.geschwindigkeit)
                     {
-                        Farbe_setzen(lblGeschwindigkeitWert2, lblGeschwindigkeitWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     else
@@ -154,11 +160,11 @@ namespace Auto_Quartett_WindowsForms
                 case 1:
                     if (auto1.leistung > auto2.leistung)
                     {
-                        Farbe_setzen(lblLeistungWert1, lblLeistungWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.leistung < auto2.leistung)
                     {
-                        Farbe_setzen(lblLeistungWert2, lblLeistungWert1); ;
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
@@ -166,66 +172,66 @@ namespace Auto_Quartett_WindowsForms
                     //"Verbrauch" ist die Ausnahme: Der kleinere Wert gewinnt.
                     if (auto1.verbrauch < auto2.verbrauch)
                     {
-                        Farbe_setzen(lblVerbrauchWert1, lblVerbrauchWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.verbrauch > auto2.verbrauch)
                     {
-                        Farbe_setzen(lblVerbrauchWert2, lblVerbrauchWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
                 case 3:
                     if (auto1.zylinder > auto2.zylinder)
                     {
-                        Farbe_setzen(lblZylinderWert1, lblZylinderWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.zylinder < auto2.zylinder)
                     {
-                        Farbe_setzen(lblZylinderWert2, lblZylinderWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
                 case 4:
                     if (auto1.hubraum > auto2.hubraum)
                     {
-                        Farbe_setzen(lblHubraumWert1, lblHubraumWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.hubraum < auto2.hubraum)
                     {
-                        Farbe_setzen(lblHubraumWert2, lblHubraumWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
                 case 5:
                     if (auto1.beschleunigung > auto2.beschleunigung)
                     {
-                        Farbe_setzen(lblBeschleunigungWert1, lblBeschleunigungWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.beschleunigung < auto2.beschleunigung)
                     {
-                        Farbe_setzen(lblBeschleunigungWert2, lblBeschleunigungWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
                 case 6:
                     if (auto1.zuladung > auto2.zuladung)
                     {
-                        Farbe_setzen(lblZuladungWert1, lblZuladungWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.zuladung < auto2.zuladung)
                     {
-                        Farbe_setzen(lblBeschleunigungWert2, lblBeschleunigungWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
                 case 7:
                     if (auto1.ladevolumen > auto2.ladevolumen)
                     {
-                        Farbe_setzen(lblLadevolumenWert1, lblLadevolumenWert2);
+                        Farbe_setzen(this.LabelsAuto1[vergleichsfeld], this.LabelsAuto2[vergleichsfeld]);
                     }
                     else if (auto1.ladevolumen < auto2.ladevolumen)
                     {
-                        Farbe_setzen(lblLadevolumenWert2, lblLadevolumenWert1);
+                        Farbe_setzen(this.LabelsAuto2[vergleichsfeld], this.LabelsAuto1[vergleichsfeld]);
                         auto1_groesser = false;
                     }
                     break;
@@ -233,7 +239,7 @@ namespace Auto_Quartett_WindowsForms
             return auto1_groesser;
         }
 
-        private void Farbe_setzen(Label lblGewonnen, Label lblVerloren )
+        private void Farbe_setzen(Label lblGewonnen, Label lblVerloren)
         {
             lblGewonnen.BackColor = Color.Chartreuse;
             lblVerloren.BackColor = Color.LightCoral;
@@ -252,15 +258,11 @@ namespace Auto_Quartett_WindowsForms
             lblGewonnenVerloren.Visible = false;
             btnVergleichen.Enabled = true;
 
-            //Zwei Arrays der Wert-Labels werden erstellt, um die Farben in einer Schleife zurücksetzen zu können.
-            Label[] auto1 = new Label[8] { lblGeschwindigkeitWert1, lblLeistungWert1, lblVerbrauchWert1, lblZylinderWert1,
-            lblHubraumWert1,lblBeschleunigungWert1,lblZuladungWert1,lblLadevolumenWert1 };
-            Label[] auto2 = new Label[8] { lblGeschwindigkeitWert2, lblLeistungWert2, lblVerbrauchWert2, lblZylinderWert2,
-            lblHubraumWert2,lblBeschleunigungWert2,lblZuladungWert2,lblLadevolumenWert2 };
+
             for (int i = 0; i < 8; i++)
             {
-                LabelFarbeZuruecksetzen(auto1[i]);
-                LabelFarbeZuruecksetzen(auto2[i]);
+                LabelFarbeZuruecksetzen(this.LabelsAuto1[i]);
+                LabelFarbeZuruecksetzen(this.LabelsAuto2[i]);
             }
         }
 
@@ -268,6 +270,6 @@ namespace Auto_Quartett_WindowsForms
         {
             lblZurücksetzen.BackColor = Color.White;
         }
-        
+
     }
 }
