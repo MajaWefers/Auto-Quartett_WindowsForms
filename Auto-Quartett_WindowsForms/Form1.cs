@@ -41,9 +41,6 @@ namespace Auto_Quartett_WindowsForms
         public static int zufall1;
         public static int zufall2;
 
-        public static int vergleichsfeld = 0;
-        public static int[] vergleich = new int[8];
-
         public void autokarten_anzeigen( Autokarte auto1, Autokarte auto2 )
         {
             Autokarte1_anzeigen(auto1);
@@ -80,11 +77,6 @@ namespace Auto_Quartett_WindowsForms
 
         private void btnVergleichen_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; i++)
-            {
-                //Zahl pro Eigenschaft
-                vergleich[i] = i;
-            }
             Auswahl_anzeigen();
             zufall1 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
             Autokarte1_anzeigen( autos[zufall1] );
@@ -99,7 +91,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void cbAuswahl_Wert_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vergleichsfeld = Vergleichswert_ermitteln();
+            int vergleichsfeld = cbAuswahlWert.SelectedIndex;
 
             do
             {
@@ -109,7 +101,7 @@ namespace Auto_Quartett_WindowsForms
             //Vorsorglich einen (weiteren) Vergleich verhindern
             cbAuswahlWert.Enabled = false;
 
-            if (cbAuswahlWert.SelectedIndex != -1)
+            if (vergleichsfeld != -1)
             {
                 Autokarte2_anzeigen(autos[zufall2]);
             }
@@ -134,21 +126,7 @@ namespace Auto_Quartett_WindowsForms
                 lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
             }
         }
-
-        public int Vergleichswert_ermitteln()
-        {
-            int feld = 0;
-            for (int i = 0; i < vergleich.Length-1 ; i++)
-            {
-                if (cbAuswahlWert.SelectedItem == cbAuswahlWert.Items[i])
-                {
-                    vergleichsfeld = vergleich[feld];
-                }
-                feld++;
-            }
-            return vergleichsfeld;
-        }
-
+        
         public bool Vergleiche_Wert(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {            
             //Ob der Wert von auto1 grösser als von auto_y ist, wird mit "auto1_groesser" zurückgegeben.
