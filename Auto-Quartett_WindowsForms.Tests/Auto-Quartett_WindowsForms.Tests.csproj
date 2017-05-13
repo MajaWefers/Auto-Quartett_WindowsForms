@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DatenZugriffTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlErsteller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
