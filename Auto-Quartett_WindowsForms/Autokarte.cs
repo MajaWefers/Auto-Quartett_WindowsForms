@@ -17,7 +17,7 @@ namespace Auto_Quartett_WindowsForms
         public double beschleunigung;
         public int zuladung;
         public int ladevolumen;
-
+        
         public Autokarte(string modell, int geschwindigkeit, int leistung, double verbrauch,
                   int zylinder, double hubraum, double beschleunigung, int zuladung, int ladevolumen)
         {

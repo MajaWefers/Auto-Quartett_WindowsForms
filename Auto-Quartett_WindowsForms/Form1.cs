@@ -12,20 +12,28 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private Autokarte[] autos;
+
+        private readonly DatenZugriff datenZugriff;
+
+        public Form1(DatenZugriff datenZugriff)
         {
+            this.datenZugriff = datenZugriff;
+            this.initialisiereAutos();
+
             InitializeComponent();
         }
 
-        //TODO MB: Gleichstand
-
-        Autokarte[] autos = new Autokarte[] 
+        private void initialisiereAutos()
         {
-            new Autokarte("VW Phaeton", 250, 309, 15.7, 12, 6, 6.7, 600, 500),
-            new Autokarte("VW New Beetle", 185, 85, 8.7, 4, 2, 10.9, 419, 527),
-            new Autokarte("VW Touareg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555),
-            new Autokarte()
-        };
+            Autokarte[] gespeicherteKarten = this.datenZugriff.LadeKarten();
+
+            //TODO: Da wir wahrscheinlich das Array bei jeder neuen Karte vergrößern (also neu erstellen)
+            //wollen, kann das dann raus
+            this.autos = gespeicherteKarten.Concat(new[] {new Autokarte()}).ToArray();
+        }
+
+        //TODO MB: Gleichstand
 
         //Variablen für den VERGLEICH
         //Zufallszahlen für die beim Vergleich angezeigten Autos

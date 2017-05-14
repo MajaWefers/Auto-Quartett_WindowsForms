@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Autokarten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Autokarte>
+    <modell>VW Phaeton</modell>
+    <geschwindigkeit>250</geschwindigkeit>
+    <leistung>309</leistung>
+    <verbrauch>15.7</verbrauch>
+    <zylinder>12</zylinder>
+    <hubraum>6</hubraum>
+    <beschleunigung>6.7</beschleunigung>
+    <zuladung>600</zuladung>
+    <ladevolumen>500</ladevolumen>
+  </Autokarte>
+  <Autokarte>
+    <modell>VW New Beetle</modell>
+    <geschwindigkeit>185</geschwindigkeit>
+    <leistung>85</leistung>
+    <verbrauch>8.7</verbrauch>
+    <zylinder>4</zylinder>
+    <hubraum>2</hubraum>
+    <beschleunigung>10.9</beschleunigung>
+    <zuladung>419</zuladung>
+    <ladevolumen>527</ladevolumen>
+  </Autokarte>
+  <Autokarte>
+    <modell>VW Touareg</modell>
+    <geschwindigkeit>225</geschwindigkeit>
+    <leistung>230</leistung>
+    <verbrauch>12.2</verbrauch>
+    <zylinder>10</zylinder>
+    <hubraum>4.9</hubraum>
+    <beschleunigung>7.8</beschleunigung>
+    <zuladung>600</zuladung>
+    <ladevolumen>555</ladevolumen>
+  </Autokarte>
+</Autokarten>
