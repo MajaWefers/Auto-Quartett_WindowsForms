@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Autokarte.cs" />
     <Compile Include="AutokartenVergleich.cs" />
+    <Compile Include="ChancenBerechner.cs" />
     <Compile Include="DatenZugriff.cs" />
     <Compile Include="EigenschaftVergleich.cs" />
     <Compile Include="Ergebnis.cs" />
