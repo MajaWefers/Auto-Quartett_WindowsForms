@@ -38,6 +38,15 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ColName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColGeschwindigkeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColVerbrauch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColZylinder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColLeistung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColHubraum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColBeschleunigung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColZuladung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColLadevolumen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,11 +125,69 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColName,
+            this.ColGeschwindigkeit,
+            this.ColVerbrauch,
+            this.ColZylinder,
+            this.ColLeistung,
+            this.ColHubraum,
+            this.ColBeschleunigung,
+            this.ColZuladung,
+            this.ColLadevolumen});
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(948, 358);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ColName
+            // 
+            this.ColName.Tag = "";
+            this.ColName.Text = "Name";
+            this.ColName.Width = 105;
+            // 
+            // ColGeschwindigkeit
+            // 
+            this.ColGeschwindigkeit.Tag = "";
+            this.ColGeschwindigkeit.Text = "Geschwindigkeit";
+            this.ColGeschwindigkeit.Width = 105;
+            // 
+            // ColVerbrauch
+            // 
+            this.ColVerbrauch.Text = "Verbrauch";
+            this.ColVerbrauch.Width = 105;
+            // 
+            // ColZylinder
+            // 
+            this.ColZylinder.Text = "Zylinder";
+            this.ColZylinder.Width = 105;
+            // 
+            // ColLeistung
+            // 
+            this.ColLeistung.Text = "Leistung";
+            this.ColLeistung.Width = 105;
+            // 
+            // ColHubraum
+            // 
+            this.ColHubraum.Text = "Hubraum";
+            this.ColHubraum.Width = 105;
+            // 
+            // ColBeschleunigung
+            // 
+            this.ColBeschleunigung.Text = "Beschleunigung";
+            this.ColBeschleunigung.Width = 105;
+            // 
+            // ColZuladung
+            // 
+            this.ColZuladung.Text = "Zuladung";
+            this.ColZuladung.Width = 105;
+            // 
+            // ColLadevolumen
+            // 
+            this.ColLadevolumen.Text = "Ladevolumen";
+            this.ColLadevolumen.Width = 105;
             // 
             // label1
             // 
@@ -277,5 +344,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSpeichern;
         private System.Windows.Forms.Button btnZurueck;
+        public System.Windows.Forms.ColumnHeader ColName;
+        private System.Windows.Forms.ColumnHeader ColGeschwindigkeit;
+        private System.Windows.Forms.ColumnHeader ColVerbrauch;
+        private System.Windows.Forms.ColumnHeader ColZylinder;
+        private System.Windows.Forms.ColumnHeader ColLeistung;
+        private System.Windows.Forms.ColumnHeader ColHubraum;
+        private System.Windows.Forms.ColumnHeader ColBeschleunigung;
+        private System.Windows.Forms.ColumnHeader ColZuladung;
+        private System.Windows.Forms.ColumnHeader ColLadevolumen;
     }
 }
