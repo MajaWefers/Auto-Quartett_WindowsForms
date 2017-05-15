@@ -47,24 +47,5 @@ namespace Auto_Quartett_WindowsForms.Tests
             //Clean up
             File.Delete(dateiPfad);
         }
-
-        //Braucht nur ein mal ausgeführt zu werden (dazu das Attribute von "Ignore" auf "TestMethod" ändern), 
-        //um im Projekt "Auto-Quartett_WindowsForms" die Datei mit den vorgegebenen Karten zu erstellen.
-        //Anschließend in den Dateieigenschaften "Copy to Output Directory" aktivieren, 
-        //damit sie beim Kompilieren im gleichen Ordner landet wie die .exe
-        [Ignore]
-        public void ErstelleVorgegebeneKarten()
-        {
-            string dateiPfad = Path.Combine(@"..\..\..\Auto-Quartett_WindowsForms\VordefinierteKarten.xml");
-            DatenZugriff datenZugriff = new DatenZugriff(dateiPfad);
-            Autokarte[] kartenZumSpeichern = new[]
-            {
-                new Autokarte("VW Phaeton", 250, 309, 15.7, 12, 6, 6.7, 600, 500),
-                new Autokarte("VW New Beetle", 185, 85, 8.7, 4, 2, 10.9, 419, 527),
-                new Autokarte("VW Touareg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555)
-            };
-
-            datenZugriff.SpeichereKarten(kartenZumSpeichern);
-        }
     }
 }

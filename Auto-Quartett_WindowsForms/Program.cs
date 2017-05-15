@@ -22,7 +22,8 @@ namespace Auto_Quartett_WindowsForms
         private static Form1 createForm1()
         {
             DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
-            return new Form1(datenZugriff);
+            AutokartenVergleich vergleich = new AutokartenVergleich();
+            return new Form1(datenZugriff, vergleich);
         }
     }
 }
