@@ -16,7 +16,8 @@ namespace Auto_Quartett_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(createForm1());
+            //Application.Run(createForm1());
+            Application.Run(new Editor());
         }
 
         private static Form1 createForm1()
