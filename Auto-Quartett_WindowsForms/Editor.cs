@@ -20,7 +20,8 @@ namespace Auto_Quartett_WindowsForms
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             
-            eintrag.marke = tbName.Text;
+            eintrag.marke = tbMarke.Text;
+            eintrag.modell = tbModell.Text;
             eintrag.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
             eintrag.leistung = Int32.Parse(tbLeistung.Text);
             eintrag.verbrauch = Double.Parse(tbVerbrauch.Text);
@@ -34,7 +35,8 @@ namespace Auto_Quartett_WindowsForms
         }
         private void RefreshView()
         {
-            tbName.Text = "";
+            tbMarke.Text = "";
+            tbModell.Text = "";
             tbGeschwindigkeit.Text = "";
             tbLeistung.Text = "";
             tbVerbrauch.Text = "";

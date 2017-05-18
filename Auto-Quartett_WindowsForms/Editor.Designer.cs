@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbMarke = new System.Windows.Forms.TextBox();
             this.tbGeschwindigkeit = new System.Windows.Forms.TextBox();
             this.tbVerbrauch = new System.Windows.Forms.TextBox();
             this.tbZylinder = new System.Windows.Forms.TextBox();
@@ -38,7 +38,8 @@
             this.tbHubraum = new System.Windows.Forms.TextBox();
             this.tbBeschleunigung = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.ColName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColMarke = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColModell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColGeschwindigkeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColVerbrauch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColZylinder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,67 +59,69 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnSpeichern = new System.Windows.Forms.Button();
             this.btnZurueck = new System.Windows.Forms.Button();
+            this.tbModell = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // tbName
+            // tbMarke
             // 
-            this.tbName.Location = new System.Drawing.Point(12, 376);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(100, 20);
-            this.tbName.TabIndex = 0;
+            this.tbMarke.Location = new System.Drawing.Point(12, 376);
+            this.tbMarke.Name = "tbMarke";
+            this.tbMarke.Size = new System.Drawing.Size(100, 20);
+            this.tbMarke.TabIndex = 0;
             // 
             // tbGeschwindigkeit
             // 
-            this.tbGeschwindigkeit.Location = new System.Drawing.Point(118, 376);
+            this.tbGeschwindigkeit.Location = new System.Drawing.Point(224, 376);
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
             this.tbGeschwindigkeit.Size = new System.Drawing.Size(100, 20);
             this.tbGeschwindigkeit.TabIndex = 1;
             // 
             // tbVerbrauch
             // 
-            this.tbVerbrauch.Location = new System.Drawing.Point(224, 376);
+            this.tbVerbrauch.Location = new System.Drawing.Point(330, 376);
             this.tbVerbrauch.Name = "tbVerbrauch";
             this.tbVerbrauch.Size = new System.Drawing.Size(100, 20);
             this.tbVerbrauch.TabIndex = 2;
             // 
             // tbZylinder
             // 
-            this.tbZylinder.Location = new System.Drawing.Point(330, 376);
+            this.tbZylinder.Location = new System.Drawing.Point(436, 376);
             this.tbZylinder.Name = "tbZylinder";
             this.tbZylinder.Size = new System.Drawing.Size(100, 20);
             this.tbZylinder.TabIndex = 3;
             // 
             // tbLeistung
             // 
-            this.tbLeistung.Location = new System.Drawing.Point(436, 376);
+            this.tbLeistung.Location = new System.Drawing.Point(542, 376);
             this.tbLeistung.Name = "tbLeistung";
             this.tbLeistung.Size = new System.Drawing.Size(100, 20);
             this.tbLeistung.TabIndex = 4;
             // 
             // tbLadevolumen
             // 
-            this.tbLadevolumen.Location = new System.Drawing.Point(860, 376);
+            this.tbLadevolumen.Location = new System.Drawing.Point(966, 376);
             this.tbLadevolumen.Name = "tbLadevolumen";
             this.tbLadevolumen.Size = new System.Drawing.Size(100, 20);
             this.tbLadevolumen.TabIndex = 5;
             // 
             // tbZuladung
             // 
-            this.tbZuladung.Location = new System.Drawing.Point(754, 376);
+            this.tbZuladung.Location = new System.Drawing.Point(860, 376);
             this.tbZuladung.Name = "tbZuladung";
             this.tbZuladung.Size = new System.Drawing.Size(100, 20);
             this.tbZuladung.TabIndex = 6;
             // 
             // tbHubraum
             // 
-            this.tbHubraum.Location = new System.Drawing.Point(542, 376);
+            this.tbHubraum.Location = new System.Drawing.Point(648, 376);
             this.tbHubraum.Name = "tbHubraum";
             this.tbHubraum.Size = new System.Drawing.Size(100, 20);
             this.tbHubraum.TabIndex = 7;
             // 
             // tbBeschleunigung
             // 
-            this.tbBeschleunigung.Location = new System.Drawing.Point(648, 376);
+            this.tbBeschleunigung.Location = new System.Drawing.Point(754, 376);
             this.tbBeschleunigung.Name = "tbBeschleunigung";
             this.tbBeschleunigung.Size = new System.Drawing.Size(100, 20);
             this.tbBeschleunigung.TabIndex = 8;
@@ -126,7 +129,8 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColName,
+            this.ColMarke,
+            this.ColModell,
             this.ColGeschwindigkeit,
             this.ColVerbrauch,
             this.ColZylinder,
@@ -137,16 +141,21 @@
             this.ColLadevolumen});
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(948, 358);
+            this.listView1.Size = new System.Drawing.Size(1054, 358);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // ColName
+            // ColMarke
             // 
-            this.ColName.Tag = "";
-            this.ColName.Text = "Name";
-            this.ColName.Width = 105;
+            this.ColMarke.Tag = "";
+            this.ColMarke.Text = "Name";
+            this.ColMarke.Width = 105;
+            // 
+            // ColModell
+            // 
+            this.ColModell.Text = "Modell";
+            this.ColModell.Width = 105;
             // 
             // ColGeschwindigkeit
             // 
@@ -192,16 +201,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 399);
+            this.label1.Location = new System.Drawing.Point(148, 399);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Name";
+            this.label1.Text = "Modell";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 399);
+            this.label2.Location = new System.Drawing.Point(230, 399);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 11;
@@ -210,7 +219,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(461, 399);
+            this.label3.Location = new System.Drawing.Point(568, 399);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 12;
@@ -219,7 +228,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(246, 399);
+            this.label4.Location = new System.Drawing.Point(351, 399);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 12;
@@ -228,7 +237,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(354, 399);
+            this.label5.Location = new System.Drawing.Point(464, 399);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 13;
@@ -237,7 +246,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(567, 399);
+            this.label6.Location = new System.Drawing.Point(668, 399);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 14;
@@ -246,7 +255,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(655, 399);
+            this.label7.Location = new System.Drawing.Point(761, 399);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 13);
             this.label7.TabIndex = 15;
@@ -255,7 +264,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(778, 399);
+            this.label8.Location = new System.Drawing.Point(882, 399);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 16;
@@ -264,7 +273,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(877, 399);
+            this.label9.Location = new System.Drawing.Point(988, 399);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 13);
             this.label9.TabIndex = 17;
@@ -272,7 +281,7 @@
             // 
             // btnSpeichern
             // 
-            this.btnSpeichern.Location = new System.Drawing.Point(804, 446);
+            this.btnSpeichern.Location = new System.Drawing.Point(912, 441);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(75, 23);
             this.btnSpeichern.TabIndex = 18;
@@ -282,18 +291,36 @@
             // 
             // btnZurueck
             // 
-            this.btnZurueck.Location = new System.Drawing.Point(885, 446);
+            this.btnZurueck.Location = new System.Drawing.Point(993, 441);
             this.btnZurueck.Name = "btnZurueck";
             this.btnZurueck.Size = new System.Drawing.Size(75, 23);
             this.btnZurueck.TabIndex = 19;
             this.btnZurueck.Text = "Zurück";
             this.btnZurueck.UseVisualStyleBackColor = true;
             // 
+            // tbModell
+            // 
+            this.tbModell.Location = new System.Drawing.Point(118, 376);
+            this.tbModell.Name = "tbModell";
+            this.tbModell.Size = new System.Drawing.Size(100, 20);
+            this.tbModell.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(38, 399);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Marke";
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 476);
+            this.ClientSize = new System.Drawing.Size(1078, 476);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.tbModell);
             this.Controls.Add(this.btnZurueck);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.label9);
@@ -314,7 +341,7 @@
             this.Controls.Add(this.tbZylinder);
             this.Controls.Add(this.tbVerbrauch);
             this.Controls.Add(this.tbGeschwindigkeit);
-            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbMarke);
             this.Name = "Editor";
             this.Text = "Editor";
             this.ResumeLayout(false);
@@ -324,7 +351,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbMarke;
         private System.Windows.Forms.TextBox tbGeschwindigkeit;
         private System.Windows.Forms.TextBox tbVerbrauch;
         private System.Windows.Forms.TextBox tbZylinder;
@@ -345,7 +372,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSpeichern;
         private System.Windows.Forms.Button btnZurueck;
-        public System.Windows.Forms.ColumnHeader ColName;
+        public System.Windows.Forms.ColumnHeader ColMarke;
         private System.Windows.Forms.ColumnHeader ColGeschwindigkeit;
         private System.Windows.Forms.ColumnHeader ColVerbrauch;
         private System.Windows.Forms.ColumnHeader ColZylinder;
@@ -354,5 +381,8 @@
         private System.Windows.Forms.ColumnHeader ColBeschleunigung;
         private System.Windows.Forms.ColumnHeader ColZuladung;
         private System.Windows.Forms.ColumnHeader ColLadevolumen;
+        private System.Windows.Forms.ColumnHeader ColModell;
+        private System.Windows.Forms.TextBox tbModell;
+        private System.Windows.Forms.Label label10;
     }
 }
