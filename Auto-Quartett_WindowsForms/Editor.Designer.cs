@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbGeschwindigkeit = new System.Windows.Forms.TextBox();
+            this.tbVerbrauch = new System.Windows.Forms.TextBox();
+            this.tbZylinder = new System.Windows.Forms.TextBox();
+            this.tbLeistung = new System.Windows.Forms.TextBox();
+            this.tbLadevolumen = new System.Windows.Forms.TextBox();
+            this.tbZuladung = new System.Windows.Forms.TextBox();
+            this.tbHubraum = new System.Windows.Forms.TextBox();
+            this.tbBeschleunigung = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ColName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColGeschwindigkeit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,68 +60,68 @@
             this.btnZurueck = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 376);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbName.Location = new System.Drawing.Point(12, 376);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(100, 20);
+            this.tbName.TabIndex = 0;
             // 
-            // textBox2
+            // tbGeschwindigkeit
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 376);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbGeschwindigkeit.Location = new System.Drawing.Point(118, 376);
+            this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
+            this.tbGeschwindigkeit.Size = new System.Drawing.Size(100, 20);
+            this.tbGeschwindigkeit.TabIndex = 1;
             // 
-            // textBox3
+            // tbVerbrauch
             // 
-            this.textBox3.Location = new System.Drawing.Point(224, 376);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.tbVerbrauch.Location = new System.Drawing.Point(224, 376);
+            this.tbVerbrauch.Name = "tbVerbrauch";
+            this.tbVerbrauch.Size = new System.Drawing.Size(100, 20);
+            this.tbVerbrauch.TabIndex = 2;
             // 
-            // textBox4
+            // tbZylinder
             // 
-            this.textBox4.Location = new System.Drawing.Point(330, 376);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.tbZylinder.Location = new System.Drawing.Point(330, 376);
+            this.tbZylinder.Name = "tbZylinder";
+            this.tbZylinder.Size = new System.Drawing.Size(100, 20);
+            this.tbZylinder.TabIndex = 3;
             // 
-            // textBox5
+            // tbLeistung
             // 
-            this.textBox5.Location = new System.Drawing.Point(436, 376);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.tbLeistung.Location = new System.Drawing.Point(436, 376);
+            this.tbLeistung.Name = "tbLeistung";
+            this.tbLeistung.Size = new System.Drawing.Size(100, 20);
+            this.tbLeistung.TabIndex = 4;
             // 
-            // textBox6
+            // tbLadevolumen
             // 
-            this.textBox6.Location = new System.Drawing.Point(860, 376);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.tbLadevolumen.Location = new System.Drawing.Point(860, 376);
+            this.tbLadevolumen.Name = "tbLadevolumen";
+            this.tbLadevolumen.Size = new System.Drawing.Size(100, 20);
+            this.tbLadevolumen.TabIndex = 5;
             // 
-            // textBox7
+            // tbZuladung
             // 
-            this.textBox7.Location = new System.Drawing.Point(754, 376);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.tbZuladung.Location = new System.Drawing.Point(754, 376);
+            this.tbZuladung.Name = "tbZuladung";
+            this.tbZuladung.Size = new System.Drawing.Size(100, 20);
+            this.tbZuladung.TabIndex = 6;
             // 
-            // textBox8
+            // tbHubraum
             // 
-            this.textBox8.Location = new System.Drawing.Point(542, 376);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 7;
+            this.tbHubraum.Location = new System.Drawing.Point(542, 376);
+            this.tbHubraum.Name = "tbHubraum";
+            this.tbHubraum.Size = new System.Drawing.Size(100, 20);
+            this.tbHubraum.TabIndex = 7;
             // 
-            // textBox9
+            // tbBeschleunigung
             // 
-            this.textBox9.Location = new System.Drawing.Point(648, 376);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 8;
+            this.tbBeschleunigung.Location = new System.Drawing.Point(648, 376);
+            this.tbBeschleunigung.Name = "tbBeschleunigung";
+            this.tbBeschleunigung.Size = new System.Drawing.Size(100, 20);
+            this.tbBeschleunigung.TabIndex = 8;
             // 
             // listView1
             // 
@@ -278,6 +278,7 @@
             this.btnSpeichern.TabIndex = 18;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
             // 
             // btnZurueck
             // 
@@ -305,15 +306,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBeschleunigung);
+            this.Controls.Add(this.tbHubraum);
+            this.Controls.Add(this.tbZuladung);
+            this.Controls.Add(this.tbLadevolumen);
+            this.Controls.Add(this.tbLeistung);
+            this.Controls.Add(this.tbZylinder);
+            this.Controls.Add(this.tbVerbrauch);
+            this.Controls.Add(this.tbGeschwindigkeit);
+            this.Controls.Add(this.tbName);
             this.Name = "Editor";
             this.Text = "Editor";
             this.ResumeLayout(false);
@@ -323,15 +324,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbGeschwindigkeit;
+        private System.Windows.Forms.TextBox tbVerbrauch;
+        private System.Windows.Forms.TextBox tbZylinder;
+        private System.Windows.Forms.TextBox tbLeistung;
+        private System.Windows.Forms.TextBox tbLadevolumen;
+        private System.Windows.Forms.TextBox tbZuladung;
+        private System.Windows.Forms.TextBox tbHubraum;
+        private System.Windows.Forms.TextBox tbBeschleunigung;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
