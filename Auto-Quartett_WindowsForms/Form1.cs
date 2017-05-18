@@ -58,7 +58,7 @@ namespace Auto_Quartett_WindowsForms
         public void Autokarte1_anzeigen(Autokarte auto1)
         {
             panelAuto1.Visible = true;
-            lblModell1.Text = auto1.name.ToUpper();
+            lblModell1.Text = auto1.marke.ToUpper();
             lblGeschwindigkeitWert1.Text = auto1.geschwindigkeit.ToString();
             lblLeistungWert1.Text = auto1.leistung.ToString();
             lblVerbrauchWert1.Text = auto1.verbrauch.ToString();
@@ -72,7 +72,7 @@ namespace Auto_Quartett_WindowsForms
         public void Autokarte2_anzeigen(Autokarte auto2)
         {
             panelAuto2.Visible = true;
-            lblModell2.Text = auto2.name.ToUpper();
+            lblModell2.Text = auto2.marke.ToUpper();
             lblGeschwindigkeitWert2.Text = auto2.geschwindigkeit.ToString();
             lblLeistungWert2.Text = auto2.leistung.ToString();
             lblVerbrauchWert2.Text = auto2.verbrauch.ToString();

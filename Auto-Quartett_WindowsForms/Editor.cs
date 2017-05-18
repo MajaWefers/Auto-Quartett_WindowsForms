@@ -20,7 +20,7 @@ namespace Auto_Quartett_WindowsForms
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             
-            eintrag.name = tbName.Text;
+            eintrag.marke = tbName.Text;
             eintrag.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
             eintrag.leistung = Int32.Parse(tbLeistung.Text);
             eintrag.verbrauch = Double.Parse(tbVerbrauch.Text);
