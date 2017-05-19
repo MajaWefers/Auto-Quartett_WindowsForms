@@ -61,69 +61,71 @@
             this.btnZurueck = new System.Windows.Forms.Button();
             this.tbModell = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbMarke
             // 
-            this.tbMarke.Location = new System.Drawing.Point(12, 376);
+            this.tbMarke.Location = new System.Drawing.Point(3, 16);
             this.tbMarke.Name = "tbMarke";
             this.tbMarke.Size = new System.Drawing.Size(100, 20);
             this.tbMarke.TabIndex = 0;
             // 
             // tbGeschwindigkeit
             // 
-            this.tbGeschwindigkeit.Location = new System.Drawing.Point(224, 376);
+            this.tbGeschwindigkeit.Location = new System.Drawing.Point(3, 225);
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
-            this.tbGeschwindigkeit.Size = new System.Drawing.Size(100, 20);
+            this.tbGeschwindigkeit.Size = new System.Drawing.Size(62, 20);
             this.tbGeschwindigkeit.TabIndex = 1;
             // 
             // tbVerbrauch
             // 
-            this.tbVerbrauch.Location = new System.Drawing.Point(330, 376);
+            this.tbVerbrauch.Location = new System.Drawing.Point(3, 270);
             this.tbVerbrauch.Name = "tbVerbrauch";
-            this.tbVerbrauch.Size = new System.Drawing.Size(100, 20);
+            this.tbVerbrauch.Size = new System.Drawing.Size(62, 20);
             this.tbVerbrauch.TabIndex = 2;
             // 
             // tbZylinder
             // 
-            this.tbZylinder.Location = new System.Drawing.Point(436, 376);
+            this.tbZylinder.Location = new System.Drawing.Point(3, 315);
             this.tbZylinder.Name = "tbZylinder";
-            this.tbZylinder.Size = new System.Drawing.Size(100, 20);
+            this.tbZylinder.Size = new System.Drawing.Size(62, 20);
             this.tbZylinder.TabIndex = 3;
             // 
             // tbLeistung
             // 
-            this.tbLeistung.Location = new System.Drawing.Point(542, 376);
+            this.tbLeistung.Location = new System.Drawing.Point(3, 361);
             this.tbLeistung.Name = "tbLeistung";
-            this.tbLeistung.Size = new System.Drawing.Size(100, 20);
+            this.tbLeistung.Size = new System.Drawing.Size(62, 20);
             this.tbLeistung.TabIndex = 4;
             // 
             // tbLadevolumen
             // 
-            this.tbLadevolumen.Location = new System.Drawing.Point(966, 376);
+            this.tbLadevolumen.Location = new System.Drawing.Point(162, 361);
             this.tbLadevolumen.Name = "tbLadevolumen";
-            this.tbLadevolumen.Size = new System.Drawing.Size(100, 20);
+            this.tbLadevolumen.Size = new System.Drawing.Size(62, 20);
             this.tbLadevolumen.TabIndex = 5;
             // 
             // tbZuladung
             // 
-            this.tbZuladung.Location = new System.Drawing.Point(860, 376);
+            this.tbZuladung.Location = new System.Drawing.Point(162, 312);
             this.tbZuladung.Name = "tbZuladung";
-            this.tbZuladung.Size = new System.Drawing.Size(100, 20);
+            this.tbZuladung.Size = new System.Drawing.Size(62, 20);
             this.tbZuladung.TabIndex = 6;
             // 
             // tbHubraum
             // 
-            this.tbHubraum.Location = new System.Drawing.Point(648, 376);
+            this.tbHubraum.Location = new System.Drawing.Point(162, 222);
             this.tbHubraum.Name = "tbHubraum";
-            this.tbHubraum.Size = new System.Drawing.Size(100, 20);
+            this.tbHubraum.Size = new System.Drawing.Size(62, 20);
             this.tbHubraum.TabIndex = 7;
             // 
             // tbBeschleunigung
             // 
-            this.tbBeschleunigung.Location = new System.Drawing.Point(754, 376);
+            this.tbBeschleunigung.Location = new System.Drawing.Point(162, 270);
             this.tbBeschleunigung.Name = "tbBeschleunigung";
-            this.tbBeschleunigung.Size = new System.Drawing.Size(100, 20);
+            this.tbBeschleunigung.Size = new System.Drawing.Size(62, 20);
             this.tbBeschleunigung.TabIndex = 8;
             // 
             // listView1
@@ -141,7 +143,7 @@
             this.ColLadevolumen});
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1054, 358);
+            this.listView1.Size = new System.Drawing.Size(1056, 413);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -201,7 +203,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 399);
+            this.label1.Location = new System.Drawing.Point(258, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 10;
@@ -210,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 399);
+            this.label2.Location = new System.Drawing.Point(71, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 11;
@@ -219,7 +221,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 399);
+            this.label3.Location = new System.Drawing.Point(71, 361);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 12;
@@ -228,7 +230,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 399);
+            this.label4.Location = new System.Drawing.Point(71, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 12;
@@ -237,7 +239,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(464, 399);
+            this.label5.Location = new System.Drawing.Point(71, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 13;
@@ -246,7 +248,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(668, 399);
+            this.label6.Location = new System.Drawing.Point(230, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 14;
@@ -255,7 +257,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(761, 399);
+            this.label7.Location = new System.Drawing.Point(230, 273);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 13);
             this.label7.TabIndex = 15;
@@ -264,7 +266,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(882, 399);
+            this.label8.Location = new System.Drawing.Point(230, 312);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 16;
@@ -273,7 +275,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(988, 399);
+            this.label9.Location = new System.Drawing.Point(230, 364);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 13);
             this.label9.TabIndex = 17;
@@ -281,7 +283,7 @@
             // 
             // btnSpeichern
             // 
-            this.btnSpeichern.Location = new System.Drawing.Point(912, 441);
+            this.btnSpeichern.Location = new System.Drawing.Point(1238, 402);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(75, 23);
             this.btnSpeichern.TabIndex = 18;
@@ -291,7 +293,7 @@
             // 
             // btnZurueck
             // 
-            this.btnZurueck.Location = new System.Drawing.Point(993, 441);
+            this.btnZurueck.Location = new System.Drawing.Point(1329, 402);
             this.btnZurueck.Name = "btnZurueck";
             this.btnZurueck.Size = new System.Drawing.Size(75, 23);
             this.btnZurueck.TabIndex = 19;
@@ -300,7 +302,7 @@
             // 
             // tbModell
             // 
-            this.tbModell.Location = new System.Drawing.Point(118, 376);
+            this.tbModell.Location = new System.Drawing.Point(152, 16);
             this.tbModell.Name = "tbModell";
             this.tbModell.Size = new System.Drawing.Size(100, 20);
             this.tbModell.TabIndex = 20;
@@ -308,44 +310,53 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(38, 399);
+            this.label10.Location = new System.Drawing.Point(109, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 21;
             this.label10.Text = "Marke";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tbMarke);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.tbModell);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.tbGeschwindigkeit);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.tbVerbrauch);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.tbZylinder);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.tbLadevolumen);
+            this.panel1.Controls.Add(this.tbZuladung);
+            this.panel1.Controls.Add(this.tbBeschleunigung);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.tbHubraum);
+            this.panel1.Controls.Add(this.tbLeistung);
+            this.panel1.Location = new System.Drawing.Point(1086, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(318, 384);
+            this.panel1.TabIndex = 22;
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 476);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.tbModell);
+            this.ClientSize = new System.Drawing.Size(1419, 433);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnZurueck);
             this.Controls.Add(this.btnSpeichern);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.tbBeschleunigung);
-            this.Controls.Add(this.tbHubraum);
-            this.Controls.Add(this.tbZuladung);
-            this.Controls.Add(this.tbLadevolumen);
-            this.Controls.Add(this.tbLeistung);
-            this.Controls.Add(this.tbZylinder);
-            this.Controls.Add(this.tbVerbrauch);
-            this.Controls.Add(this.tbGeschwindigkeit);
-            this.Controls.Add(this.tbMarke);
             this.Name = "Editor";
             this.Text = "Editor";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -384,5 +395,6 @@
         private System.Windows.Forms.ColumnHeader ColModell;
         private System.Windows.Forms.TextBox tbModell;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel1;
     }
 }
