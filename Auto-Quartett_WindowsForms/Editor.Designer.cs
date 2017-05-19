@@ -116,7 +116,7 @@
             // 
             // tbHubraum
             // 
-            this.tbHubraum.Location = new System.Drawing.Point(162, 222);
+            this.tbHubraum.Location = new System.Drawing.Point(162, 225);
             this.tbHubraum.Name = "tbHubraum";
             this.tbHubraum.Size = new System.Drawing.Size(62, 20);
             this.tbHubraum.TabIndex = 7;
@@ -248,7 +248,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 222);
+            this.label6.Location = new System.Drawing.Point(230, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 14;
