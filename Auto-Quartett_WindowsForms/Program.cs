@@ -16,15 +16,7 @@ namespace Auto_Quartett_WindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(createForm1());
-            //Application.Run(new Editor());
-        }
-
-        private static Form1 createForm1()
-        {
-            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
-            AutokartenVergleich vergleich = new AutokartenVergleich();
-            return new Form1(datenZugriff, vergleich);
+            Application.Run(new Menü());
         }
     }
 }

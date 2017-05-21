@@ -150,6 +150,7 @@
             this.Controls.Add(this.btnEinzeln);
             this.Controls.Add(this.lblEinzelnVgl);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto-Quartett";
             this.ResumeLayout(false);
             this.PerformLayout();
