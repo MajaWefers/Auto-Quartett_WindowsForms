@@ -1,31 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
     public partial class AutokarteAnzeige : UserControl
     {
+        private Label[] labels;
+
         public AutokarteAnzeige(Autokarte autokarte)
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.initialisiereLabels();
+            this.setzeWerte(autokarte);
+        }
 
-            Marke.Text = autokarte.marke.ToUpper();
-            Modell.Text = autokarte.modell.ToUpper();
-            GeschwindigkeitWert.Text = autokarte.geschwindigkeit.ToString();
-            LeistungWert.Text = autokarte.leistung.ToString();
-            VerbrauchWert.Text = autokarte.verbrauch.ToString("N1");
-            ZylinderWert.Text = autokarte.zylinder.ToString();
-            HubraumWert.Text = autokarte.hubraum.ToString("N1");
-            BeschleunigungWert.Text = autokarte.beschleunigung.ToString("N1");
-            ZuladungWert.Text = autokarte.zuladung.ToString();
-            LadevolumenWert.Text = autokarte.ladevolumen.ToString();
+        public void SetzeErgebnisFarben(Ergebnis vergleichsErgebnis,int vergleichsfeld)
+        {
+            switch (vergleichsErgebnis)
+            {
+                case Ergebnis.Gewinn:
+                    this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
+                    break;
+                case Ergebnis.Niederlage:
+                    this.labels[vergleichsfeld].BackColor = Color.LightCoral;
+                    break;
+                case Ergebnis.Gleichstand:
+                    this.labels[vergleichsfeld].BackColor = Color.LightBlue;
+                    break;
+            }
+        }
+
+        private void initialisiereLabels()
+        {
+            this.labels = new[]
+            {
+                this.GeschwindigkeitWert,
+                this.LeistungWert,
+                this.VerbrauchWert,
+                this.ZylinderWert,
+                this.HubraumWert,
+                this.BeschleunigungWert,
+                this.ZuladungWert,
+                this.LadevolumenWert
+            };
+        }
+
+        private void setzeWerte(Autokarte autokarte)
+        {
+            this.Marke.Text = autokarte.marke.ToUpper();
+            this.Modell.Text = autokarte.modell.ToUpper();
+            this.GeschwindigkeitWert.Text = autokarte.geschwindigkeit.ToString();
+            this.LeistungWert.Text = autokarte.leistung.ToString();
+            this.VerbrauchWert.Text = autokarte.verbrauch.ToString("N1");
+            this.ZylinderWert.Text = autokarte.zylinder.ToString();
+            this.HubraumWert.Text = autokarte.hubraum.ToString("N1");
+            this.BeschleunigungWert.Text = autokarte.beschleunigung.ToString("N1");
+            this.ZuladungWert.Text = autokarte.zuladung.ToString();
+            this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
         }
     }
 }

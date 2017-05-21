@@ -92,7 +92,6 @@
             this.panelAuto1.Name = "panelAuto1";
             this.panelAuto1.Size = new System.Drawing.Size(207, 316);
             this.panelAuto1.TabIndex = 1;
-            this.panelAuto1.Visible = false;
             // 
             // Marke
             // 
