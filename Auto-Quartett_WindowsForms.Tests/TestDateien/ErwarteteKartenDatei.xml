@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Autokarten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Autokarte>
-    <modell>Smart</modell>
+    <marke>Smart</marke>
+    <modell>bla</modell>
     <geschwindigkeit>1</geschwindigkeit>
     <leistung>2</leistung>
     <verbrauch>3</verbrauch>
@@ -12,7 +13,8 @@
     <ladevolumen>8</ladevolumen>
   </Autokarte>
   <Autokarte>
-    <modell>bla</modell>
+    <marke>bla</marke>
+    <modell>blabla</modell>
     <geschwindigkeit>1</geschwindigkeit>
     <leistung>2</leistung>
     <verbrauch>3</verbrauch>

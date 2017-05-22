@@ -353,6 +353,7 @@
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.listView1);
             this.Name = "Editor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
