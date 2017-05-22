@@ -5,15 +5,15 @@
 
 \begin{center}
 \Huge
-Auto-Quartett
+\textbf{Auto-Quartett}
 
 \medskip
 \large
-Realisierung eines Spiels 
+\textit{Realisierung eines Spiels }
 
 \vskip 1in
 \Huge
-Pflichtenheft
+\textbf{Pflichtenheft}
 
 \large
 \vskip 2in
@@ -191,11 +191,11 @@ Es soll ein Programm erstellt werden, das ein Auto-Quartett-Spiel simuliert. Die
 \end{itemize}
 
 \section{Funktionsbeschreibungen}
-\paragraph{...}
+\paragraph{Spiel}
+Die Software soll es ermöglichen, gegen den Computer oder gegen eine Person zu spielen. Während des Spiels soll der Benutzer ein Attribut auswählen, dass er vergleichen will. Der Gegner bekommt zufällig eine Karte zugeteilt. Der Gewinner Wert wird dann grün dargestellt und der Verlierer Wert rot. Wer als erstes.... hat gewonnen.   
 
-
-\paragraph{...}
-
+\paragraph{Erstellen von Karten}
+Die Software soll ermöglichen, dass der Benutzer selber Karten anlegen kann und bestehende zu verändern oder zu löschen. Zu beachten ist, das nur Auto Karten erstellt werden können mit den Vorgegebenen Attributen. Diese Informationen werden in einer .xml-Datei abgelegt und je nach bedarf wider aufgerufen.  
 
 \chapter{Vorgehensmodell – Wasserfallmodell}
 \section{Allgemeine Definition Wasserfallmodell}
@@ -241,5 +241,9 @@ Im folgenden Struktogramm wird ein grobes Schema dargestellt, wie das Spiel übe
 
 \newpage
 \chapter{Glossar}
-\paragraph{TETS} ...
+\paragraph{Git} Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die ursprünglich von Linux-Entwickler Linus Torvalds entwickeld wurde, um den Source Code des Linux Kernels zu verwalten.
+
+\paragraph{GitHub.com} GitHub ist ein Portal, um Git Projekte zu hosten. Es bietet eine übersichtliche Oberfläche und erweitert das pure Git um weitere Projektmanagementfunktionen, wie eine Ticket (engl. Issue) Funktion und Analyse Funktionen.
+
+\paragraph{Visual Studio}
 \end{document}
