@@ -31,11 +31,12 @@
             this.SpielButton = new System.Windows.Forms.Button();
             this.EditorButton = new System.Windows.Forms.Button();
             this.BeendenButton = new System.Windows.Forms.Button();
+            this.GallerieButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SpielButton
             // 
-            this.SpielButton.Location = new System.Drawing.Point(197, 54);
+            this.SpielButton.Location = new System.Drawing.Point(197, 22);
             this.SpielButton.Name = "SpielButton";
             this.SpielButton.Size = new System.Drawing.Size(75, 23);
             this.SpielButton.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // EditorButton
             // 
-            this.EditorButton.Location = new System.Drawing.Point(197, 104);
+            this.EditorButton.Location = new System.Drawing.Point(197, 110);
             this.EditorButton.Name = "EditorButton";
             this.EditorButton.Size = new System.Drawing.Size(75, 23);
             this.EditorButton.TabIndex = 1;
@@ -63,11 +64,22 @@
             this.BeendenButton.UseVisualStyleBackColor = true;
             this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
             // 
+            // GallerieButton
+            // 
+            this.GallerieButton.Location = new System.Drawing.Point(197, 64);
+            this.GallerieButton.Name = "GallerieButton";
+            this.GallerieButton.Size = new System.Drawing.Size(75, 23);
+            this.GallerieButton.TabIndex = 3;
+            this.GallerieButton.Text = "Gallerie";
+            this.GallerieButton.UseVisualStyleBackColor = true;
+            this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);
+            // 
             // Menü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 210);
+            this.Controls.Add(this.GallerieButton);
             this.Controls.Add(this.BeendenButton);
             this.Controls.Add(this.EditorButton);
             this.Controls.Add(this.SpielButton);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Button SpielButton;
         private System.Windows.Forms.Button EditorButton;
         private System.Windows.Forms.Button BeendenButton;
+        private System.Windows.Forms.Button GallerieButton;
     }
 }

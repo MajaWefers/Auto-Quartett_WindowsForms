@@ -7,7 +7,7 @@ namespace Auto_Quartett_WindowsForms
     {
         public Menü()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void SpielButton_Click(object sender, EventArgs e)
@@ -18,10 +18,24 @@ namespace Auto_Quartett_WindowsForms
             this.zeigeForm(spielForm);
         }
 
+        private void GallerieButton_Click(object sender, EventArgs e)
+        {
+            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
+            Autokarte[] gespeicherteKarten = datenZugriff.LadeKarten();
+            KartenGallerie kartenGallerie = new KartenGallerie(gespeicherteKarten);
+
+            this.zeigeForm(kartenGallerie);
+        }
+
         private void EditorButton_Click(object sender, EventArgs e)
         {
             Editor editorForm = new Editor();
             this.zeigeForm(editorForm);
+        }
+
+        private void BeendenButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void zeigeForm(Form form)
@@ -39,11 +53,6 @@ namespace Auto_Quartett_WindowsForms
             {
                 childForm.Closed -= this.onChildFormClosed;
             }
-        }
-
-        private void BeendenButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
