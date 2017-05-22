@@ -28,36 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SpielButton = new System.Windows.Forms.Button();
+            this.EditorButton = new System.Windows.Forms.Button();
+            this.BeendenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // SpielButton
             // 
-            this.button1.Location = new System.Drawing.Point(197, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SpielButton.Location = new System.Drawing.Point(197, 54);
+            this.SpielButton.Name = "SpielButton";
+            this.SpielButton.Size = new System.Drawing.Size(75, 23);
+            this.SpielButton.TabIndex = 0;
+            this.SpielButton.Text = "Spiel";
+            this.SpielButton.UseVisualStyleBackColor = true;
+            this.SpielButton.Click += new System.EventHandler(this.SpielButton_Click);
             // 
-            // button2
+            // EditorButton
             // 
-            this.button2.Location = new System.Drawing.Point(392, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.EditorButton.Location = new System.Drawing.Point(197, 104);
+            this.EditorButton.Name = "EditorButton";
+            this.EditorButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorButton.TabIndex = 1;
+            this.EditorButton.Text = "Editor";
+            this.EditorButton.UseVisualStyleBackColor = true;
+            this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
+            // 
+            // BeendenButton
+            // 
+            this.BeendenButton.Location = new System.Drawing.Point(197, 154);
+            this.BeendenButton.Name = "BeendenButton";
+            this.BeendenButton.Size = new System.Drawing.Size(75, 23);
+            this.BeendenButton.TabIndex = 2;
+            this.BeendenButton.Text = "Beenden";
+            this.BeendenButton.UseVisualStyleBackColor = true;
+            this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
             // 
             // Menü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 447);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(456, 210);
+            this.Controls.Add(this.BeendenButton);
+            this.Controls.Add(this.EditorButton);
+            this.Controls.Add(this.SpielButton);
             this.Name = "Menü";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menü";
             this.ResumeLayout(false);
 
@@ -65,7 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SpielButton;
+        private System.Windows.Forms.Button EditorButton;
+        private System.Windows.Forms.Button BeendenButton;
     }
 }

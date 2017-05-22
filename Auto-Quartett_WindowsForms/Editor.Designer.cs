@@ -343,6 +343,7 @@
             this.Controls.Add(this.tbGeschwindigkeit);
             this.Controls.Add(this.tbMarke);
             this.Name = "Editor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor";
             this.ResumeLayout(false);
             this.PerformLayout();

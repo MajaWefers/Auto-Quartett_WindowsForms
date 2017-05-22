@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autokarte.cs" />
+    <Compile Include="AutokarteAnzeige.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutokarteAnzeige.Designer.cs">
+      <DependentUpon>AutokarteAnzeige.cs</DependentUpon>
+    </Compile>
     <Compile Include="AutokartenVergleich.cs" />
     <Compile Include="ChancenBerechner.cs" />
     <Compile Include="DatenZugriff.cs" />
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AutokarteAnzeige.resx">
+      <DependentUpon>AutokarteAnzeige.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>

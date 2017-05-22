@@ -7,16 +7,16 @@ namespace Auto_Quartett_WindowsForms.Tests
     {
         private readonly Autokarte[] autos = new[]
         {
-            new Autokarte("auto1", 9, 9, 9, 9, 9, 9, 9, 9),
-            new Autokarte("auto2", 9, 9, 9, 9, 9, 9, 9, 99),
-            new Autokarte("auto3", 99, 9, 9, 9, 9, 9, 9, 1),
-            new Autokarte("auto4", 1, 9, 9, 9, 9, 9, 9, 1)
+            new Autokarte("auto1", "modell", 9, 9, 9, 9, 9, 9, 9, 9),
+            new Autokarte("auto2", "modell", 9, 9, 9, 9, 9, 9, 9, 99),
+            new Autokarte("auto3", "modell", 99, 9, 9, 9, 9, 9, 9, 1),
+            new Autokarte("auto4", "modell", 1, 9, 9, 9, 9, 9, 9, 1)
         };
 
         [TestMethod]
         public void BerechneGewinnchance_AutoNichtInArray()
         {
-            Autokarte eigenesAuto = new Autokarte("auto", 9, 9, 9, 9, 9, 9, 9, 9);
+            Autokarte eigenesAuto = new Autokarte("auto", "modell", 9, 9, 9, 9, 9, 9, 9, 9);
             this.teste(eigenesAuto, 0, 0.25);
             this.teste(eigenesAuto, 7, 0.5);
         }
