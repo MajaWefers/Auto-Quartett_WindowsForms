@@ -12,17 +12,16 @@ namespace Auto_Quartett_WindowsForms
 
         private void SpielButton_Click(object sender, EventArgs e)
         {
-            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
             AutokartenVergleich vergleich = new AutokartenVergleich();
-            Form1 spielForm = new Form1(datenZugriff, vergleich);
+            Autokarte[] autokarten = this.ladeKarten();
+            Form1 spielForm = new Form1(autokarten, vergleich);
             this.zeigeForm(spielForm);
         }
 
         private void GallerieButton_Click(object sender, EventArgs e)
         {
-            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
-            Autokarte[] gespeicherteKarten = datenZugriff.LadeKarten();
-            KartenGallerie kartenGallerie = new KartenGallerie(gespeicherteKarten);
+            Autokarte[] autokarten = this.ladeKarten();
+            KartenGallerie kartenGallerie = new KartenGallerie(autokarten);
 
             this.zeigeForm(kartenGallerie);
         }
@@ -43,6 +42,13 @@ namespace Auto_Quartett_WindowsForms
             this.Hide();
             form.Closed += this.onChildFormClosed;
             form.Show();
+        }
+
+        private Autokarte[] ladeKarten()
+        {
+            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
+            Autokarte[] gespeicherteKarten = datenZugriff.LadeKarten();
+            return gespeicherteKarten;
         }
 
         private void onChildFormClosed(object sender, EventArgs e)

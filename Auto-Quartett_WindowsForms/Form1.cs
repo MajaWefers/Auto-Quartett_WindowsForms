@@ -13,7 +13,6 @@ namespace Auto_Quartett_WindowsForms
     public partial class Form1 : Form
     {
         private Autokarte[] autos;
-        private readonly DatenZugriff datenZugriff;
         private readonly AutokartenVergleich vergleich;
 
         private AutokarteAnzeige autokarteAnzeige1;
@@ -25,21 +24,12 @@ namespace Auto_Quartett_WindowsForms
         public static int zufall1;
         public static int zufall2;
 
-        public Form1(DatenZugriff datenZugriff, AutokartenVergleich vergleich)
+        public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich)
         {
-            this.datenZugriff = datenZugriff;
+            this.autos = autokarten;
             this.vergleich = vergleich;
-            this.initialisiereAutos();
 
             InitializeComponent();
-        }
-
-        private void initialisiereAutos()
-        {
-            Autokarte[] gespeicherteKarten = this.datenZugriff.LadeKarten();
-
-            //TODO: Da wir wahrscheinlich das Array bei jeder neuen Karte vergrößern (also neu erstellen) wollen, kann das dann raus
-            this.autos = gespeicherteKarten.Concat(new[] { new Autokarte() }).ToArray();
         }
 
         private void zeigeAuto1(Autokarte auto)
@@ -59,7 +49,7 @@ namespace Auto_Quartett_WindowsForms
         private void btnVergleichen_Click(object sender, EventArgs e)
         {
             Auswahl_anzeigen();
-            zufall1 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
+            zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             zeigeAuto1(autos[zufall1]);
             
             btnVergleichen.Enabled = false;
@@ -77,7 +67,7 @@ namespace Auto_Quartett_WindowsForms
 
             do
             {
-                zufall2 = nr.Next(0, 3); //0 inklusiv, 3 exklusiv
+                zufall2 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             } while (zufall1 == zufall2);
 
             //Vorsorglich einen (weiteren) Vergleich verhindern
