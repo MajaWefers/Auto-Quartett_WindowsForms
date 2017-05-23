@@ -71,6 +71,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KartenGallerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KartenGallerie.Designer.cs">
+      <DependentUpon>KartenGallerie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menü.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KartenGallerie.resx">
+      <DependentUpon>KartenGallerie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menü.resx">
       <DependentUpon>Menü.cs</DependentUpon>
