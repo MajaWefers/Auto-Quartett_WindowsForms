@@ -5,9 +5,12 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Menü : Form
     {
+        private readonly DatenZugriff datenZugriff;
+
         public Menü()
         {
             this.InitializeComponent();
+            this.datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
         }
 
         private void SpielButton_Click(object sender, EventArgs e)
@@ -28,7 +31,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void EditorButton_Click(object sender, EventArgs e)
         {
-            Editor editorForm = new Editor();
+            Editor editorForm = new Editor(this.datenZugriff);
             this.zeigeForm(editorForm);
         }
 
@@ -46,8 +49,7 @@ namespace Auto_Quartett_WindowsForms
 
         private Autokarte[] ladeKarten()
         {
-            DatenZugriff datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
-            Autokarte[] gespeicherteKarten = datenZugriff.LadeKarten();
+            Autokarte[] gespeicherteKarten = this.datenZugriff.LadeKarten();
             return gespeicherteKarten;
         }
 

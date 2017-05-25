@@ -14,10 +14,23 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Editor : Form
     {
-       
-        public Editor()
+        private readonly DatenZugriff datenZugriff;
+
+        public Editor(DatenZugriff datenZugriff)
         {
+            this.datenZugriff = datenZugriff;
             InitializeComponent();
+        }
+
+        private void beispiele()
+        {
+            //Beispiel zum Laden
+            Autokarte[] karten = this.datenZugriff.LadeKarten();
+            //danach die Karten in der Tabelle anzeigen etc
+
+            //Beispiel zum Speichern
+            //karten sollten alle Karten sein, die vorher geladenen + die neue
+            this.datenZugriff.SpeichereKarten(karten);
         }
        
         private void btnSpeichern_Click(object sender, EventArgs e)
