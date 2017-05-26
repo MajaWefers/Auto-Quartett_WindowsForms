@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System;
 
 namespace Auto_Quartett_WindowsForms
 {
@@ -57,6 +58,13 @@ namespace Auto_Quartett_WindowsForms
             this.BeschleunigungWert.Text = autokarte.beschleunigung.ToString("N1");
             this.ZuladungWert.Text = autokarte.zuladung.ToString();
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
+        }
+
+        private void Button_Click(object sender, System.EventArgs e)
+        {
+            Button eigenschaft = (Button)sender;
+            //TODO verbinden
+            int vergleichsfeld = Convert.ToInt16(eigenschaft.Text);
         }
     }
 }

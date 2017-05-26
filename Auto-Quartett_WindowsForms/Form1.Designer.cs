@@ -123,15 +123,15 @@
             this.PanelAuto1.AutoSize = true;
             this.PanelAuto1.Location = new System.Drawing.Point(15, 97);
             this.PanelAuto1.Name = "PanelAuto1";
-            this.PanelAuto1.Size = new System.Drawing.Size(199, 308);
+            this.PanelAuto1.Size = new System.Drawing.Size(223, 385);
             this.PanelAuto1.TabIndex = 17;
             // 
             // PanelAuto2
             // 
             this.PanelAuto2.AutoSize = true;
-            this.PanelAuto2.Location = new System.Drawing.Point(241, 97);
+            this.PanelAuto2.Location = new System.Drawing.Point(266, 97);
             this.PanelAuto2.Name = "PanelAuto2";
-            this.PanelAuto2.Size = new System.Drawing.Size(199, 308);
+            this.PanelAuto2.Size = new System.Drawing.Size(219, 385);
             this.PanelAuto2.TabIndex = 18;
             // 
             // Form1
@@ -139,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(461, 417);
+            this.ClientSize = new System.Drawing.Size(519, 494);
             this.Controls.Add(this.PanelAuto2);
             this.Controls.Add(this.PanelAuto1);
             this.Controls.Add(this.cbAuswahlWert);
