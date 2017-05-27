@@ -23,6 +23,7 @@ namespace Auto_Quartett_WindowsForms
         public static Random nr = new Random();
         public static int zufall1;
         public static int zufall2;
+        public static int vergleichsfeld;
 
         public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich)
         {
@@ -58,12 +59,13 @@ namespace Auto_Quartett_WindowsForms
         public void Auswahl_anzeigen()
         {
             lblAuswahlVergleichswert.Visible = true;
-            cbAuswahlWert.Visible = true;
+            //cbAuswahlWert.Visible = true;
         }
 
-        private void cbAuswahl_Wert_SelectedIndexChanged(object sender, EventArgs e)
+        private void Button_Click(object sender, System.EventArgs e)
         {
-            int vergleichsfeld = cbAuswahlWert.SelectedIndex;
+            Button eigenschaft = (Button)sender;
+            vergleichsfeld = Convert.ToInt32(eigenschaft.Text);
 
             do
             {
@@ -71,19 +73,10 @@ namespace Auto_Quartett_WindowsForms
             } while (zufall1 == zufall2);
 
             //Vorsorglich einen (weiteren) Vergleich verhindern
-            cbAuswahlWert.Enabled = false;
-
-            if (vergleichsfeld != -1)
-            {
-                zeigeAuto2(autos[zufall2]);
-            }
-            else
-            {
-                //Falls der Wert auf "-1" zurückgesetzt ist (Button "Neu"), darf verglichen werden.
-                cbAuswahlWert.Enabled = true;
-                //Der Vergleich soll erst bei einer gültigen Auswahl ausgefhrt werden
-                return;
-            }
+            //cbAuswahlWert.Enabled = false;
+            
+            zeigeAuto2(autos[zufall2]);
+            
 
             //Vergleich der Werte
             Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
@@ -114,9 +107,6 @@ namespace Auto_Quartett_WindowsForms
             this.PanelAuto2.Controls.Clear();
 
             //Zurücksetzen von relevanten Eigenschaften
-            cbAuswahlWert.Enabled = true;
-            cbAuswahlWert.SelectedIndex = -1; //keine Auswahl in der ComboBox
-            cbAuswahlWert.Visible = false;
             lblAuswahlVergleichswert.Visible = false;
             lblGewonnenVerloren.Visible = false;
             btnVergleichen.Enabled = true;

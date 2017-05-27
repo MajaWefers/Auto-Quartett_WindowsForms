@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelAuto1 = new System.Windows.Forms.Panel();
-            this.btnLadevolumen = new System.Windows.Forms.Button();
-            this.btnZuladung = new System.Windows.Forms.Button();
-            this.btnBeschleunigung = new System.Windows.Forms.Button();
-            this.btnHubraum = new System.Windows.Forms.Button();
-            this.btnZylinder = new System.Windows.Forms.Button();
-            this.btnVerbrauch = new System.Windows.Forms.Button();
+            this.panelAuto = new System.Windows.Forms.Panel();
             this.AutoBild = new System.Windows.Forms.Panel();
-            this.btnLeistung = new System.Windows.Forms.Button();
-            this.btnGeschwindigkeit = new System.Windows.Forms.Button();
             this.Modell = new System.Windows.Forms.Label();
             this.Marke = new System.Windows.Forms.Label();
             this.lbl_la_einheit1 = new System.Windows.Forms.Label();
@@ -64,130 +56,44 @@
             this.lblLeistung1 = new System.Windows.Forms.Label();
             this.GeschwindigkeitWert = new System.Windows.Forms.Label();
             this.lblGeschwindigkeit1 = new System.Windows.Forms.Label();
-            this.panelAuto1.SuspendLayout();
+            this.panelAuto.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelAuto1
+            // panelAuto
             // 
-            this.panelAuto1.BackColor = System.Drawing.Color.White;
-            this.panelAuto1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelAuto1.Controls.Add(this.btnLadevolumen);
-            this.panelAuto1.Controls.Add(this.btnZuladung);
-            this.panelAuto1.Controls.Add(this.btnBeschleunigung);
-            this.panelAuto1.Controls.Add(this.btnHubraum);
-            this.panelAuto1.Controls.Add(this.btnZylinder);
-            this.panelAuto1.Controls.Add(this.btnVerbrauch);
-            this.panelAuto1.Controls.Add(this.AutoBild);
-            this.panelAuto1.Controls.Add(this.btnLeistung);
-            this.panelAuto1.Controls.Add(this.btnGeschwindigkeit);
-            this.panelAuto1.Controls.Add(this.Modell);
-            this.panelAuto1.Controls.Add(this.Marke);
-            this.panelAuto1.Controls.Add(this.lbl_la_einheit1);
-            this.panelAuto1.Controls.Add(this.LadevolumenWert);
-            this.panelAuto1.Controls.Add(this.lbl_zu_einheit1);
-            this.panelAuto1.Controls.Add(this.ZuladungWert);
-            this.panelAuto1.Controls.Add(this.lbl_b_einheit1);
-            this.panelAuto1.Controls.Add(this.BeschleunigungWert);
-            this.panelAuto1.Controls.Add(this.lbl_h_einheit1);
-            this.panelAuto1.Controls.Add(this.HubraumWert);
-            this.panelAuto1.Controls.Add(this.lbl_zy_einheit1);
-            this.panelAuto1.Controls.Add(this.ZylinderWert);
-            this.panelAuto1.Controls.Add(this.lbl_v_einheit1);
-            this.panelAuto1.Controls.Add(this.VerbrauchWert);
-            this.panelAuto1.Controls.Add(this.lbl_l_einheit1);
-            this.panelAuto1.Controls.Add(this.LeistungWert);
-            this.panelAuto1.Controls.Add(this.lbl_g_einheit1);
-            this.panelAuto1.Controls.Add(this.lblLadevolumen1);
-            this.panelAuto1.Controls.Add(this.lblZuladung1);
-            this.panelAuto1.Controls.Add(this.lblBeschleunigung1);
-            this.panelAuto1.Controls.Add(this.lblHubraum1);
-            this.panelAuto1.Controls.Add(this.lblZylinder1);
-            this.panelAuto1.Controls.Add(this.lblVerbrauch1);
-            this.panelAuto1.Controls.Add(this.lblLeistung1);
-            this.panelAuto1.Controls.Add(this.GeschwindigkeitWert);
-            this.panelAuto1.Controls.Add(this.lblGeschwindigkeit1);
-            this.panelAuto1.Location = new System.Drawing.Point(0, 0);
-            this.panelAuto1.Name = "panelAuto1";
-            this.panelAuto1.Size = new System.Drawing.Size(239, 380);
-            this.panelAuto1.TabIndex = 1;
-            // 
-            // btnLadevolumen
-            // 
-            this.btnLadevolumen.BackColor = System.Drawing.Color.Transparent;
-            this.btnLadevolumen.FlatAppearance.BorderSize = 0;
-            this.btnLadevolumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLadevolumen.Location = new System.Drawing.Point(17, 348);
-            this.btnLadevolumen.Name = "btnLadevolumen";
-            this.btnLadevolumen.Size = new System.Drawing.Size(202, 23);
-            this.btnLadevolumen.TabIndex = 34;
-            this.btnLadevolumen.Text = "8";
-            this.btnLadevolumen.UseVisualStyleBackColor = false;
-            this.btnLadevolumen.Visible = false;
-            // 
-            // btnZuladung
-            // 
-            this.btnZuladung.BackColor = System.Drawing.Color.Transparent;
-            this.btnZuladung.FlatAppearance.BorderSize = 0;
-            this.btnZuladung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZuladung.Location = new System.Drawing.Point(17, 324);
-            this.btnZuladung.Name = "btnZuladung";
-            this.btnZuladung.Size = new System.Drawing.Size(202, 23);
-            this.btnZuladung.TabIndex = 33;
-            this.btnZuladung.Text = "7";
-            this.btnZuladung.UseVisualStyleBackColor = false;
-            this.btnZuladung.Visible = false;
-            // 
-            // btnBeschleunigung
-            // 
-            this.btnBeschleunigung.BackColor = System.Drawing.Color.Transparent;
-            this.btnBeschleunigung.FlatAppearance.BorderSize = 0;
-            this.btnBeschleunigung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBeschleunigung.Location = new System.Drawing.Point(17, 300);
-            this.btnBeschleunigung.Name = "btnBeschleunigung";
-            this.btnBeschleunigung.Size = new System.Drawing.Size(202, 23);
-            this.btnBeschleunigung.TabIndex = 32;
-            this.btnBeschleunigung.Text = "6";
-            this.btnBeschleunigung.UseVisualStyleBackColor = false;
-            this.btnBeschleunigung.Visible = false;
-            // 
-            // btnHubraum
-            // 
-            this.btnHubraum.BackColor = System.Drawing.Color.Transparent;
-            this.btnHubraum.FlatAppearance.BorderSize = 0;
-            this.btnHubraum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHubraum.Location = new System.Drawing.Point(17, 277);
-            this.btnHubraum.Name = "btnHubraum";
-            this.btnHubraum.Size = new System.Drawing.Size(202, 23);
-            this.btnHubraum.TabIndex = 31;
-            this.btnHubraum.Text = "5";
-            this.btnHubraum.UseVisualStyleBackColor = false;
-            this.btnHubraum.Visible = false;
-            // 
-            // btnZylinder
-            // 
-            this.btnZylinder.BackColor = System.Drawing.Color.Transparent;
-            this.btnZylinder.FlatAppearance.BorderSize = 0;
-            this.btnZylinder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZylinder.Location = new System.Drawing.Point(17, 250);
-            this.btnZylinder.Name = "btnZylinder";
-            this.btnZylinder.Size = new System.Drawing.Size(202, 23);
-            this.btnZylinder.TabIndex = 30;
-            this.btnZylinder.Text = "4";
-            this.btnZylinder.UseVisualStyleBackColor = false;
-            this.btnZylinder.Visible = false;
-            // 
-            // btnVerbrauch
-            // 
-            this.btnVerbrauch.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerbrauch.FlatAppearance.BorderSize = 0;
-            this.btnVerbrauch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerbrauch.Location = new System.Drawing.Point(17, 226);
-            this.btnVerbrauch.Name = "btnVerbrauch";
-            this.btnVerbrauch.Size = new System.Drawing.Size(202, 23);
-            this.btnVerbrauch.TabIndex = 29;
-            this.btnVerbrauch.Text = "3";
-            this.btnVerbrauch.UseVisualStyleBackColor = false;
-            this.btnVerbrauch.Visible = false;
+            this.panelAuto.BackColor = System.Drawing.Color.White;
+            this.panelAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelAuto.Controls.Add(this.AutoBild);
+            this.panelAuto.Controls.Add(this.Modell);
+            this.panelAuto.Controls.Add(this.Marke);
+            this.panelAuto.Controls.Add(this.lbl_la_einheit1);
+            this.panelAuto.Controls.Add(this.LadevolumenWert);
+            this.panelAuto.Controls.Add(this.lbl_zu_einheit1);
+            this.panelAuto.Controls.Add(this.ZuladungWert);
+            this.panelAuto.Controls.Add(this.lbl_b_einheit1);
+            this.panelAuto.Controls.Add(this.BeschleunigungWert);
+            this.panelAuto.Controls.Add(this.lbl_h_einheit1);
+            this.panelAuto.Controls.Add(this.HubraumWert);
+            this.panelAuto.Controls.Add(this.lbl_zy_einheit1);
+            this.panelAuto.Controls.Add(this.ZylinderWert);
+            this.panelAuto.Controls.Add(this.lbl_v_einheit1);
+            this.panelAuto.Controls.Add(this.VerbrauchWert);
+            this.panelAuto.Controls.Add(this.lbl_l_einheit1);
+            this.panelAuto.Controls.Add(this.LeistungWert);
+            this.panelAuto.Controls.Add(this.lbl_g_einheit1);
+            this.panelAuto.Controls.Add(this.lblLadevolumen1);
+            this.panelAuto.Controls.Add(this.lblZuladung1);
+            this.panelAuto.Controls.Add(this.lblBeschleunigung1);
+            this.panelAuto.Controls.Add(this.lblHubraum1);
+            this.panelAuto.Controls.Add(this.lblZylinder1);
+            this.panelAuto.Controls.Add(this.lblVerbrauch1);
+            this.panelAuto.Controls.Add(this.lblLeistung1);
+            this.panelAuto.Controls.Add(this.GeschwindigkeitWert);
+            this.panelAuto.Controls.Add(this.lblGeschwindigkeit1);
+            this.panelAuto.Location = new System.Drawing.Point(0, 0);
+            this.panelAuto.Name = "panelAuto";
+            this.panelAuto.Size = new System.Drawing.Size(239, 380);
+            this.panelAuto.TabIndex = 1;
             // 
             // AutoBild
             // 
@@ -195,33 +101,6 @@
             this.AutoBild.Name = "AutoBild";
             this.AutoBild.Size = new System.Drawing.Size(202, 111);
             this.AutoBild.TabIndex = 28;
-            // 
-            // btnLeistung
-            // 
-            this.btnLeistung.BackColor = System.Drawing.Color.Transparent;
-            this.btnLeistung.FlatAppearance.BorderSize = 0;
-            this.btnLeistung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeistung.Location = new System.Drawing.Point(17, 200);
-            this.btnLeistung.Name = "btnLeistung";
-            this.btnLeistung.Size = new System.Drawing.Size(202, 23);
-            this.btnLeistung.TabIndex = 27;
-            this.btnLeistung.Text = "2";
-            this.btnLeistung.UseVisualStyleBackColor = false;
-            this.btnLeistung.Visible = false;
-            // 
-            // btnGeschwindigkeit
-            // 
-            this.btnGeschwindigkeit.BackColor = System.Drawing.Color.Transparent;
-            this.btnGeschwindigkeit.FlatAppearance.BorderSize = 0;
-            this.btnGeschwindigkeit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeschwindigkeit.Location = new System.Drawing.Point(17, 176);
-            this.btnGeschwindigkeit.Name = "btnGeschwindigkeit";
-            this.btnGeschwindigkeit.Size = new System.Drawing.Size(202, 23);
-            this.btnGeschwindigkeit.TabIndex = 26;
-            this.btnGeschwindigkeit.Text = "1";
-            this.btnGeschwindigkeit.UseVisualStyleBackColor = false;
-            this.btnGeschwindigkeit.Visible = false;
-            this.btnGeschwindigkeit.Click += new System.EventHandler(this.Button_Click);
             // 
             // Modell
             // 
@@ -461,18 +340,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelAuto1);
+            this.Controls.Add(this.panelAuto);
             this.Name = "AutokarteAnzeige";
             this.Size = new System.Drawing.Size(239, 383);
-            this.panelAuto1.ResumeLayout(false);
-            this.panelAuto1.PerformLayout();
+            this.panelAuto.ResumeLayout(false);
+            this.panelAuto.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelAuto1;
+        private System.Windows.Forms.Panel panelAuto;
         private System.Windows.Forms.Label Marke;
         private System.Windows.Forms.Label lbl_la_einheit1;
         private System.Windows.Forms.Label LadevolumenWert;
@@ -499,14 +378,6 @@
         private System.Windows.Forms.Label GeschwindigkeitWert;
         private System.Windows.Forms.Label lblGeschwindigkeit1;
         private System.Windows.Forms.Label Modell;
-        public System.Windows.Forms.Button btnGeschwindigkeit;
-        public System.Windows.Forms.Button btnLeistung;
-        public System.Windows.Forms.Button btnLadevolumen;
-        public System.Windows.Forms.Button btnZuladung;
-        public System.Windows.Forms.Button btnBeschleunigung;
-        public System.Windows.Forms.Button btnHubraum;
-        public System.Windows.Forms.Button btnZylinder;
-        public System.Windows.Forms.Button btnVerbrauch;
         private System.Windows.Forms.Panel AutoBild;
     }
 }
