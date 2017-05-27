@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblEinzelnVgl = new System.Windows.Forms.Label();
-            this.btnVergleichen = new System.Windows.Forms.Button();
             this.lblAuswahlVergleichswert = new System.Windows.Forms.Label();
             this.lblGewonnenVerloren = new System.Windows.Forms.Label();
             this.btnNeu = new System.Windows.Forms.Button();
@@ -38,47 +36,27 @@
             this.btnZuladung = new System.Windows.Forms.Button();
             this.btnBeschleunigung = new System.Windows.Forms.Button();
             this.btnHubraum = new System.Windows.Forms.Button();
-            this.btnZylinder = new System.Windows.Forms.Button();
-            this.btnVerbrauch = new System.Windows.Forms.Button();
             this.btnLeistung = new System.Windows.Forms.Button();
-            this.btnGeschwindigkeit = new System.Windows.Forms.Button();
+            this.btnVerbrauch = new System.Windows.Forms.Button();
+            this.btnZylinder = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.PanelAuto2 = new System.Windows.Forms.Panel();
             this.PanelAuto1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblEinzelnVgl
-            // 
-            this.lblEinzelnVgl.AutoSize = true;
-            this.lblEinzelnVgl.Location = new System.Drawing.Point(12, 14);
-            this.lblEinzelnVgl.Name = "lblEinzelnVgl";
-            this.lblEinzelnVgl.Size = new System.Drawing.Size(269, 13);
-            this.lblEinzelnVgl.TabIndex = 2;
-            this.lblEinzelnVgl.Text = "Möchten Sie Karten einzeln ansehen oder vergleichen?";
-            // 
-            // btnVergleichen
-            // 
-            this.btnVergleichen.Location = new System.Drawing.Point(332, 9);
-            this.btnVergleichen.Name = "btnVergleichen";
-            this.btnVergleichen.Size = new System.Drawing.Size(70, 23);
-            this.btnVergleichen.TabIndex = 4;
-            this.btnVergleichen.Text = "vergleichen";
-            this.btnVergleichen.UseVisualStyleBackColor = true;
-            this.btnVergleichen.Click += new System.EventHandler(this.btnVergleichen_Click);
-            // 
             // lblAuswahlVergleichswert
             // 
             this.lblAuswahlVergleichswert.AutoSize = true;
-            this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(12, 41);
+            this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(12, 19);
             this.lblAuswahlVergleichswert.Name = "lblAuswahlVergleichswert";
             this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(322, 13);
             this.lblAuswahlVergleichswert.TabIndex = 5;
             this.lblAuswahlVergleichswert.Text = "Welchen Wert möchten Sie vergleichen? Klicken Sie auf die Zeile.";
-            this.lblAuswahlVergleichswert.Visible = false;
             // 
             // lblGewonnenVerloren
             // 
             this.lblGewonnenVerloren.AutoSize = true;
-            this.lblGewonnenVerloren.Location = new System.Drawing.Point(167, 67);
+            this.lblGewonnenVerloren.Location = new System.Drawing.Point(195, 48);
             this.lblGewonnenVerloren.Name = "lblGewonnenVerloren";
             this.lblGewonnenVerloren.Size = new System.Drawing.Size(103, 13);
             this.lblGewonnenVerloren.TabIndex = 14;
@@ -103,11 +81,11 @@
             this.PanelAuto1.Controls.Add(this.btnZuladung);
             this.PanelAuto1.Controls.Add(this.btnBeschleunigung);
             this.PanelAuto1.Controls.Add(this.btnHubraum);
-            this.PanelAuto1.Controls.Add(this.btnZylinder);
-            this.PanelAuto1.Controls.Add(this.btnVerbrauch);
             this.PanelAuto1.Controls.Add(this.btnLeistung);
-            this.PanelAuto1.Controls.Add(this.btnGeschwindigkeit);
-            this.PanelAuto1.Location = new System.Drawing.Point(15, 97);
+            this.PanelAuto1.Controls.Add(this.btnVerbrauch);
+            this.PanelAuto1.Controls.Add(this.btnZylinder);
+            this.PanelAuto1.Controls.Add(this.button1);
+            this.PanelAuto1.Location = new System.Drawing.Point(15, 64);
             this.PanelAuto1.Name = "PanelAuto1";
             this.PanelAuto1.Size = new System.Drawing.Size(223, 385);
             this.PanelAuto1.TabIndex = 17;
@@ -172,20 +150,20 @@
             this.btnHubraum.Visible = false;
             this.btnHubraum.Click += new System.EventHandler(this.Button_Click);
             // 
-            // btnZylinder
+            // btnLeistung
             // 
-            this.btnZylinder.BackColor = System.Drawing.Color.Transparent;
-            this.btnZylinder.FlatAppearance.BorderSize = 0;
-            this.btnZylinder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZylinder.Location = new System.Drawing.Point(3, 250);
-            this.btnZylinder.Name = "btnZylinder";
-            this.btnZylinder.Size = new System.Drawing.Size(202, 23);
-            this.btnZylinder.TabIndex = 38;
-            this.btnZylinder.Text = "3";
-            this.btnZylinder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZylinder.UseVisualStyleBackColor = false;
-            this.btnZylinder.Visible = false;
-            this.btnZylinder.Click += new System.EventHandler(this.Button_Click);
+            this.btnLeistung.BackColor = System.Drawing.Color.Transparent;
+            this.btnLeistung.FlatAppearance.BorderSize = 0;
+            this.btnLeistung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLeistung.Location = new System.Drawing.Point(3, 200);
+            this.btnLeistung.Name = "btnLeistung";
+            this.btnLeistung.Size = new System.Drawing.Size(202, 23);
+            this.btnLeistung.TabIndex = 36;
+            this.btnLeistung.Text = "1";
+            this.btnLeistung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLeistung.UseVisualStyleBackColor = false;
+            this.btnLeistung.Visible = false;
+            this.btnLeistung.Click += new System.EventHandler(this.Button_Click);
             // 
             // btnVerbrauch
             // 
@@ -202,43 +180,40 @@
             this.btnVerbrauch.Visible = false;
             this.btnVerbrauch.Click += new System.EventHandler(this.Button_Click);
             // 
-            // btnLeistung
+            // btnZylinder
             // 
-            this.btnLeistung.BackColor = System.Drawing.Color.Transparent;
-            this.btnLeistung.FlatAppearance.BorderSize = 0;
-            this.btnLeistung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeistung.Location = new System.Drawing.Point(3, 200);
-            this.btnLeistung.Name = "btnLeistung";
-            this.btnLeistung.Size = new System.Drawing.Size(202, 23);
-            this.btnLeistung.TabIndex = 36;
-            this.btnLeistung.Text = "1";
-            this.btnLeistung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLeistung.UseVisualStyleBackColor = false;
-            this.btnLeistung.Visible = false;
-            this.btnLeistung.Click += new System.EventHandler(this.Button_Click);
+            this.btnZylinder.BackColor = System.Drawing.Color.Transparent;
+            this.btnZylinder.FlatAppearance.BorderSize = 0;
+            this.btnZylinder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZylinder.Location = new System.Drawing.Point(3, 250);
+            this.btnZylinder.Name = "btnZylinder";
+            this.btnZylinder.Size = new System.Drawing.Size(202, 23);
+            this.btnZylinder.TabIndex = 38;
+            this.btnZylinder.Text = "3";
+            this.btnZylinder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnZylinder.UseVisualStyleBackColor = false;
+            this.btnZylinder.Visible = false;
+            this.btnZylinder.Click += new System.EventHandler(this.Button_Click);
             // 
-            // btnGeschwindigkeit
+            // button1
             // 
-            this.btnGeschwindigkeit.BackColor = System.Drawing.Color.Transparent;
-            this.btnGeschwindigkeit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnGeschwindigkeit.FlatAppearance.BorderSize = 0;
-            this.btnGeschwindigkeit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeschwindigkeit.ForeColor = System.Drawing.Color.Black;
-            this.btnGeschwindigkeit.Location = new System.Drawing.Point(3, 176);
-            this.btnGeschwindigkeit.Name = "btnGeschwindigkeit";
-            this.btnGeschwindigkeit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnGeschwindigkeit.Size = new System.Drawing.Size(202, 23);
-            this.btnGeschwindigkeit.TabIndex = 35;
-            this.btnGeschwindigkeit.Text = "0";
-            this.btnGeschwindigkeit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGeschwindigkeit.UseVisualStyleBackColor = false;
-            this.btnGeschwindigkeit.Click += new System.EventHandler(this.Button_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 23);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "0";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // PanelAuto2
             // 
             this.PanelAuto2.AutoSize = true;
             this.PanelAuto2.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAuto2.Location = new System.Drawing.Point(266, 97);
+            this.PanelAuto2.Location = new System.Drawing.Point(266, 64);
             this.PanelAuto2.Name = "PanelAuto2";
             this.PanelAuto2.Size = new System.Drawing.Size(219, 385);
             this.PanelAuto2.TabIndex = 18;
@@ -254,8 +229,6 @@
             this.Controls.Add(this.btnNeu);
             this.Controls.Add(this.lblGewonnenVerloren);
             this.Controls.Add(this.lblAuswahlVergleichswert);
-            this.Controls.Add(this.btnVergleichen);
-            this.Controls.Add(this.lblEinzelnVgl);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto-Quartett";
@@ -266,8 +239,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblEinzelnVgl;
-        private System.Windows.Forms.Button btnVergleichen;
         private System.Windows.Forms.Label lblAuswahlVergleichswert;
         private System.Windows.Forms.Label lblGewonnenVerloren;
         private System.Windows.Forms.Button btnNeu;
@@ -280,7 +251,7 @@
         public System.Windows.Forms.Button btnZylinder;
         public System.Windows.Forms.Button btnVerbrauch;
         public System.Windows.Forms.Button btnLeistung;
-        public System.Windows.Forms.Button btnGeschwindigkeit;
+        public System.Windows.Forms.Button button1;
     }
 }
 

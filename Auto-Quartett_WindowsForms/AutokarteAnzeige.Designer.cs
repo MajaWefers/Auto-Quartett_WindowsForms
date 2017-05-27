@@ -63,6 +63,9 @@
             // 
             this.panelAuto.BackColor = System.Drawing.Color.White;
             this.panelAuto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelAuto.Controls.Add(this.lbl_g_einheit1);
+            this.panelAuto.Controls.Add(this.GeschwindigkeitWert);
+            this.panelAuto.Controls.Add(this.lblGeschwindigkeit1);
             this.panelAuto.Controls.Add(this.AutoBild);
             this.panelAuto.Controls.Add(this.Modell);
             this.panelAuto.Controls.Add(this.Marke);
@@ -80,7 +83,6 @@
             this.panelAuto.Controls.Add(this.VerbrauchWert);
             this.panelAuto.Controls.Add(this.lbl_l_einheit1);
             this.panelAuto.Controls.Add(this.LeistungWert);
-            this.panelAuto.Controls.Add(this.lbl_g_einheit1);
             this.panelAuto.Controls.Add(this.lblLadevolumen1);
             this.panelAuto.Controls.Add(this.lblZuladung1);
             this.panelAuto.Controls.Add(this.lblBeschleunigung1);
@@ -88,8 +90,6 @@
             this.panelAuto.Controls.Add(this.lblZylinder1);
             this.panelAuto.Controls.Add(this.lblVerbrauch1);
             this.panelAuto.Controls.Add(this.lblLeistung1);
-            this.panelAuto.Controls.Add(this.GeschwindigkeitWert);
-            this.panelAuto.Controls.Add(this.lblGeschwindigkeit1);
             this.panelAuto.Location = new System.Drawing.Point(0, 0);
             this.panelAuto.Name = "panelAuto";
             this.panelAuto.Size = new System.Drawing.Size(239, 380);
@@ -335,6 +335,7 @@
             this.lblGeschwindigkeit1.Size = new System.Drawing.Size(88, 13);
             this.lblGeschwindigkeit1.TabIndex = 0;
             this.lblGeschwindigkeit1.Text = "Geschwindigkeit:";
+            this.lblGeschwindigkeit1.Click += new System.EventHandler(this.Label_Click);
             // 
             // AutokarteAnzeige
             // 

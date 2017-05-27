@@ -31,6 +31,9 @@ namespace Auto_Quartett_WindowsForms
             this.vergleich = vergleich;
 
             InitializeComponent();
+
+            zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
+            zeigeAuto1(autos[zufall1]);
         }
 
         private void zeigeAuto1(Autokarte auto)
@@ -45,22 +48,9 @@ namespace Auto_Quartett_WindowsForms
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
 
-        //TODO MB: Gleichstand
-        
-        private void btnVergleichen_Click(object sender, EventArgs e)
-        {
-            Auswahl_anzeigen();
-            zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
-            zeigeAuto1(autos[zufall1]);
-            
-            btnVergleichen.Enabled = false;
-        }
 
-        public void Auswahl_anzeigen()
-        {
-            lblAuswahlVergleichswert.Visible = true;
-            //cbAuswahlWert.Visible = true;
-        }
+
+        //TODO MB: Gleichstand
 
         private void Button_Click(object sender, System.EventArgs e)
         {
@@ -107,9 +97,9 @@ namespace Auto_Quartett_WindowsForms
             this.PanelAuto2.Controls.Clear();
 
             //Zurücksetzen von relevanten Eigenschaften
-            lblAuswahlVergleichswert.Visible = false;
             lblGewonnenVerloren.Visible = false;
-            btnVergleichen.Enabled = true;
+            zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
+            zeigeAuto1(autos[zufall1]);
         }
     }
 }

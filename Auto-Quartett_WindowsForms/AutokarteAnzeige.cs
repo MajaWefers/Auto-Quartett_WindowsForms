@@ -60,5 +60,11 @@ namespace Auto_Quartett_WindowsForms
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
         }
 
+        private void Label_Click(object sender, EventArgs e)
+        {
+            Label eigenschaft = (Label)sender;
+            Form1.vergleichsfeld = 0;
+                //Convert.ToInt32(eigenschaft.Text);
+        }
     }
 }
