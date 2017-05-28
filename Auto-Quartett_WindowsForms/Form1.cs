@@ -52,11 +52,8 @@ namespace Auto_Quartett_WindowsForms
 
         //TODO MB: Gleichstand
 
-        private void Button_Click(object sender, System.EventArgs e)
+        private void Vergleich()
         {
-            Button eigenschaft = (Button)sender;
-            vergleichsfeld = Convert.ToInt32(eigenschaft.Text);
-            
             do
             {
                 zufall2 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
@@ -101,5 +98,53 @@ namespace Auto_Quartett_WindowsForms
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             zeigeAuto1(autos[zufall1]);
         }
-   }
+
+        private void btnGeschwindigkeit_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 0;
+            Vergleich();
+        }
+
+        private void btnLeistung_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 1;
+            Vergleich();
+        }
+
+        private void btnVerbrauch_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 2;
+            Vergleich();
+        }
+
+        private void btnZylinder_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 3;
+            Vergleich();
+        }
+
+        private void btnHubraum_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 4;
+            Vergleich();
+        }
+
+        private void btnBeschleunigung_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 5;
+            Vergleich();
+        }
+
+        private void btnZuladung_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 6;
+            Vergleich();
+        }
+
+        private void btnLadevolumen_Click(object sender, EventArgs e)
+        {
+            vergleichsfeld = 7;
+            Vergleich();
+        }
+    }
 }
