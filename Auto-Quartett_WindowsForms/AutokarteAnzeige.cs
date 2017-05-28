@@ -13,6 +13,7 @@ namespace Auto_Quartett_WindowsForms
             this.InitializeComponent();
             this.initialisiereLabels();
             this.setzeWerte(autokarte);
+            this.BildEinfuegen(autokarte);
         }
 
         public void SetzeErgebnisFarben(Ergebnis vergleichsErgebnis,int vergleichsfeld)
@@ -46,6 +47,11 @@ namespace Auto_Quartett_WindowsForms
             };
         }
 
+        private void BildEinfuegen(Autokarte autokarte)
+        {   
+            AutoBild.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"Bilder\" + autokarte.bilddateiname);
+        }
+
         private void setzeWerte(Autokarte autokarte)
         {
             this.Marke.Text = autokarte.marke.ToUpper();
@@ -60,11 +66,15 @@ namespace Auto_Quartett_WindowsForms
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
         }
 
-        private void Label_Click(object sender, EventArgs e)
+
+        private void lblGeschwindigkeit_Click(object sender, EventArgs e)
         {
-            Label eigenschaft = (Label)sender;
             Form1.vergleichsfeld = 0;
-                //Convert.ToInt32(eigenschaft.Text);
         }
+        private void lblLeistung1_Click(object sender, EventArgs e)
+        {
+            Form1.vergleichsfeld = 1;
+        }
+
     }
 }

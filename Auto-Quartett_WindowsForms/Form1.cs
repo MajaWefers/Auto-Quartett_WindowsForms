@@ -56,7 +56,7 @@ namespace Auto_Quartett_WindowsForms
         {
             Button eigenschaft = (Button)sender;
             vergleichsfeld = Convert.ToInt32(eigenschaft.Text);
-
+            
             do
             {
                 zufall2 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
@@ -64,9 +64,9 @@ namespace Auto_Quartett_WindowsForms
 
             //Vorsorglich einen (weiteren) Vergleich verhindern
             //cbAuswahlWert.Enabled = false;
-            
+
             zeigeAuto2(autos[zufall2]);
-            
+
 
             //Vergleich der Werte
             Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
@@ -101,5 +101,5 @@ namespace Auto_Quartett_WindowsForms
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             zeigeAuto1(autos[zufall1]);
         }
-    }
+   }
 }

@@ -3,6 +3,7 @@
   <Autokarte>
     <marke>VW</marke>
     <modell>Phaeton</modell>
+    <bilddateiname>vwphaeton.jpg</bilddateiname>
     <geschwindigkeit>250</geschwindigkeit>
     <leistung>309</leistung>
     <verbrauch>15.7</verbrauch>
@@ -15,6 +16,7 @@
   <Autokarte>
     <marke>VW</marke>
     <modell>New Beetle</modell>
+    <bilddateiname>vwnewbeetle.jpg</bilddateiname>
     <geschwindigkeit>185</geschwindigkeit>
     <leistung>85</leistung>
     <verbrauch>8.7</verbrauch>
@@ -27,6 +29,7 @@
   <Autokarte>
     <marke>VW</marke>
     <modell>Touareg</modell>
+    <bilddateiname>vwtouareg.jpg</bilddateiname>
     <geschwindigkeit>225</geschwindigkeit>
     <leistung>230</leistung>
     <verbrauch>12.2</verbrauch>

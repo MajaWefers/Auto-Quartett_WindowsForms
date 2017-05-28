@@ -15,9 +15,9 @@ namespace Auto_Quartett_WindowsForms.Tests
         {
             Autokarte[] kartenZumSpeichern = new[]
             {
-                new Autokarte("VW", "Phaeton", 250, 309, 15.7, 12, 6, 6.7, 600, 500),
-                new Autokarte("VW", "New Beetle", 185, 85, 8.7, 4, 2, 10.9, 419, 527),
-                new Autokarte("VW", "Touareg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555)
+                new Autokarte("VW", "Phaeton", "vwphaeton.jpg", 250, 309, 15.7, 12, 6, 6.7, 600, 500),
+                new Autokarte("VW", "New Beetle", "vwnewbeetle.jpg", 185, 85, 8.7, 4, 2, 10.9, 419, 527),
+                new Autokarte("VW", "Touareg",  "vwtouareg.jpg", 225, 230, 12.2, 10, 4.9, 7.8, 600, 555)
             };
 
             speichereKarten(kartenZumSpeichern);
