@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelAuto = new System.Windows.Forms.Panel();
+            this.AutoBild = new System.Windows.Forms.PictureBox();
             this.lbl_g_einheit = new System.Windows.Forms.Label();
             this.GeschwindigkeitWert = new System.Windows.Forms.Label();
             this.lblGeschwindigkeit = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.lblZylinder = new System.Windows.Forms.Label();
             this.lblVerbrauch = new System.Windows.Forms.Label();
             this.lblLeistung = new System.Windows.Forms.Label();
-            this.AutoBild = new System.Windows.Forms.PictureBox();
             this.panelAuto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutoBild)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,15 @@
             this.panelAuto.Size = new System.Drawing.Size(239, 394);
             this.panelAuto.TabIndex = 1;
             // 
+            // AutoBild
+            // 
+            this.AutoBild.Location = new System.Drawing.Point(17, 54);
+            this.AutoBild.Name = "AutoBild";
+            this.AutoBild.Size = new System.Drawing.Size(202, 135);
+            this.AutoBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AutoBild.TabIndex = 26;
+            this.AutoBild.TabStop = false;
+            // 
             // lbl_g_einheit
             // 
             this.lbl_g_einheit.AutoSize = true;
@@ -122,7 +131,6 @@
             this.lblGeschwindigkeit.Size = new System.Drawing.Size(88, 13);
             this.lblGeschwindigkeit.TabIndex = 0;
             this.lblGeschwindigkeit.Text = "Geschwindigkeit:";
-            this.lblGeschwindigkeit.Click += new System.EventHandler(this.lblGeschwindigkeit_Click);
             // 
             // Modell
             // 
@@ -330,16 +338,6 @@
             this.lblLeistung.Size = new System.Drawing.Size(50, 13);
             this.lblLeistung.TabIndex = 2;
             this.lblLeistung.Text = "Leistung:";
-            this.lblLeistung.Click += new System.EventHandler(this.lblLeistung1_Click);
-            // 
-            // AutoBild
-            // 
-            this.AutoBild.Location = new System.Drawing.Point(17, 54);
-            this.AutoBild.Name = "AutoBild";
-            this.AutoBild.Size = new System.Drawing.Size(202, 135);
-            this.AutoBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AutoBild.TabIndex = 26;
-            this.AutoBild.TabStop = false;
             // 
             // AutokarteAnzeige
             // 

@@ -23,7 +23,6 @@ namespace Auto_Quartett_WindowsForms
         public static Random nr = new Random();
         public static int zufall1;
         public static int zufall2;
-        public static int vergleichsfeld;
 
         public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich)
         {
@@ -31,7 +30,11 @@ namespace Auto_Quartett_WindowsForms
             this.vergleich = vergleich;
 
             InitializeComponent();
+            zeigeSpielkarte();
+        }
 
+        private void zeigeSpielkarte()
+        {
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             zeigeAuto1(autos[zufall1]);
         }
@@ -47,24 +50,17 @@ namespace Auto_Quartett_WindowsForms
             autokarteAnzeige2 =  new AutokarteAnzeige(auto);
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
-
-
-
-        //TODO MB: Gleichstand
-
-        private void Vergleich()
+        
+        //Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
+        private void Vergleich(int vergleichsfeld)
         {
             do
             {
                 zufall2 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             } while (zufall1 == zufall2);
 
-            //Vorsorglich einen (weiteren) Vergleich verhindern
-            //cbAuswahlWert.Enabled = false;
-
             zeigeAuto2(autos[zufall2]);
-
-
+            
             //Vergleich der Werte
             Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
             autokarteAnzeige1.SetzeErgebnisFarben(vergleichsErgebnis, vergleichsfeld);
@@ -74,15 +70,19 @@ namespace Auto_Quartett_WindowsForms
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Niederlage, vergleichsfeld);
                     lblGewonnenVerloren.ForeColor = Color.Blue;
                     lblGewonnenVerloren.Text = "Sie haben GEWONNEN!";
+                    lblGewonnenVerloren.Visible = true;
                     break;
                 case Ergebnis.Niederlage:
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gewinn, vergleichsfeld);
                     lblGewonnenVerloren.ForeColor = Color.Red;
                     lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
+                    lblGewonnenVerloren.Visible = true;
                     break;
                 case Ergebnis.Gleichstand:
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gleichstand, vergleichsfeld);
-                    //TODO: lblGewonnenVerloren anzeigen und färben (und das Label umbenennen)
+                    lblGewonnenVerloren.ForeColor = Color.Red;
+                    lblGewonnenVerloren.Text = "Gleichstand! Sie haben VERLOREN.";
+                    lblGewonnenVerloren.Visible = true;
                     break;
             }
         }
@@ -95,56 +95,41 @@ namespace Auto_Quartett_WindowsForms
 
             //Zurücksetzen von relevanten Eigenschaften
             lblGewonnenVerloren.Visible = false;
-            zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
-            zeigeAuto1(autos[zufall1]);
+            zeigeSpielkarte();
         }
 
+        //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
         private void btnGeschwindigkeit_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 0;
-            Vergleich();
+            Vergleich(0);
         }
-
         private void btnLeistung_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 1;
-            Vergleich();
+            Vergleich(1);
         }
-
         private void btnVerbrauch_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 2;
-            Vergleich();
+            Vergleich(2);
         }
-
         private void btnZylinder_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 3;
-            Vergleich();
+            Vergleich(3);
         }
-
         private void btnHubraum_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 4;
-            Vergleich();
+            Vergleich(4);
         }
-
         private void btnBeschleunigung_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 5;
-            Vergleich();
+            Vergleich(5);
         }
-
         private void btnZuladung_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 6;
-            Vergleich();
+            Vergleich(6);
         }
-
         private void btnLadevolumen_Click(object sender, EventArgs e)
         {
-            vergleichsfeld = 7;
-            Vergleich();
+            Vergleich(7);
         }
     }
 }

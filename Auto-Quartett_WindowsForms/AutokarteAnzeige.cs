@@ -47,11 +47,6 @@ namespace Auto_Quartett_WindowsForms
             };
         }
 
-        private void BildEinfuegen(Autokarte autokarte)
-        {   
-            AutoBild.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"Bilder\" + autokarte.bilddateiname);
-        }
-
         private void setzeWerte(Autokarte autokarte)
         {
             this.Marke.Text = autokarte.marke.ToUpper();
@@ -66,15 +61,9 @@ namespace Auto_Quartett_WindowsForms
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
         }
 
-
-        private void lblGeschwindigkeit_Click(object sender, EventArgs e)
+        private void BildEinfuegen(Autokarte autokarte)
         {
-            Form1.vergleichsfeld = 0;
+            AutoBild.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"Bilder\" + autokarte.bilddateiname);
         }
-        private void lblLeistung1_Click(object sender, EventArgs e)
-        {
-            Form1.vergleichsfeld = 1;
-        }
-
     }
 }
