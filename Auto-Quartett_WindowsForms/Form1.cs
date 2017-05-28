@@ -85,6 +85,7 @@ namespace Auto_Quartett_WindowsForms
                     lblGewonnenVerloren.Visible = true;
                     break;
             }
+            ButtonsEnabled(false);
         }
 
         private void btnNeu_Click(object sender, EventArgs e)
@@ -96,6 +97,19 @@ namespace Auto_Quartett_WindowsForms
             //Zurücksetzen von relevanten Eigenschaften
             lblGewonnenVerloren.Visible = false;
             zeigeSpielkarte();
+            ButtonsEnabled(true);
+        }
+        
+        private void ButtonsEnabled(bool klickbar)
+        {
+            btnGeschwindigkeit.Enabled = klickbar;
+            btnLeistung.Enabled = klickbar;
+            btnVerbrauch.Enabled = klickbar;
+            btnZylinder.Enabled = klickbar;
+            btnHubraum.Enabled = klickbar;
+            btnBeschleunigung.Enabled = klickbar;
+            btnZuladung.Enabled = klickbar;
+            btnLadevolumen.Enabled = klickbar;
         }
 
         //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
