@@ -93,13 +93,13 @@
             this.panelAuto.Controls.Add(this.lblLeistung);
             this.panelAuto.Location = new System.Drawing.Point(0, 0);
             this.panelAuto.Name = "panelAuto";
-            this.panelAuto.Size = new System.Drawing.Size(239, 380);
+            this.panelAuto.Size = new System.Drawing.Size(239, 394);
             this.panelAuto.TabIndex = 1;
             // 
             // lbl_g_einheit
             // 
             this.lbl_g_einheit.AutoSize = true;
-            this.lbl_g_einheit.Location = new System.Drawing.Point(192, 183);
+            this.lbl_g_einheit.Location = new System.Drawing.Point(192, 203);
             this.lbl_g_einheit.Name = "lbl_g_einheit";
             this.lbl_g_einheit.Size = new System.Drawing.Size(27, 13);
             this.lbl_g_einheit.TabIndex = 9;
@@ -108,7 +108,7 @@
             // GeschwindigkeitWert
             // 
             this.GeschwindigkeitWert.AutoSize = true;
-            this.GeschwindigkeitWert.Location = new System.Drawing.Point(108, 183);
+            this.GeschwindigkeitWert.Location = new System.Drawing.Point(108, 203);
             this.GeschwindigkeitWert.Name = "GeschwindigkeitWert";
             this.GeschwindigkeitWert.Size = new System.Drawing.Size(19, 13);
             this.GeschwindigkeitWert.TabIndex = 1;
@@ -117,7 +117,7 @@
             // lblGeschwindigkeit
             // 
             this.lblGeschwindigkeit.AutoSize = true;
-            this.lblGeschwindigkeit.Location = new System.Drawing.Point(14, 183);
+            this.lblGeschwindigkeit.Location = new System.Drawing.Point(14, 203);
             this.lblGeschwindigkeit.Name = "lblGeschwindigkeit";
             this.lblGeschwindigkeit.Size = new System.Drawing.Size(88, 13);
             this.lblGeschwindigkeit.TabIndex = 0;
@@ -145,7 +145,7 @@
             // lbl_la_einheit
             // 
             this.lbl_la_einheit.AutoSize = true;
-            this.lbl_la_einheit.Location = new System.Drawing.Point(192, 353);
+            this.lbl_la_einheit.Location = new System.Drawing.Point(192, 366);
             this.lbl_la_einheit.Name = "lbl_la_einheit";
             this.lbl_la_einheit.Size = new System.Drawing.Size(27, 13);
             this.lbl_la_einheit.TabIndex = 23;
@@ -154,7 +154,7 @@
             // LadevolumenWert
             // 
             this.LadevolumenWert.AutoSize = true;
-            this.LadevolumenWert.Location = new System.Drawing.Point(108, 353);
+            this.LadevolumenWert.Location = new System.Drawing.Point(108, 366);
             this.LadevolumenWert.Name = "LadevolumenWert";
             this.LadevolumenWert.Size = new System.Drawing.Size(21, 13);
             this.LadevolumenWert.TabIndex = 22;
@@ -163,7 +163,7 @@
             // lbl_zu_einheit
             // 
             this.lbl_zu_einheit.AutoSize = true;
-            this.lbl_zu_einheit.Location = new System.Drawing.Point(192, 329);
+            this.lbl_zu_einheit.Location = new System.Drawing.Point(192, 343);
             this.lbl_zu_einheit.Name = "lbl_zu_einheit";
             this.lbl_zu_einheit.Size = new System.Drawing.Size(19, 13);
             this.lbl_zu_einheit.TabIndex = 21;
@@ -172,7 +172,7 @@
             // ZuladungWert
             // 
             this.ZuladungWert.AutoSize = true;
-            this.ZuladungWert.Location = new System.Drawing.Point(108, 329);
+            this.ZuladungWert.Location = new System.Drawing.Point(108, 343);
             this.ZuladungWert.Name = "ZuladungWert";
             this.ZuladungWert.Size = new System.Drawing.Size(24, 13);
             this.ZuladungWert.TabIndex = 20;
@@ -181,7 +181,7 @@
             // lbl_b_einheit
             // 
             this.lbl_b_einheit.AutoSize = true;
-            this.lbl_b_einheit.Location = new System.Drawing.Point(192, 305);
+            this.lbl_b_einheit.Location = new System.Drawing.Point(192, 320);
             this.lbl_b_einheit.Name = "lbl_b_einheit";
             this.lbl_b_einheit.Size = new System.Drawing.Size(24, 13);
             this.lbl_b_einheit.TabIndex = 19;
@@ -190,7 +190,7 @@
             // BeschleunigungWert
             // 
             this.BeschleunigungWert.AutoSize = true;
-            this.BeschleunigungWert.Location = new System.Drawing.Point(108, 305);
+            this.BeschleunigungWert.Location = new System.Drawing.Point(108, 320);
             this.BeschleunigungWert.Name = "BeschleunigungWert";
             this.BeschleunigungWert.Size = new System.Drawing.Size(19, 13);
             this.BeschleunigungWert.TabIndex = 18;
@@ -199,7 +199,7 @@
             // lbl_h_einheit
             // 
             this.lbl_h_einheit.AutoSize = true;
-            this.lbl_h_einheit.Location = new System.Drawing.Point(192, 282);
+            this.lbl_h_einheit.Location = new System.Drawing.Point(192, 297);
             this.lbl_h_einheit.Name = "lbl_h_einheit";
             this.lbl_h_einheit.Size = new System.Drawing.Size(27, 13);
             this.lbl_h_einheit.TabIndex = 17;
@@ -208,7 +208,7 @@
             // HubraumWert
             // 
             this.HubraumWert.AutoSize = true;
-            this.HubraumWert.Location = new System.Drawing.Point(108, 282);
+            this.HubraumWert.Location = new System.Drawing.Point(108, 297);
             this.HubraumWert.Name = "HubraumWert";
             this.HubraumWert.Size = new System.Drawing.Size(19, 13);
             this.HubraumWert.TabIndex = 16;
@@ -217,7 +217,7 @@
             // lbl_zy_einheit
             // 
             this.lbl_zy_einheit.AutoSize = true;
-            this.lbl_zy_einheit.Location = new System.Drawing.Point(192, 257);
+            this.lbl_zy_einheit.Location = new System.Drawing.Point(192, 274);
             this.lbl_zy_einheit.Name = "lbl_zy_einheit";
             this.lbl_zy_einheit.Size = new System.Drawing.Size(21, 13);
             this.lbl_zy_einheit.TabIndex = 15;
@@ -226,7 +226,7 @@
             // ZylinderWert
             // 
             this.ZylinderWert.AutoSize = true;
-            this.ZylinderWert.Location = new System.Drawing.Point(108, 257);
+            this.ZylinderWert.Location = new System.Drawing.Point(108, 274);
             this.ZylinderWert.Name = "ZylinderWert";
             this.ZylinderWert.Size = new System.Drawing.Size(23, 13);
             this.ZylinderWert.TabIndex = 14;
@@ -235,7 +235,7 @@
             // lbl_v_einheit
             // 
             this.lbl_v_einheit.AutoSize = true;
-            this.lbl_v_einheit.Location = new System.Drawing.Point(192, 233);
+            this.lbl_v_einheit.Location = new System.Drawing.Point(192, 251);
             this.lbl_v_einheit.Name = "lbl_v_einheit";
             this.lbl_v_einheit.Size = new System.Drawing.Size(27, 13);
             this.lbl_v_einheit.TabIndex = 13;
@@ -244,7 +244,7 @@
             // VerbrauchWert
             // 
             this.VerbrauchWert.AutoSize = true;
-            this.VerbrauchWert.Location = new System.Drawing.Point(108, 233);
+            this.VerbrauchWert.Location = new System.Drawing.Point(108, 251);
             this.VerbrauchWert.Name = "VerbrauchWert";
             this.VerbrauchWert.Size = new System.Drawing.Size(19, 13);
             this.VerbrauchWert.TabIndex = 12;
@@ -253,7 +253,7 @@
             // lbl_l_einheit
             // 
             this.lbl_l_einheit.AutoSize = true;
-            this.lbl_l_einheit.Location = new System.Drawing.Point(192, 207);
+            this.lbl_l_einheit.Location = new System.Drawing.Point(192, 226);
             this.lbl_l_einheit.Name = "lbl_l_einheit";
             this.lbl_l_einheit.Size = new System.Drawing.Size(24, 13);
             this.lbl_l_einheit.TabIndex = 11;
@@ -262,7 +262,7 @@
             // LeistungWert
             // 
             this.LeistungWert.AutoSize = true;
-            this.LeistungWert.Location = new System.Drawing.Point(108, 207);
+            this.LeistungWert.Location = new System.Drawing.Point(108, 226);
             this.LeistungWert.Name = "LeistungWert";
             this.LeistungWert.Size = new System.Drawing.Size(15, 13);
             this.LeistungWert.TabIndex = 10;
@@ -271,7 +271,7 @@
             // lblLadevolumen
             // 
             this.lblLadevolumen.AutoSize = true;
-            this.lblLadevolumen.Location = new System.Drawing.Point(14, 353);
+            this.lblLadevolumen.Location = new System.Drawing.Point(14, 366);
             this.lblLadevolumen.Name = "lblLadevolumen";
             this.lblLadevolumen.Size = new System.Drawing.Size(74, 13);
             this.lblLadevolumen.TabIndex = 8;
@@ -280,7 +280,7 @@
             // lblZuladung
             // 
             this.lblZuladung.AutoSize = true;
-            this.lblZuladung.Location = new System.Drawing.Point(14, 329);
+            this.lblZuladung.Location = new System.Drawing.Point(14, 343);
             this.lblZuladung.Name = "lblZuladung";
             this.lblZuladung.Size = new System.Drawing.Size(55, 13);
             this.lblZuladung.TabIndex = 7;
@@ -289,7 +289,7 @@
             // lblBeschleunigung
             // 
             this.lblBeschleunigung.AutoSize = true;
-            this.lblBeschleunigung.Location = new System.Drawing.Point(14, 305);
+            this.lblBeschleunigung.Location = new System.Drawing.Point(14, 320);
             this.lblBeschleunigung.Name = "lblBeschleunigung";
             this.lblBeschleunigung.Size = new System.Drawing.Size(86, 13);
             this.lblBeschleunigung.TabIndex = 6;
@@ -298,7 +298,7 @@
             // lblHubraum
             // 
             this.lblHubraum.AutoSize = true;
-            this.lblHubraum.Location = new System.Drawing.Point(14, 282);
+            this.lblHubraum.Location = new System.Drawing.Point(14, 297);
             this.lblHubraum.Name = "lblHubraum";
             this.lblHubraum.Size = new System.Drawing.Size(53, 13);
             this.lblHubraum.TabIndex = 5;
@@ -307,7 +307,7 @@
             // lblZylinder
             // 
             this.lblZylinder.AutoSize = true;
-            this.lblZylinder.Location = new System.Drawing.Point(14, 257);
+            this.lblZylinder.Location = new System.Drawing.Point(14, 274);
             this.lblZylinder.Name = "lblZylinder";
             this.lblZylinder.Size = new System.Drawing.Size(47, 13);
             this.lblZylinder.TabIndex = 4;
@@ -316,7 +316,7 @@
             // lblVerbrauch
             // 
             this.lblVerbrauch.AutoSize = true;
-            this.lblVerbrauch.Location = new System.Drawing.Point(14, 233);
+            this.lblVerbrauch.Location = new System.Drawing.Point(14, 251);
             this.lblVerbrauch.Name = "lblVerbrauch";
             this.lblVerbrauch.Size = new System.Drawing.Size(59, 13);
             this.lblVerbrauch.TabIndex = 3;
@@ -325,7 +325,7 @@
             // lblLeistung
             // 
             this.lblLeistung.AutoSize = true;
-            this.lblLeistung.Location = new System.Drawing.Point(14, 207);
+            this.lblLeistung.Location = new System.Drawing.Point(14, 226);
             this.lblLeistung.Name = "lblLeistung";
             this.lblLeistung.Size = new System.Drawing.Size(50, 13);
             this.lblLeistung.TabIndex = 2;
@@ -334,9 +334,9 @@
             // 
             // AutoBild
             // 
-            this.AutoBild.Location = new System.Drawing.Point(17, 50);
+            this.AutoBild.Location = new System.Drawing.Point(17, 54);
             this.AutoBild.Name = "AutoBild";
-            this.AutoBild.Size = new System.Drawing.Size(202, 118);
+            this.AutoBild.Size = new System.Drawing.Size(202, 135);
             this.AutoBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AutoBild.TabIndex = 26;
             this.AutoBild.TabStop = false;
@@ -347,7 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelAuto);
             this.Name = "AutokarteAnzeige";
-            this.Size = new System.Drawing.Size(239, 383);
+            this.Size = new System.Drawing.Size(244, 399);
             this.panelAuto.ResumeLayout(false);
             this.panelAuto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutoBild)).EndInit();

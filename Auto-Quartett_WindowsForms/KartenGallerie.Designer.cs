@@ -36,14 +36,14 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(873, 388);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(873, 403);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // KartenGallerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 412);
+            this.ClientSize = new System.Drawing.Size(897, 427);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "KartenGallerie";
             this.Text = "KartenGallerie";
