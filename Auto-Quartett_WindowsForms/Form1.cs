@@ -87,17 +87,20 @@ namespace Auto_Quartett_WindowsForms
             }
             ButtonsEnabled(false);
         }
-
+        
         private void btnNeu_Click(object sender, EventArgs e)
         {
-            //Autokartenanzeigen entfernen
-            this.PanelAuto1.Controls.Clear();
-            this.PanelAuto2.Controls.Clear();
+            if (btnBeschleunigung.Enabled == false)
+            {
+                //Autokartenanzeigen entfernen
+                this.PanelAuto1.Controls.Clear();
+                this.PanelAuto2.Controls.Clear();
 
-            //Zurücksetzen von relevanten Eigenschaften
-            lblGewonnenVerloren.Visible = false;
-            zeigeSpielkarte();
-            ButtonsEnabled(true);
+                //Zurücksetzen von relevanten Eigenschaften
+                lblGewonnenVerloren.Visible = false;
+                zeigeSpielkarte();
+                ButtonsEnabled(true);
+            }
         }
         
         private void ButtonsEnabled(bool klickbar)
@@ -110,6 +113,17 @@ namespace Auto_Quartett_WindowsForms
             btnBeschleunigung.Enabled = klickbar;
             btnZuladung.Enabled = klickbar;
             btnLadevolumen.Enabled = klickbar;
+            //Next kann umgekehrt zu Vergleich nicht angeklickt werden.
+            btnNeu.Enabled = !klickbar;
+            //Focus setzen, damit mit Enter und Pfeiltasten leicht bedient werden kann.
+            if (!klickbar)
+            {
+                btnNeu.Focus();
+            }
+            else
+            {
+                btnGeschwindigkeit.Focus();
+            }
         }
 
         //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
