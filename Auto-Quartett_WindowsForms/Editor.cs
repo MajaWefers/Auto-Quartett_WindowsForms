@@ -93,14 +93,14 @@ namespace Auto_Quartett_WindowsForms
                 ListViewItem lvItem = new ListViewItem();
                 lvItem.SubItems.Add(eintrag.marke);
                 lvItem.SubItems.Add(eintrag.modell);
-                lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString());
-                lvItem.SubItems.Add(eintrag.leistung.ToString());
-                lvItem.SubItems.Add(eintrag.verbrauch.ToString());
-                lvItem.SubItems.Add(eintrag.zylinder.ToString());
-                lvItem.SubItems.Add(eintrag.hubraum.ToString());
-                lvItem.SubItems.Add(eintrag.beschleunigung.ToString());
-                lvItem.SubItems.Add(eintrag.zuladung.ToString());
-                lvItem.SubItems.Add(eintrag.ladevolumen.ToString());
+                lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString()+ " km/h");
+                lvItem.SubItems.Add(eintrag.verbrauch.ToString()+" Liter");
+                lvItem.SubItems.Add(eintrag.zylinder.ToString()+" Zyl");
+                lvItem.SubItems.Add(eintrag.leistung.ToString()+" kW");
+                lvItem.SubItems.Add(eintrag.hubraum.ToString()+" Liter");
+                lvItem.SubItems.Add(eintrag.beschleunigung.ToString()+" sec");
+                lvItem.SubItems.Add(eintrag.zuladung.ToString()+" Kg");
+                lvItem.SubItems.Add(eintrag.ladevolumen.ToString()+" Liter");
 
                 listView1.Items.Add(lvItem);
             }
