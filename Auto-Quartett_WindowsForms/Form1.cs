@@ -24,6 +24,9 @@ namespace Auto_Quartett_WindowsForms
         public static int zufall1;
         public static int zufall2;
 
+        int spielerpunkte;
+        int gegnerpunkte;
+
         public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich)
         {
             this.autos = autokarten;
@@ -60,7 +63,7 @@ namespace Auto_Quartett_WindowsForms
             } while (zufall1 == zufall2);
 
             zeigeAuto2(autos[zufall2]);
-            
+
             //Vergleich der Werte
             Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
             autokarteAnzeige1.SetzeErgebnisFarben(vergleichsErgebnis, vergleichsfeld);
@@ -68,22 +71,33 @@ namespace Auto_Quartett_WindowsForms
             {
                 case Ergebnis.Gewinn:
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Niederlage, vergleichsfeld);
-                    lblGewonnenVerloren.ForeColor = Color.Blue;
-                    lblGewonnenVerloren.Text = "Sie haben GEWONNEN!";
-                    lblGewonnenVerloren.Visible = true;
+                    Int32.TryParse(lblSpielerpunkte.Text, out spielerpunkte);
+                    lblSpielerpunkte.Text = Convert.ToString(++spielerpunkte);
                     break;
                 case Ergebnis.Niederlage:
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gewinn, vergleichsfeld);
-                    lblGewonnenVerloren.ForeColor = Color.Red;
-                    lblGewonnenVerloren.Text = "Sie haben VERLOREN!";
-                    lblGewonnenVerloren.Visible = true;
+                    Int32.TryParse(lblGegnerpunkte.Text, out gegnerpunkte);
+                    lblGegnerpunkte.Text = Convert.ToString(++gegnerpunkte);
                     break;
                 case Ergebnis.Gleichstand:
                     autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gleichstand, vergleichsfeld);
-                    lblGewonnenVerloren.ForeColor = Color.Red;
-                    lblGewonnenVerloren.Text = "Gleichstand! Sie haben VERLOREN.";
-                    lblGewonnenVerloren.Visible = true;
                     break;
+            }
+
+            if (spielerpunkte > gegnerpunkte)
+            {
+                lblSpielerpunkte.ForeColor = Color.Green;
+                lblGegnerpunkte.ForeColor = Color.Red;
+            }
+            else if (spielerpunkte < gegnerpunkte)
+            {
+                lblSpielerpunkte.ForeColor = Color.Red;
+                lblGegnerpunkte.ForeColor = Color.Green;
+            }
+            else if (spielerpunkte == gegnerpunkte)
+            {
+                lblSpielerpunkte.ForeColor = Color.Blue;
+                lblGegnerpunkte.ForeColor = Color.Blue;
             }
             ButtonsEnabled(false);
         }
@@ -97,7 +111,6 @@ namespace Auto_Quartett_WindowsForms
                 this.PanelAuto2.Controls.Clear();
 
                 //Zurücksetzen von relevanten Eigenschaften
-                lblGewonnenVerloren.Visible = false;
                 zeigeSpielkarte();
                 ButtonsEnabled(true);
             }
@@ -160,10 +173,46 @@ namespace Auto_Quartett_WindowsForms
             Vergleich(7);
         }
 
+        //ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
         private void btnGeschwindigkeit_MouseHover(object sender, EventArgs e)
         {
             ToolTip tip = new ToolTip();
             tip.SetToolTip(btnGeschwindigkeit, "Geschwindigkeit");
+        }
+        private void btnLeistung_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnLeistung, "Leistung");
+        }
+        private void btnVerbrauch_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnVerbrauch, "Verbrauch");
+        }
+        private void btnZylinder_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnZylinder, "Zylinder");
+        }
+        private void btnHubraum_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnHubraum, "Hubraum");
+        }
+        private void btnBeschleunigung_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnBeschleunigung, "Beschleunigung");
+        }
+        private void btnZuladung_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnZuladung, "Zuladung");
+        }
+        private void btnLadevolumen_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnLadevolumen, "Ladevolumen");
         }
     }
 }
