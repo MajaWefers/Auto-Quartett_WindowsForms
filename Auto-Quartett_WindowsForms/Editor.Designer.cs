@@ -62,6 +62,7 @@
             this.tbModell = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             this.tbMarke.Name = "tbMarke";
             this.tbMarke.Size = new System.Drawing.Size(100, 20);
             this.tbMarke.TabIndex = 0;
+            this.tbMarke.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // tbGeschwindigkeit
             // 
@@ -78,6 +80,7 @@
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
             this.tbGeschwindigkeit.Size = new System.Drawing.Size(62, 20);
             this.tbGeschwindigkeit.TabIndex = 1;
+            this.tbGeschwindigkeit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbVerbrauch
             // 
@@ -85,6 +88,7 @@
             this.tbVerbrauch.Name = "tbVerbrauch";
             this.tbVerbrauch.Size = new System.Drawing.Size(62, 20);
             this.tbVerbrauch.TabIndex = 2;
+            this.tbVerbrauch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbZylinder
             // 
@@ -92,6 +96,7 @@
             this.tbZylinder.Name = "tbZylinder";
             this.tbZylinder.Size = new System.Drawing.Size(62, 20);
             this.tbZylinder.TabIndex = 3;
+            this.tbZylinder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbLeistung
             // 
@@ -99,6 +104,7 @@
             this.tbLeistung.Name = "tbLeistung";
             this.tbLeistung.Size = new System.Drawing.Size(62, 20);
             this.tbLeistung.TabIndex = 4;
+            this.tbLeistung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbLadevolumen
             // 
@@ -106,6 +112,7 @@
             this.tbLadevolumen.Name = "tbLadevolumen";
             this.tbLadevolumen.Size = new System.Drawing.Size(62, 20);
             this.tbLadevolumen.TabIndex = 5;
+            this.tbLadevolumen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbZuladung
             // 
@@ -113,6 +120,7 @@
             this.tbZuladung.Name = "tbZuladung";
             this.tbZuladung.Size = new System.Drawing.Size(62, 20);
             this.tbZuladung.TabIndex = 6;
+            this.tbZuladung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbHubraum
             // 
@@ -120,6 +128,7 @@
             this.tbHubraum.Name = "tbHubraum";
             this.tbHubraum.Size = new System.Drawing.Size(62, 20);
             this.tbHubraum.TabIndex = 7;
+            this.tbHubraum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbBeschleunigung
             // 
@@ -127,6 +136,7 @@
             this.tbBeschleunigung.Name = "tbBeschleunigung";
             this.tbBeschleunigung.Size = new System.Drawing.Size(62, 20);
             this.tbBeschleunigung.TabIndex = 8;
+            this.tbBeschleunigung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // listView1
             // 
@@ -151,7 +161,7 @@
             // ColMarke
             // 
             this.ColMarke.Tag = "";
-            this.ColMarke.Text = "Name";
+            this.ColMarke.Text = "Marke";
             this.ColMarke.Width = 105;
             // 
             // ColModell
@@ -306,6 +316,7 @@
             this.tbModell.Name = "tbModell";
             this.tbModell.Size = new System.Drawing.Size(100, 20);
             this.tbModell.TabIndex = 20;
+            this.tbModell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // label10
             // 
@@ -397,5 +408,6 @@
         private System.Windows.Forms.TextBox tbModell;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
