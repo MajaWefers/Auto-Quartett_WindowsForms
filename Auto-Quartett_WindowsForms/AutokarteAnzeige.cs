@@ -66,7 +66,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void BildEinfuegen(Autokarte autokarte)
         {
-            AutoBild.Image = Image.FromFile(@"..\..\..\Auto-Quartett_WindowsForms\Bilder" + autokarte.marke.ToLower() + Regex.Replace(autokarte.modell.ToLower(), " ","") + ".jpg");
+            AutoBild.Image = Image.FromFile(@"..\..\..\Auto-Quartett_WindowsForms\Bilder\" + autokarte.marke.ToLower() + Regex.Replace(autokarte.modell.ToLower(), " ","") + ".jpg");
         }
     }
 }
