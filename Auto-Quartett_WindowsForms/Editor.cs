@@ -90,8 +90,7 @@ namespace Auto_Quartett_WindowsForms
             this.karten = this.datenZugriff.LadeKarten();
             foreach (Autokarte eintrag in this.karten)
             {
-                ListViewItem lvItem = new ListViewItem();
-                lvItem.SubItems.Add(eintrag.marke);
+                ListViewItem lvItem = new ListViewItem(eintrag.marke);
                 lvItem.SubItems.Add(eintrag.modell);
                 lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString()+ " km/h");
                 lvItem.SubItems.Add(eintrag.verbrauch.ToString()+" Liter");
