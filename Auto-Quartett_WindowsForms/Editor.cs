@@ -28,24 +28,24 @@ namespace Auto_Quartett_WindowsForms
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             Autokarte save = new Autokarte();
-                save.marke = tbMarke.Text;
-                save.modell = tbModell.Text;
-                save.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
-                save.leistung = Int32.Parse(tbLeistung.Text);
-                save.verbrauch = Double.Parse(tbVerbrauch.Text);
-                save.zylinder = Int32.Parse(tbZylinder.Text);
-                save.hubraum = Double.Parse(tbHubraum.Text);
-                save.beschleunigung = Double.Parse(tbBeschleunigung.Text);
-                save.zuladung = Int32.Parse(tbZuladung.Text);
-                save.ladevolumen = Int32.Parse(tbLadevolumen.Text);
-            Autokarte[] kartenArray = this.karten.Concat(new []{save}).ToArray();
+            save.marke = tbMarke.Text;
+            save.modell = tbModell.Text;
+            save.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
+            save.leistung = Int32.Parse(tbLeistung.Text);
+            save.verbrauch = Double.Parse(tbVerbrauch.Text);
+            save.zylinder = Int32.Parse(tbZylinder.Text);
+            save.hubraum = Double.Parse(tbHubraum.Text);
+            save.beschleunigung = Double.Parse(tbBeschleunigung.Text);
+            save.zuladung = Int32.Parse(tbZuladung.Text);
+            save.ladevolumen = Int32.Parse(tbLadevolumen.Text);
+            Autokarte[] kartenArray = this.karten.Concat(new[] { save }).ToArray();
             this.datenZugriff.SpeichereKarten(kartenArray);
 
             this.RefreshView();
-            
+
         }
 
-               
+
         private void RefreshView()
         {
             tbMarke.Text = "";
@@ -75,6 +75,15 @@ namespace Auto_Quartett_WindowsForms
                 e.Handled = true;
             }
         }
+        private void OnlyNumAndChar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) )
+            {
+                e.Handled = true;
+            }
+
+
+        }
 
         private void load()
         {
@@ -92,6 +101,8 @@ namespace Auto_Quartett_WindowsForms
                 lvItem.SubItems.Add(eintrag.beschleunigung.ToString());
                 lvItem.SubItems.Add(eintrag.zuladung.ToString());
                 lvItem.SubItems.Add(eintrag.ladevolumen.ToString());
+
+                listView1.Items.Add(lvItem);
             }
 
         }

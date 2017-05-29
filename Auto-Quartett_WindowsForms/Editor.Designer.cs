@@ -72,6 +72,7 @@
             this.tbMarke.Name = "tbMarke";
             this.tbMarke.Size = new System.Drawing.Size(100, 20);
             this.tbMarke.TabIndex = 0;
+            this.tbMarke.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // tbGeschwindigkeit
             // 
@@ -160,7 +161,7 @@
             // ColMarke
             // 
             this.ColMarke.Tag = "";
-            this.ColMarke.Text = "Name";
+            this.ColMarke.Text = "Marke";
             this.ColMarke.Width = 105;
             // 
             // ColModell
@@ -315,6 +316,7 @@
             this.tbModell.Name = "tbModell";
             this.tbModell.Size = new System.Drawing.Size(100, 20);
             this.tbModell.TabIndex = 20;
+            this.tbModell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // label10
             // 
