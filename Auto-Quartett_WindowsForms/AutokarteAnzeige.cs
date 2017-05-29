@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using System;
 
 namespace Auto_Quartett_WindowsForms
@@ -65,7 +66,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void BildEinfuegen(Autokarte autokarte)
         {
-            AutoBild.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"Bilder\" + autokarte.bilddateiname);
+            AutoBild.Image = Image.FromFile(@"..\..\..\Auto-Quartett_WindowsForms\Bilder\" + autokarte.marke.ToLower() + Regex.Replace(autokarte.modell.ToLower(), " ","") + ".jpg");
         }
     }
 }

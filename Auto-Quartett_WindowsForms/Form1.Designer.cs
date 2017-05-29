@@ -50,7 +50,7 @@
             this.lblAuswahlVergleichswert.BackColor = System.Drawing.Color.White;
             this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(0, 1);
             this.lblAuswahlVergleichswert.Name = "lblAuswahlVergleichswert";
-            this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(572, 23);
+            this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(588, 23);
             this.lblAuswahlVergleichswert.TabIndex = 5;
             this.lblAuswahlVergleichswert.Text = " Wählen Sie den Vergleichswert mit Hilfe eines Buttons.";
             this.lblAuswahlVergleichswert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -82,16 +82,16 @@
             this.PanelAuto1.BackColor = System.Drawing.Color.Transparent;
             this.PanelAuto1.Location = new System.Drawing.Point(62, 53);
             this.PanelAuto1.Name = "PanelAuto1";
-            this.PanelAuto1.Size = new System.Drawing.Size(223, 397);
+            this.PanelAuto1.Size = new System.Drawing.Size(232, 397);
             this.PanelAuto1.TabIndex = 17;
             // 
             // PanelAuto2
             // 
             this.PanelAuto2.AutoSize = true;
             this.PanelAuto2.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAuto2.Location = new System.Drawing.Point(314, 53);
+            this.PanelAuto2.Location = new System.Drawing.Point(322, 53);
             this.PanelAuto2.Name = "PanelAuto2";
-            this.PanelAuto2.Size = new System.Drawing.Size(219, 397);
+            this.PanelAuto2.Size = new System.Drawing.Size(228, 397);
             this.PanelAuto2.TabIndex = 18;
             // 
             // btnGeschwindigkeit
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(570, 464);
+            this.ClientSize = new System.Drawing.Size(586, 470);
             this.Controls.Add(this.btnZuladung);
             this.Controls.Add(this.btnLadevolumen);
             this.Controls.Add(this.btnBeschleunigung);

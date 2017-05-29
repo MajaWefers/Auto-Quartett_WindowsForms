@@ -91,7 +91,7 @@
             this.panelAuto.Controls.Add(this.lblZylinder);
             this.panelAuto.Controls.Add(this.lblVerbrauch);
             this.panelAuto.Controls.Add(this.lblLeistung);
-            this.panelAuto.Location = new System.Drawing.Point(0, 0);
+            this.panelAuto.Location = new System.Drawing.Point(5, 5);
             this.panelAuto.Name = "panelAuto";
             this.panelAuto.Size = new System.Drawing.Size(239, 394);
             this.panelAuto.TabIndex = 1;
@@ -345,7 +345,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelAuto);
             this.Name = "AutokarteAnzeige";
-            this.Size = new System.Drawing.Size(244, 399);
+            this.Size = new System.Drawing.Size(252, 407);
             this.panelAuto.ResumeLayout(false);
             this.panelAuto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutoBild)).EndInit();
