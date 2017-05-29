@@ -22,9 +22,11 @@ namespace Auto_Quartett_WindowsForms
             {
                 case Ergebnis.Gewinn:
                     this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
+                    this.BackColor = Color.LightGreen;
                     break;
                 case Ergebnis.Niederlage:
                     this.labels[vergleichsfeld].BackColor = Color.LightCoral;
+                    this.BackColor = Color.Salmon;
                     break;
                 case Ergebnis.Gleichstand:
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
