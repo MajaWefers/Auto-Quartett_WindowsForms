@@ -159,5 +159,11 @@ namespace Auto_Quartett_WindowsForms
         {
             Vergleich(7);
         }
+
+        private void btnGeschwindigkeit_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.SetToolTip(btnGeschwindigkeit, "Geschwindigkeit");
+        }
     }
 }

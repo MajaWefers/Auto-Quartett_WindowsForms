@@ -68,7 +68,7 @@
             // btnNeu
             // 
             this.btnNeu.Enabled = false;
-            this.btnNeu.Location = new System.Drawing.Point(12, 212);
+            this.btnNeu.Location = new System.Drawing.Point(12, 216);
             this.btnNeu.Name = "btnNeu";
             this.btnNeu.Size = new System.Drawing.Size(44, 23);
             this.btnNeu.TabIndex = 15;
@@ -97,16 +97,17 @@
             // btnGeschwindigkeit
             // 
             this.btnGeschwindigkeit.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnGeschwindigkeit.Location = new System.Drawing.Point(12, 253);
+            this.btnGeschwindigkeit.Location = new System.Drawing.Point(11, 259);
             this.btnGeschwindigkeit.Name = "btnGeschwindigkeit";
             this.btnGeschwindigkeit.Size = new System.Drawing.Size(24, 23);
             this.btnGeschwindigkeit.TabIndex = 1;
             this.btnGeschwindigkeit.UseVisualStyleBackColor = true;
             this.btnGeschwindigkeit.Click += new System.EventHandler(this.btnGeschwindigkeit_Click);
+            this.btnGeschwindigkeit.MouseHover += new System.EventHandler(this.btnGeschwindigkeit_MouseHover);
             // 
             // btnLeistung
             // 
-            this.btnLeistung.Location = new System.Drawing.Point(12, 276);
+            this.btnLeistung.Location = new System.Drawing.Point(11, 282);
             this.btnLeistung.Name = "btnLeistung";
             this.btnLeistung.Size = new System.Drawing.Size(24, 23);
             this.btnLeistung.TabIndex = 2;
@@ -115,7 +116,7 @@
             // 
             // btnVerbrauch
             // 
-            this.btnVerbrauch.Location = new System.Drawing.Point(12, 299);
+            this.btnVerbrauch.Location = new System.Drawing.Point(11, 305);
             this.btnVerbrauch.Name = "btnVerbrauch";
             this.btnVerbrauch.Size = new System.Drawing.Size(24, 23);
             this.btnVerbrauch.TabIndex = 3;
@@ -124,7 +125,7 @@
             // 
             // btnZylinder
             // 
-            this.btnZylinder.Location = new System.Drawing.Point(12, 322);
+            this.btnZylinder.Location = new System.Drawing.Point(11, 328);
             this.btnZylinder.Name = "btnZylinder";
             this.btnZylinder.Size = new System.Drawing.Size(24, 23);
             this.btnZylinder.TabIndex = 4;
@@ -133,7 +134,7 @@
             // 
             // btnHubraum
             // 
-            this.btnHubraum.Location = new System.Drawing.Point(12, 345);
+            this.btnHubraum.Location = new System.Drawing.Point(11, 351);
             this.btnHubraum.Name = "btnHubraum";
             this.btnHubraum.Size = new System.Drawing.Size(24, 23);
             this.btnHubraum.TabIndex = 5;
@@ -142,7 +143,7 @@
             // 
             // btnBeschleunigung
             // 
-            this.btnBeschleunigung.Location = new System.Drawing.Point(12, 368);
+            this.btnBeschleunigung.Location = new System.Drawing.Point(11, 374);
             this.btnBeschleunigung.Name = "btnBeschleunigung";
             this.btnBeschleunigung.Size = new System.Drawing.Size(24, 23);
             this.btnBeschleunigung.TabIndex = 6;
@@ -151,7 +152,7 @@
             // 
             // btnLadevolumen
             // 
-            this.btnLadevolumen.Location = new System.Drawing.Point(12, 414);
+            this.btnLadevolumen.Location = new System.Drawing.Point(11, 420);
             this.btnLadevolumen.Name = "btnLadevolumen";
             this.btnLadevolumen.Size = new System.Drawing.Size(24, 23);
             this.btnLadevolumen.TabIndex = 8;
@@ -160,7 +161,7 @@
             // 
             // btnZuladung
             // 
-            this.btnZuladung.Location = new System.Drawing.Point(12, 391);
+            this.btnZuladung.Location = new System.Drawing.Point(11, 397);
             this.btnZuladung.Name = "btnZuladung";
             this.btnZuladung.Size = new System.Drawing.Size(24, 23);
             this.btnZuladung.TabIndex = 7;
