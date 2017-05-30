@@ -119,7 +119,7 @@
             // GeschwindigkeitWert
             // 
             this.GeschwindigkeitWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GeschwindigkeitWert.Location = new System.Drawing.Point(130, 248);
+            this.GeschwindigkeitWert.Location = new System.Drawing.Point(141, 248);
             this.GeschwindigkeitWert.Name = "GeschwindigkeitWert";
             this.GeschwindigkeitWert.Size = new System.Drawing.Size(72, 18);
             this.GeschwindigkeitWert.TabIndex = 1;
@@ -130,7 +130,7 @@
             // 
             this.lblGeschwindigkeit.AutoSize = true;
             this.lblGeschwindigkeit.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeschwindigkeit.Location = new System.Drawing.Point(14, 248);
+            this.lblGeschwindigkeit.Location = new System.Drawing.Point(24, 248);
             this.lblGeschwindigkeit.Name = "lblGeschwindigkeit";
             this.lblGeschwindigkeit.Size = new System.Drawing.Size(115, 18);
             this.lblGeschwindigkeit.TabIndex = 0;
@@ -169,9 +169,9 @@
             // LadevolumenWert
             // 
             this.LadevolumenWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LadevolumenWert.Location = new System.Drawing.Point(127, 411);
+            this.LadevolumenWert.Location = new System.Drawing.Point(141, 411);
             this.LadevolumenWert.Name = "LadevolumenWert";
-            this.LadevolumenWert.Size = new System.Drawing.Size(75, 18);
+            this.LadevolumenWert.Size = new System.Drawing.Size(72, 18);
             this.LadevolumenWert.TabIndex = 22;
             this.LadevolumenWert.Text = "la1";
             this.LadevolumenWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -189,9 +189,9 @@
             // ZuladungWert
             // 
             this.ZuladungWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZuladungWert.Location = new System.Drawing.Point(125, 388);
+            this.ZuladungWert.Location = new System.Drawing.Point(141, 388);
             this.ZuladungWert.Name = "ZuladungWert";
-            this.ZuladungWert.Size = new System.Drawing.Size(78, 18);
+            this.ZuladungWert.Size = new System.Drawing.Size(72, 18);
             this.ZuladungWert.TabIndex = 20;
             this.ZuladungWert.Text = "zu1";
             this.ZuladungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -209,7 +209,7 @@
             // BeschleunigungWert
             // 
             this.BeschleunigungWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeschleunigungWert.Location = new System.Drawing.Point(130, 365);
+            this.BeschleunigungWert.Location = new System.Drawing.Point(141, 365);
             this.BeschleunigungWert.Name = "BeschleunigungWert";
             this.BeschleunigungWert.Size = new System.Drawing.Size(72, 18);
             this.BeschleunigungWert.TabIndex = 18;
@@ -229,7 +229,7 @@
             // HubraumWert
             // 
             this.HubraumWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HubraumWert.Location = new System.Drawing.Point(130, 342);
+            this.HubraumWert.Location = new System.Drawing.Point(141, 342);
             this.HubraumWert.Name = "HubraumWert";
             this.HubraumWert.Size = new System.Drawing.Size(72, 18);
             this.HubraumWert.TabIndex = 16;
@@ -249,9 +249,9 @@
             // ZylinderWert
             // 
             this.ZylinderWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZylinderWert.Location = new System.Drawing.Point(132, 319);
+            this.ZylinderWert.Location = new System.Drawing.Point(141, 319);
             this.ZylinderWert.Name = "ZylinderWert";
-            this.ZylinderWert.Size = new System.Drawing.Size(70, 18);
+            this.ZylinderWert.Size = new System.Drawing.Size(72, 18);
             this.ZylinderWert.TabIndex = 14;
             this.ZylinderWert.Text = "zy1";
             this.ZylinderWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -269,9 +269,9 @@
             // VerbrauchWert
             // 
             this.VerbrauchWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerbrauchWert.Location = new System.Drawing.Point(132, 296);
+            this.VerbrauchWert.Location = new System.Drawing.Point(141, 296);
             this.VerbrauchWert.Name = "VerbrauchWert";
-            this.VerbrauchWert.Size = new System.Drawing.Size(71, 18);
+            this.VerbrauchWert.Size = new System.Drawing.Size(72, 18);
             this.VerbrauchWert.TabIndex = 12;
             this.VerbrauchWert.Text = "v1";
             this.VerbrauchWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -289,9 +289,9 @@
             // LeistungWert
             // 
             this.LeistungWert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeistungWert.Location = new System.Drawing.Point(134, 271);
+            this.LeistungWert.Location = new System.Drawing.Point(141, 271);
             this.LeistungWert.Name = "LeistungWert";
-            this.LeistungWert.Size = new System.Drawing.Size(68, 18);
+            this.LeistungWert.Size = new System.Drawing.Size(72, 18);
             this.LeistungWert.TabIndex = 10;
             this.LeistungWert.Text = "l1";
             this.LeistungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -300,7 +300,7 @@
             // 
             this.lblLadevolumen.AutoSize = true;
             this.lblLadevolumen.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLadevolumen.Location = new System.Drawing.Point(14, 411);
+            this.lblLadevolumen.Location = new System.Drawing.Point(24, 411);
             this.lblLadevolumen.Name = "lblLadevolumen";
             this.lblLadevolumen.Size = new System.Drawing.Size(96, 18);
             this.lblLadevolumen.TabIndex = 8;
@@ -310,7 +310,7 @@
             // 
             this.lblZuladung.AutoSize = true;
             this.lblZuladung.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZuladung.Location = new System.Drawing.Point(14, 388);
+            this.lblZuladung.Location = new System.Drawing.Point(24, 388);
             this.lblZuladung.Name = "lblZuladung";
             this.lblZuladung.Size = new System.Drawing.Size(70, 18);
             this.lblZuladung.TabIndex = 7;
@@ -320,7 +320,7 @@
             // 
             this.lblBeschleunigung.AutoSize = true;
             this.lblBeschleunigung.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeschleunigung.Location = new System.Drawing.Point(14, 365);
+            this.lblBeschleunigung.Location = new System.Drawing.Point(24, 365);
             this.lblBeschleunigung.Name = "lblBeschleunigung";
             this.lblBeschleunigung.Size = new System.Drawing.Size(110, 18);
             this.lblBeschleunigung.TabIndex = 6;
@@ -330,7 +330,7 @@
             // 
             this.lblHubraum.AutoSize = true;
             this.lblHubraum.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHubraum.Location = new System.Drawing.Point(14, 342);
+            this.lblHubraum.Location = new System.Drawing.Point(24, 342);
             this.lblHubraum.Name = "lblHubraum";
             this.lblHubraum.Size = new System.Drawing.Size(73, 18);
             this.lblHubraum.TabIndex = 5;
@@ -340,7 +340,7 @@
             // 
             this.lblZylinder.AutoSize = true;
             this.lblZylinder.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZylinder.Location = new System.Drawing.Point(14, 319);
+            this.lblZylinder.Location = new System.Drawing.Point(24, 319);
             this.lblZylinder.Name = "lblZylinder";
             this.lblZylinder.Size = new System.Drawing.Size(63, 18);
             this.lblZylinder.TabIndex = 4;
@@ -350,7 +350,7 @@
             // 
             this.lblVerbrauch.AutoSize = true;
             this.lblVerbrauch.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerbrauch.Location = new System.Drawing.Point(14, 296);
+            this.lblVerbrauch.Location = new System.Drawing.Point(24, 296);
             this.lblVerbrauch.Name = "lblVerbrauch";
             this.lblVerbrauch.Size = new System.Drawing.Size(77, 18);
             this.lblVerbrauch.TabIndex = 3;
@@ -360,7 +360,7 @@
             // 
             this.lblLeistung.AutoSize = true;
             this.lblLeistung.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeistung.Location = new System.Drawing.Point(14, 271);
+            this.lblLeistung.Location = new System.Drawing.Point(24, 271);
             this.lblLeistung.Name = "lblLeistung";
             this.lblLeistung.Size = new System.Drawing.Size(66, 18);
             this.lblLeistung.TabIndex = 2;
