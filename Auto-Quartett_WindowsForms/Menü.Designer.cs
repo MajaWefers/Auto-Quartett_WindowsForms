@@ -49,7 +49,7 @@
             this.EditorButton.Location = new System.Drawing.Point(197, 110);
             this.EditorButton.Name = "EditorButton";
             this.EditorButton.Size = new System.Drawing.Size(75, 23);
-            this.EditorButton.TabIndex = 1;
+            this.EditorButton.TabIndex = 2;
             this.EditorButton.Text = "Editor";
             this.EditorButton.UseVisualStyleBackColor = true;
             this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
@@ -59,7 +59,7 @@
             this.BeendenButton.Location = new System.Drawing.Point(197, 154);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(75, 23);
-            this.BeendenButton.TabIndex = 2;
+            this.BeendenButton.TabIndex = 3;
             this.BeendenButton.Text = "Beenden";
             this.BeendenButton.UseVisualStyleBackColor = true;
             this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
@@ -69,7 +69,7 @@
             this.GallerieButton.Location = new System.Drawing.Point(197, 64);
             this.GallerieButton.Name = "GallerieButton";
             this.GallerieButton.Size = new System.Drawing.Size(75, 23);
-            this.GallerieButton.TabIndex = 3;
+            this.GallerieButton.TabIndex = 1;
             this.GallerieButton.Text = "Gallerie";
             this.GallerieButton.UseVisualStyleBackColor = true;
             this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);

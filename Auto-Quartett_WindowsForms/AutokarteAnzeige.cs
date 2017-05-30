@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Auto_Quartett_WindowsForms
 {
@@ -12,6 +13,7 @@ namespace Auto_Quartett_WindowsForms
             this.InitializeComponent();
             this.initialisiereLabels();
             this.setzeWerte(autokarte);
+            this.BildEinfuegen(autokarte);
         }
 
         public void SetzeErgebnisFarben(Ergebnis vergleichsErgebnis,int vergleichsfeld)
@@ -20,12 +22,15 @@ namespace Auto_Quartett_WindowsForms
             {
                 case Ergebnis.Gewinn:
                     this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
+                    this.BackColor = Color.LightGreen;
                     break;
                 case Ergebnis.Niederlage:
                     this.labels[vergleichsfeld].BackColor = Color.LightCoral;
+                    this.BackColor = Color.Salmon;
                     break;
                 case Ergebnis.Gleichstand:
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
+                    this.BackColor = Color.Blue;
                     break;
             }
         }
@@ -57,6 +62,18 @@ namespace Auto_Quartett_WindowsForms
             this.BeschleunigungWert.Text = autokarte.beschleunigung.ToString("N1");
             this.ZuladungWert.Text = autokarte.zuladung.ToString();
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
+        }
+
+        private void BildEinfuegen(Autokarte autokarte)
+        {
+            try
+            {
+                AutoBild.Image = Image.FromFile(@"Bilder\" + autokarte.marke.ToLower() + Regex.Replace(autokarte.modell.ToLower(), " ", "") + ".jpg");
+            }
+            catch
+            {
+                AutoBild.Image = Image.FromFile(@"Bilder\" + "autodefault.jpg");
+            }
         }
     }
 }
