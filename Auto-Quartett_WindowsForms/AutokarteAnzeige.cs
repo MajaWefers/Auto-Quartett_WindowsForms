@@ -68,7 +68,7 @@ namespace Auto_Quartett_WindowsForms
         {
             try
             {
-                AutoBild.Image = Image.FromFile(@"Bilder\" + autokarte.marke.ToLower() + Regex.Replace(autokarte.modell.ToLower(), " ", "") + ".jpg");
+                AutoBild.Image = Image.FromFile(@"Bilder\" + autokarte.marke.ToLower() + " " + autokarte.modell.ToLower() + ".jpg");
             }
             catch
             {
