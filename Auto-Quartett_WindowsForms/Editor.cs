@@ -7,32 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Auto_Quartett_WindowsForms
 {
     public partial class Editor : Form
     {
-        public Editor()
+        private readonly DatenZugriff datenZugriff;
+        private Autokarte[] karten;
+
+        public Editor(DatenZugriff datenZugriff)
         {
+            this.datenZugriff = datenZugriff;
             InitializeComponent();
+            this.load();
         }
-        Autokarte eintrag = new Autokarte();
+
+
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
-            
-            eintrag.marke = tbMarke.Text;
-            eintrag.modell = tbModell.Text;
-            eintrag.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
-            eintrag.leistung = Int32.Parse(tbLeistung.Text);
-            eintrag.verbrauch = Double.Parse(tbVerbrauch.Text);
-            eintrag.zylinder = Int32.Parse(tbZylinder.Text);
-            eintrag.hubraum = Double.Parse(tbHubraum.Text);
-            eintrag.beschleunigung = Double.Parse(tbBeschleunigung.Text);
-            eintrag.zuladung = Int32.Parse(tbZuladung.Text);
-            eintrag.ladevolumen = Int32.Parse(tbLadevolumen.Text);
+            Autokarte save = new Autokarte();
+            save.marke = tbMarke.Text;
+            save.modell = tbModell.Text;
+            save.geschwindigkeit = Int32.Parse(tbGeschwindigkeit.Text);
+            save.leistung = Int32.Parse(tbLeistung.Text);
+            save.verbrauch = Double.Parse(tbVerbrauch.Text);
+            save.zylinder = Int32.Parse(tbZylinder.Text);
+            save.hubraum = Double.Parse(tbHubraum.Text);
+            save.beschleunigung = Double.Parse(tbBeschleunigung.Text);
+            save.zuladung = Int32.Parse(tbZuladung.Text);
+            save.ladevolumen = Int32.Parse(tbLadevolumen.Text);
+            Autokarte[] kartenArray = this.karten.Concat(new[] { save }).ToArray();
+            this.datenZugriff.SpeichereKarten(kartenArray);
 
             this.RefreshView();
+
         }
+
+
         private void RefreshView()
         {
             tbMarke.Text = "";
@@ -46,20 +59,50 @@ namespace Auto_Quartett_WindowsForms
             tbZuladung.Text = "";
             tbLadevolumen.Text = "";
 
-            //foreach (var eintrag)
-            //{
-            // System.Windows.Forms.ListViewItem lvItem = new ListViewItem();
-            // lvItem.SubItems.Add(eintrag.name);
-            // lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString());
-            // lvItem.SubItems.Add(eintrag.leistung.ToString());
-            // lvItem.SubItems.Add(eintrag.verbrauch.ToString());
-            // lvItem.SubItems.Add(eintrag.zylinder.ToString());
-            // lvItem.SubItems.Add(eintrag.hubraum.ToString());
-            // lvItem.SubItems.Add(eintrag.beschleunigung.ToString());
-            // lvItem.SubItems.Add(eintrag.zuladung.ToString());
-            // lvItem.SubItems.Add(eintrag.ladevolumen.ToString());
 
-            //}
+
+        }
+        private void OnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void OnlyNumAndChar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) )
+            {
+                e.Handled = true;
+            }
+
+
+        }
+
+        private void load()
+        {
+            this.karten = this.datenZugriff.LadeKarten();
+            foreach (Autokarte eintrag in this.karten)
+            {
+                ListViewItem lvItem = new ListViewItem(eintrag.marke);
+                lvItem.SubItems.Add(eintrag.modell);
+                lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString()+ " km/h");
+                lvItem.SubItems.Add(eintrag.verbrauch.ToString()+" Liter");
+                lvItem.SubItems.Add(eintrag.zylinder.ToString()+" Zyl");
+                lvItem.SubItems.Add(eintrag.leistung.ToString()+" kW");
+                lvItem.SubItems.Add(eintrag.hubraum.ToString()+" Liter");
+                lvItem.SubItems.Add(eintrag.beschleunigung.ToString()+" sec");
+                lvItem.SubItems.Add(eintrag.zuladung.ToString()+" Kg");
+                lvItem.SubItems.Add(eintrag.ladevolumen.ToString()+" Liter");
+
+                listView1.Items.Add(lvItem);
+            }
 
         }
     }
