@@ -43,6 +43,7 @@
             this.lblSpielerpunkte = new System.Windows.Forms.Label();
             this.lblGegnerpunkte = new System.Windows.Forms.Label();
             this.lblDoppelpunkt = new System.Windows.Forms.Label();
+            this.lblVergleich = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAuswahlVergleichswert
@@ -53,7 +54,7 @@
             this.lblAuswahlVergleichswert.Font = new System.Drawing.Font("Plantagenet Cherokee", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(0, 1);
             this.lblAuswahlVergleichswert.Name = "lblAuswahlVergleichswert";
-            this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(777, 23);
+            this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(783, 23);
             this.lblAuswahlVergleichswert.TabIndex = 5;
             this.lblAuswahlVergleichswert.Text = " Wählen Sie den Vergleichswert mit Hilfe eines Buttons.";
             this.lblAuswahlVergleichswert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -62,7 +63,7 @@
             // 
             this.btnNeu.Enabled = false;
             this.btnNeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNeu.Location = new System.Drawing.Point(358, 253);
+            this.btnNeu.Location = new System.Drawing.Point(357, 199);
             this.btnNeu.Name = "btnNeu";
             this.btnNeu.Size = new System.Drawing.Size(68, 47);
             this.btnNeu.TabIndex = 15;
@@ -74,7 +75,7 @@
             // 
             this.PanelAuto1.AutoSize = true;
             this.PanelAuto1.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAuto1.Location = new System.Drawing.Point(22, 53);
+            this.PanelAuto1.Location = new System.Drawing.Point(21, 44);
             this.PanelAuto1.Name = "PanelAuto1";
             this.PanelAuto1.Size = new System.Drawing.Size(293, 461);
             this.PanelAuto1.TabIndex = 17;
@@ -83,7 +84,7 @@
             // 
             this.PanelAuto2.AutoSize = true;
             this.PanelAuto2.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAuto2.Location = new System.Drawing.Point(462, 53);
+            this.PanelAuto2.Location = new System.Drawing.Point(461, 44);
             this.PanelAuto2.Name = "PanelAuto2";
             this.PanelAuto2.Size = new System.Drawing.Size(293, 461);
             this.PanelAuto2.TabIndex = 18;
@@ -91,7 +92,7 @@
             // btnGeschwindigkeit
             // 
             this.btnGeschwindigkeit.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnGeschwindigkeit.Location = new System.Drawing.Point(378, 306);
+            this.btnGeschwindigkeit.Location = new System.Drawing.Point(377, 297);
             this.btnGeschwindigkeit.Name = "btnGeschwindigkeit";
             this.btnGeschwindigkeit.Size = new System.Drawing.Size(24, 23);
             this.btnGeschwindigkeit.TabIndex = 1;
@@ -101,7 +102,7 @@
             // 
             // btnLeistung
             // 
-            this.btnLeistung.Location = new System.Drawing.Point(378, 329);
+            this.btnLeistung.Location = new System.Drawing.Point(377, 320);
             this.btnLeistung.Name = "btnLeistung";
             this.btnLeistung.Size = new System.Drawing.Size(24, 23);
             this.btnLeistung.TabIndex = 2;
@@ -111,7 +112,7 @@
             // 
             // btnVerbrauch
             // 
-            this.btnVerbrauch.Location = new System.Drawing.Point(378, 352);
+            this.btnVerbrauch.Location = new System.Drawing.Point(377, 343);
             this.btnVerbrauch.Name = "btnVerbrauch";
             this.btnVerbrauch.Size = new System.Drawing.Size(24, 23);
             this.btnVerbrauch.TabIndex = 3;
@@ -121,7 +122,7 @@
             // 
             // btnZylinder
             // 
-            this.btnZylinder.Location = new System.Drawing.Point(378, 375);
+            this.btnZylinder.Location = new System.Drawing.Point(377, 366);
             this.btnZylinder.Name = "btnZylinder";
             this.btnZylinder.Size = new System.Drawing.Size(24, 23);
             this.btnZylinder.TabIndex = 4;
@@ -131,7 +132,7 @@
             // 
             // btnHubraum
             // 
-            this.btnHubraum.Location = new System.Drawing.Point(378, 398);
+            this.btnHubraum.Location = new System.Drawing.Point(377, 389);
             this.btnHubraum.Name = "btnHubraum";
             this.btnHubraum.Size = new System.Drawing.Size(24, 23);
             this.btnHubraum.TabIndex = 5;
@@ -141,7 +142,7 @@
             // 
             // btnBeschleunigung
             // 
-            this.btnBeschleunigung.Location = new System.Drawing.Point(378, 421);
+            this.btnBeschleunigung.Location = new System.Drawing.Point(377, 412);
             this.btnBeschleunigung.Name = "btnBeschleunigung";
             this.btnBeschleunigung.Size = new System.Drawing.Size(24, 23);
             this.btnBeschleunigung.TabIndex = 6;
@@ -151,7 +152,7 @@
             // 
             // btnLadevolumen
             // 
-            this.btnLadevolumen.Location = new System.Drawing.Point(378, 467);
+            this.btnLadevolumen.Location = new System.Drawing.Point(377, 458);
             this.btnLadevolumen.Name = "btnLadevolumen";
             this.btnLadevolumen.Size = new System.Drawing.Size(24, 23);
             this.btnLadevolumen.TabIndex = 8;
@@ -161,7 +162,7 @@
             // 
             // btnZuladung
             // 
-            this.btnZuladung.Location = new System.Drawing.Point(378, 444);
+            this.btnZuladung.Location = new System.Drawing.Point(377, 435);
             this.btnZuladung.Name = "btnZuladung";
             this.btnZuladung.Size = new System.Drawing.Size(24, 23);
             this.btnZuladung.TabIndex = 7;
@@ -171,8 +172,8 @@
             // 
             // lblSpielerpunkte
             // 
-            this.lblSpielerpunkte.Font = new System.Drawing.Font("Plantagenet Cherokee", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpielerpunkte.Location = new System.Drawing.Point(330, 187);
+            this.lblSpielerpunkte.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpielerpunkte.Location = new System.Drawing.Point(329, 133);
             this.lblSpielerpunkte.Name = "lblSpielerpunkte";
             this.lblSpielerpunkte.Size = new System.Drawing.Size(59, 51);
             this.lblSpielerpunkte.TabIndex = 19;
@@ -181,8 +182,8 @@
             // 
             // lblGegnerpunkte
             // 
-            this.lblGegnerpunkte.Font = new System.Drawing.Font("Plantagenet Cherokee", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGegnerpunkte.Location = new System.Drawing.Point(399, 187);
+            this.lblGegnerpunkte.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGegnerpunkte.Location = new System.Drawing.Point(398, 133);
             this.lblGegnerpunkte.Name = "lblGegnerpunkte";
             this.lblGegnerpunkte.Size = new System.Drawing.Size(56, 51);
             this.lblGegnerpunkte.TabIndex = 20;
@@ -192,19 +193,30 @@
             // lblDoppelpunkt
             // 
             this.lblDoppelpunkt.AutoSize = true;
-            this.lblDoppelpunkt.Font = new System.Drawing.Font("Plantagenet Cherokee", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoppelpunkt.Location = new System.Drawing.Point(380, 187);
+            this.lblDoppelpunkt.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoppelpunkt.Location = new System.Drawing.Point(379, 138);
             this.lblDoppelpunkt.Name = "lblDoppelpunkt";
-            this.lblDoppelpunkt.Size = new System.Drawing.Size(28, 46);
+            this.lblDoppelpunkt.Size = new System.Drawing.Size(26, 39);
             this.lblDoppelpunkt.TabIndex = 21;
             this.lblDoppelpunkt.Text = ":";
+            // 
+            // lblVergleich
+            // 
+            this.lblVergleich.AutoSize = true;
+            this.lblVergleich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVergleich.Location = new System.Drawing.Point(353, 265);
+            this.lblVergleich.Name = "lblVergleich";
+            this.lblVergleich.Size = new System.Drawing.Size(79, 20);
+            this.lblVergleich.TabIndex = 22;
+            this.lblVergleich.Text = "Vergleich:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(775, 536);
+            this.ClientSize = new System.Drawing.Size(781, 520);
+            this.Controls.Add(this.lblVergleich);
             this.Controls.Add(this.lblGegnerpunkte);
             this.Controls.Add(this.lblSpielerpunkte);
             this.Controls.Add(this.btnZuladung);
@@ -244,6 +256,7 @@
         private System.Windows.Forms.Label lblSpielerpunkte;
         private System.Windows.Forms.Label lblGegnerpunkte;
         private System.Windows.Forms.Label lblDoppelpunkt;
+        private System.Windows.Forms.Label lblVergleich;
     }
 }
 
