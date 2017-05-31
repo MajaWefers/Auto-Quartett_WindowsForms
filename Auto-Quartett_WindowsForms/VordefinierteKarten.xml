@@ -36,4 +36,40 @@
     <zuladung>600</zuladung>
     <ladevolumen>555</ladevolumen>
   </Autokarte>
+  <Autokarte>
+    <marke>Nissan</marke>
+    <modell>GT-R</modell>
+    <geschwindigkeit>315</geschwindigkeit>
+    <leistung>404</leistung>
+    <verbrauch>11.8</verbrauch>
+    <zylinder>6</zylinder>
+    <hubraum>3.8</hubraum>
+    <beschleunigung>2.8</beschleunigung>
+    <zuladung>385</zuladung>
+    <ladevolumen>315</ladevolumen>
+  </Autokarte>
+  <Autokarte>
+    <marke>BMW</marke>
+    <modell>X1</modell>
+    <geschwindigkeit>205</geschwindigkeit>
+    <leistung>110</leistung>
+    <verbrauch>4.5</verbrauch>
+    <zylinder>4</zylinder>
+    <hubraum>2</hubraum>
+    <beschleunigung>9.2</beschleunigung>
+    <zuladung>585</zuladung>
+    <ladevolumen>505</ladevolumen>
+  </Autokarte>
+  <Autokarte>
+    <marke>Renault</marke>
+    <modell>Megane</modell>
+    <geschwindigkeit>190</geschwindigkeit>
+    <leistung>74</leistung>
+    <verbrauch>5.4</verbrauch>
+    <zylinder>4</zylinder>
+    <hubraum>1.6</hubraum>
+    <beschleunigung>12.3</beschleunigung>
+    <zuladung>472</zuladung>
+    <ladevolumen>1162</ladevolumen>
+  </Autokarte>
 </Autokarten>
