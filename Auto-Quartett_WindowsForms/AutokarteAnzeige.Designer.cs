@@ -94,11 +94,12 @@
             this.panelAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelAuto.Location = new System.Drawing.Point(5, 5);
             this.panelAuto.Name = "panelAuto";
-            this.panelAuto.Size = new System.Drawing.Size(292, 451);
+            this.panelAuto.Size = new System.Drawing.Size(291, 451);
             this.panelAuto.TabIndex = 1;
             // 
             // AutoBild
             // 
+            this.AutoBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AutoBild.Location = new System.Drawing.Point(17, 65);
             this.AutoBild.Name = "AutoBild";
             this.AutoBild.Size = new System.Drawing.Size(254, 165);
@@ -372,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelAuto);
             this.Name = "AutokarteAnzeige";
-            this.Size = new System.Drawing.Size(302, 461);
+            this.Size = new System.Drawing.Size(301, 461);
             this.panelAuto.ResumeLayout(false);
             this.panelAuto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutoBild)).EndInit();
@@ -384,6 +385,11 @@
 
         private System.Windows.Forms.Panel panelAuto;
         private System.Windows.Forms.Label Marke;
+        private System.Windows.Forms.Label Modell;
+        private System.Windows.Forms.PictureBox AutoBild;
+        private System.Windows.Forms.Label lbl_g_einheit;
+        private System.Windows.Forms.Label GeschwindigkeitWert;
+        private System.Windows.Forms.Label lblGeschwindigkeit;
         private System.Windows.Forms.Label lbl_la_einheit;
         private System.Windows.Forms.Label LadevolumenWert;
         private System.Windows.Forms.Label lbl_zu_einheit;
@@ -398,7 +404,6 @@
         private System.Windows.Forms.Label VerbrauchWert;
         private System.Windows.Forms.Label lbl_l_einheit;
         private System.Windows.Forms.Label LeistungWert;
-        private System.Windows.Forms.Label lbl_g_einheit;
         private System.Windows.Forms.Label lblLadevolumen;
         private System.Windows.Forms.Label lblZuladung;
         private System.Windows.Forms.Label lblBeschleunigung;
@@ -406,9 +411,5 @@
         private System.Windows.Forms.Label lblZylinder;
         private System.Windows.Forms.Label lblVerbrauch;
         private System.Windows.Forms.Label lblLeistung;
-        private System.Windows.Forms.Label GeschwindigkeitWert;
-        private System.Windows.Forms.Label lblGeschwindigkeit;
-        private System.Windows.Forms.Label Modell;
-        private System.Windows.Forms.PictureBox AutoBild;
     }
 }
