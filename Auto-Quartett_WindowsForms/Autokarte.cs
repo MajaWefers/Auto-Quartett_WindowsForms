@@ -9,7 +9,7 @@ namespace Auto_Quartett_WindowsForms
     public struct Autokarte
     {
         public string marke;
-        public string modell; 
+        public string modell;
         public int geschwindigkeit;
         public int leistung;
         public double verbrauch;
