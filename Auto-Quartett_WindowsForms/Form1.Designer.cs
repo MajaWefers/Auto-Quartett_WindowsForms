@@ -99,7 +99,6 @@
             this.btnGeschwindigkeit.TabIndex = 1;
             this.btnGeschwindigkeit.UseVisualStyleBackColor = true;
             this.btnGeschwindigkeit.Click += new System.EventHandler(this.btnGeschwindigkeit_Click);
-            this.btnGeschwindigkeit.MouseHover += new System.EventHandler(this.btnGeschwindigkeit_MouseHover);
             // 
             // btnLeistung
             // 
@@ -109,7 +108,6 @@
             this.btnLeistung.TabIndex = 2;
             this.btnLeistung.UseVisualStyleBackColor = true;
             this.btnLeistung.Click += new System.EventHandler(this.btnLeistung_Click);
-            this.btnLeistung.MouseHover += new System.EventHandler(this.btnLeistung_MouseHover);
             // 
             // btnVerbrauch
             // 
@@ -119,7 +117,6 @@
             this.btnVerbrauch.TabIndex = 3;
             this.btnVerbrauch.UseVisualStyleBackColor = true;
             this.btnVerbrauch.Click += new System.EventHandler(this.btnVerbrauch_Click);
-            this.btnVerbrauch.MouseHover += new System.EventHandler(this.btnVerbrauch_MouseHover);
             // 
             // btnZylinder
             // 
@@ -129,7 +126,6 @@
             this.btnZylinder.TabIndex = 4;
             this.btnZylinder.UseVisualStyleBackColor = true;
             this.btnZylinder.Click += new System.EventHandler(this.btnZylinder_Click);
-            this.btnZylinder.MouseHover += new System.EventHandler(this.btnZylinder_MouseHover);
             // 
             // btnHubraum
             // 
@@ -139,7 +135,6 @@
             this.btnHubraum.TabIndex = 5;
             this.btnHubraum.UseVisualStyleBackColor = true;
             this.btnHubraum.Click += new System.EventHandler(this.btnHubraum_Click);
-            this.btnHubraum.MouseHover += new System.EventHandler(this.btnHubraum_MouseHover);
             // 
             // btnBeschleunigung
             // 
@@ -149,7 +144,6 @@
             this.btnBeschleunigung.TabIndex = 6;
             this.btnBeschleunigung.UseVisualStyleBackColor = true;
             this.btnBeschleunigung.Click += new System.EventHandler(this.btnBeschleunigung_Click);
-            this.btnBeschleunigung.MouseHover += new System.EventHandler(this.btnBeschleunigung_MouseHover);
             // 
             // btnLadevolumen
             // 
@@ -159,7 +153,6 @@
             this.btnLadevolumen.TabIndex = 8;
             this.btnLadevolumen.UseVisualStyleBackColor = true;
             this.btnLadevolumen.Click += new System.EventHandler(this.btnLadevolumen_Click);
-            this.btnLadevolumen.MouseHover += new System.EventHandler(this.btnLadevolumen_MouseHover);
             // 
             // btnZuladung
             // 
@@ -169,7 +162,6 @@
             this.btnZuladung.TabIndex = 7;
             this.btnZuladung.UseVisualStyleBackColor = true;
             this.btnZuladung.Click += new System.EventHandler(this.btnZuladung_Click);
-            this.btnZuladung.MouseHover += new System.EventHandler(this.btnZuladung_MouseHover);
             // 
             // lblSpielerpunkte
             // 

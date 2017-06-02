@@ -7,7 +7,9 @@ namespace Auto_Quartett_WindowsForms
     public partial class Form1 : Form
     {
         private Autokarte[] autos;
-        private readonly AutokartenVergleich vergleich;
+        private AutokartenVergleich vergleich;
+        private ChancenBerechner chancenBerechner;
+        private ToolTip toolTip;
 
         private AutokarteAnzeige autokarteAnzeige1;
         private AutokarteAnzeige autokarteAnzeige2;
@@ -21,10 +23,12 @@ namespace Auto_Quartett_WindowsForms
         int spielerpunkte;
         int gegnerpunkte;
 
-        public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich)
+        public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich, ChancenBerechner chancenBerechner)
         {
             this.autos = autokarten;
             this.vergleich = vergleich;
+            this.chancenBerechner = chancenBerechner;
+            this.toolTip = new ToolTip();
 
             InitializeComponent();
             zeigeSpielkarte();
@@ -33,7 +37,9 @@ namespace Auto_Quartett_WindowsForms
         private void zeigeSpielkarte()
         {
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
-            zeigeAuto1(autos[zufall1]);
+            Autokarte autoDesSpielers = autos[zufall1];
+            zeigeAuto1(autoDesSpielers);
+            setzeToolTips(autoDesSpielers);
         }
 
         private void zeigeAuto1(Autokarte auto)
@@ -167,46 +173,35 @@ namespace Auto_Quartett_WindowsForms
             Vergleich(7);
         }
 
-        //ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
-        private void btnGeschwindigkeit_MouseHover(object sender, EventArgs e)
+        //Setzt ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
+        //sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft
+        private void setzeToolTips(Autokarte auto)
         {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnGeschwindigkeit, "Geschwindigkeit");
+            double[] gewinnchancen = berechneGewinnchancen(auto);
+            setzeToolTip(btnGeschwindigkeit, "Geschwindigkeit", gewinnchancen[0]);
+            setzeToolTip(btnLeistung, "Leistung", gewinnchancen[1]);
+            setzeToolTip(btnVerbrauch, "Verbrauch", gewinnchancen[2]);
+            setzeToolTip(btnZylinder, "Zylinder", gewinnchancen[3]);
+            setzeToolTip(btnHubraum, "Hubraum", gewinnchancen[4]);
+            setzeToolTip(btnBeschleunigung, "Beschleunigung", gewinnchancen[5]);
+            setzeToolTip(btnZuladung, "Zuladung", gewinnchancen[6]);
+            setzeToolTip(btnLadevolumen, "Ladevolumen", gewinnchancen[7]);
         }
-        private void btnLeistung_MouseHover(object sender, EventArgs e)
+
+        private void setzeToolTip(Button button, string eigenschaft, double gewinnChance)
         {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnLeistung, "Leistung");
+            string toolTipText = eigenschaft + "\nGewinnchance: " + gewinnChance.ToString("P0");
+            this.toolTip.SetToolTip(button, toolTipText);
         }
-        private void btnVerbrauch_MouseHover(object sender, EventArgs e)
+
+        private double[] berechneGewinnchancen(Autokarte auto)
         {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnVerbrauch, "Verbrauch");
-        }
-        private void btnZylinder_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnZylinder, "Zylinder");
-        }
-        private void btnHubraum_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnHubraum, "Hubraum");
-        }
-        private void btnBeschleunigung_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnBeschleunigung, "Beschleunigung");
-        }
-        private void btnZuladung_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnZuladung, "Zuladung");
-        }
-        private void btnLadevolumen_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip tip = new ToolTip();
-            tip.SetToolTip(btnLadevolumen, "Ladevolumen");
+            double[] gewinnchancen = new double[8];
+            for (int i = 0; i < gewinnchancen.Length; i++)
+            {
+                gewinnchancen[i] = this.chancenBerechner.BerechneGewinnchance(auto, this.autos, i);
+            }
+            return gewinnchancen;
         }
     }
 }

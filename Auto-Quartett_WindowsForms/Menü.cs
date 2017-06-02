@@ -16,8 +16,9 @@ namespace Auto_Quartett_WindowsForms
         private void SpielButton_Click(object sender, EventArgs e)
         {
             AutokartenVergleich vergleich = new AutokartenVergleich();
+            ChancenBerechner chancenBerechner = new ChancenBerechner(vergleich);
             Autokarte[] autokarten = this.ladeKarten();
-            Form1 spielForm = new Form1(autokarten, vergleich);
+            Form1 spielForm = new Form1(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
         }
 
