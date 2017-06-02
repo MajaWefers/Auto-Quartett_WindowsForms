@@ -10,7 +10,7 @@ namespace Auto_Quartett_WindowsForms
         public Menü()
         {
             this.InitializeComponent();
-            this.datenZugriff = new DatenZugriff("VordefinierteKarten.xml");
+            this.datenZugriff = new DatenZugriff("Karten.xml");
         }
 
         private void SpielButton_Click(object sender, EventArgs e)
