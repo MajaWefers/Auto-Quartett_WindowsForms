@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace Auto_Quartett_WindowsForms
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Auto_Quartett_WindowsForms
+﻿namespace Auto_Quartett_WindowsForms
 {
     public class AutokartenVergleich
     {
