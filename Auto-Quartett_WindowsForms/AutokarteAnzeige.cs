@@ -1,6 +1,6 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace Auto_Quartett_WindowsForms
 {
@@ -32,6 +32,8 @@ namespace Auto_Quartett_WindowsForms
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
                     this.BackColor = Color.Blue;
                     break;
+                default:
+                    throw new InvalidEnumArgumentException(@"Ungültiges Ergebnis");
             }
         }
 

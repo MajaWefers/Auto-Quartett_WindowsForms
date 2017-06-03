@@ -85,7 +85,7 @@
             this.Controls.Add(this.SpielButton);
             this.Name = "Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menü";
+            this.Text = "Auto-Quartett";
             this.ResumeLayout(false);
 
         }

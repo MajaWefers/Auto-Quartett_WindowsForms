@@ -1,5 +1,4 @@
-﻿using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Auto_Quartett_WindowsForms.Tests
 {
@@ -8,8 +7,8 @@ namespace Auto_Quartett_WindowsForms.Tests
     {
         //Braucht nur ein mal ausgeführt zu werden (dazu das Attribute von "Ignore" auf "TestMethod" ändern), 
         //um im Projekt "Auto-Quartett_WindowsForms" die Datei mit den vorgegebenen Karten zu erstellen.
-        //Anschließend in den Dateieigenschaften "Copy to Output Directory" aktivieren, 
-        //damit sie beim Kompilieren im gleichen Ordner landet wie die .exe
+        //In den Dateieigenschaften muss "Copy to Output Directory" aktiviert sein, 
+        //damit sie beim Kompilieren im gleichen Ordner kommt wie die .exe
         [Ignore]
         public void ErstelleVorgegebeneKarten()
         {
@@ -28,7 +27,7 @@ namespace Auto_Quartett_WindowsForms.Tests
 
         private static void speichereKarten(Autokarte[] kartenZumSpeichern)
         {
-            DatenZugriff datenZugriff = new DatenZugriff(@"..\..\..\Auto-Quartett_WindowsForms\VordefinierteKarten.xml");
+            DatenZugriff datenZugriff = new DatenZugriff(@"..\..\..\Auto-Quartett_WindowsForms\Karten.xml");
 
             datenZugriff.SpeichereKarten(kartenZumSpeichern);
         }
