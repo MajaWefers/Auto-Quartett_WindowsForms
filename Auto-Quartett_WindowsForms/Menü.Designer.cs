@@ -36,6 +36,10 @@
             // 
             // SpielButton
             // 
+            this.SpielButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SpielButton.BackColor = System.Drawing.Color.Lime;
             this.SpielButton.Location = new System.Drawing.Point(184, 36);
             this.SpielButton.Name = "SpielButton";
@@ -47,6 +51,10 @@
             // 
             // EditorButton
             // 
+            this.EditorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditorButton.BackColor = System.Drawing.Color.Yellow;
             this.EditorButton.Location = new System.Drawing.Point(269, 86);
             this.EditorButton.Name = "EditorButton";
@@ -58,7 +66,11 @@
             // 
             // BeendenButton
             // 
-            this.BeendenButton.BackColor = System.Drawing.Color.LightCoral;
+            this.BeendenButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BeendenButton.BackColor = System.Drawing.Color.Red;
             this.BeendenButton.Location = new System.Drawing.Point(184, 141);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(88, 37);
@@ -69,6 +81,10 @@
             // 
             // GallerieButton
             // 
+            this.GallerieButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
             this.GallerieButton.Location = new System.Drawing.Point(104, 86);
             this.GallerieButton.Name = "GallerieButton";
@@ -82,6 +98,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(456, 210);
             this.Controls.Add(this.GallerieButton);
