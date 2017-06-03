@@ -36,48 +36,53 @@
             // 
             // SpielButton
             // 
-            this.SpielButton.Location = new System.Drawing.Point(197, 22);
+            this.SpielButton.BackColor = System.Drawing.Color.Lime;
+            this.SpielButton.Location = new System.Drawing.Point(184, 36);
             this.SpielButton.Name = "SpielButton";
-            this.SpielButton.Size = new System.Drawing.Size(75, 23);
+            this.SpielButton.Size = new System.Drawing.Size(88, 37);
             this.SpielButton.TabIndex = 0;
             this.SpielButton.Text = "Spiel";
-            this.SpielButton.UseVisualStyleBackColor = true;
+            this.SpielButton.UseVisualStyleBackColor = false;
             this.SpielButton.Click += new System.EventHandler(this.SpielButton_Click);
             // 
             // EditorButton
             // 
-            this.EditorButton.Location = new System.Drawing.Point(197, 110);
+            this.EditorButton.BackColor = System.Drawing.Color.Yellow;
+            this.EditorButton.Location = new System.Drawing.Point(269, 86);
             this.EditorButton.Name = "EditorButton";
-            this.EditorButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorButton.Size = new System.Drawing.Size(86, 37);
             this.EditorButton.TabIndex = 2;
             this.EditorButton.Text = "Editor";
-            this.EditorButton.UseVisualStyleBackColor = true;
+            this.EditorButton.UseVisualStyleBackColor = false;
             this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
             // 
             // BeendenButton
             // 
-            this.BeendenButton.Location = new System.Drawing.Point(197, 154);
+            this.BeendenButton.BackColor = System.Drawing.Color.LightCoral;
+            this.BeendenButton.Location = new System.Drawing.Point(184, 141);
             this.BeendenButton.Name = "BeendenButton";
-            this.BeendenButton.Size = new System.Drawing.Size(75, 23);
+            this.BeendenButton.Size = new System.Drawing.Size(88, 37);
             this.BeendenButton.TabIndex = 3;
             this.BeendenButton.Text = "Beenden";
-            this.BeendenButton.UseVisualStyleBackColor = true;
+            this.BeendenButton.UseVisualStyleBackColor = false;
             this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
             // 
             // GallerieButton
             // 
-            this.GallerieButton.Location = new System.Drawing.Point(197, 64);
+            this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
+            this.GallerieButton.Location = new System.Drawing.Point(104, 86);
             this.GallerieButton.Name = "GallerieButton";
-            this.GallerieButton.Size = new System.Drawing.Size(75, 23);
+            this.GallerieButton.Size = new System.Drawing.Size(86, 37);
             this.GallerieButton.TabIndex = 1;
             this.GallerieButton.Text = "Gallerie";
-            this.GallerieButton.UseVisualStyleBackColor = true;
+            this.GallerieButton.UseVisualStyleBackColor = false;
             this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);
             // 
             // Menü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(456, 210);
             this.Controls.Add(this.GallerieButton);
             this.Controls.Add(this.BeendenButton);

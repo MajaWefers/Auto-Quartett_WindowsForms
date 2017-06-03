@@ -58,7 +58,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSpeichern = new System.Windows.Forms.Button();
-            this.btnZurueck = new System.Windows.Forms.Button();
             this.tbModell = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -72,7 +71,6 @@
             this.tbMarke.ShortcutsEnabled = false;
             this.tbMarke.Size = new System.Drawing.Size(62, 20);
             this.tbMarke.TabIndex = 0;
-        
             this.tbMarke.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // tbGeschwindigkeit
@@ -305,22 +303,14 @@
             // 
             // btnSpeichern
             // 
-            this.btnSpeichern.Location = new System.Drawing.Point(856, 416);
+            this.btnSpeichern.BackColor = System.Drawing.Color.Lime;
+            this.btnSpeichern.Location = new System.Drawing.Point(979, 411);
             this.btnSpeichern.Name = "btnSpeichern";
-            this.btnSpeichern.Size = new System.Drawing.Size(75, 23);
+            this.btnSpeichern.Size = new System.Drawing.Size(89, 31);
             this.btnSpeichern.TabIndex = 18;
             this.btnSpeichern.Text = "Speichern";
-            this.btnSpeichern.UseVisualStyleBackColor = true;
+            this.btnSpeichern.UseVisualStyleBackColor = false;
             this.btnSpeichern.Click += new System.EventHandler(this.btnSpeichern_Click);
-            // 
-            // btnZurueck
-            // 
-            this.btnZurueck.Location = new System.Drawing.Point(975, 417);
-            this.btnZurueck.Name = "btnZurueck";
-            this.btnZurueck.Size = new System.Drawing.Size(75, 23);
-            this.btnZurueck.TabIndex = 19;
-            this.btnZurueck.Text = "Zurück";
-            this.btnZurueck.UseVisualStyleBackColor = true;
             // 
             // tbModell
             // 
@@ -371,9 +361,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1074, 452);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnZurueck);
             this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.listView1);
             this.Name = "Editor";
@@ -407,7 +397,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSpeichern;
-        private System.Windows.Forms.Button btnZurueck;
         public System.Windows.Forms.ColumnHeader ColMarke;
         private System.Windows.Forms.ColumnHeader ColGeschwindigkeit;
         private System.Windows.Forms.ColumnHeader ColVerbrauch;
