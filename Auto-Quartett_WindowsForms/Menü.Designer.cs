@@ -63,9 +63,9 @@
             this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditorButton.BackColor = System.Drawing.Color.Red;
             this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditorButton.Location = new System.Drawing.Point(237, 32);
+            this.EditorButton.Location = new System.Drawing.Point(287, 32);
             this.EditorButton.Name = "EditorButton";
-            this.EditorButton.Size = new System.Drawing.Size(102, 37);
+            this.EditorButton.Size = new System.Drawing.Size(103, 37);
             this.EditorButton.TabIndex = 2;
             this.EditorButton.Text = "Editor";
             this.EditorButton.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BeendenButton.BackColor = System.Drawing.Color.White;
             this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeendenButton.Location = new System.Drawing.Point(126, 249);
+            this.BeendenButton.Location = new System.Drawing.Point(152, 249);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(102, 37);
             this.BeendenButton.TabIndex = 3;
@@ -91,9 +91,9 @@
             this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
             this.GallerieButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GallerieButton.Location = new System.Drawing.Point(128, 32);
+            this.GallerieButton.Location = new System.Drawing.Point(151, 32);
             this.GallerieButton.Name = "GallerieButton";
-            this.GallerieButton.Size = new System.Drawing.Size(102, 37);
+            this.GallerieButton.Size = new System.Drawing.Size(103, 37);
             this.GallerieButton.TabIndex = 1;
             this.GallerieButton.Text = "Gallerie";
             this.GallerieButton.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(152, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(238, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(288, 75);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 99);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +142,7 @@
             // lblGallerie
             // 
             this.lblGallerie.BackColor = System.Drawing.Color.White;
-            this.lblGallerie.Location = new System.Drawing.Point(128, 183);
+            this.lblGallerie.Location = new System.Drawing.Point(152, 183);
             this.lblGallerie.Name = "lblGallerie";
             this.lblGallerie.Size = new System.Drawing.Size(102, 31);
             this.lblGallerie.TabIndex = 12;
@@ -152,7 +152,7 @@
             // lblEditor
             // 
             this.lblEditor.BackColor = System.Drawing.Color.White;
-            this.lblEditor.Location = new System.Drawing.Point(238, 183);
+            this.lblEditor.Location = new System.Drawing.Point(288, 183);
             this.lblEditor.Name = "lblEditor";
             this.lblEditor.Size = new System.Drawing.Size(102, 31);
             this.lblEditor.TabIndex = 13;
@@ -166,7 +166,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(351, 298);
+            this.ClientSize = new System.Drawing.Size(402, 298);
             this.Controls.Add(this.lblEditor);
             this.Controls.Add(this.lblGallerie);
             this.Controls.Add(this.label1);

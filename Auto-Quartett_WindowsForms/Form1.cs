@@ -39,23 +39,23 @@ namespace Auto_Quartett_WindowsForms
         {
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
             Autokarte autoDesSpielers = autos[zufall1];
-            zeigeAuto1(autoDesSpielers);           
-                setzeToolTips(autoDesSpielers);
-        
+            zeigeAuto1(autoDesSpielers);
+            setzeToolTips(autoDesSpielers);
+
         }
 
         private void zeigeAuto1(Autokarte auto)
         {
-            autokarteAnzeige1 =  new AutokarteAnzeige(auto);
+            autokarteAnzeige1 = new AutokarteAnzeige(auto);
             PanelAuto1.Controls.Add(autokarteAnzeige1);
         }
 
         private void zeigeAuto2(Autokarte auto)
         {
-            autokarteAnzeige2 =  new AutokarteAnzeige(auto);
+            autokarteAnzeige2 = new AutokarteAnzeige(auto);
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
-        
+
         //Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
         private void Vergleich(int vergleichsfeld)
         {
@@ -103,7 +103,7 @@ namespace Auto_Quartett_WindowsForms
             }
             ButtonsEnabled(false);
         }
-        
+
         private void btnNeu_Click(object sender, EventArgs e)
         {
             if (btnBeschleunigung.Enabled == false)
@@ -117,7 +117,7 @@ namespace Auto_Quartett_WindowsForms
                 ButtonsEnabled(true);
             }
         }
-        
+
         private void ButtonsEnabled(bool klickbar)
         {
             btnGeschwindigkeit.Enabled = klickbar;
@@ -179,28 +179,31 @@ namespace Auto_Quartett_WindowsForms
         //sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft
         private void setzeToolTips(Autokarte auto)
         {
-           
-                double[] gewinnchancen = berechneGewinnchancen(auto);
-                setzeToolTip(btnGeschwindigkeit, "Geschwindigkeit", gewinnchancen[0]);
-                setzeToolTip(btnLeistung, "Leistung", gewinnchancen[1]);
-                setzeToolTip(btnVerbrauch, "Verbrauch", gewinnchancen[2]);
-                setzeToolTip(btnZylinder, "Zylinder", gewinnchancen[3]);
-                setzeToolTip(btnHubraum, "Hubraum", gewinnchancen[4]);
-                setzeToolTip(btnBeschleunigung, "Beschleunigung", gewinnchancen[5]);
-                setzeToolTip(btnZuladung, "Zuladung", gewinnchancen[6]);
-                setzeToolTip(btnLadevolumen, "Ladevolumen", gewinnchancen[7]);
-            
+
+            double[] gewinnchancen = berechneGewinnchancen(auto);
+            setzeToolTip(btnGeschwindigkeit, "Geschwindigkeit", gewinnchancen[0]);
+            setzeToolTip(btnLeistung, "Leistung", gewinnchancen[1]);
+            setzeToolTip(btnVerbrauch, "Verbrauch", gewinnchancen[2]);
+            setzeToolTip(btnZylinder, "Zylinder", gewinnchancen[3]);
+            setzeToolTip(btnHubraum, "Hubraum", gewinnchancen[4]);
+            setzeToolTip(btnBeschleunigung, "Beschleunigung", gewinnchancen[5]);
+            setzeToolTip(btnZuladung, "Zuladung", gewinnchancen[6]);
+            setzeToolTip(btnLadevolumen, "Ladevolumen", gewinnchancen[7]);
+
         }
-  private void btnEinfach_Click(object sender, EventArgs e)
+        private void btnEinfach_Click(object sender, EventArgs e)
         {
             isClicked = true;
             this.zeigeSpielkarte();
+            MessageBox.Show("Gewinchancen werden jetzt als Tooltip angezeigt.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
         private void btnSchwer_Click(object sender, EventArgs e)
         {
             isClicked = false;
             this.zeigeSpielkarte();
-        }
+            MessageBox.Show("Gewinchancen werden nicht als Tooltip angezeigt.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        
+    }
         private void setzeToolTip(Button button, string eigenschaft, double gewinnChance)
         {
             if (isClicked)
@@ -210,11 +213,11 @@ namespace Auto_Quartett_WindowsForms
             }
             else
             {
-                string toolTipText =eigenschaft;
+                string toolTipText = eigenschaft;
                 this.toolTip.SetToolTip(button, toolTipText);
             }
-       }
-           
+        }
+
 
         private double[] berechneGewinnchancen(Autokarte auto)
         {
@@ -226,8 +229,8 @@ namespace Auto_Quartett_WindowsForms
             return gewinnchancen;
         }
 
-      
 
-       
+
+
     }
 }
