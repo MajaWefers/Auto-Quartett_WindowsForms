@@ -69,14 +69,17 @@
             // 
             this.tbMarke.Location = new System.Drawing.Point(3, 16);
             this.tbMarke.Name = "tbMarke";
+            this.tbMarke.ShortcutsEnabled = false;
             this.tbMarke.Size = new System.Drawing.Size(62, 20);
             this.tbMarke.TabIndex = 0;
+        
             this.tbMarke.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // tbGeschwindigkeit
             // 
             this.tbGeschwindigkeit.Location = new System.Drawing.Point(3, 57);
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
+            this.tbGeschwindigkeit.ShortcutsEnabled = false;
             this.tbGeschwindigkeit.Size = new System.Drawing.Size(62, 20);
             this.tbGeschwindigkeit.TabIndex = 1;
             this.tbGeschwindigkeit.TextChanged += new System.EventHandler(this.tbGeschwindigkeit_TextChanged);
@@ -86,6 +89,7 @@
             // 
             this.tbVerbrauch.Location = new System.Drawing.Point(3, 102);
             this.tbVerbrauch.Name = "tbVerbrauch";
+            this.tbVerbrauch.ShortcutsEnabled = false;
             this.tbVerbrauch.Size = new System.Drawing.Size(62, 20);
             this.tbVerbrauch.TabIndex = 2;
             this.tbVerbrauch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -94,6 +98,7 @@
             // 
             this.tbZylinder.Location = new System.Drawing.Point(3, 147);
             this.tbZylinder.Name = "tbZylinder";
+            this.tbZylinder.ShortcutsEnabled = false;
             this.tbZylinder.Size = new System.Drawing.Size(62, 20);
             this.tbZylinder.TabIndex = 3;
             this.tbZylinder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -102,6 +107,7 @@
             // 
             this.tbLeistung.Location = new System.Drawing.Point(3, 193);
             this.tbLeistung.Name = "tbLeistung";
+            this.tbLeistung.ShortcutsEnabled = false;
             this.tbLeistung.Size = new System.Drawing.Size(62, 20);
             this.tbLeistung.TabIndex = 4;
             this.tbLeistung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -110,6 +116,7 @@
             // 
             this.tbLadevolumen.Location = new System.Drawing.Point(162, 193);
             this.tbLadevolumen.Name = "tbLadevolumen";
+            this.tbLadevolumen.ShortcutsEnabled = false;
             this.tbLadevolumen.Size = new System.Drawing.Size(62, 20);
             this.tbLadevolumen.TabIndex = 5;
             this.tbLadevolumen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -118,6 +125,7 @@
             // 
             this.tbZuladung.Location = new System.Drawing.Point(162, 144);
             this.tbZuladung.Name = "tbZuladung";
+            this.tbZuladung.ShortcutsEnabled = false;
             this.tbZuladung.Size = new System.Drawing.Size(62, 20);
             this.tbZuladung.TabIndex = 6;
             this.tbZuladung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -126,6 +134,7 @@
             // 
             this.tbHubraum.Location = new System.Drawing.Point(162, 57);
             this.tbHubraum.Name = "tbHubraum";
+            this.tbHubraum.ShortcutsEnabled = false;
             this.tbHubraum.Size = new System.Drawing.Size(62, 20);
             this.tbHubraum.TabIndex = 7;
             this.tbHubraum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -134,6 +143,7 @@
             // 
             this.tbBeschleunigung.Location = new System.Drawing.Point(162, 102);
             this.tbBeschleunigung.Name = "tbBeschleunigung";
+            this.tbBeschleunigung.ShortcutsEnabled = false;
             this.tbBeschleunigung.Size = new System.Drawing.Size(62, 20);
             this.tbBeschleunigung.TabIndex = 8;
             this.tbBeschleunigung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
@@ -151,12 +161,14 @@
             this.ColBeschleunigung,
             this.ColZuladung,
             this.ColLadevolumen});
+            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1056, 196);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // ColMarke
             // 
@@ -314,6 +326,7 @@
             // 
             this.tbModell.Location = new System.Drawing.Point(162, 16);
             this.tbModell.Name = "tbModell";
+            this.tbModell.ShortcutsEnabled = false;
             this.tbModell.Size = new System.Drawing.Size(62, 20);
             this.tbModell.TabIndex = 20;
             this.tbModell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);

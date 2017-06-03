@@ -10,11 +10,14 @@ namespace Auto_Quartett_WindowsForms
         private readonly DatenZugriff datenZugriff;
         private Autokarte[] karten;
 
+
+
+
         public Editor(DatenZugriff datenZugriff)
         {
             this.datenZugriff = datenZugriff;
             InitializeComponent();
-            this.load();
+            this.load();           
         }
 
         private void btnSpeichern_Click(object sender, EventArgs e)
@@ -77,6 +80,7 @@ namespace Auto_Quartett_WindowsForms
             {
                 e.Handled = true;
             }
+
         }
 
         private void OnlyNumAndChar_KeyPress(object sender, KeyPressEventArgs e)
@@ -86,6 +90,8 @@ namespace Auto_Quartett_WindowsForms
                 e.Handled = true;
             }
         }
+
+       
 
         private void load()
         {
@@ -101,14 +107,14 @@ namespace Auto_Quartett_WindowsForms
         {
             ListViewItem lvItem = new ListViewItem(eintrag.marke);
             lvItem.SubItems.Add(eintrag.modell);
-            lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString() + " km/h");
-            lvItem.SubItems.Add(eintrag.verbrauch.ToString() + " Liter");
-            lvItem.SubItems.Add(eintrag.zylinder.ToString() + " Zyl");
-            lvItem.SubItems.Add(eintrag.leistung.ToString() + " kW");
-            lvItem.SubItems.Add(eintrag.hubraum.ToString() + " Liter");
-            lvItem.SubItems.Add(eintrag.beschleunigung.ToString() + " sec");
-            lvItem.SubItems.Add(eintrag.zuladung.ToString() + " Kg");
-            lvItem.SubItems.Add(eintrag.ladevolumen.ToString() + " Liter");
+            lvItem.SubItems.Add(eintrag.geschwindigkeit.ToString());
+            lvItem.SubItems.Add(eintrag.verbrauch.ToString());
+            lvItem.SubItems.Add(eintrag.zylinder.ToString());
+            lvItem.SubItems.Add(eintrag.leistung.ToString());
+            lvItem.SubItems.Add(eintrag.hubraum.ToString());
+            lvItem.SubItems.Add(eintrag.beschleunigung.ToString());
+            lvItem.SubItems.Add(eintrag.zuladung.ToString());
+            lvItem.SubItems.Add(eintrag.ladevolumen.ToString());
             listView1.Items.Add(lvItem);
             return eintrag;
         }
@@ -122,6 +128,25 @@ namespace Auto_Quartett_WindowsForms
                 tbGeschwindigkeit.Text = "250";
                 
             }
+
+        }
+
+      
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {           
+            var lvItem = listView1.SelectedItems[0];
+            tbMarke.Text = lvItem.SubItems[0].Text;
+            tbModell.Text = lvItem.SubItems[1].Text;
+            tbGeschwindigkeit.Text = lvItem.SubItems[2].Text;
+            tbVerbrauch.Text = lvItem.SubItems[3].Text;
+            tbZylinder.Text = lvItem.SubItems[4].Text;
+            tbLeistung.Text = lvItem.SubItems[5].Text;
+            tbHubraum.Text = lvItem.SubItems[6].Text;
+            tbBeschleunigung.Text = lvItem.SubItems[7].Text;
+            tbZuladung.Text = lvItem.SubItems[8].Text;
+            tbLadevolumen.Text = lvItem.SubItems[9].Text;
+
 
         }
     }
