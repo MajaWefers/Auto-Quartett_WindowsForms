@@ -45,6 +45,8 @@
             this.lblDoppelpunkt = new System.Windows.Forms.Label();
             this.lblVergleich = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEinfach = new System.Windows.Forms.Button();
+            this.btnSchwer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAuswahlVergleichswert
@@ -216,12 +218,38 @@
             this.label1.Text = "Gegnerspielkarte";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnEinfach
+            // 
+            this.btnEinfach.BackColor = System.Drawing.Color.Lime;
+            this.btnEinfach.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEinfach.Location = new System.Drawing.Point(321, 44);
+            this.btnEinfach.Name = "btnEinfach";
+            this.btnEinfach.Size = new System.Drawing.Size(75, 23);
+            this.btnEinfach.TabIndex = 24;
+            this.btnEinfach.Text = "Einfach";
+            this.btnEinfach.UseVisualStyleBackColor = false;
+            this.btnEinfach.Click += new System.EventHandler(this.btnEinfach_Click);
+            // 
+            // btnSchwer
+            // 
+            this.btnSchwer.BackColor = System.Drawing.Color.Red;
+            this.btnSchwer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchwer.Location = new System.Drawing.Point(396, 44);
+            this.btnSchwer.Name = "btnSchwer";
+            this.btnSchwer.Size = new System.Drawing.Size(75, 23);
+            this.btnSchwer.TabIndex = 25;
+            this.btnSchwer.Text = "Schwer";
+            this.btnSchwer.UseVisualStyleBackColor = false;
+            this.btnSchwer.Click += new System.EventHandler(this.btnSchwer_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(799, 525);
+            this.Controls.Add(this.btnSchwer);
+            this.Controls.Add(this.btnEinfach);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblVergleich);
             this.Controls.Add(this.lblGegnerpunkte);
@@ -265,6 +293,8 @@
         private System.Windows.Forms.Label lblDoppelpunkt;
         private System.Windows.Forms.Label lblVergleich;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEinfach;
+        private System.Windows.Forms.Button btnSchwer;
     }
 }
 
