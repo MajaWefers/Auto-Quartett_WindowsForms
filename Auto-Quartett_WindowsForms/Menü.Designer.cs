@@ -49,7 +49,7 @@
             this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SpielButton.BackColor = System.Drawing.Color.Lime;
             this.SpielButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpielButton.Location = new System.Drawing.Point(12, 32);
+            this.SpielButton.Location = new System.Drawing.Point(12, 46);
             this.SpielButton.Name = "SpielButton";
             this.SpielButton.Size = new System.Drawing.Size(102, 37);
             this.SpielButton.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditorButton.BackColor = System.Drawing.Color.Red;
             this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditorButton.Location = new System.Drawing.Point(287, 32);
+            this.EditorButton.Location = new System.Drawing.Point(287, 46);
             this.EditorButton.Name = "EditorButton";
             this.EditorButton.Size = new System.Drawing.Size(103, 37);
             this.EditorButton.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
             this.GallerieButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GallerieButton.Location = new System.Drawing.Point(151, 32);
+            this.GallerieButton.Location = new System.Drawing.Point(151, 46);
             this.GallerieButton.Name = "GallerieButton";
             this.GallerieButton.Size = new System.Drawing.Size(103, 37);
             this.GallerieButton.TabIndex = 1;
@@ -102,7 +102,7 @@
             // pbMenueSpiel
             // 
             this.pbMenueSpiel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbMenueSpiel.Location = new System.Drawing.Point(12, 75);
+            this.pbMenueSpiel.Location = new System.Drawing.Point(12, 89);
             this.pbMenueSpiel.Name = "pbMenueSpiel";
             this.pbMenueSpiel.Size = new System.Drawing.Size(102, 99);
             this.pbMenueSpiel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +112,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(152, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(152, 89);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 75);
+            this.pictureBox2.Location = new System.Drawing.Point(288, 89);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 99);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +132,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 177);
+            this.label1.Location = new System.Drawing.Point(12, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 43);
             this.label1.TabIndex = 11;
@@ -142,7 +142,7 @@
             // lblGallerie
             // 
             this.lblGallerie.BackColor = System.Drawing.Color.White;
-            this.lblGallerie.Location = new System.Drawing.Point(152, 183);
+            this.lblGallerie.Location = new System.Drawing.Point(152, 197);
             this.lblGallerie.Name = "lblGallerie";
             this.lblGallerie.Size = new System.Drawing.Size(102, 31);
             this.lblGallerie.TabIndex = 12;
@@ -152,7 +152,7 @@
             // lblEditor
             // 
             this.lblEditor.BackColor = System.Drawing.Color.White;
-            this.lblEditor.Location = new System.Drawing.Point(288, 183);
+            this.lblEditor.Location = new System.Drawing.Point(288, 197);
             this.lblEditor.Name = "lblEditor";
             this.lblEditor.Size = new System.Drawing.Size(102, 31);
             this.lblEditor.TabIndex = 13;
