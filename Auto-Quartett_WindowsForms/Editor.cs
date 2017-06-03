@@ -38,14 +38,15 @@ namespace Auto_Quartett_WindowsForms
                 Autokarte[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
                 this.datenZugriff.SpeichereKarten(kartenArray);
                 this.KarteZurListviewHinzufügen(NeueKarte);
-                this.RefreshView();
+                
 
-                DialogResult dialogResult= MessageBox.Show("12","54",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                DialogResult dialogResult = MessageBox.Show("Bild speichern ?" + Environment.NewLine + "Bild bitte so bennenen: \"" + tbMarke.Text.ToLower().ToString() + " " + tbModell.Text.ToLower().ToString()+ "\" und in den Ordner kopieren", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
                     var filePath = AppDomain.CurrentDomain.BaseDirectory;
-                    Process.Start("explorer.exe", filePath);
+                    Process.Start(@"Bilder\", filePath);
                 }
+                this.RefreshView();
             }
             catch
             {
