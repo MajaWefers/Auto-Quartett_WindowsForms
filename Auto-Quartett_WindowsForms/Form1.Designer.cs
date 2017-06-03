@@ -52,7 +52,7 @@
             this.lblAuswahlVergleichswert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAuswahlVergleichswert.BackColor = System.Drawing.Color.White;
-            this.lblAuswahlVergleichswert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuswahlVergleichswert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuswahlVergleichswert.Location = new System.Drawing.Point(115, 14);
             this.lblAuswahlVergleichswert.Name = "lblAuswahlVergleichswert";
             this.lblAuswahlVergleichswert.Size = new System.Drawing.Size(116, 23);
@@ -63,7 +63,7 @@
             // btnNeu
             // 
             this.btnNeu.Enabled = false;
-            this.btnNeu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNeu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNeu.Location = new System.Drawing.Point(363, 199);
             this.btnNeu.Name = "btnNeu";
             this.btnNeu.Size = new System.Drawing.Size(68, 47);
@@ -165,7 +165,7 @@
             // 
             // lblSpielerpunkte
             // 
-            this.lblSpielerpunkte.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpielerpunkte.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpielerpunkte.Location = new System.Drawing.Point(323, 134);
             this.lblSpielerpunkte.Name = "lblSpielerpunkte";
             this.lblSpielerpunkte.Size = new System.Drawing.Size(73, 51);
@@ -175,7 +175,7 @@
             // 
             // lblGegnerpunkte
             // 
-            this.lblGegnerpunkte.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGegnerpunkte.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGegnerpunkte.Location = new System.Drawing.Point(404, 134);
             this.lblGegnerpunkte.Name = "lblGegnerpunkte";
             this.lblGegnerpunkte.Size = new System.Drawing.Size(67, 51);
@@ -186,20 +186,20 @@
             // lblDoppelpunkt
             // 
             this.lblDoppelpunkt.AutoSize = true;
-            this.lblDoppelpunkt.Font = new System.Drawing.Font("Trebuchet MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoppelpunkt.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoppelpunkt.Location = new System.Drawing.Point(385, 133);
             this.lblDoppelpunkt.Name = "lblDoppelpunkt";
-            this.lblDoppelpunkt.Size = new System.Drawing.Size(37, 49);
+            this.lblDoppelpunkt.Size = new System.Drawing.Size(32, 54);
             this.lblDoppelpunkt.TabIndex = 21;
             this.lblDoppelpunkt.Text = ":";
             // 
             // lblVergleich
             // 
             this.lblVergleich.AutoSize = true;
-            this.lblVergleich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVergleich.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVergleich.Location = new System.Drawing.Point(359, 265);
             this.lblVergleich.Name = "lblVergleich";
-            this.lblVergleich.Size = new System.Drawing.Size(79, 20);
+            this.lblVergleich.Size = new System.Drawing.Size(77, 21);
             this.lblVergleich.TabIndex = 22;
             this.lblVergleich.Text = "Vergleich:";
             // 
@@ -208,7 +208,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(566, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 23);
@@ -220,7 +220,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(799, 525);
             this.Controls.Add(this.label1);

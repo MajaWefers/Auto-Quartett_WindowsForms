@@ -41,6 +41,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SpielButton.BackColor = System.Drawing.Color.Lime;
+            this.SpielButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpielButton.Location = new System.Drawing.Point(184, 36);
             this.SpielButton.Name = "SpielButton";
             this.SpielButton.Size = new System.Drawing.Size(88, 37);
@@ -56,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditorButton.BackColor = System.Drawing.Color.Yellow;
+            this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditorButton.Location = new System.Drawing.Point(269, 86);
             this.EditorButton.Name = "EditorButton";
             this.EditorButton.Size = new System.Drawing.Size(86, 37);
@@ -71,6 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BeendenButton.BackColor = System.Drawing.Color.Red;
+            this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BeendenButton.Location = new System.Drawing.Point(184, 141);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(88, 37);
@@ -86,6 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
+            this.GallerieButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GallerieButton.Location = new System.Drawing.Point(104, 86);
             this.GallerieButton.Name = "GallerieButton";
             this.GallerieButton.Size = new System.Drawing.Size(86, 37);

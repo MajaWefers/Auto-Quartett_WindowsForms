@@ -110,16 +110,16 @@
             // lbl_g_einheit
             // 
             this.lbl_g_einheit.AutoSize = true;
-            this.lbl_g_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_g_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_g_einheit.Location = new System.Drawing.Point(216, 248);
             this.lbl_g_einheit.Name = "lbl_g_einheit";
-            this.lbl_g_einheit.Size = new System.Drawing.Size(34, 17);
+            this.lbl_g_einheit.Size = new System.Drawing.Size(32, 17);
             this.lbl_g_einheit.TabIndex = 9;
             this.lbl_g_einheit.Text = "kmh";
             // 
             // GeschwindigkeitWert
             // 
-            this.GeschwindigkeitWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GeschwindigkeitWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GeschwindigkeitWert.Location = new System.Drawing.Point(141, 248);
             this.GeschwindigkeitWert.Name = "GeschwindigkeitWert";
             this.GeschwindigkeitWert.Size = new System.Drawing.Size(72, 18);
@@ -130,46 +130,46 @@
             // lblGeschwindigkeit
             // 
             this.lblGeschwindigkeit.AutoSize = true;
-            this.lblGeschwindigkeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeschwindigkeit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGeschwindigkeit.Location = new System.Drawing.Point(24, 248);
             this.lblGeschwindigkeit.Name = "lblGeschwindigkeit";
-            this.lblGeschwindigkeit.Size = new System.Drawing.Size(114, 17);
+            this.lblGeschwindigkeit.Size = new System.Drawing.Size(104, 17);
             this.lblGeschwindigkeit.TabIndex = 0;
             this.lblGeschwindigkeit.Text = "Geschwindigkeit:";
             // 
             // Modell
             // 
             this.Modell.AutoSize = true;
-            this.Modell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modell.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modell.Location = new System.Drawing.Point(14, 34);
             this.Modell.Name = "Modell";
-            this.Modell.Size = new System.Drawing.Size(71, 17);
+            this.Modell.Size = new System.Drawing.Size(61, 17);
             this.Modell.TabIndex = 25;
             this.Modell.Text = "MODELL";
             // 
             // Marke
             // 
             this.Marke.AutoSize = true;
-            this.Marke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Marke.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marke.Location = new System.Drawing.Point(14, 12);
             this.Marke.Name = "Marke";
-            this.Marke.Size = new System.Drawing.Size(61, 17);
+            this.Marke.Size = new System.Drawing.Size(52, 17);
             this.Marke.TabIndex = 24;
             this.Marke.Text = "MARKE";
             // 
             // lbl_la_einheit
             // 
             this.lbl_la_einheit.AutoSize = true;
-            this.lbl_la_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_la_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_la_einheit.Location = new System.Drawing.Point(216, 411);
             this.lbl_la_einheit.Name = "lbl_la_einheit";
-            this.lbl_la_einheit.Size = new System.Drawing.Size(36, 17);
+            this.lbl_la_einheit.Size = new System.Drawing.Size(33, 17);
             this.lbl_la_einheit.TabIndex = 23;
             this.lbl_la_einheit.Text = "Liter";
             // 
             // LadevolumenWert
             // 
-            this.LadevolumenWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LadevolumenWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LadevolumenWert.Location = new System.Drawing.Point(141, 411);
             this.LadevolumenWert.Name = "LadevolumenWert";
             this.LadevolumenWert.Size = new System.Drawing.Size(72, 18);
@@ -180,16 +180,16 @@
             // lbl_zu_einheit
             // 
             this.lbl_zu_einheit.AutoSize = true;
-            this.lbl_zu_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_zu_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_zu_einheit.Location = new System.Drawing.Point(216, 388);
             this.lbl_zu_einheit.Name = "lbl_zu_einheit";
-            this.lbl_zu_einheit.Size = new System.Drawing.Size(23, 17);
+            this.lbl_zu_einheit.Size = new System.Drawing.Size(22, 17);
             this.lbl_zu_einheit.TabIndex = 21;
             this.lbl_zu_einheit.Text = "kg";
             // 
             // ZuladungWert
             // 
-            this.ZuladungWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZuladungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZuladungWert.Location = new System.Drawing.Point(141, 388);
             this.ZuladungWert.Name = "ZuladungWert";
             this.ZuladungWert.Size = new System.Drawing.Size(72, 18);
@@ -200,16 +200,16 @@
             // lbl_b_einheit
             // 
             this.lbl_b_einheit.AutoSize = true;
-            this.lbl_b_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_b_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_b_einheit.Location = new System.Drawing.Point(216, 365);
             this.lbl_b_einheit.Name = "lbl_b_einheit";
-            this.lbl_b_einheit.Size = new System.Drawing.Size(30, 17);
+            this.lbl_b_einheit.Size = new System.Drawing.Size(27, 17);
             this.lbl_b_einheit.TabIndex = 19;
             this.lbl_b_einheit.Text = "sec";
             // 
             // BeschleunigungWert
             // 
-            this.BeschleunigungWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BeschleunigungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BeschleunigungWert.Location = new System.Drawing.Point(141, 365);
             this.BeschleunigungWert.Name = "BeschleunigungWert";
             this.BeschleunigungWert.Size = new System.Drawing.Size(72, 18);
@@ -220,16 +220,16 @@
             // lbl_h_einheit
             // 
             this.lbl_h_einheit.AutoSize = true;
-            this.lbl_h_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_h_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_h_einheit.Location = new System.Drawing.Point(216, 342);
             this.lbl_h_einheit.Name = "lbl_h_einheit";
-            this.lbl_h_einheit.Size = new System.Drawing.Size(36, 17);
+            this.lbl_h_einheit.Size = new System.Drawing.Size(33, 17);
             this.lbl_h_einheit.TabIndex = 17;
             this.lbl_h_einheit.Text = "Liter";
             // 
             // HubraumWert
             // 
-            this.HubraumWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HubraumWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HubraumWert.Location = new System.Drawing.Point(141, 342);
             this.HubraumWert.Name = "HubraumWert";
             this.HubraumWert.Size = new System.Drawing.Size(72, 18);
@@ -240,16 +240,16 @@
             // lbl_zy_einheit
             // 
             this.lbl_zy_einheit.AutoSize = true;
-            this.lbl_zy_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_zy_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_zy_einheit.Location = new System.Drawing.Point(216, 319);
             this.lbl_zy_einheit.Name = "lbl_zy_einheit";
-            this.lbl_zy_einheit.Size = new System.Drawing.Size(27, 17);
+            this.lbl_zy_einheit.Size = new System.Drawing.Size(24, 17);
             this.lbl_zy_einheit.TabIndex = 15;
             this.lbl_zy_einheit.Text = "Zyl";
             // 
             // ZylinderWert
             // 
-            this.ZylinderWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZylinderWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZylinderWert.Location = new System.Drawing.Point(141, 319);
             this.ZylinderWert.Name = "ZylinderWert";
             this.ZylinderWert.Size = new System.Drawing.Size(72, 18);
@@ -260,16 +260,16 @@
             // lbl_v_einheit
             // 
             this.lbl_v_einheit.AutoSize = true;
-            this.lbl_v_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_v_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_v_einheit.Location = new System.Drawing.Point(216, 296);
             this.lbl_v_einheit.Name = "lbl_v_einheit";
-            this.lbl_v_einheit.Size = new System.Drawing.Size(36, 17);
+            this.lbl_v_einheit.Size = new System.Drawing.Size(33, 17);
             this.lbl_v_einheit.TabIndex = 13;
             this.lbl_v_einheit.Text = "Liter";
             // 
             // VerbrauchWert
             // 
-            this.VerbrauchWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VerbrauchWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VerbrauchWert.Location = new System.Drawing.Point(141, 296);
             this.VerbrauchWert.Name = "VerbrauchWert";
             this.VerbrauchWert.Size = new System.Drawing.Size(72, 18);
@@ -280,16 +280,16 @@
             // lbl_l_einheit
             // 
             this.lbl_l_einheit.AutoSize = true;
-            this.lbl_l_einheit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_l_einheit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_l_einheit.Location = new System.Drawing.Point(216, 271);
             this.lbl_l_einheit.Name = "lbl_l_einheit";
-            this.lbl_l_einheit.Size = new System.Drawing.Size(28, 17);
+            this.lbl_l_einheit.Size = new System.Drawing.Size(26, 17);
             this.lbl_l_einheit.TabIndex = 11;
             this.lbl_l_einheit.Text = "kW";
             // 
             // LeistungWert
             // 
-            this.LeistungWert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeistungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeistungWert.Location = new System.Drawing.Point(141, 271);
             this.LeistungWert.Name = "LeistungWert";
             this.LeistungWert.Size = new System.Drawing.Size(72, 18);
@@ -300,70 +300,70 @@
             // lblLadevolumen
             // 
             this.lblLadevolumen.AutoSize = true;
-            this.lblLadevolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLadevolumen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLadevolumen.Location = new System.Drawing.Point(24, 411);
             this.lblLadevolumen.Name = "lblLadevolumen";
-            this.lblLadevolumen.Size = new System.Drawing.Size(97, 17);
+            this.lblLadevolumen.Size = new System.Drawing.Size(88, 17);
             this.lblLadevolumen.TabIndex = 8;
             this.lblLadevolumen.Text = "Ladevolumen:";
             // 
             // lblZuladung
             // 
             this.lblZuladung.AutoSize = true;
-            this.lblZuladung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZuladung.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZuladung.Location = new System.Drawing.Point(24, 388);
             this.lblZuladung.Name = "lblZuladung";
-            this.lblZuladung.Size = new System.Drawing.Size(72, 17);
+            this.lblZuladung.Size = new System.Drawing.Size(65, 17);
             this.lblZuladung.TabIndex = 7;
             this.lblZuladung.Text = "Zuladung:";
             // 
             // lblBeschleunigung
             // 
             this.lblBeschleunigung.AutoSize = true;
-            this.lblBeschleunigung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBeschleunigung.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBeschleunigung.Location = new System.Drawing.Point(24, 365);
             this.lblBeschleunigung.Name = "lblBeschleunigung";
-            this.lblBeschleunigung.Size = new System.Drawing.Size(113, 17);
+            this.lblBeschleunigung.Size = new System.Drawing.Size(101, 17);
             this.lblBeschleunigung.TabIndex = 6;
             this.lblBeschleunigung.Text = "Beschleunigung:";
             // 
             // lblHubraum
             // 
             this.lblHubraum.AutoSize = true;
-            this.lblHubraum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHubraum.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHubraum.Location = new System.Drawing.Point(24, 342);
             this.lblHubraum.Name = "lblHubraum";
-            this.lblHubraum.Size = new System.Drawing.Size(70, 17);
+            this.lblHubraum.Size = new System.Drawing.Size(65, 17);
             this.lblHubraum.TabIndex = 5;
             this.lblHubraum.Text = "Hubraum:";
             // 
             // lblZylinder
             // 
             this.lblZylinder.AutoSize = true;
-            this.lblZylinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZylinder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZylinder.Location = new System.Drawing.Point(24, 319);
             this.lblZylinder.Name = "lblZylinder";
-            this.lblZylinder.Size = new System.Drawing.Size(63, 17);
+            this.lblZylinder.Size = new System.Drawing.Size(57, 17);
             this.lblZylinder.TabIndex = 4;
             this.lblZylinder.Text = "Zylinder:";
             // 
             // lblVerbrauch
             // 
             this.lblVerbrauch.AutoSize = true;
-            this.lblVerbrauch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerbrauch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerbrauch.Location = new System.Drawing.Point(24, 296);
             this.lblVerbrauch.Name = "lblVerbrauch";
-            this.lblVerbrauch.Size = new System.Drawing.Size(78, 17);
+            this.lblVerbrauch.Size = new System.Drawing.Size(70, 17);
             this.lblVerbrauch.TabIndex = 3;
             this.lblVerbrauch.Text = "Verbrauch:";
             // 
             // lblLeistung
             // 
             this.lblLeistung.AutoSize = true;
-            this.lblLeistung.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeistung.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLeistung.Location = new System.Drawing.Point(24, 271);
             this.lblLeistung.Name = "lblLeistung";
-            this.lblLeistung.Size = new System.Drawing.Size(66, 17);
+            this.lblLeistung.Size = new System.Drawing.Size(59, 17);
             this.lblLeistung.TabIndex = 2;
             this.lblLeistung.Text = "Leistung:";
             // 
