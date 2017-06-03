@@ -306,7 +306,7 @@
             this.btnSpeichern.BackColor = System.Drawing.Color.Lime;
             this.btnSpeichern.Location = new System.Drawing.Point(979, 411);
             this.btnSpeichern.Name = "btnSpeichern";
-            this.btnSpeichern.Size = new System.Drawing.Size(89, 31);
+            this.btnSpeichern.Size = new System.Drawing.Size(88, 37);
             this.btnSpeichern.TabIndex = 18;
             this.btnSpeichern.Text = "Speichern";
             this.btnSpeichern.UseVisualStyleBackColor = false;
