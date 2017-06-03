@@ -11,8 +11,6 @@
 
         public double BerechneGewinnchance(Autokarte auto, Autokarte[] autosImSpiel, int vergleichsfeld)
         {
-            //TODO: evtl anders machen: hier wird nicht autosImSpiel.Length genommen, weil nicht bekannt ist,
-            // ob auto in autosImSpiel enthalten ist oder nicht
             int anzahlAndererAutos = 0;
             int anzahlUnterlegenerAutos = 0;
 
@@ -23,7 +21,6 @@
                     anzahlAndererAutos++;
                     if (this.gewinntAuto1(auto, autosImSpiel[i], vergleichsfeld))
                     {
-                        //TODO: eventuell unentschieden halb mit einberechnen
                         anzahlUnterlegenerAutos++;
                     }
                 }
