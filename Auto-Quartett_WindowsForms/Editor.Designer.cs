@@ -77,7 +77,7 @@
             // tbGeschwindigkeit
             // 
             this.tbGeschwindigkeit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGeschwindigkeit.Location = new System.Drawing.Point(3, 57);
+            this.tbGeschwindigkeit.Location = new System.Drawing.Point(370, 16);
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
             this.tbGeschwindigkeit.ShortcutsEnabled = false;
             this.tbGeschwindigkeit.Size = new System.Drawing.Size(62, 23);
@@ -88,7 +88,7 @@
             // tbVerbrauch
             // 
             this.tbVerbrauch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbVerbrauch.Location = new System.Drawing.Point(3, 102);
+            this.tbVerbrauch.Location = new System.Drawing.Point(591, 16);
             this.tbVerbrauch.Name = "tbVerbrauch";
             this.tbVerbrauch.ShortcutsEnabled = false;
             this.tbVerbrauch.Size = new System.Drawing.Size(62, 23);
@@ -98,7 +98,7 @@
             // tbZylinder
             // 
             this.tbZylinder.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbZylinder.Location = new System.Drawing.Point(3, 147);
+            this.tbZylinder.Location = new System.Drawing.Point(3, 62);
             this.tbZylinder.Name = "tbZylinder";
             this.tbZylinder.ShortcutsEnabled = false;
             this.tbZylinder.Size = new System.Drawing.Size(62, 23);
@@ -108,7 +108,7 @@
             // tbLeistung
             // 
             this.tbLeistung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLeistung.Location = new System.Drawing.Point(3, 193);
+            this.tbLeistung.Location = new System.Drawing.Point(195, 62);
             this.tbLeistung.Name = "tbLeistung";
             this.tbLeistung.ShortcutsEnabled = false;
             this.tbLeistung.Size = new System.Drawing.Size(62, 23);
@@ -118,7 +118,7 @@
             // tbLadevolumen
             // 
             this.tbLadevolumen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLadevolumen.Location = new System.Drawing.Point(212, 193);
+            this.tbLadevolumen.Location = new System.Drawing.Point(195, 114);
             this.tbLadevolumen.Name = "tbLadevolumen";
             this.tbLadevolumen.ShortcutsEnabled = false;
             this.tbLadevolumen.Size = new System.Drawing.Size(62, 23);
@@ -128,7 +128,7 @@
             // tbZuladung
             // 
             this.tbZuladung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbZuladung.Location = new System.Drawing.Point(212, 144);
+            this.tbZuladung.Location = new System.Drawing.Point(3, 114);
             this.tbZuladung.Name = "tbZuladung";
             this.tbZuladung.ShortcutsEnabled = false;
             this.tbZuladung.Size = new System.Drawing.Size(62, 23);
@@ -138,7 +138,7 @@
             // tbHubraum
             // 
             this.tbHubraum.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHubraum.Location = new System.Drawing.Point(212, 57);
+            this.tbHubraum.Location = new System.Drawing.Point(370, 66);
             this.tbHubraum.Name = "tbHubraum";
             this.tbHubraum.ShortcutsEnabled = false;
             this.tbHubraum.Size = new System.Drawing.Size(62, 23);
@@ -148,7 +148,7 @@
             // tbBeschleunigung
             // 
             this.tbBeschleunigung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBeschleunigung.Location = new System.Drawing.Point(212, 102);
+            this.tbBeschleunigung.Location = new System.Drawing.Point(591, 65);
             this.tbBeschleunigung.Name = "tbBeschleunigung";
             this.tbBeschleunigung.ShortcutsEnabled = false;
             this.tbBeschleunigung.Size = new System.Drawing.Size(62, 23);
@@ -233,7 +233,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 19);
+            this.label1.Location = new System.Drawing.Point(263, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 10;
@@ -243,7 +243,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 57);
+            this.label2.Location = new System.Drawing.Point(438, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 15);
             this.label2.TabIndex = 11;
@@ -253,7 +253,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(71, 193);
+            this.label3.Location = new System.Drawing.Point(263, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 12;
@@ -263,7 +263,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(71, 102);
+            this.label4.Location = new System.Drawing.Point(659, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 12;
@@ -273,7 +273,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 147);
+            this.label5.Location = new System.Drawing.Point(71, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 13;
@@ -283,7 +283,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(280, 57);
+            this.label6.Location = new System.Drawing.Point(438, 66);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 14;
@@ -293,7 +293,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(280, 105);
+            this.label7.Location = new System.Drawing.Point(659, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 15);
             this.label7.TabIndex = 15;
@@ -303,7 +303,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(280, 144);
+            this.label8.Location = new System.Drawing.Point(71, 119);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 15);
             this.label8.TabIndex = 16;
@@ -313,7 +313,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(280, 196);
+            this.label9.Location = new System.Drawing.Point(263, 117);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 15);
             this.label9.TabIndex = 17;
@@ -322,7 +322,7 @@
             // btnSpeichern
             // 
             this.btnSpeichern.BackColor = System.Drawing.Color.Lime;
-            this.btnSpeichern.Location = new System.Drawing.Point(688, 403);
+            this.btnSpeichern.Location = new System.Drawing.Point(673, 139);
             this.btnSpeichern.Name = "btnSpeichern";
             this.btnSpeichern.Size = new System.Drawing.Size(88, 37);
             this.btnSpeichern.TabIndex = 18;
@@ -333,7 +333,7 @@
             // tbModell
             // 
             this.tbModell.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbModell.Location = new System.Drawing.Point(212, 16);
+            this.tbModell.Location = new System.Drawing.Point(195, 16);
             this.tbModell.Name = "tbModell";
             this.tbModell.ShortcutsEnabled = false;
             this.tbModell.Size = new System.Drawing.Size(62, 23);
@@ -353,6 +353,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.tbMarke);
+            this.panel1.Controls.Add(this.btnSpeichern);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.tbModell);
             this.panel1.Controls.Add(this.label1);
@@ -374,7 +375,7 @@
             this.panel1.Controls.Add(this.tbLeistung);
             this.panel1.Location = new System.Drawing.Point(12, 215);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(380, 225);
+            this.panel1.Size = new System.Drawing.Size(764, 179);
             this.panel1.TabIndex = 22;
             // 
             // Editor
@@ -383,9 +384,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 452);
+            this.ClientSize = new System.Drawing.Size(788, 404);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSpeichern);
             this.Controls.Add(this.listView1);
             this.Name = "Editor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
