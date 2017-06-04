@@ -137,6 +137,7 @@
             this.GallerieButton.TabIndex = 15;
             this.GallerieButton.Text = "Gallerie";
             this.GallerieButton.UseVisualStyleBackColor = false;
+            this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);
             // 
             // BeendenButton
             // 
@@ -144,12 +145,13 @@
             this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BeendenButton.BackColor = System.Drawing.Color.White;
             this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeendenButton.Location = new System.Drawing.Point(157, 222);
+            this.BeendenButton.Location = new System.Drawing.Point(157, 226);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(102, 37);
             this.BeendenButton.TabIndex = 17;
             this.BeendenButton.Text = "Beenden";
             this.BeendenButton.UseVisualStyleBackColor = false;
+            this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
             // 
             // EditorButton
             // 
@@ -163,6 +165,7 @@
             this.EditorButton.TabIndex = 16;
             this.EditorButton.Text = "Editor";
             this.EditorButton.UseVisualStyleBackColor = false;
+            this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
             // 
             // SpielButton
             // 
@@ -176,6 +179,7 @@
             this.SpielButton.TabIndex = 14;
             this.SpielButton.Text = "Spiel";
             this.SpielButton.UseVisualStyleBackColor = false;
+            this.SpielButton.Click += new System.EventHandler(this.SpielButton_Click);
             // 
             // Menü
             // 
