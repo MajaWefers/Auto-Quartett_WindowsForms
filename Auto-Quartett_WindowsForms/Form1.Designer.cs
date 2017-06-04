@@ -80,7 +80,7 @@
             this.PanelAuto1.BackColor = System.Drawing.Color.Transparent;
             this.PanelAuto1.Location = new System.Drawing.Point(21, 44);
             this.PanelAuto1.Name = "PanelAuto1";
-            this.PanelAuto1.Size = new System.Drawing.Size(293, 461);
+            this.PanelAuto1.Size = new System.Drawing.Size(300, 461);
             this.PanelAuto1.TabIndex = 17;
             // 
             // PanelAuto2
