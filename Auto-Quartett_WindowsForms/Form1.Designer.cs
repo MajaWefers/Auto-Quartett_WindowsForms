@@ -201,7 +201,7 @@
             this.lblVergleich.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVergleich.Location = new System.Drawing.Point(359, 265);
             this.lblVergleich.Name = "lblVergleich";
-            this.lblVergleich.Size = new System.Drawing.Size(77, 21);
+            this.lblVergleich.Size = new System.Drawing.Size(78, 21);
             this.lblVergleich.TabIndex = 22;
             this.lblVergleich.Text = "Vergleich:";
             // 
@@ -222,9 +222,9 @@
             // 
             this.btnEinfach.BackColor = System.Drawing.Color.Lime;
             this.btnEinfach.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEinfach.Location = new System.Drawing.Point(321, 44);
+            this.btnEinfach.Location = new System.Drawing.Point(324, 48);
             this.btnEinfach.Name = "btnEinfach";
-            this.btnEinfach.Size = new System.Drawing.Size(75, 23);
+            this.btnEinfach.Size = new System.Drawing.Size(76, 23);
             this.btnEinfach.TabIndex = 24;
             this.btnEinfach.Text = "Einfach";
             this.btnEinfach.UseVisualStyleBackColor = false;
@@ -234,9 +234,9 @@
             // 
             this.btnSchwer.BackColor = System.Drawing.Color.Red;
             this.btnSchwer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchwer.Location = new System.Drawing.Point(396, 44);
+            this.btnSchwer.Location = new System.Drawing.Point(399, 48);
             this.btnSchwer.Name = "btnSchwer";
-            this.btnSchwer.Size = new System.Drawing.Size(75, 23);
+            this.btnSchwer.Size = new System.Drawing.Size(76, 23);
             this.btnSchwer.TabIndex = 25;
             this.btnSchwer.Text = "Schwer";
             this.btnSchwer.UseVisualStyleBackColor = false;
