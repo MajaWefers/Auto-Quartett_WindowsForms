@@ -28,62 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SpielButton = new System.Windows.Forms.Button();
-            this.EditorButton = new System.Windows.Forms.Button();
-            this.BeendenButton = new System.Windows.Forms.Button();
-            this.GallerieButton = new System.Windows.Forms.Button();
-            this.pbMenueSpiel = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblGallerie = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblEditor = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenueSpiel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblGallerie = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbMenueSpiel = new System.Windows.Forms.PictureBox();
+            this.GallerieButton = new System.Windows.Forms.Button();
+            this.BeendenButton = new System.Windows.Forms.Button();
+            this.EditorButton = new System.Windows.Forms.Button();
+            this.SpielButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenueSpiel)).BeginInit();
             this.SuspendLayout();
             // 
-            // SpielButton
+            // panel1
             // 
-            this.SpielButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SpielButton.BackColor = System.Drawing.Color.Lime;
-            this.SpielButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpielButton.Location = new System.Drawing.Point(12, 46);
-            this.SpielButton.Name = "SpielButton";
-            this.SpielButton.Size = new System.Drawing.Size(102, 37);
-            this.SpielButton.TabIndex = 0;
-            this.SpielButton.Text = "Spiel";
-            this.SpielButton.UseVisualStyleBackColor = false;
-            this.SpielButton.Click += new System.EventHandler(this.SpielButton_Click);
+            this.panel1.Controls.Add(this.lblEditor);
+            this.panel1.Controls.Add(this.lblGallerie);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbMenueSpiel);
+            this.panel1.Controls.Add(this.GallerieButton);
+            this.panel1.Controls.Add(this.BeendenButton);
+            this.panel1.Controls.Add(this.EditorButton);
+            this.panel1.Controls.Add(this.SpielButton);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 274);
+            this.panel1.TabIndex = 0;
             // 
-            // EditorButton
+            // lblEditor
             // 
-            this.EditorButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EditorButton.BackColor = System.Drawing.Color.Red;
-            this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditorButton.Location = new System.Drawing.Point(287, 46);
-            this.EditorButton.Name = "EditorButton";
-            this.EditorButton.Size = new System.Drawing.Size(103, 37);
-            this.EditorButton.TabIndex = 2;
-            this.EditorButton.Text = "Editor";
-            this.EditorButton.UseVisualStyleBackColor = false;
-            this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
+            this.lblEditor.BackColor = System.Drawing.Color.White;
+            this.lblEditor.Location = new System.Drawing.Point(288, 186);
+            this.lblEditor.Name = "lblEditor";
+            this.lblEditor.Size = new System.Drawing.Size(102, 31);
+            this.lblEditor.TabIndex = 23;
+            this.lblEditor.Text = "Erstellen neuer Karten";
+            this.lblEditor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BeendenButton
+            // lblGallerie
             // 
-            this.BeendenButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BeendenButton.BackColor = System.Drawing.Color.White;
-            this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeendenButton.Location = new System.Drawing.Point(152, 249);
-            this.BeendenButton.Name = "BeendenButton";
-            this.BeendenButton.Size = new System.Drawing.Size(102, 37);
-            this.BeendenButton.TabIndex = 3;
-            this.BeendenButton.Text = "Beenden";
-            this.BeendenButton.UseVisualStyleBackColor = false;
-            this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
+            this.lblGallerie.BackColor = System.Drawing.Color.White;
+            this.lblGallerie.Location = new System.Drawing.Point(153, 186);
+            this.lblGallerie.Name = "lblGallerie";
+            this.lblGallerie.Size = new System.Drawing.Size(102, 31);
+            this.lblGallerie.TabIndex = 22;
+            this.lblGallerie.Text = "Ansicht aller Quartettkarten";
+            this.lblGallerie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 43);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Spiel gegen den Computer";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(288, 78);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(102, 99);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(152, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbMenueSpiel
+            // 
+            this.pbMenueSpiel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMenueSpiel.Location = new System.Drawing.Point(12, 78);
+            this.pbMenueSpiel.Name = "pbMenueSpiel";
+            this.pbMenueSpiel.Size = new System.Drawing.Size(102, 99);
+            this.pbMenueSpiel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMenueSpiel.TabIndex = 18;
+            this.pbMenueSpiel.TabStop = false;
             // 
             // GallerieButton
             // 
@@ -91,73 +128,51 @@
             this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
             this.GallerieButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GallerieButton.Location = new System.Drawing.Point(151, 46);
+            this.GallerieButton.Location = new System.Drawing.Point(152, 35);
             this.GallerieButton.Name = "GallerieButton";
             this.GallerieButton.Size = new System.Drawing.Size(103, 37);
-            this.GallerieButton.TabIndex = 1;
+            this.GallerieButton.TabIndex = 15;
             this.GallerieButton.Text = "Gallerie";
             this.GallerieButton.UseVisualStyleBackColor = false;
-            this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);
             // 
-            // pbMenueSpiel
+            // BeendenButton
             // 
-            this.pbMenueSpiel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbMenueSpiel.Location = new System.Drawing.Point(12, 89);
-            this.pbMenueSpiel.Name = "pbMenueSpiel";
-            this.pbMenueSpiel.Size = new System.Drawing.Size(102, 99);
-            this.pbMenueSpiel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMenueSpiel.TabIndex = 5;
-            this.pbMenueSpiel.TabStop = false;
+            this.BeendenButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BeendenButton.BackColor = System.Drawing.Color.White;
+            this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BeendenButton.Location = new System.Drawing.Point(156, 237);
+            this.BeendenButton.Name = "BeendenButton";
+            this.BeendenButton.Size = new System.Drawing.Size(102, 37);
+            this.BeendenButton.TabIndex = 17;
+            this.BeendenButton.Text = "Beenden";
+            this.BeendenButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // EditorButton
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(152, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.EditorButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EditorButton.BackColor = System.Drawing.Color.Red;
+            this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditorButton.Location = new System.Drawing.Point(288, 35);
+            this.EditorButton.Name = "EditorButton";
+            this.EditorButton.Size = new System.Drawing.Size(103, 37);
+            this.EditorButton.TabIndex = 16;
+            this.EditorButton.Text = "Editor";
+            this.EditorButton.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // SpielButton
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 89);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(102, 99);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 43);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Spiel gegen den Computer";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblGallerie
-            // 
-            this.lblGallerie.BackColor = System.Drawing.Color.White;
-            this.lblGallerie.Location = new System.Drawing.Point(152, 197);
-            this.lblGallerie.Name = "lblGallerie";
-            this.lblGallerie.Size = new System.Drawing.Size(102, 31);
-            this.lblGallerie.TabIndex = 12;
-            this.lblGallerie.Text = "Ansicht aller Quartettkarten";
-            this.lblGallerie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEditor
-            // 
-            this.lblEditor.BackColor = System.Drawing.Color.White;
-            this.lblEditor.Location = new System.Drawing.Point(288, 197);
-            this.lblEditor.Name = "lblEditor";
-            this.lblEditor.Size = new System.Drawing.Size(102, 31);
-            this.lblEditor.TabIndex = 13;
-            this.lblEditor.Text = "Erstellen neuer Karten";
-            this.lblEditor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SpielButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SpielButton.BackColor = System.Drawing.Color.Lime;
+            this.SpielButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpielButton.Location = new System.Drawing.Point(12, 35);
+            this.SpielButton.Name = "SpielButton";
+            this.SpielButton.Size = new System.Drawing.Size(102, 37);
+            this.SpielButton.TabIndex = 14;
+            this.SpielButton.Text = "Spiel";
+            this.SpielButton.UseVisualStyleBackColor = false;
             // 
             // Menü
             // 
@@ -167,37 +182,30 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(402, 298);
-            this.Controls.Add(this.lblEditor);
-            this.Controls.Add(this.lblGallerie);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbMenueSpiel);
-            this.Controls.Add(this.GallerieButton);
-            this.Controls.Add(this.BeendenButton);
-            this.Controls.Add(this.EditorButton);
-            this.Controls.Add(this.SpielButton);
+            this.Controls.Add(this.panel1);
             this.Name = "Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto-Quartett";
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenueSpiel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenueSpiel)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button SpielButton;
-        private System.Windows.Forms.Button EditorButton;
-        private System.Windows.Forms.Button BeendenButton;
-        private System.Windows.Forms.Button GallerieButton;
-        private System.Windows.Forms.PictureBox pbMenueSpiel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblGallerie;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblEditor;
+        private System.Windows.Forms.Label lblGallerie;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbMenueSpiel;
+        private System.Windows.Forms.Button GallerieButton;
+        private System.Windows.Forms.Button BeendenButton;
+        private System.Windows.Forms.Button EditorButton;
+        private System.Windows.Forms.Button SpielButton;
     }
 }

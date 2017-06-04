@@ -81,7 +81,7 @@
             this.tbGeschwindigkeit.Name = "tbGeschwindigkeit";
             this.tbGeschwindigkeit.ShortcutsEnabled = false;
             this.tbGeschwindigkeit.Size = new System.Drawing.Size(62, 23);
-            this.tbGeschwindigkeit.TabIndex = 1;
+            this.tbGeschwindigkeit.TabIndex = 3;
             this.tbGeschwindigkeit.TextChanged += new System.EventHandler(this.tbGeschwindigkeit_TextChanged);
             this.tbGeschwindigkeit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
@@ -92,7 +92,7 @@
             this.tbVerbrauch.Name = "tbVerbrauch";
             this.tbVerbrauch.ShortcutsEnabled = false;
             this.tbVerbrauch.Size = new System.Drawing.Size(62, 23);
-            this.tbVerbrauch.TabIndex = 2;
+            this.tbVerbrauch.TabIndex = 4;
             this.tbVerbrauch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbZylinder
@@ -102,7 +102,7 @@
             this.tbZylinder.Name = "tbZylinder";
             this.tbZylinder.ShortcutsEnabled = false;
             this.tbZylinder.Size = new System.Drawing.Size(62, 23);
-            this.tbZylinder.TabIndex = 3;
+            this.tbZylinder.TabIndex = 6;
             this.tbZylinder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbLeistung
@@ -112,7 +112,7 @@
             this.tbLeistung.Name = "tbLeistung";
             this.tbLeistung.ShortcutsEnabled = false;
             this.tbLeistung.Size = new System.Drawing.Size(62, 23);
-            this.tbLeistung.TabIndex = 4;
+            this.tbLeistung.TabIndex = 7;
             this.tbLeistung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbLadevolumen
@@ -122,7 +122,7 @@
             this.tbLadevolumen.Name = "tbLadevolumen";
             this.tbLadevolumen.ShortcutsEnabled = false;
             this.tbLadevolumen.Size = new System.Drawing.Size(62, 23);
-            this.tbLadevolumen.TabIndex = 5;
+            this.tbLadevolumen.TabIndex = 11;
             this.tbLadevolumen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbZuladung
@@ -132,7 +132,7 @@
             this.tbZuladung.Name = "tbZuladung";
             this.tbZuladung.ShortcutsEnabled = false;
             this.tbZuladung.Size = new System.Drawing.Size(62, 23);
-            this.tbZuladung.TabIndex = 6;
+            this.tbZuladung.TabIndex = 10;
             this.tbZuladung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbHubraum
@@ -142,7 +142,7 @@
             this.tbHubraum.Name = "tbHubraum";
             this.tbHubraum.ShortcutsEnabled = false;
             this.tbHubraum.Size = new System.Drawing.Size(62, 23);
-            this.tbHubraum.TabIndex = 7;
+            this.tbHubraum.TabIndex = 8;
             this.tbHubraum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // tbBeschleunigung
@@ -152,7 +152,7 @@
             this.tbBeschleunigung.Name = "tbBeschleunigung";
             this.tbBeschleunigung.ShortcutsEnabled = false;
             this.tbBeschleunigung.Size = new System.Drawing.Size(62, 23);
-            this.tbBeschleunigung.TabIndex = 8;
+            this.tbBeschleunigung.TabIndex = 9;
             this.tbBeschleunigung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers_KeyPress);
             // 
             // listView1
@@ -337,7 +337,7 @@
             this.tbModell.Name = "tbModell";
             this.tbModell.ShortcutsEnabled = false;
             this.tbModell.Size = new System.Drawing.Size(62, 23);
-            this.tbModell.TabIndex = 20;
+            this.tbModell.TabIndex = 1;
             this.tbModell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumAndChar_KeyPress);
             // 
             // label10
