@@ -57,17 +57,17 @@
             this.panel1.Controls.Add(this.BeendenButton);
             this.panel1.Controls.Add(this.EditorButton);
             this.panel1.Controls.Add(this.SpielButton);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 274);
+            this.panel1.Size = new System.Drawing.Size(415, 278);
             this.panel1.TabIndex = 0;
             // 
             // lblEditor
             // 
             this.lblEditor.BackColor = System.Drawing.Color.White;
-            this.lblEditor.Location = new System.Drawing.Point(288, 186);
+            this.lblEditor.Location = new System.Drawing.Point(292, 161);
             this.lblEditor.Name = "lblEditor";
-            this.lblEditor.Size = new System.Drawing.Size(102, 31);
+            this.lblEditor.Size = new System.Drawing.Size(103, 31);
             this.lblEditor.TabIndex = 23;
             this.lblEditor.Text = "Erstellen neuer Karten";
             this.lblEditor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,9 +75,9 @@
             // lblGallerie
             // 
             this.lblGallerie.BackColor = System.Drawing.Color.White;
-            this.lblGallerie.Location = new System.Drawing.Point(153, 186);
+            this.lblGallerie.Location = new System.Drawing.Point(156, 161);
             this.lblGallerie.Name = "lblGallerie";
-            this.lblGallerie.Size = new System.Drawing.Size(102, 31);
+            this.lblGallerie.Size = new System.Drawing.Size(104, 31);
             this.lblGallerie.TabIndex = 22;
             this.lblGallerie.Text = "Ansicht aller Quartettkarten";
             this.lblGallerie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,9 +85,9 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 180);
+            this.label1.Location = new System.Drawing.Point(15, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 43);
+            this.label1.Size = new System.Drawing.Size(104, 43);
             this.label1.TabIndex = 21;
             this.label1.Text = "Spiel gegen den Computer";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -95,7 +95,8 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 78);
+            this.pictureBox2.Image = global::Auto_Quartett_WindowsForms.Properties.Resources.menue_editor;
+            this.pictureBox2.Location = new System.Drawing.Point(293, 53);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(102, 99);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +106,8 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(152, 78);
+            this.pictureBox1.Image = global::Auto_Quartett_WindowsForms.Properties.Resources.menue_gallerie;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +117,8 @@
             // pbMenueSpiel
             // 
             this.pbMenueSpiel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbMenueSpiel.Location = new System.Drawing.Point(12, 78);
+            this.pbMenueSpiel.Image = global::Auto_Quartett_WindowsForms.Properties.Resources.menue_spiel;
+            this.pbMenueSpiel.Location = new System.Drawing.Point(17, 53);
             this.pbMenueSpiel.Name = "pbMenueSpiel";
             this.pbMenueSpiel.Size = new System.Drawing.Size(102, 99);
             this.pbMenueSpiel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,12 +131,13 @@
             this.GallerieButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.GallerieButton.BackColor = System.Drawing.Color.Yellow;
             this.GallerieButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GallerieButton.Location = new System.Drawing.Point(152, 35);
+            this.GallerieButton.Location = new System.Drawing.Point(156, 10);
             this.GallerieButton.Name = "GallerieButton";
             this.GallerieButton.Size = new System.Drawing.Size(103, 37);
             this.GallerieButton.TabIndex = 15;
             this.GallerieButton.Text = "Gallerie";
             this.GallerieButton.UseVisualStyleBackColor = false;
+            this.GallerieButton.Click += new System.EventHandler(this.GallerieButton_Click);
             // 
             // BeendenButton
             // 
@@ -141,12 +145,13 @@
             this.BeendenButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BeendenButton.BackColor = System.Drawing.Color.White;
             this.BeendenButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeendenButton.Location = new System.Drawing.Point(156, 237);
+            this.BeendenButton.Location = new System.Drawing.Point(157, 226);
             this.BeendenButton.Name = "BeendenButton";
             this.BeendenButton.Size = new System.Drawing.Size(102, 37);
             this.BeendenButton.TabIndex = 17;
             this.BeendenButton.Text = "Beenden";
             this.BeendenButton.UseVisualStyleBackColor = false;
+            this.BeendenButton.Click += new System.EventHandler(this.BeendenButton_Click);
             // 
             // EditorButton
             // 
@@ -154,12 +159,13 @@
             this.EditorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.EditorButton.BackColor = System.Drawing.Color.Red;
             this.EditorButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditorButton.Location = new System.Drawing.Point(288, 35);
+            this.EditorButton.Location = new System.Drawing.Point(292, 10);
             this.EditorButton.Name = "EditorButton";
             this.EditorButton.Size = new System.Drawing.Size(103, 37);
             this.EditorButton.TabIndex = 16;
             this.EditorButton.Text = "Editor";
             this.EditorButton.UseVisualStyleBackColor = false;
+            this.EditorButton.Click += new System.EventHandler(this.EditorButton_Click);
             // 
             // SpielButton
             // 
@@ -167,12 +173,13 @@
             this.SpielButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SpielButton.BackColor = System.Drawing.Color.Lime;
             this.SpielButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpielButton.Location = new System.Drawing.Point(12, 35);
+            this.SpielButton.Location = new System.Drawing.Point(17, 10);
             this.SpielButton.Name = "SpielButton";
             this.SpielButton.Size = new System.Drawing.Size(102, 37);
             this.SpielButton.TabIndex = 14;
             this.SpielButton.Text = "Spiel";
             this.SpielButton.UseVisualStyleBackColor = false;
+            this.SpielButton.Click += new System.EventHandler(this.SpielButton_Click);
             // 
             // Menü
             // 
@@ -181,7 +188,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(402, 298);
+            this.ClientSize = new System.Drawing.Size(421, 298);
             this.Controls.Add(this.panel1);
             this.Name = "Menü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
