@@ -66,7 +66,7 @@
             // 
             this.btnNeu.Enabled = false;
             this.btnNeu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNeu.Location = new System.Drawing.Point(363, 199);
+            this.btnNeu.Location = new System.Drawing.Point(363, 189);
             this.btnNeu.Name = "btnNeu";
             this.btnNeu.Size = new System.Drawing.Size(68, 47);
             this.btnNeu.TabIndex = 15;
@@ -87,7 +87,7 @@
             // 
             this.PanelAuto2.AutoSize = true;
             this.PanelAuto2.BackColor = System.Drawing.Color.Transparent;
-            this.PanelAuto2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelAuto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.PanelAuto2.Location = new System.Drawing.Point(477, 44);
             this.PanelAuto2.Name = "PanelAuto2";
             this.PanelAuto2.Size = new System.Drawing.Size(293, 461);
@@ -193,7 +193,7 @@
             // lblSpielerpunkte
             // 
             this.lblSpielerpunkte.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpielerpunkte.Location = new System.Drawing.Point(323, 134);
+            this.lblSpielerpunkte.Location = new System.Drawing.Point(323, 124);
             this.lblSpielerpunkte.Name = "lblSpielerpunkte";
             this.lblSpielerpunkte.Size = new System.Drawing.Size(73, 51);
             this.lblSpielerpunkte.TabIndex = 19;
@@ -203,7 +203,7 @@
             // lblGegnerpunkte
             // 
             this.lblGegnerpunkte.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGegnerpunkte.Location = new System.Drawing.Point(404, 134);
+            this.lblGegnerpunkte.Location = new System.Drawing.Point(404, 124);
             this.lblGegnerpunkte.Name = "lblGegnerpunkte";
             this.lblGegnerpunkte.Size = new System.Drawing.Size(67, 51);
             this.lblGegnerpunkte.TabIndex = 20;
@@ -214,7 +214,7 @@
             // 
             this.lblDoppelpunkt.AutoSize = true;
             this.lblDoppelpunkt.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoppelpunkt.Location = new System.Drawing.Point(385, 133);
+            this.lblDoppelpunkt.Location = new System.Drawing.Point(385, 123);
             this.lblDoppelpunkt.Name = "lblDoppelpunkt";
             this.lblDoppelpunkt.Size = new System.Drawing.Size(32, 54);
             this.lblDoppelpunkt.TabIndex = 21;
@@ -224,7 +224,7 @@
             // 
             this.lblVergleich.AutoSize = true;
             this.lblVergleich.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVergleich.Location = new System.Drawing.Point(359, 265);
+            this.lblVergleich.Location = new System.Drawing.Point(359, 255);
             this.lblVergleich.Name = "lblVergleich";
             this.lblVergleich.Size = new System.Drawing.Size(78, 21);
             this.lblVergleich.TabIndex = 22;
@@ -272,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 525);
+            this.ClientSize = new System.Drawing.Size(799, 526);
             this.Controls.Add(this.btnSchwer);
             this.Controls.Add(this.btnEinfach);
             this.Controls.Add(this.label1);

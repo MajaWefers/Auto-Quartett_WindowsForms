@@ -18,7 +18,7 @@
             new EigenschaftVergleich(karte => karte.verbrauch, false),
             new EigenschaftVergleich(karte => karte.zylinder),
             new EigenschaftVergleich(karte => karte.hubraum),
-            new EigenschaftVergleich(karte => karte.beschleunigung),
+            new EigenschaftVergleich(karte => karte.beschleunigung, false),
             new EigenschaftVergleich(karte => karte.zuladung),
             new EigenschaftVergleich(karte => karte.ladevolumen),
         };
