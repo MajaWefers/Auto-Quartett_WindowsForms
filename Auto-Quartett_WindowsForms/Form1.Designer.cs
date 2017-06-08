@@ -87,6 +87,7 @@
             // 
             this.PanelAuto2.AutoSize = true;
             this.PanelAuto2.BackColor = System.Drawing.Color.Transparent;
+            this.PanelAuto2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelAuto2.Location = new System.Drawing.Point(477, 44);
             this.PanelAuto2.Name = "PanelAuto2";
             this.PanelAuto2.Size = new System.Drawing.Size(293, 461);
@@ -94,74 +95,98 @@
             // 
             // btnGeschwindigkeit
             // 
+            this.btnGeschwindigkeit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGeschwindigkeit.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.btnGeschwindigkeit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeschwindigkeit.Location = new System.Drawing.Point(383, 297);
             this.btnGeschwindigkeit.Name = "btnGeschwindigkeit";
             this.btnGeschwindigkeit.Size = new System.Drawing.Size(24, 23);
             this.btnGeschwindigkeit.TabIndex = 1;
+            this.btnGeschwindigkeit.Text = "↑";
             this.btnGeschwindigkeit.UseVisualStyleBackColor = true;
             this.btnGeschwindigkeit.Click += new System.EventHandler(this.btnGeschwindigkeit_Click);
             // 
             // btnLeistung
             // 
+            this.btnLeistung.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLeistung.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLeistung.Location = new System.Drawing.Point(383, 320);
             this.btnLeistung.Name = "btnLeistung";
             this.btnLeistung.Size = new System.Drawing.Size(24, 23);
             this.btnLeistung.TabIndex = 2;
+            this.btnLeistung.Text = "↑";
             this.btnLeistung.UseVisualStyleBackColor = true;
             this.btnLeistung.Click += new System.EventHandler(this.btnLeistung_Click);
             // 
             // btnVerbrauch
             // 
+            this.btnVerbrauch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVerbrauch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerbrauch.Location = new System.Drawing.Point(383, 343);
             this.btnVerbrauch.Name = "btnVerbrauch";
             this.btnVerbrauch.Size = new System.Drawing.Size(24, 23);
             this.btnVerbrauch.TabIndex = 3;
+            this.btnVerbrauch.Text = "↓";
             this.btnVerbrauch.UseVisualStyleBackColor = true;
             this.btnVerbrauch.Click += new System.EventHandler(this.btnVerbrauch_Click);
             // 
             // btnZylinder
             // 
+            this.btnZylinder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnZylinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZylinder.Location = new System.Drawing.Point(383, 366);
             this.btnZylinder.Name = "btnZylinder";
             this.btnZylinder.Size = new System.Drawing.Size(24, 23);
             this.btnZylinder.TabIndex = 4;
+            this.btnZylinder.Text = "↑";
             this.btnZylinder.UseVisualStyleBackColor = true;
             this.btnZylinder.Click += new System.EventHandler(this.btnZylinder_Click);
             // 
             // btnHubraum
             // 
+            this.btnHubraum.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHubraum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHubraum.Location = new System.Drawing.Point(383, 389);
             this.btnHubraum.Name = "btnHubraum";
             this.btnHubraum.Size = new System.Drawing.Size(24, 23);
             this.btnHubraum.TabIndex = 5;
+            this.btnHubraum.Text = "↑";
             this.btnHubraum.UseVisualStyleBackColor = true;
             this.btnHubraum.Click += new System.EventHandler(this.btnHubraum_Click);
             // 
             // btnBeschleunigung
             // 
+            this.btnBeschleunigung.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBeschleunigung.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBeschleunigung.Location = new System.Drawing.Point(383, 412);
             this.btnBeschleunigung.Name = "btnBeschleunigung";
             this.btnBeschleunigung.Size = new System.Drawing.Size(24, 23);
             this.btnBeschleunigung.TabIndex = 6;
+            this.btnBeschleunigung.Text = "↓";
             this.btnBeschleunigung.UseVisualStyleBackColor = true;
             this.btnBeschleunigung.Click += new System.EventHandler(this.btnBeschleunigung_Click);
             // 
             // btnLadevolumen
             // 
+            this.btnLadevolumen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLadevolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLadevolumen.Location = new System.Drawing.Point(383, 458);
             this.btnLadevolumen.Name = "btnLadevolumen";
             this.btnLadevolumen.Size = new System.Drawing.Size(24, 23);
             this.btnLadevolumen.TabIndex = 8;
+            this.btnLadevolumen.Text = "↑";
             this.btnLadevolumen.UseVisualStyleBackColor = true;
             this.btnLadevolumen.Click += new System.EventHandler(this.btnLadevolumen_Click);
             // 
             // btnZuladung
             // 
+            this.btnZuladung.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnZuladung.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZuladung.Location = new System.Drawing.Point(383, 435);
             this.btnZuladung.Name = "btnZuladung";
             this.btnZuladung.Size = new System.Drawing.Size(24, 23);
             this.btnZuladung.TabIndex = 7;
+            this.btnZuladung.Text = "↑";
             this.btnZuladung.UseVisualStyleBackColor = true;
             this.btnZuladung.Click += new System.EventHandler(this.btnZuladung_Click);
             // 
