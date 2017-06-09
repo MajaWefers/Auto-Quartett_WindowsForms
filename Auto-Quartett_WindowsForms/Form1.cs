@@ -37,6 +37,7 @@ namespace Auto_Quartett_WindowsForms
             this.toolTip.SetToolTip(this.btnEinfach, 
                 "Zeigt die Gewinnchance bei Auswahl einer bestimmten Eigenschaft zum Vergleich");
             this.toolTip.SetToolTip(this.btnSchwer, "Zeigt keine Hilfe an");
+            this.toolTip.SetToolTip(this.lblVergleich, "↑: größerer Wert gewinnt\n↓: kleinerer Wert gewinnt");
         }
 
         private void zeigeSpielkarte()

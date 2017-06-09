@@ -66,6 +66,8 @@ namespace Auto_Quartett_WindowsForms
             this.LadevolumenWert.Text = autokarte.ladevolumen.ToString();
         }
 
+        //Das Bild ist keine Eigenschaft der Autokarte, sondern wird direkt aus dem Bilder-Ordner
+        //geladen, der in dem Ordner der ausgeführten Datei liegen muss.
         private void BildEinfuegen(Autokarte autokarte)
         {
             try
