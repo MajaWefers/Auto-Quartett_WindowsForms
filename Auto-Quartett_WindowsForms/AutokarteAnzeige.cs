@@ -76,7 +76,13 @@ namespace Auto_Quartett_WindowsForms
             }
             catch
             {
-                AutoBild.Image = Image.FromFile(@"Bilder\" + "autodefault.jpg");
+                try
+                {
+                    AutoBild.Image = Image.FromFile(@"Bilder\" + "autodefault.jpg");
+                }
+                catch
+                {
+                }
             }
         }
     }
