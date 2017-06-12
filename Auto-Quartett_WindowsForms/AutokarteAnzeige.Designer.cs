@@ -110,9 +110,9 @@
             // GeschwindigkeitWert
             // 
             this.GeschwindigkeitWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GeschwindigkeitWert.Location = new System.Drawing.Point(134, 248);
+            this.GeschwindigkeitWert.Location = new System.Drawing.Point(136, 248);
             this.GeschwindigkeitWert.Name = "GeschwindigkeitWert";
-            this.GeschwindigkeitWert.Size = new System.Drawing.Size(85, 18);
+            this.GeschwindigkeitWert.Size = new System.Drawing.Size(83, 18);
             this.GeschwindigkeitWert.TabIndex = 1;
             this.GeschwindigkeitWert.Text = "g1";
             this.GeschwindigkeitWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -158,9 +158,9 @@
             // LadevolumenWert
             // 
             this.LadevolumenWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LadevolumenWert.Location = new System.Drawing.Point(134, 411);
+            this.LadevolumenWert.Location = new System.Drawing.Point(136, 411);
             this.LadevolumenWert.Name = "LadevolumenWert";
-            this.LadevolumenWert.Size = new System.Drawing.Size(85, 18);
+            this.LadevolumenWert.Size = new System.Drawing.Size(83, 18);
             this.LadevolumenWert.TabIndex = 22;
             this.LadevolumenWert.Text = "la1";
             this.LadevolumenWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -178,9 +178,9 @@
             // ZuladungWert
             // 
             this.ZuladungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZuladungWert.Location = new System.Drawing.Point(134, 388);
+            this.ZuladungWert.Location = new System.Drawing.Point(136, 388);
             this.ZuladungWert.Name = "ZuladungWert";
-            this.ZuladungWert.Size = new System.Drawing.Size(85, 18);
+            this.ZuladungWert.Size = new System.Drawing.Size(83, 18);
             this.ZuladungWert.TabIndex = 20;
             this.ZuladungWert.Text = "zu1";
             this.ZuladungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -198,9 +198,9 @@
             // BeschleunigungWert
             // 
             this.BeschleunigungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeschleunigungWert.Location = new System.Drawing.Point(134, 365);
+            this.BeschleunigungWert.Location = new System.Drawing.Point(136, 365);
             this.BeschleunigungWert.Name = "BeschleunigungWert";
-            this.BeschleunigungWert.Size = new System.Drawing.Size(85, 18);
+            this.BeschleunigungWert.Size = new System.Drawing.Size(83, 18);
             this.BeschleunigungWert.TabIndex = 18;
             this.BeschleunigungWert.Text = "b1";
             this.BeschleunigungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -218,9 +218,9 @@
             // HubraumWert
             // 
             this.HubraumWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HubraumWert.Location = new System.Drawing.Point(134, 342);
+            this.HubraumWert.Location = new System.Drawing.Point(136, 342);
             this.HubraumWert.Name = "HubraumWert";
-            this.HubraumWert.Size = new System.Drawing.Size(85, 18);
+            this.HubraumWert.Size = new System.Drawing.Size(83, 18);
             this.HubraumWert.TabIndex = 16;
             this.HubraumWert.Text = "h1";
             this.HubraumWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -238,9 +238,9 @@
             // ZylinderWert
             // 
             this.ZylinderWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZylinderWert.Location = new System.Drawing.Point(134, 319);
+            this.ZylinderWert.Location = new System.Drawing.Point(136, 319);
             this.ZylinderWert.Name = "ZylinderWert";
-            this.ZylinderWert.Size = new System.Drawing.Size(85, 18);
+            this.ZylinderWert.Size = new System.Drawing.Size(83, 18);
             this.ZylinderWert.TabIndex = 14;
             this.ZylinderWert.Text = "zy1";
             this.ZylinderWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -258,9 +258,9 @@
             // VerbrauchWert
             // 
             this.VerbrauchWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerbrauchWert.Location = new System.Drawing.Point(134, 296);
+            this.VerbrauchWert.Location = new System.Drawing.Point(136, 296);
             this.VerbrauchWert.Name = "VerbrauchWert";
-            this.VerbrauchWert.Size = new System.Drawing.Size(85, 18);
+            this.VerbrauchWert.Size = new System.Drawing.Size(83, 18);
             this.VerbrauchWert.TabIndex = 12;
             this.VerbrauchWert.Text = "v1";
             this.VerbrauchWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -278,9 +278,9 @@
             // LeistungWert
             // 
             this.LeistungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeistungWert.Location = new System.Drawing.Point(134, 271);
+            this.LeistungWert.Location = new System.Drawing.Point(136, 271);
             this.LeistungWert.Name = "LeistungWert";
-            this.LeistungWert.Size = new System.Drawing.Size(85, 18);
+            this.LeistungWert.Size = new System.Drawing.Size(83, 18);
             this.LeistungWert.TabIndex = 10;
             this.LeistungWert.Text = "l1";
             this.LeistungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
