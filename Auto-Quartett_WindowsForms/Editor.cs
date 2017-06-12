@@ -86,7 +86,8 @@ namespace Auto_Quartett_WindowsForms
 
         private void OnlyNumAndChar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) )
+            string verboteneZeichen = "*.\"/\\:;|=,";
+            if (verboteneZeichen.Contains(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -149,6 +150,13 @@ namespace Auto_Quartett_WindowsForms
             tbLadevolumen.Text = lvItem.SubItems[9].Text;
 
 
+        }
+
+       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.RefreshView();
         }
     }
 }
