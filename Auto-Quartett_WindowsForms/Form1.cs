@@ -145,7 +145,7 @@ namespace Auto_Quartett_WindowsForms
                 btnGeschwindigkeit.Focus();
             }
         }
-
+        
         //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
         private void btnGeschwindigkeit_Click(object sender, EventArgs e)
         {
@@ -202,7 +202,7 @@ namespace Auto_Quartett_WindowsForms
             this.gewinnchancenSichtbar = true;
             this.setzeToolTips(this.autos[zufall1]);
             MessageBox.Show(
-                "Gewinchancen werden jetzt als Tooltip der Buttons angezeigt, " +
+                "Gewinnchancen werden jetzt als Tooltip der Buttons angezeigt, " +
                 "mit denen man eine Eigenschaft für den Vergleich auswählt.",
                 "Info", 
                 MessageBoxButtons.OK, 
@@ -214,7 +214,7 @@ namespace Auto_Quartett_WindowsForms
             this.gewinnchancenSichtbar = false;
             this.setzeToolTips(this.autos[zufall1]);
             MessageBox.Show(
-                "Gewinchancen werden nicht als Tooltip angezeigt.", 
+                "Gewinnchancen werden nicht als Tooltip angezeigt.", 
                 "Info", 
                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
