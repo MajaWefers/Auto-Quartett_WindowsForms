@@ -48,6 +48,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(970, 493);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.MaximizeBox = false;
             this.Name = "KartenGallerie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gallerie";

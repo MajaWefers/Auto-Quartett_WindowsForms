@@ -400,6 +400,7 @@
             this.ClientSize = new System.Drawing.Size(788, 404);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
+            this.MaximizeBox = false;
             this.Name = "Editor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor";

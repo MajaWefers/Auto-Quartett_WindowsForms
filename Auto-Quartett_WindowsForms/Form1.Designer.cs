@@ -292,6 +292,7 @@
             this.Controls.Add(this.btnNeu);
             this.Controls.Add(this.lblAuswahlVergleichswert);
             this.Controls.Add(this.lblDoppelpunkt);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto-Quartett";
