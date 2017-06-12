@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblAuswahlVergleichswert = new System.Windows.Forms.Label();
-            this.btnNeu = new System.Windows.Forms.Button();
+            this.btnNaechsteKarte = new System.Windows.Forms.Button();
             this.PanelAuto1 = new System.Windows.Forms.Panel();
             this.PanelAuto2 = new System.Windows.Forms.Panel();
             this.btnGeschwindigkeit = new System.Windows.Forms.Button();
@@ -62,17 +62,17 @@
             this.lblAuswahlVergleichswert.Text = "Ihre Spielkarte";
             this.lblAuswahlVergleichswert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnNeu
+            // btnNaechsteKarte
             // 
-            this.btnNeu.Enabled = false;
-            this.btnNeu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNeu.Location = new System.Drawing.Point(363, 189);
-            this.btnNeu.Name = "btnNeu";
-            this.btnNeu.Size = new System.Drawing.Size(68, 47);
-            this.btnNeu.TabIndex = 15;
-            this.btnNeu.Text = "Nächste Karte";
-            this.btnNeu.UseVisualStyleBackColor = true;
-            this.btnNeu.Click += new System.EventHandler(this.btnNeu_Click);
+            this.btnNaechsteKarte.Enabled = false;
+            this.btnNaechsteKarte.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaechsteKarte.Location = new System.Drawing.Point(363, 189);
+            this.btnNaechsteKarte.Name = "btnNaechsteKarte";
+            this.btnNaechsteKarte.Size = new System.Drawing.Size(68, 47);
+            this.btnNaechsteKarte.TabIndex = 15;
+            this.btnNaechsteKarte.Text = "Nächste Karte";
+            this.btnNaechsteKarte.UseVisualStyleBackColor = true;
+            this.btnNaechsteKarte.Click += new System.EventHandler(this.btnNaechsteKarte_Click);
             // 
             // PanelAuto1
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.btnGeschwindigkeit);
             this.Controls.Add(this.PanelAuto2);
             this.Controls.Add(this.PanelAuto1);
-            this.Controls.Add(this.btnNeu);
+            this.Controls.Add(this.btnNaechsteKarte);
             this.Controls.Add(this.lblAuswahlVergleichswert);
             this.Controls.Add(this.lblDoppelpunkt);
             this.Name = "Form1";
@@ -302,7 +302,7 @@
 
         #endregion
         private System.Windows.Forms.Label lblAuswahlVergleichswert;
-        private System.Windows.Forms.Button btnNeu;
+        private System.Windows.Forms.Button btnNaechsteKarte;
         private System.Windows.Forms.Panel PanelAuto1;
         private System.Windows.Forms.Panel PanelAuto2;
         private System.Windows.Forms.Button btnGeschwindigkeit;

@@ -6,7 +6,7 @@ namespace Auto_Quartett_WindowsForms
     /// <summary>
     /// Beinhaltet Logik zum Laden und Speichern von Arrays von <see cref="Autokarte"/>n
     /// in einer XML-Datei.
-    /// Der Pfad der Datei wird bei der Erstellung eines Objekts dieser Klasse fertgelegt.
+    /// Der Pfad der Datei wird bei der Erstellung eines Objekts dieser Klasse festgelegt.
     /// </summary>
     public class DatenZugriff
     {

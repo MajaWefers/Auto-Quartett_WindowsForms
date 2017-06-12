@@ -46,7 +46,6 @@ namespace Auto_Quartett_WindowsForms
             Autokarte autoDesSpielers = autos[zufall1];
             zeigeAuto1(autoDesSpielers);
             setzeToolTips(autoDesSpielers);
-
         }
 
         private void zeigeAuto1(Autokarte auto)
@@ -91,6 +90,7 @@ namespace Auto_Quartett_WindowsForms
                     break;
             }
 
+            //Je nach Punkteverhältnis wird die Schriftfarbe der Punkte gesetzt
             if (spielerpunkte > gegnerpunkte)
             {
                 lblSpielerpunkte.ForeColor = Color.Green;
@@ -109,7 +109,8 @@ namespace Auto_Quartett_WindowsForms
             ButtonsEnabled(false);
         }
 
-        private void btnNeu_Click(object sender, EventArgs e)
+
+        private void btnNaechsteKarte_Click(object sender, EventArgs e)
         {
             if (btnBeschleunigung.Enabled == false)
             {
@@ -123,6 +124,11 @@ namespace Auto_Quartett_WindowsForms
             }
         }
 
+        /// <summary>
+        /// Die "Enabled"-Eigenschaft der Vergleichsbuttons und des "Nächste Karte"-Buttons
+        /// wird entgegengesetzt auf true/false gesetzt.
+        /// </summary>
+        /// <param name="klickbar"></param>
         private void ButtonsEnabled(bool klickbar)
         {
             btnGeschwindigkeit.Enabled = klickbar;
@@ -134,11 +140,11 @@ namespace Auto_Quartett_WindowsForms
             btnZuladung.Enabled = klickbar;
             btnLadevolumen.Enabled = klickbar;
             //Next kann umgekehrt zu Vergleich nicht angeklickt werden.
-            btnNeu.Enabled = !klickbar;
+            btnNaechsteKarte.Enabled = !klickbar;
             //Focus setzen, damit mit Enter und Pfeiltasten leicht bedient werden kann.
             if (!klickbar)
             {
-                btnNeu.Focus();
+                btnNaechsteKarte.Focus();
             }
             else
             {
@@ -238,5 +244,6 @@ namespace Auto_Quartett_WindowsForms
             }
             return gewinnchancen;
         }
+
     }
 }
