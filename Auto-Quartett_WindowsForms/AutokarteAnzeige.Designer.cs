@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelAuto = new System.Windows.Forms.Panel();
-            this.AutoBild = new System.Windows.Forms.PictureBox();
             this.lbl_g_einheit = new System.Windows.Forms.Label();
             this.GeschwindigkeitWert = new System.Windows.Forms.Label();
             this.lblGeschwindigkeit = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.lblZylinder = new System.Windows.Forms.Label();
             this.lblVerbrauch = new System.Windows.Forms.Label();
             this.lblLeistung = new System.Windows.Forms.Label();
+            this.AutoBild = new System.Windows.Forms.PictureBox();
             this.panelAuto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AutoBild)).BeginInit();
             this.SuspendLayout();
@@ -97,16 +97,6 @@
             this.panelAuto.Size = new System.Drawing.Size(291, 451);
             this.panelAuto.TabIndex = 1;
             // 
-            // AutoBild
-            // 
-            this.AutoBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AutoBild.Location = new System.Drawing.Point(17, 65);
-            this.AutoBild.Name = "AutoBild";
-            this.AutoBild.Size = new System.Drawing.Size(254, 165);
-            this.AutoBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AutoBild.TabIndex = 26;
-            this.AutoBild.TabStop = false;
-            // 
             // lbl_g_einheit
             // 
             this.lbl_g_einheit.AutoSize = true;
@@ -120,9 +110,9 @@
             // GeschwindigkeitWert
             // 
             this.GeschwindigkeitWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GeschwindigkeitWert.Location = new System.Drawing.Point(138, 248);
+            this.GeschwindigkeitWert.Location = new System.Drawing.Point(136, 248);
             this.GeschwindigkeitWert.Name = "GeschwindigkeitWert";
-            this.GeschwindigkeitWert.Size = new System.Drawing.Size(81, 18);
+            this.GeschwindigkeitWert.Size = new System.Drawing.Size(83, 18);
             this.GeschwindigkeitWert.TabIndex = 1;
             this.GeschwindigkeitWert.Text = "g1";
             this.GeschwindigkeitWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -139,21 +129,19 @@
             // 
             // Modell
             // 
-            this.Modell.AutoSize = true;
             this.Modell.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modell.Location = new System.Drawing.Point(14, 34);
             this.Modell.Name = "Modell";
-            this.Modell.Size = new System.Drawing.Size(61, 17);
+            this.Modell.Size = new System.Drawing.Size(257, 17);
             this.Modell.TabIndex = 25;
             this.Modell.Text = "MODELL";
             // 
             // Marke
             // 
-            this.Marke.AutoSize = true;
             this.Marke.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marke.Location = new System.Drawing.Point(14, 12);
             this.Marke.Name = "Marke";
-            this.Marke.Size = new System.Drawing.Size(52, 17);
+            this.Marke.Size = new System.Drawing.Size(257, 17);
             this.Marke.TabIndex = 24;
             this.Marke.Text = "MARKE";
             // 
@@ -170,9 +158,9 @@
             // LadevolumenWert
             // 
             this.LadevolumenWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LadevolumenWert.Location = new System.Drawing.Point(138, 411);
+            this.LadevolumenWert.Location = new System.Drawing.Point(136, 411);
             this.LadevolumenWert.Name = "LadevolumenWert";
-            this.LadevolumenWert.Size = new System.Drawing.Size(81, 18);
+            this.LadevolumenWert.Size = new System.Drawing.Size(83, 18);
             this.LadevolumenWert.TabIndex = 22;
             this.LadevolumenWert.Text = "la1";
             this.LadevolumenWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -190,9 +178,9 @@
             // ZuladungWert
             // 
             this.ZuladungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZuladungWert.Location = new System.Drawing.Point(138, 388);
+            this.ZuladungWert.Location = new System.Drawing.Point(136, 388);
             this.ZuladungWert.Name = "ZuladungWert";
-            this.ZuladungWert.Size = new System.Drawing.Size(81, 18);
+            this.ZuladungWert.Size = new System.Drawing.Size(83, 18);
             this.ZuladungWert.TabIndex = 20;
             this.ZuladungWert.Text = "zu1";
             this.ZuladungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -210,9 +198,9 @@
             // BeschleunigungWert
             // 
             this.BeschleunigungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BeschleunigungWert.Location = new System.Drawing.Point(138, 365);
+            this.BeschleunigungWert.Location = new System.Drawing.Point(136, 365);
             this.BeschleunigungWert.Name = "BeschleunigungWert";
-            this.BeschleunigungWert.Size = new System.Drawing.Size(81, 18);
+            this.BeschleunigungWert.Size = new System.Drawing.Size(83, 18);
             this.BeschleunigungWert.TabIndex = 18;
             this.BeschleunigungWert.Text = "b1";
             this.BeschleunigungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -230,9 +218,9 @@
             // HubraumWert
             // 
             this.HubraumWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HubraumWert.Location = new System.Drawing.Point(138, 342);
+            this.HubraumWert.Location = new System.Drawing.Point(136, 342);
             this.HubraumWert.Name = "HubraumWert";
-            this.HubraumWert.Size = new System.Drawing.Size(81, 18);
+            this.HubraumWert.Size = new System.Drawing.Size(83, 18);
             this.HubraumWert.TabIndex = 16;
             this.HubraumWert.Text = "h1";
             this.HubraumWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -250,9 +238,9 @@
             // ZylinderWert
             // 
             this.ZylinderWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZylinderWert.Location = new System.Drawing.Point(138, 319);
+            this.ZylinderWert.Location = new System.Drawing.Point(136, 319);
             this.ZylinderWert.Name = "ZylinderWert";
-            this.ZylinderWert.Size = new System.Drawing.Size(81, 18);
+            this.ZylinderWert.Size = new System.Drawing.Size(83, 18);
             this.ZylinderWert.TabIndex = 14;
             this.ZylinderWert.Text = "zy1";
             this.ZylinderWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -270,9 +258,9 @@
             // VerbrauchWert
             // 
             this.VerbrauchWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerbrauchWert.Location = new System.Drawing.Point(138, 296);
+            this.VerbrauchWert.Location = new System.Drawing.Point(136, 296);
             this.VerbrauchWert.Name = "VerbrauchWert";
-            this.VerbrauchWert.Size = new System.Drawing.Size(81, 18);
+            this.VerbrauchWert.Size = new System.Drawing.Size(83, 18);
             this.VerbrauchWert.TabIndex = 12;
             this.VerbrauchWert.Text = "v1";
             this.VerbrauchWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -290,9 +278,9 @@
             // LeistungWert
             // 
             this.LeistungWert.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeistungWert.Location = new System.Drawing.Point(138, 271);
+            this.LeistungWert.Location = new System.Drawing.Point(136, 271);
             this.LeistungWert.Name = "LeistungWert";
-            this.LeistungWert.Size = new System.Drawing.Size(81, 18);
+            this.LeistungWert.Size = new System.Drawing.Size(83, 18);
             this.LeistungWert.TabIndex = 10;
             this.LeistungWert.Text = "l1";
             this.LeistungWert.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -366,6 +354,16 @@
             this.lblLeistung.Size = new System.Drawing.Size(59, 17);
             this.lblLeistung.TabIndex = 2;
             this.lblLeistung.Text = "Leistung:";
+            // 
+            // AutoBild
+            // 
+            this.AutoBild.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AutoBild.Location = new System.Drawing.Point(17, 65);
+            this.AutoBild.Name = "AutoBild";
+            this.AutoBild.Size = new System.Drawing.Size(254, 165);
+            this.AutoBild.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AutoBild.TabIndex = 26;
+            this.AutoBild.TabStop = false;
             // 
             // AutokarteAnzeige
             // 
