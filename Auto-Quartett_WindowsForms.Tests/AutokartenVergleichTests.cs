@@ -5,8 +5,8 @@ namespace Auto_Quartett_WindowsForms.Tests
     [TestClass]
     public class AutokartenVergleichTests
     {
-        private readonly Autokarte auto1 = new Autokarte("auto1", "modell", 199, 555, 9.9, 6, 1.99, 9.8, 555, 1110);
-        private readonly Autokarte auto2 = new Autokarte("auto2", "modell", 198, 55, 10, 6, 1.99, 9.9, 1555, 1111);
+        private readonly Autokarte auto1 = new Autokarte("auto1", "modell", 199, 555, 9.9, 6, 1.99, 9.9, 555, 1110);
+        private readonly Autokarte auto2 = new Autokarte("auto2", "modell", 198, 55, 10, 6, 1.99, 9.8, 1555, 1111);
 
         [TestMethod]
         public void VergleicheTests()
