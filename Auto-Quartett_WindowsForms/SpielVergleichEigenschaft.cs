@@ -5,7 +5,7 @@ namespace Auto_Quartett_WindowsForms
     /// <summary>
     /// Dient dem Vergleich zweier <see cref="AutokarteDaten"/>n anhand einer festgelegten Eigenschaft.
     /// </summary>
-    public class EigenschaftVergleich
+    public class SpielVergleichEigenschaft
     {
         private readonly Func<AutokarteDaten, double> eigenschaftZugriff;
         private readonly bool groesserGewinnt;
@@ -19,7 +19,7 @@ namespace Auto_Quartett_WindowsForms
         /// </summary>
         /// <param name="eigenschaftZugriff"></param>
         /// <param name="groesserGewinnt"></param>
-        public EigenschaftVergleich(Func<AutokarteDaten, double> eigenschaftZugriff, bool groesserGewinnt = true)
+        public SpielVergleichEigenschaft(Func<AutokarteDaten, double> eigenschaftZugriff, bool groesserGewinnt = true)
         {
             this.eigenschaftZugriff = eigenschaftZugriff;
             this.groesserGewinnt = groesserGewinnt;
@@ -33,7 +33,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="auto1"></param>
         /// <param name="auto2"></param>
         /// <returns></returns>
-        public Ergebnis Vergleiche(AutokarteDaten auto1, AutokarteDaten auto2)
+        public SpielVergleichErgebnis Vergleiche(AutokarteDaten auto1, AutokarteDaten auto2)
         {
             //Lese den Wert der zu vergleichenden Eigenschaft der beiden Karten aus
             double wert1 = this.eigenschaftZugriff(auto1);
@@ -42,15 +42,15 @@ namespace Auto_Quartett_WindowsForms
             //Vergleiche diese Werte und gebe einen der 3 Möglichen Werte des Ergebnis enums zurück
             if (wert1 == wert2)
             {
-                return Ergebnis.Gleichstand;
+                return SpielVergleichErgebnis.Gleichstand;
             }
             else if (this.groesserGewinnt == (wert1 > wert2))
             {
-                return Ergebnis.Gewinn;
+                return SpielVergleichErgebnis.Gewinn;
             }
             else
             {
-                return Ergebnis.Niederlage;
+                return SpielVergleichErgebnis.Niederlage;
             }
         }
     }

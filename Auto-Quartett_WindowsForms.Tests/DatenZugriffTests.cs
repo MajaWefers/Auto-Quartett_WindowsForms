@@ -10,7 +10,7 @@ namespace Auto_Quartett_WindowsForms.Tests
         public void LadeKartenTest()
         {
             //Arrange
-            DatenZugriff datenZugriff = new DatenZugriff(@"..\..\TestDateien\TestKartenDatei.xml");
+            AutokarteDatenZugriff datenZugriff = new AutokarteDatenZugriff(@"..\..\TestDateien\TestKartenDatei.xml");
 
             //Act
             AutokarteDaten[] ergebnis = datenZugriff.LadeKarten();
@@ -29,7 +29,7 @@ namespace Auto_Quartett_WindowsForms.Tests
         {
             //Arrange
             string dateiPfad = Path.Combine(Path.GetTempPath(), "SchreibTest.xml");
-            DatenZugriff datenZugriff = new DatenZugriff(dateiPfad);
+            AutokarteDatenZugriff datenZugriff = new AutokarteDatenZugriff(dateiPfad);
             AutokarteDaten[] kartenZumSpeichern = new[]
             {
                 new AutokarteDaten("Smart", "bla" , 1, 2, 3, 4, 5, 6, 7, 8),

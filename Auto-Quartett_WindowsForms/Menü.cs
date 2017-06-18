@@ -11,17 +11,17 @@ namespace Auto_Quartett_WindowsForms
     /// </summary>
     public partial class Menü : Form
     {
-        private readonly DatenZugriff datenZugriff;
+        private readonly AutokarteDatenZugriff datenZugriff;
 
         public Menü()
         {
             this.InitializeComponent();
-            this.datenZugriff = new DatenZugriff("Karten.xml");
+            this.datenZugriff = new AutokarteDatenZugriff("Karten.xml");
         }
 
         /// <summary>
         /// Instanziiert die für die Erstellung von <see cref="QuartettSpiel"/> benötigten Klassen
-        /// <see cref="AutokartenVergleich"/> und <see cref="ChancenBerechner"/>,
+        /// <see cref="SpielVergleichAutokarten"/> und <see cref="SpielChancenBerechner"/>,
         /// lädt die Autokarten aus einer Datei und übergibt das alles an den Konstruktor.
         /// Anschließend wird das Fenster mit Hilfe der Methode <see cref="zeigeForm"/> angezeigt
         /// </summary>
@@ -29,8 +29,8 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="e"></param>
         private void SpielButton_Click(object sender, EventArgs e)
         {
-            AutokartenVergleich vergleich = new AutokartenVergleich();
-            ChancenBerechner chancenBerechner = new ChancenBerechner(vergleich);
+            SpielVergleichAutokarten vergleich = new SpielVergleichAutokarten();
+            SpielChancenBerechner chancenBerechner = new SpielChancenBerechner(vergleich);
             AutokarteDaten[] autokarten = this.ladeKarten();
             QuartettSpiel spielForm = new QuartettSpiel(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
@@ -53,7 +53,7 @@ namespace Auto_Quartett_WindowsForms
 
         /// <summary>
         /// Erzeugt eine Instanz von <see cref="Editor"/> mit
-        /// einem davon benötigten <see cref="DatenZugriff"/> 
+        /// einem davon benötigten <see cref="AutokarteDatenZugriff"/> 
         /// und zeigt diese an.
         /// </summary>
         /// <param name="sender"></param>

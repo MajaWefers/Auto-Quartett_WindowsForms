@@ -54,17 +54,17 @@
     <Compile Include="AutokarteSchablone.Designer.cs">
       <DependentUpon>AutokarteSchablone.cs</DependentUpon>
     </Compile>
-    <Compile Include="AutokartenVergleich.cs" />
-    <Compile Include="ChancenBerechner.cs" />
-    <Compile Include="DatenZugriff.cs" />
+    <Compile Include="SpielVergleichAutokarten.cs" />
+    <Compile Include="SpielChancenBerechner.cs" />
+    <Compile Include="AutokarteDatenZugriff.cs" />
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
-    <Compile Include="EigenschaftVergleich.cs" />
-    <Compile Include="Ergebnis.cs" />
+    <Compile Include="SpielVergleichEigenschaft.cs" />
+    <Compile Include="SpielVergleichErgebnis.cs" />
     <Compile Include="QuartettSpiel.cs">
       <SubType>Form</SubType>
     </Compile>

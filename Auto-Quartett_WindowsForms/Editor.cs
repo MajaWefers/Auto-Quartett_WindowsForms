@@ -7,13 +7,13 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Editor : Form
     {
-        private readonly DatenZugriff datenZugriff;
+        private readonly AutokarteDatenZugriff datenZugriff;
         private AutokarteDaten[] karten;
 
 
 
 
-        public Editor(DatenZugriff datenZugriff)
+        public Editor(AutokarteDatenZugriff datenZugriff)
         {
             this.datenZugriff = datenZugriff;
             InitializeComponent();

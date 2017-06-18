@@ -27,7 +27,7 @@ namespace Auto_Quartett_WindowsForms.Tests
 
         private static void speichereKarten(AutokarteDaten[] kartenZumSpeichern)
         {
-            DatenZugriff datenZugriff = new DatenZugriff(@"..\..\..\Auto-Quartett_WindowsForms\Karten.xml");
+            AutokarteDatenZugriff datenZugriff = new AutokarteDatenZugriff(@"..\..\..\Auto-Quartett_WindowsForms\Karten.xml");
 
             datenZugriff.SpeichereKarten(kartenZumSpeichern);
         }
