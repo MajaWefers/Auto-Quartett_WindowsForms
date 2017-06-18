@@ -1,6 +1,6 @@
 ﻿namespace Auto_Quartett_WindowsForms
 {
-    partial class AutokarteAnzeige
+    partial class AutokarteSchablone
     {
         /// <summary> 
         /// Required designer variable.

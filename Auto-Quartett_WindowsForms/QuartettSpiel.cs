@@ -4,18 +4,20 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class QuartettSpiel : Form
     {
-        private Autokarte[] autos;
+        private AutokarteDaten[] autos;
         private AutokartenVergleich vergleich;
         private ChancenBerechner chancenBerechner;
         private ToolTip toolTip;
 
-        private AutokarteAnzeige autokarteAnzeige1;
-        private AutokarteAnzeige autokarteAnzeige2;
+        private AutokarteSchablone autokarteAnzeige1;
+        private AutokarteSchablone autokarteAnzeige2;
 
-        //Variablen für den VERGLEICH
-        //Zufallszahlen für die beim Vergleich angezeigten Autos
+        /// <summary>
+        /// Variablen für den VERGLEICH
+        /// Variablen für Zufallszahlen, um beim Vergleich ein zufälliges Auto zu wählen
+        /// </summary>
         public static Random nr = new Random();
         public static int zufall1;
         public static int zufall2;
@@ -24,7 +26,13 @@ namespace Auto_Quartett_WindowsForms
         int gegnerpunkte;
         bool gewinnchancenSichtbar;
 
-        public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich, ChancenBerechner chancenBerechner)
+        /// <summary>
+        /// Steuert die Erstellung der benötogten Komponenten des Spiels
+        /// </summary>
+        /// <param name="autokarten"></param>
+        /// <param name="vergleich"></param>
+        /// <param name="chancenBerechner"></param>
+        public QuartettSpiel(AutokarteDaten[] autokarten, AutokartenVergleich vergleich, ChancenBerechner chancenBerechner)
         {
             this.autos = autokarten;
             this.vergleich = vergleich;
@@ -43,24 +51,27 @@ namespace Auto_Quartett_WindowsForms
         private void zeigeSpielkarte()
         {
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
-            Autokarte autoDesSpielers = autos[zufall1];
+            AutokarteDaten autoDesSpielers = autos[zufall1];
             zeigeAuto1(autoDesSpielers);
             setzeToolTips(autoDesSpielers);
         }
 
-        private void zeigeAuto1(Autokarte auto)
+        private void zeigeAuto1(AutokarteDaten auto)
         {
-            autokarteAnzeige1 = new AutokarteAnzeige(auto);
+            autokarteAnzeige1 = new AutokarteSchablone(auto);
             PanelAuto1.Controls.Add(autokarteAnzeige1);
         }
-
-        private void zeigeAuto2(Autokarte auto)
+    
+        private void zeigeAuto2(AutokarteDaten auto)
         {
-            autokarteAnzeige2 = new AutokarteAnzeige(auto);
+            autokarteAnzeige2 = new AutokarteSchablone(auto);
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
 
-        //Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
+        /// <summary>
+        /// Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
+        /// </summary>
+        /// <param name="vergleichsfeld"></param>
         private void Vergleich(int vergleichsfeld)
         {
             do
@@ -90,7 +101,7 @@ namespace Auto_Quartett_WindowsForms
                     break;
             }
 
-            //Je nach Punkteverhältnis wird die Schriftfarbe der Punkte gesetzt
+            //Je nach Punkteverhältnis wird die Schriftfarbe der Punktanzeige gesetzt
             if (spielerpunkte > gegnerpunkte)
             {
                 lblSpielerpunkte.ForeColor = Color.Green;
@@ -152,7 +163,11 @@ namespace Auto_Quartett_WindowsForms
             }
         }
         
-        //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
+        /// <summary>
+        /// Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGeschwindigkeit_Click(object sender, EventArgs e)
         {
             Vergleich(0);
@@ -186,9 +201,12 @@ namespace Auto_Quartett_WindowsForms
             Vergleich(7);
         }
 
-        //Setzt ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
-        //sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft
-        private void setzeToolTips(Autokarte auto)
+        /// <summary>
+        /// Setzt ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
+        /// sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft 
+        /// </summary>
+        /// <param name="auto"></param>
+        private void setzeToolTips(AutokarteDaten auto)
         {
 
             double[] gewinnchancen = berechneGewinnchancen(auto);
@@ -203,6 +221,7 @@ namespace Auto_Quartett_WindowsForms
 
         }
 
+        //Es folgen die Events für das Ein- und Ausblenden der Chancenberechnung
         private void btnEinfach_Click(object sender, EventArgs e)
         {
             this.gewinnchancenSichtbar = true;
@@ -235,7 +254,7 @@ namespace Auto_Quartett_WindowsForms
             this.toolTip.SetToolTip(button, toolTipText);
         }
         
-        private double[] berechneGewinnchancen(Autokarte auto)
+        private double[] berechneGewinnchancen(AutokarteDaten auto)
         {
             double[] gewinnchancen = new double[8];
             for (int i = 0; i < gewinnchancen.Length; i++)

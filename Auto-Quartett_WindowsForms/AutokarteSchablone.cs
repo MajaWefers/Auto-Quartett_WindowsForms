@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class AutokarteAnzeige : UserControl
+    public partial class AutokarteSchablone : UserControl
     {
         private Label[] labels;
 
-        public AutokarteAnzeige(Autokarte autokarte)
+        public AutokarteSchablone(AutokarteDaten autokarte)
         {
             this.InitializeComponent();
             this.initialisiereLabels();
@@ -52,7 +52,7 @@ namespace Auto_Quartett_WindowsForms
             };
         }
 
-        private void setzeWerte(Autokarte autokarte)
+        private void setzeWerte(AutokarteDaten autokarte)
         {
             this.Marke.Text = autokarte.marke.ToUpper();
             this.Modell.Text = autokarte.modell.ToUpper();
@@ -68,7 +68,7 @@ namespace Auto_Quartett_WindowsForms
 
         //Das Bild ist keine Eigenschaft der Autokarte, sondern wird direkt aus dem Bilder-Ordner
         //geladen, der in dem Ordner der ausgeführten Datei liegen muss.
-        private void BildEinfuegen(Autokarte autokarte)
+        private void BildEinfuegen(AutokarteDaten autokarte)
         {
             try
             {

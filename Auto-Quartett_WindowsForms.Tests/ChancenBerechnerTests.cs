@@ -5,18 +5,18 @@ namespace Auto_Quartett_WindowsForms.Tests
     [TestClass]
     public class ChancenBerechnerTests
     {
-        private readonly Autokarte[] autos = new[]
+        private readonly AutokarteDaten[] autos = new[]
         {
-            new Autokarte("auto1", "modell", 9, 9, 9, 9, 9, 9, 9, 9),
-            new Autokarte("auto2", "modell", 9, 9, 9, 9, 9, 9, 9, 99),
-            new Autokarte("auto3", "modell", 99, 9, 9, 9, 9, 9, 9, 1),
-            new Autokarte("auto4", "modell", 1, 9, 9, 9, 9, 9, 9, 1)
+            new AutokarteDaten("auto1", "modell", 9, 9, 9, 9, 9, 9, 9, 9),
+            new AutokarteDaten("auto2", "modell", 9, 9, 9, 9, 9, 9, 9, 99),
+            new AutokarteDaten("auto3", "modell", 99, 9, 9, 9, 9, 9, 9, 1),
+            new AutokarteDaten("auto4", "modell", 1, 9, 9, 9, 9, 9, 9, 1)
         };
 
         [TestMethod]
         public void BerechneGewinnchance_AutoNichtInArray()
         {
-            Autokarte eigenesAuto = new Autokarte("auto", "modell", 9, 9, 9, 9, 9, 9, 9, 9);
+            AutokarteDaten eigenesAuto = new AutokarteDaten("auto", "modell", 9, 9, 9, 9, 9, 9, 9, 9);
             this.teste(eigenesAuto, 0, 0.25);
             this.teste(eigenesAuto, 7, 0.5);
         }
@@ -24,12 +24,12 @@ namespace Auto_Quartett_WindowsForms.Tests
         [TestMethod]
         public void BerechneGewinnchance_AutoIstInArray()
         {
-            Autokarte eigenesAuto = this.autos[0];
+            AutokarteDaten eigenesAuto = this.autos[0];
             this.teste(eigenesAuto, 0, 0.333333);
             this.teste(eigenesAuto, 7, 0.666666);
         }
 
-        private void teste(Autokarte eigenesAuto, int vergleichsfeld, double erwarteteGewinnchance)
+        private void teste(AutokarteDaten eigenesAuto, int vergleichsfeld, double erwarteteGewinnchance)
         {
             //Arrange
             ChancenBerechner chancenBerechner = new ChancenBerechner(new AutokartenVergleich());

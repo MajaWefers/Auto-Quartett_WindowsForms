@@ -1,6 +1,6 @@
 ﻿namespace Auto_Quartett_WindowsForms
 {
-    partial class Form1
+    partial class QuartettSpiel
     {
         /// <summary>
         /// Required designer variable.

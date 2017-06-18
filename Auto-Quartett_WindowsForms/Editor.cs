@@ -8,7 +8,7 @@ namespace Auto_Quartett_WindowsForms
     public partial class Editor : Form
     {
         private readonly DatenZugriff datenZugriff;
-        private Autokarte[] karten;
+        private AutokarteDaten[] karten;
 
 
 
@@ -22,7 +22,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
-            Autokarte NeueKarte = new Autokarte();
+            AutokarteDaten NeueKarte = new AutokarteDaten();
             try
             {
                 NeueKarte.marke = tbMarke.Text;
@@ -35,7 +35,7 @@ namespace Auto_Quartett_WindowsForms
                 NeueKarte.beschleunigung = Double.Parse(tbBeschleunigung.Text);
                 NeueKarte.zuladung = Int32.Parse(tbZuladung.Text);
                 NeueKarte.ladevolumen = Int32.Parse(tbLadevolumen.Text);
-                Autokarte[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
+                AutokarteDaten[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
                 this.datenZugriff.SpeichereKarten(kartenArray);
                 this.KarteZurListviewHinzufügen(NeueKarte);
                 
@@ -98,14 +98,14 @@ namespace Auto_Quartett_WindowsForms
         private void load()
         {
             this.karten = this.datenZugriff.LadeKarten();
-            foreach (Autokarte eintrag in this.karten)
+            foreach (AutokarteDaten eintrag in this.karten)
             {
                 this.KarteZurListviewHinzufügen(eintrag);
             }
 
         }
 
-        private Autokarte KarteZurListviewHinzufügen(Autokarte eintrag)
+        private AutokarteDaten KarteZurListviewHinzufügen(AutokarteDaten eintrag)
         {
             ListViewItem lvItem = new ListViewItem(eintrag.marke);
             lvItem.SubItems.Add(eintrag.modell);

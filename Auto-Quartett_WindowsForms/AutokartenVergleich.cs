@@ -1,7 +1,7 @@
 ﻿namespace Auto_Quartett_WindowsForms
 {
     /// <summary>
-    /// Dient dem Vergleichen zweier <see cref="Autokarte"/>n anhand einer wählbaren Eigenschaft.
+    /// Dient dem Vergleichen zweier <see cref="AutokarteDaten"/>n anhand einer wählbaren Eigenschaft.
     /// Verwendet dazu für jede Eigenschaft eine Instanz von <see cref="EigenschaftVergleich"/>.
     /// </summary>
     public class AutokartenVergleich
@@ -9,7 +9,7 @@
         /// <summary>
         /// Beinhaltet für jede zu vergleichende Eigenschaft eine Instanz der Klasse <see cref="EigenschaftVergleich"/>.
         /// Der an den Konstruktor übergebene Lambda-Ausdruck gibt dieser die Möglichkeit, den Wert dieser Eigenschaft
-        /// von einer beliebigen <see cref="Autokarte"/> abzurufen.
+        /// von einer beliebigen <see cref="AutokarteDaten"/> abzurufen.
         /// </summary>
         private readonly EigenschaftVergleich[] eigenschaften = new[]
         {
@@ -31,7 +31,7 @@
         /// <param name="auto2"></param>
         /// <param name="vergleichsfeld"></param>
         /// <returns></returns>
-        public Ergebnis Vergleiche(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
+        public Ergebnis Vergleiche(AutokarteDaten auto1, AutokarteDaten auto2, int vergleichsfeld)
         {
             //Rufe den zum übergebenen vergleichsfeld passenden EigenschaftVergleich ab,
             //nutze diesen anschließend, um den Vergleich durchzuführen

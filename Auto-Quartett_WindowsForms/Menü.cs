@@ -20,7 +20,7 @@ namespace Auto_Quartett_WindowsForms
         }
 
         /// <summary>
-        /// Instanziiert die für die Erstellung von <see cref="Form1"/> benötigten Klassen
+        /// Instanziiert die für die Erstellung von <see cref="QuartettSpiel"/> benötigten Klassen
         /// <see cref="AutokartenVergleich"/> und <see cref="ChancenBerechner"/>,
         /// lädt die Autokarten aus einer Datei und übergibt das alles an den Konstruktor.
         /// Anschließend wird das Fenster mit Hilfe der Methode <see cref="zeigeForm"/> angezeigt
@@ -31,13 +31,13 @@ namespace Auto_Quartett_WindowsForms
         {
             AutokartenVergleich vergleich = new AutokartenVergleich();
             ChancenBerechner chancenBerechner = new ChancenBerechner(vergleich);
-            Autokarte[] autokarten = this.ladeKarten();
-            Form1 spielForm = new Form1(autokarten, vergleich, chancenBerechner);
+            AutokarteDaten[] autokarten = this.ladeKarten();
+            QuartettSpiel spielForm = new QuartettSpiel(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
         }
 
         /// <summary>
-        /// Lädt die gespeicherten <see cref="Autokarte"/>n aus der Datei
+        /// Lädt die gespeicherten <see cref="AutokarteDaten"/>n aus der Datei
         /// und erzeugt damit eine Instanz von <see cref="KartenGallerie"/>.
         /// Zeigt diese anschließend an.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="e"></param>
         private void GallerieButton_Click(object sender, EventArgs e)
         {
-            Autokarte[] autokarten = this.ladeKarten();
+            AutokarteDaten[] autokarten = this.ladeKarten();
             KartenGallerie kartenGallerie = new KartenGallerie(autokarten);
 
             this.zeigeForm(kartenGallerie);
@@ -87,9 +87,9 @@ namespace Auto_Quartett_WindowsForms
             form.Show();
         }
 
-        private Autokarte[] ladeKarten()
+        private AutokarteDaten[] ladeKarten()
         {
-            Autokarte[] gespeicherteKarten = this.datenZugriff.LadeKarten();
+            AutokarteDaten[] gespeicherteKarten = this.datenZugriff.LadeKarten();
             return gespeicherteKarten;
         }
 
