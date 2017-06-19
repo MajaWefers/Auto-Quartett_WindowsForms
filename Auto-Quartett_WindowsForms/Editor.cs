@@ -141,21 +141,7 @@ namespace Auto_Quartett_WindowsForms
 
 
 
-        //private void listView1_MouseClick(object sender, MouseEventArgs e)
-        //{           
-        //    var lvItem = listView1.SelectedItems[0];
-        //    tbMarke.Text = lvItem.SubItems[0].Text;
-        //    tbModell.Text = lvItem.SubItems[1].Text;
-        //    tbGeschwindigkeit.Text = lvItem.SubItems[2].Text;
-        //    tbVerbrauch.Text = lvItem.SubItems[3].Text;
-        //    tbZylinder.Text = lvItem.SubItems[4].Text;
-        //    tbLeistung.Text = lvItem.SubItems[5].Text;
-        //    tbHubraum.Text = lvItem.SubItems[6].Text;
-        //    tbBeschleunigung.Text = lvItem.SubItems[7].Text;
-        //    tbZuladung.Text = lvItem.SubItems[8].Text;
-        //    tbLadevolumen.Text = lvItem.SubItems[9].Text;
-
-        //}
+   
         //Hier werden die Textboxen via Button Click geleert
         private void button1_Click(object sender, EventArgs e)
         {
