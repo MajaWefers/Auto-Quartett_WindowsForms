@@ -3,7 +3,7 @@
     /// <summary>
     /// Repräsentiert die 3 möglichen Ausgänge des Vergleichs zweier Karten
     /// </summary>
-    public enum SpielVergleichErgebnis
+    public enum VergleichErgebnis
     {
         Gleichstand,
         Gewinn,

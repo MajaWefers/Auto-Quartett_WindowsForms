@@ -1,6 +1,6 @@
 ﻿namespace Auto_Quartett_WindowsForms
 {
-    public struct AutokarteDaten
+    public struct Autokarte
     {
         public string marke;
         public string modell;
@@ -13,7 +13,7 @@
         public int zuladung;
         public int ladevolumen;
         
-        public AutokarteDaten(string marke, string modell, int geschwindigkeit, int leistung, double verbrauch,
+        public Autokarte(string marke, string modell, int geschwindigkeit, int leistung, double verbrauch,
                   int zylinder, double hubraum, double beschleunigung, int zuladung, int ladevolumen)
         {
             this.marke = marke;

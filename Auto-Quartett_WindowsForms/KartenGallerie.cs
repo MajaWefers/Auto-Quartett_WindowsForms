@@ -4,23 +4,23 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class KartenGallerie : Form
     {
-        public KartenGallerie(AutokarteDaten[] autokarten)
+        public KartenGallerie(Autokarte[] autokarten)
         {
             this.InitializeComponent();
             this.zeigeKarten(autokarten);
         }
 
         /// <summary>
-        /// Erstellt für jede <see cref="AutokarteDaten"/> im übergebenen Array <see cref="autokarten"/>
-        /// ein UserControl <see cref="AutokarteSchablone"/> und fügt dieses einem
+        /// Erstellt für jede <see cref="Autokarte"/> im übergebenen Array <see cref="autokarten"/>
+        /// ein UserControl <see cref="AutokarteAnsicht"/> und fügt dieses einem
         /// FlowLayoutPanel hinzu, das diese automatisch hintereinander und mit Zeilenumbrüchen darstellt.
         /// </summary>
         /// <param name="autokarten"></param>
-        private void zeigeKarten(AutokarteDaten[] autokarten)
+        private void zeigeKarten(Autokarte[] autokarten)
         {
-            foreach (AutokarteDaten autokarte in autokarten)
+            foreach (Autokarte autokarte in autokarten)
             {
-                AutokarteSchablone autokarteAnzeige = new AutokarteSchablone(autokarte);
+                AutokarteAnsicht autokarteAnzeige = new AutokarteAnsicht(autokarte);
                 this.flowLayoutPanel1.Controls.Add(autokarteAnzeige);
             }
         }

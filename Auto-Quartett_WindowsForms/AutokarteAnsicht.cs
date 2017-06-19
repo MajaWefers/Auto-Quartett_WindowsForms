@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class AutokarteSchablone : UserControl
+    public partial class AutokarteAnsicht : UserControl
     {
         private Label[] labels;
 
-        public AutokarteSchablone(AutokarteDaten autokarte)
+        public AutokarteAnsicht(Autokarte autokarte)
         {
             this.InitializeComponent();
             this.initialisiereLabels();
@@ -16,19 +16,19 @@ namespace Auto_Quartett_WindowsForms
             this.BildEinfuegen(autokarte);
         }
 
-        public void SetzeErgebnisFarben(SpielVergleichErgebnis vergleichsErgebnis,int vergleichsfeld)
+        public void SetzeErgebnisFarben(VergleichErgebnis vergleichsErgebnis,int vergleichsfeld)
         {
             switch (vergleichsErgebnis)
             {
-                case SpielVergleichErgebnis.Gewinn:
+                case VergleichErgebnis.Gewinn:
                     this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
                     this.BackColor = Color.LightGreen;
                     break;
-                case SpielVergleichErgebnis.Niederlage:
+                case VergleichErgebnis.Niederlage:
                     this.labels[vergleichsfeld].BackColor = Color.LightCoral;
                     this.BackColor = Color.Salmon;
                     break;
-                case SpielVergleichErgebnis.Gleichstand:
+                case VergleichErgebnis.Gleichstand:
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
                     this.BackColor = Color.Blue;
                     break;
@@ -52,7 +52,7 @@ namespace Auto_Quartett_WindowsForms
             };
         }
 
-        private void setzeWerte(AutokarteDaten autokarte)
+        private void setzeWerte(Autokarte autokarte)
         {
             this.Marke.Text = autokarte.marke.ToUpper();
             this.Modell.Text = autokarte.modell.ToUpper();
@@ -68,7 +68,7 @@ namespace Auto_Quartett_WindowsForms
 
         //Das Bild ist keine Eigenschaft der Autokarte, sondern wird direkt aus dem Bilder-Ordner
         //geladen, der in dem Ordner der ausgeführten Datei liegen muss.
-        private void BildEinfuegen(AutokarteDaten autokarte)
+        private void BildEinfuegen(Autokarte autokarte)
         {
             try
             {

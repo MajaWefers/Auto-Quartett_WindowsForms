@@ -4,11 +4,11 @@ using System.Xml.Serialization;
 namespace Auto_Quartett_WindowsForms
 {
     /// <summary>
-    /// Beinhaltet Logik zum Laden und Speichern von Arrays von <see cref="AutokarteDaten"/>n
+    /// Beinhaltet Logik zum Laden und Speichern von Arrays von <see cref="Autokarte"/>n
     /// in einer XML-Datei.
     /// Der Pfad der Datei wird bei der Erstellung eines Objekts dieser Klasse festgelegt.
     /// </summary>
-    public class AutokarteDatenZugriff
+    public class AutokartenDateiZugriff
     {
         private readonly XmlSerializer xmlSerializer;
         private readonly string dateiPfad;
@@ -18,24 +18,24 @@ namespace Auto_Quartett_WindowsForms
         /// ausgeführten Programms sein.
         /// </summary>
         /// <param name="dateiPfad"></param>
-        public AutokarteDatenZugriff(string dateiPfad)
+        public AutokartenDateiZugriff(string dateiPfad)
         {
             this.dateiPfad = dateiPfad;
-            this.xmlSerializer = new XmlSerializer(typeof(AutokarteDaten[]), new XmlRootAttribute("Autokarten"));
+            this.xmlSerializer = new XmlSerializer(typeof(Autokarte[]), new XmlRootAttribute("Autokarten"));
         }
 
         /// <summary>
         /// Lädt die beim Erstellen dieses Objekts festgelegte XML-Datei
-        /// und deserialisiert den Inhalt zu einem Array <see cref="AutokarteDaten"/>n.
+        /// und deserialisiert den Inhalt zu einem Array <see cref="Autokarte"/>n.
         /// </summary>
         /// <returns></returns>
-        public AutokarteDaten[] LadeKarten()
+        public Autokarte[] LadeKarten()
         {
             //using entsorgt den StreamReader nach Ausführung der umschlossenen Anweisungen
             //und gibt damit die Datei frei
             using (var reader = new StreamReader(this.dateiPfad))
             {
-                return (AutokarteDaten[]) this.xmlSerializer.Deserialize(reader);
+                return (Autokarte[]) this.xmlSerializer.Deserialize(reader);
             }
         }
 
@@ -44,7 +44,7 @@ namespace Auto_Quartett_WindowsForms
         /// festgelegte Datei. Der Inhalt der Datei wird dabei vollständig überschrieben.
         /// </summary>
         /// <param name="karten"></param>
-        public void SpeichereKarten(AutokarteDaten[] karten)
+        public void SpeichereKarten(Autokarte[] karten)
         {
             using (var streamWriter= new StreamWriter(this.dateiPfad))
             {

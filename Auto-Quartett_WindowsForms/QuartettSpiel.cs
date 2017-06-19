@@ -6,13 +6,13 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class QuartettSpiel : Form
     {
-        private AutokarteDaten[] autos;
-        private SpielVergleichAutokarten vergleich;
-        private SpielChancenBerechner chancenBerechner;
+        private Autokarte[] autos;
+        private VergleichAutokarten vergleich;
+        private GewinnChancenBerechner chancenBerechner;
         private ToolTip toolTip;
 
-        private AutokarteSchablone autokarteAnzeige1;
-        private AutokarteSchablone autokarteAnzeige2;
+        private AutokarteAnsicht autokarteAnzeige1;
+        private AutokarteAnsicht autokarteAnzeige2;
 
         /// <summary>
         /// Variablen für den VERGLEICH
@@ -32,7 +32,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="autokarten"></param>
         /// <param name="vergleich"></param>
         /// <param name="chancenBerechner"></param>
-        public QuartettSpiel(AutokarteDaten[] autokarten, SpielVergleichAutokarten vergleich, SpielChancenBerechner chancenBerechner)
+        public QuartettSpiel(Autokarte[] autokarten, VergleichAutokarten vergleich, GewinnChancenBerechner chancenBerechner)
         {
             this.autos = autokarten;
             this.vergleich = vergleich;
@@ -51,20 +51,20 @@ namespace Auto_Quartett_WindowsForms
         private void zeigeSpielkarte()
         {
             zufall1 = nr.Next(0, autos.Length); //0 inklusiv, autos.Length exklusiv
-            AutokarteDaten autoDesSpielers = autos[zufall1];
+            Autokarte autoDesSpielers = autos[zufall1];
             zeigeAuto1(autoDesSpielers);
             setzeToolTips(autoDesSpielers);
         }
 
-        private void zeigeAuto1(AutokarteDaten auto)
+        private void zeigeAuto1(Autokarte auto)
         {
-            autokarteAnzeige1 = new AutokarteSchablone(auto);
+            autokarteAnzeige1 = new AutokarteAnsicht(auto);
             PanelAuto1.Controls.Add(autokarteAnzeige1);
         }
     
-        private void zeigeAuto2(AutokarteDaten auto)
+        private void zeigeAuto2(Autokarte auto)
         {
-            autokarteAnzeige2 = new AutokarteSchablone(auto);
+            autokarteAnzeige2 = new AutokarteAnsicht(auto);
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
 
@@ -82,22 +82,22 @@ namespace Auto_Quartett_WindowsForms
             zeigeAuto2(autos[zufall2]);
 
             //Vergleich der Werte
-            SpielVergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
+            VergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
             autokarteAnzeige1.SetzeErgebnisFarben(vergleichsErgebnis, vergleichsfeld);
             switch (vergleichsErgebnis)
             {
-                case SpielVergleichErgebnis.Gewinn:
-                    autokarteAnzeige2.SetzeErgebnisFarben(SpielVergleichErgebnis.Niederlage, vergleichsfeld);
+                case VergleichErgebnis.Gewinn:
+                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Niederlage, vergleichsfeld);
                     Int32.TryParse(lblSpielerpunkte.Text, out spielerpunkte);
                     lblSpielerpunkte.Text = Convert.ToString(++spielerpunkte);
                     break;
-                case SpielVergleichErgebnis.Niederlage:
-                    autokarteAnzeige2.SetzeErgebnisFarben(SpielVergleichErgebnis.Gewinn, vergleichsfeld);
+                case VergleichErgebnis.Niederlage:
+                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Gewinn, vergleichsfeld);
                     Int32.TryParse(lblGegnerpunkte.Text, out gegnerpunkte);
                     lblGegnerpunkte.Text = Convert.ToString(++gegnerpunkte);
                     break;
-                case SpielVergleichErgebnis.Gleichstand:
-                    autokarteAnzeige2.SetzeErgebnisFarben(SpielVergleichErgebnis.Gleichstand, vergleichsfeld);
+                case VergleichErgebnis.Gleichstand:
+                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Gleichstand, vergleichsfeld);
                     break;
             }
 
@@ -206,7 +206,7 @@ namespace Auto_Quartett_WindowsForms
         /// sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft 
         /// </summary>
         /// <param name="auto"></param>
-        private void setzeToolTips(AutokarteDaten auto)
+        private void setzeToolTips(Autokarte auto)
         {
 
             double[] gewinnchancen = berechneGewinnchancen(auto);
@@ -254,7 +254,7 @@ namespace Auto_Quartett_WindowsForms
             this.toolTip.SetToolTip(button, toolTipText);
         }
         
-        private double[] berechneGewinnchancen(AutokarteDaten auto)
+        private double[] berechneGewinnchancen(Autokarte auto)
         {
             double[] gewinnchancen = new double[8];
             for (int i = 0; i < gewinnchancen.Length; i++)

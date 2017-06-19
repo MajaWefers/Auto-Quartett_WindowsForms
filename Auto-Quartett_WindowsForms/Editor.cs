@@ -7,13 +7,13 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Editor : Form
     {
-        private readonly AutokarteDatenZugriff datenZugriff;
-        private AutokarteDaten[] karten;
+        private readonly AutokartenDateiZugriff datenZugriff;
+        private Autokarte[] karten;
 
 
 
 
-        public Editor(AutokarteDatenZugriff datenZugriff)
+        public Editor(AutokartenDateiZugriff datenZugriff)
         {
             this.datenZugriff = datenZugriff;
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Auto_Quartett_WindowsForms
 
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
-            AutokarteDaten NeueKarte = new AutokarteDaten();
+            Autokarte NeueKarte = new Autokarte();
             try
             {
                 NeueKarte.marke = tbMarke.Text;
@@ -35,7 +35,7 @@ namespace Auto_Quartett_WindowsForms
                 NeueKarte.beschleunigung = Double.Parse(tbBeschleunigung.Text);
                 NeueKarte.zuladung = Int32.Parse(tbZuladung.Text);
                 NeueKarte.ladevolumen = Int32.Parse(tbLadevolumen.Text);
-                AutokarteDaten[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
+                Autokarte[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
                 this.datenZugriff.SpeichereKarten(kartenArray);
                 this.KarteZurListviewHinzufügen(NeueKarte);
                 
@@ -98,14 +98,14 @@ namespace Auto_Quartett_WindowsForms
         private void load()
         {
             this.karten = this.datenZugriff.LadeKarten();
-            foreach (AutokarteDaten eintrag in this.karten)
+            foreach (Autokarte eintrag in this.karten)
             {
                 this.KarteZurListviewHinzufügen(eintrag);
             }
 
         }
 
-        private AutokarteDaten KarteZurListviewHinzufügen(AutokarteDaten eintrag)
+        private Autokarte KarteZurListviewHinzufügen(Autokarte eintrag)
         {
             ListViewItem lvItem = new ListViewItem(eintrag.marke);
             lvItem.SubItems.Add(eintrag.modell);

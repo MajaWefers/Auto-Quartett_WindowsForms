@@ -47,24 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutokarteDaten.cs" />
-    <Compile Include="AutokarteSchablone.cs">
+    <Compile Include="Autokarte.cs" />
+    <Compile Include="AutokarteAnsicht.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AutokarteSchablone.Designer.cs">
-      <DependentUpon>AutokarteSchablone.cs</DependentUpon>
+    <Compile Include="AutokarteAnsicht.Designer.cs">
+      <DependentUpon>AutokarteAnsicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="SpielVergleichAutokarten.cs" />
-    <Compile Include="SpielChancenBerechner.cs" />
-    <Compile Include="AutokarteDatenZugriff.cs" />
+    <Compile Include="VergleichAutokarten.cs" />
+    <Compile Include="GewinnChancenBerechner.cs" />
+    <Compile Include="AutokartenDateiZugriff.cs" />
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
-    <Compile Include="SpielVergleichEigenschaft.cs" />
-    <Compile Include="SpielVergleichErgebnis.cs" />
+    <Compile Include="VergleichEigenschaft.cs" />
+    <Compile Include="VergleichErgebnis.cs" />
     <Compile Include="QuartettSpiel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +85,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AutokarteSchablone.resx">
-      <DependentUpon>AutokarteSchablone.cs</DependentUpon>
+    <EmbeddedResource Include="AutokarteAnsicht.resx">
+      <DependentUpon>AutokarteAnsicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>

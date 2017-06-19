@@ -11,17 +11,17 @@ namespace Auto_Quartett_WindowsForms
     /// </summary>
     public partial class Menü : Form
     {
-        private readonly AutokarteDatenZugriff datenZugriff;
+        private readonly AutokartenDateiZugriff datenZugriff;
 
         public Menü()
         {
             this.InitializeComponent();
-            this.datenZugriff = new AutokarteDatenZugriff("Karten.xml");
+            this.datenZugriff = new AutokartenDateiZugriff("Karten.xml");
         }
 
         /// <summary>
         /// Instanziiert die für die Erstellung von <see cref="QuartettSpiel"/> benötigten Klassen
-        /// <see cref="SpielVergleichAutokarten"/> und <see cref="SpielChancenBerechner"/>,
+        /// <see cref="VergleichAutokarten"/> und <see cref="GewinnChancenBerechner"/>,
         /// lädt die Autokarten aus einer Datei und übergibt das alles an den Konstruktor.
         /// Anschließend wird das Fenster mit Hilfe der Methode <see cref="zeigeForm"/> angezeigt
         /// </summary>
@@ -29,15 +29,15 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="e"></param>
         private void SpielButton_Click(object sender, EventArgs e)
         {
-            SpielVergleichAutokarten vergleich = new SpielVergleichAutokarten();
-            SpielChancenBerechner chancenBerechner = new SpielChancenBerechner(vergleich);
-            AutokarteDaten[] autokarten = this.ladeKarten();
+            VergleichAutokarten vergleich = new VergleichAutokarten();
+            GewinnChancenBerechner chancenBerechner = new GewinnChancenBerechner(vergleich);
+            Autokarte[] autokarten = this.ladeKarten();
             QuartettSpiel spielForm = new QuartettSpiel(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
         }
 
         /// <summary>
-        /// Lädt die gespeicherten <see cref="AutokarteDaten"/>n aus der Datei
+        /// Lädt die gespeicherten <see cref="Autokarte"/>n aus der Datei
         /// und erzeugt damit eine Instanz von <see cref="KartenGallerie"/>.
         /// Zeigt diese anschließend an.
         /// </summary>
@@ -45,7 +45,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="e"></param>
         private void GallerieButton_Click(object sender, EventArgs e)
         {
-            AutokarteDaten[] autokarten = this.ladeKarten();
+            Autokarte[] autokarten = this.ladeKarten();
             KartenGallerie kartenGallerie = new KartenGallerie(autokarten);
 
             this.zeigeForm(kartenGallerie);
@@ -53,7 +53,7 @@ namespace Auto_Quartett_WindowsForms
 
         /// <summary>
         /// Erzeugt eine Instanz von <see cref="Editor"/> mit
-        /// einem davon benötigten <see cref="AutokarteDatenZugriff"/> 
+        /// einem davon benötigten <see cref="AutokartenDateiZugriff"/> 
         /// und zeigt diese an.
         /// </summary>
         /// <param name="sender"></param>
@@ -87,9 +87,9 @@ namespace Auto_Quartett_WindowsForms
             form.Show();
         }
 
-        private AutokarteDaten[] ladeKarten()
+        private Autokarte[] ladeKarten()
         {
-            AutokarteDaten[] gespeicherteKarten = this.datenZugriff.LadeKarten();
+            Autokarte[] gespeicherteKarten = this.datenZugriff.LadeKarten();
             return gespeicherteKarten;
         }
 

@@ -1,14 +1,14 @@
 ﻿namespace Auto_Quartett_WindowsForms
 {
     /// <summary>
-    /// Dient der Berechnung der durchschnittlichen Gewinnchance einer <see cref="AutokarteDaten"/> gegen alle anderen
+    /// Dient der Berechnung der durchschnittlichen Gewinnchance einer <see cref="Autokarte"/> gegen alle anderen
     /// Karten im Spiel.
     /// </summary>
-    public class SpielChancenBerechner
+    public class GewinnChancenBerechner
     {
-        private readonly SpielVergleichAutokarten vergleich;
+        private readonly VergleichAutokarten vergleich;
 
-        public SpielChancenBerechner(SpielVergleichAutokarten vergleich)
+        public GewinnChancenBerechner(VergleichAutokarten vergleich)
         {
             this.vergleich = vergleich;
         }
@@ -22,7 +22,7 @@
         /// <param name="autosImSpiel"></param>
         /// <param name="vergleichsfeld"></param>
         /// <returns></returns>
-        public double BerechneGewinnchance(AutokarteDaten auto, AutokarteDaten[] autosImSpiel, int vergleichsfeld)
+        public double BerechneGewinnchance(Autokarte auto, Autokarte[] autosImSpiel, int vergleichsfeld)
         {
             int anzahlAndererAutos = 0;
             int anzahlUnterlegenerAutos = 0;
@@ -53,10 +53,10 @@
         /// <param name="auto2"></param>
         /// <param name="vergleichsfeld"></param>
         /// <returns></returns>
-        private bool gewinntAuto1(AutokarteDaten auto1, AutokarteDaten auto2, int vergleichsfeld)
+        private bool gewinntAuto1(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {
-            SpielVergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
-            return vergleichsErgebnis == SpielVergleichErgebnis.Gewinn;
+            VergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
+            return vergleichsErgebnis == VergleichErgebnis.Gewinn;
         }
     }
 }
