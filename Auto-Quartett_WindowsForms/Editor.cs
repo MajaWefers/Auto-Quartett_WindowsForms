@@ -17,9 +17,10 @@ namespace Auto_Quartett_WindowsForms
         {
             this.datenZugriff = datenZugriff;
             InitializeComponent();
-            this.load();           
+            this.load();
         }
 
+        //Hier werden die in die XML gespeichert
         private void btnSpeichern_Click(object sender, EventArgs e)
         {
             Autokarte NeueKarte = new Autokarte();
@@ -38,9 +39,7 @@ namespace Auto_Quartett_WindowsForms
                 Autokarte[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
                 this.datenZugriff.SpeichereKarten(kartenArray);
                 this.KarteZurListviewHinzufügen(NeueKarte);
-                
-
-                DialogResult dialogResult = MessageBox.Show("Bild speichern ?" + Environment.NewLine + "Bild bitte so bennenen: \"" + tbMarke.Text.ToLower().ToString() + " " + tbModell.Text.ToLower().ToString()+ "\" und in den Ordner kopieren", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dialogResult = MessageBox.Show("Bild speichern ?" + Environment.NewLine + "Bild bitte so bennenen: \"" + tbMarke.Text.ToLower().ToString() + " " + tbModell.Text.ToLower().ToString() + "\" und in den Ordner kopieren", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
                     var filePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -52,9 +51,9 @@ namespace Auto_Quartett_WindowsForms
             {
                 MessageBox.Show("Ungültige Eingabe", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-   
-        }
 
+        }
+        // Hie werden die Textboxen geleert
         private void RefreshView()
         {
             tbMarke.Text = "";
@@ -68,7 +67,7 @@ namespace Auto_Quartett_WindowsForms
             tbZuladung.Text = "";
             tbLadevolumen.Text = "";
         }
-
+        // Die Metohde lässt nur Zahlen und ein Komma in den Textboxen zu außer in Modell und Marke
         private void OnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
@@ -83,7 +82,7 @@ namespace Auto_Quartett_WindowsForms
             }
 
         }
-
+        // Die Methode lässt keine Sonderzeichen in den Modell und Marken Textboxen zu 
         private void OnlyNumAndChar_KeyPress(object sender, KeyPressEventArgs e)
         {
             string verboteneZeichen = "*.\"/\\:;|=,";
@@ -93,8 +92,8 @@ namespace Auto_Quartett_WindowsForms
             }
         }
 
-       
 
+        //Hier werden die karten aus der XML geladen
         private void load()
         {
             this.karten = this.datenZugriff.LadeKarten();
@@ -104,7 +103,7 @@ namespace Auto_Quartett_WindowsForms
             }
 
         }
-
+        // Hier werden die Karten in die ListView geladen
         private Autokarte KarteZurListviewHinzufügen(Autokarte eintrag)
         {
             ListViewItem lvItem = new ListViewItem(eintrag.marke);
@@ -120,40 +119,30 @@ namespace Auto_Quartett_WindowsForms
             listView1.Items.Add(lvItem);
             return eintrag;
         }
-
+        //Hier wird verhidert, dass die Geschwindigkeit über 250 Km/h ist
         private void tbGeschwindigkeit_TextChanged(object sender, EventArgs e)
         {
-            if (tbGeschwindigkeit.Text != ""
-                && Int32.Parse(tbGeschwindigkeit.Text) > 250)
+            try
             {
-                MessageBox.Show("Geschwindigkeit zu hoch. Max 250 km/h.", "Geschwindigkeit zu hoch", MessageBoxButtons.OK, MessageBoxIcon.Warning);               
-                tbGeschwindigkeit.Text = "250";
-                
+                if (tbGeschwindigkeit.Text != "" && Int32.Parse(tbGeschwindigkeit.Text) > 250)
+                {
+                    MessageBox.Show("Geschwindigkeit zu hoch. Max 250 km/h.", "Geschwindigkeit zu hoch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tbGeschwindigkeit.Text = "";
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Ungültige Eingabe", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbGeschwindigkeit.Text = "";
             }
 
         }
 
-      
-
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
-        {           
-            var lvItem = listView1.SelectedItems[0];
-            tbMarke.Text = lvItem.SubItems[0].Text;
-            tbModell.Text = lvItem.SubItems[1].Text;
-            tbGeschwindigkeit.Text = lvItem.SubItems[2].Text;
-            tbVerbrauch.Text = lvItem.SubItems[3].Text;
-            tbZylinder.Text = lvItem.SubItems[4].Text;
-            tbLeistung.Text = lvItem.SubItems[5].Text;
-            tbHubraum.Text = lvItem.SubItems[6].Text;
-            tbBeschleunigung.Text = lvItem.SubItems[7].Text;
-            tbZuladung.Text = lvItem.SubItems[8].Text;
-            tbLadevolumen.Text = lvItem.SubItems[9].Text;
 
 
-        }
-
-       
-
+   
+        //Hier werden die Textboxen via Button Click geleert
         private void button1_Click(object sender, EventArgs e)
         {
             this.RefreshView();
