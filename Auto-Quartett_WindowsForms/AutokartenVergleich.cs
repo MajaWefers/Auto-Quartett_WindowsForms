@@ -31,7 +31,7 @@
         /// <param name="auto2"></param>
         /// <param name="vergleichsfeld"></param>
         /// <returns></returns>
-        public Ergebnis Vergleiche(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
+        public Vergleichsergebnis Vergleiche(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {
             //Rufe den zum übergebenen vergleichsfeld passenden EigenschaftVergleich ab,
             //nutze diesen anschließend, um den Vergleich durchzuführen

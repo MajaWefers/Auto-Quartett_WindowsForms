@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutokartenVergleichTests.cs" />
-    <Compile Include="ChancenBerechnerTests.cs" />
-    <Compile Include="DatenZugriffTests.cs" />
+    <Compile Include="GewinnChancenBerechnerTests.cs" />
+    <Compile Include="AutokarteDateiZugriffTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlErsteller.cs" />
   </ItemGroup>

@@ -8,7 +8,7 @@ namespace Auto_Quartett_WindowsForms
     /// in einer XML-Datei.
     /// Der Pfad der Datei wird bei der Erstellung eines Objekts dieser Klasse festgelegt.
     /// </summary>
-    public class DatenZugriff
+    public class AutokartenDateiZugriff
     {
         private readonly XmlSerializer xmlSerializer;
         private readonly string dateiPfad;
@@ -18,7 +18,7 @@ namespace Auto_Quartett_WindowsForms
         /// ausgeführten Programms sein.
         /// </summary>
         /// <param name="dateiPfad"></param>
-        public DatenZugriff(string dateiPfad)
+        public AutokartenDateiZugriff(string dateiPfad)
         {
             this.dateiPfad = dateiPfad;
             this.xmlSerializer = new XmlSerializer(typeof(Autokarte[]), new XmlRootAttribute("Autokarten"));

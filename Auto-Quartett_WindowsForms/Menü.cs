@@ -11,17 +11,17 @@ namespace Auto_Quartett_WindowsForms
     /// </summary>
     public partial class Menü : Form
     {
-        private readonly DatenZugriff datenZugriff;
+        private readonly AutokartenDateiZugriff datenZugriff;
 
         public Menü()
         {
             this.InitializeComponent();
-            this.datenZugriff = new DatenZugriff("Karten.xml");
+            this.datenZugriff = new AutokartenDateiZugriff("Karten.xml");
         }
 
         /// <summary>
-        /// Instanziiert die für die Erstellung von <see cref="Form1"/> benötigten Klassen
-        /// <see cref="AutokartenVergleich"/> und <see cref="ChancenBerechner"/>,
+        /// Instanziiert die für die Erstellung von <see cref="Spiel"/> benötigten Klassen
+        /// <see cref="AutokartenVergleich"/> und <see cref="GewinnChancenBerechner"/>,
         /// lädt die Autokarten aus einer Datei und übergibt das alles an den Konstruktor.
         /// Anschließend wird das Fenster mit Hilfe der Methode <see cref="zeigeForm"/> angezeigt
         /// </summary>
@@ -30,9 +30,9 @@ namespace Auto_Quartett_WindowsForms
         private void SpielButton_Click(object sender, EventArgs e)
         {
             AutokartenVergleich vergleich = new AutokartenVergleich();
-            ChancenBerechner chancenBerechner = new ChancenBerechner(vergleich);
+            GewinnChancenBerechner chancenBerechner = new GewinnChancenBerechner(vergleich);
             Autokarte[] autokarten = this.ladeKarten();
-            Form1 spielForm = new Form1(autokarten, vergleich, chancenBerechner);
+            Spiel spielForm = new Spiel(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
         }
 
@@ -53,7 +53,7 @@ namespace Auto_Quartett_WindowsForms
 
         /// <summary>
         /// Erzeugt eine Instanz von <see cref="Editor"/> mit
-        /// einem davon benötigten <see cref="DatenZugriff"/> 
+        /// einem davon benötigten <see cref="AutokartenDateiZugriff"/> 
         /// und zeigt diese an.
         /// </summary>
         /// <param name="sender"></param>

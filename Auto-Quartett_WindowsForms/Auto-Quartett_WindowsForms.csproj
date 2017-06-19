@@ -48,15 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autokarte.cs" />
-    <Compile Include="AutokarteAnzeige.cs">
+    <Compile Include="AutokarteAnsicht.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AutokarteAnzeige.Designer.cs">
-      <DependentUpon>AutokarteAnzeige.cs</DependentUpon>
+    <Compile Include="AutokarteAnsicht.Designer.cs">
+      <DependentUpon>AutokarteAnsicht.cs</DependentUpon>
     </Compile>
     <Compile Include="AutokartenVergleich.cs" />
-    <Compile Include="ChancenBerechner.cs" />
-    <Compile Include="DatenZugriff.cs" />
+    <Compile Include="GewinnChancenBerechner.cs" />
+    <Compile Include="AutokartenDateiZugriff.cs" />
     <Compile Include="Editor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +64,12 @@
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
     <Compile Include="EigenschaftVergleich.cs" />
-    <Compile Include="Ergebnis.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Vergleichsergebnis.cs" />
+    <Compile Include="Spiel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Spiel.Designer.cs">
+      <DependentUpon>Spiel.cs</DependentUpon>
     </Compile>
     <Compile Include="KartenGallerie.cs">
       <SubType>Form</SubType>
@@ -85,14 +85,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AutokarteAnzeige.resx">
-      <DependentUpon>AutokarteAnzeige.cs</DependentUpon>
+    <EmbeddedResource Include="AutokarteAnsicht.resx">
+      <DependentUpon>AutokarteAnsicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Spiel.resx">
+      <DependentUpon>Spiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KartenGallerie.resx">
       <DependentUpon>KartenGallerie.cs</DependentUpon>

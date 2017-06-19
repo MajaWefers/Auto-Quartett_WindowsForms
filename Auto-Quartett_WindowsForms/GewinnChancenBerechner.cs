@@ -4,11 +4,11 @@
     /// Dient der Berechnung der durchschnittlichen Gewinnchance einer <see cref="Autokarte"/> gegen alle anderen
     /// Karten im Spiel.
     /// </summary>
-    public class ChancenBerechner
+    public class GewinnChancenBerechner
     {
         private readonly AutokartenVergleich vergleich;
 
-        public ChancenBerechner(AutokartenVergleich vergleich)
+        public GewinnChancenBerechner(AutokartenVergleich vergleich)
         {
             this.vergleich = vergleich;
         }
@@ -55,8 +55,8 @@
         /// <returns></returns>
         private bool gewinntAuto1(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {
-            Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
-            return vergleichsErgebnis == Ergebnis.Gewinn;
+            Vergleichsergebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
+            return vergleichsErgebnis == Vergleichsergebnis.Gewinn;
         }
     }
 }

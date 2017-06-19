@@ -33,7 +33,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="auto1"></param>
         /// <param name="auto2"></param>
         /// <returns></returns>
-        public Ergebnis Vergleiche(Autokarte auto1, Autokarte auto2)
+        public Vergleichsergebnis Vergleiche(Autokarte auto1, Autokarte auto2)
         {
             //Lese den Wert der zu vergleichenden Eigenschaft der beiden Karten aus
             double wert1 = this.eigenschaftZugriff(auto1);
@@ -42,15 +42,15 @@ namespace Auto_Quartett_WindowsForms
             //Vergleiche diese Werte und gebe einen der 3 Möglichen Werte des Ergebnis enums zurück
             if (wert1 == wert2)
             {
-                return Ergebnis.Gleichstand;
+                return Vergleichsergebnis.Gleichstand;
             }
             else if (this.groesserGewinnt == (wert1 > wert2))
             {
-                return Ergebnis.Gewinn;
+                return Vergleichsergebnis.Gewinn;
             }
             else
             {
-                return Ergebnis.Niederlage;
+                return Vergleichsergebnis.Niederlage;
             }
         }
     }
