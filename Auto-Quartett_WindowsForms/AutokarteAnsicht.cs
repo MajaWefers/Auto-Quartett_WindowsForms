@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class AutokarteAnzeige : UserControl
+    public partial class AutokarteAnsicht : UserControl
     {
         private Label[] labels;
 
-        public AutokarteAnzeige(Autokarte autokarte)
+        public AutokarteAnsicht(Autokarte autokarte)
         {
             this.InitializeComponent();
             this.initialisiereLabels();
@@ -16,19 +16,19 @@ namespace Auto_Quartett_WindowsForms
             this.BildEinfuegen(autokarte);
         }
 
-        public void SetzeErgebnisFarben(Ergebnis vergleichsErgebnis,int vergleichsfeld)
+        public void SetzeErgebnisFarben(Vergleichsergebnis vergleichsErgebnis,int vergleichsfeld)
         {
             switch (vergleichsErgebnis)
             {
-                case Ergebnis.Gewinn:
+                case Vergleichsergebnis.Gewinn:
                     this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
                     this.BackColor = Color.LightGreen;
                     break;
-                case Ergebnis.Niederlage:
+                case Vergleichsergebnis.Niederlage:
                     this.labels[vergleichsfeld].BackColor = Color.LightCoral;
                     this.BackColor = Color.Salmon;
                     break;
-                case Ergebnis.Gleichstand:
+                case Vergleichsergebnis.Gleichstand:
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
                     this.BackColor = Color.Blue;
                     break;

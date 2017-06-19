@@ -7,13 +7,13 @@ namespace Auto_Quartett_WindowsForms
 {
     public partial class Editor : Form
     {
-        private readonly DatenZugriff datenZugriff;
+        private readonly AutokartenDateiZugriff datenZugriff;
         private Autokarte[] karten;
 
 
 
 
-        public Editor(DatenZugriff datenZugriff)
+        public Editor(AutokartenDateiZugriff datenZugriff)
         {
             this.datenZugriff = datenZugriff;
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace Auto_Quartett_WindowsForms
                 Autokarte[] kartenArray = this.karten.Concat(new[] { NeueKarte }).ToArray();
                 this.datenZugriff.SpeichereKarten(kartenArray);
                 this.KarteZurListviewHinzufügen(NeueKarte);
-                DialogResult dialogResult = MessageBox.Show("Bild speichern ?" + Environment.NewLine + "Bild bitte so bennenen: \"" + tbMarke.Text.ToLower().ToString() + " " + tbModell.Text.ToLower().ToString() + "\" und in den Ordner kopieren", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dialogResult = MessageBox.Show("Bild speichern ?" + Environment.NewLine + "Bild bitte so bennenen: \"" + tbMarke.Text.ToLower().ToString() + " " + tbModell.Text.ToLower().ToString() + ".jpg\" und in den Ordner kopieren", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
                     var filePath = AppDomain.CurrentDomain.BaseDirectory;

@@ -12,7 +12,7 @@ namespace Auto_Quartett_WindowsForms
 
         /// <summary>
         /// Erstellt für jede <see cref="Autokarte"/> im übergebenen Array <see cref="autokarten"/>
-        /// ein UserControl <see cref="AutokarteAnzeige"/> und fügt dieses einem
+        /// ein UserControl <see cref="AutokarteAnsicht"/> und fügt dieses einem
         /// FlowLayoutPanel hinzu, das diese automatisch hintereinander und mit Zeilenumbrüchen darstellt.
         /// </summary>
         /// <param name="autokarten"></param>
@@ -20,7 +20,7 @@ namespace Auto_Quartett_WindowsForms
         {
             foreach (Autokarte autokarte in autokarten)
             {
-                AutokarteAnzeige autokarteAnzeige = new AutokarteAnzeige(autokarte);
+                AutokarteAnsicht autokarteAnzeige = new AutokarteAnsicht(autokarte);
                 this.flowLayoutPanel1.Controls.Add(autokarteAnzeige);
             }
         }

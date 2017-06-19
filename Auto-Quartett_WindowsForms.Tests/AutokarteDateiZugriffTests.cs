@@ -4,13 +4,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Auto_Quartett_WindowsForms.Tests
 {
     [TestClass]
-    public class DatenZugriffTests
+    public class AutokarteDateiZugriffTests
     {
         [TestMethod]
         public void LadeKartenTest()
         {
             //Arrange
-            DatenZugriff datenZugriff = new DatenZugriff(@"..\..\TestDateien\TestKartenDatei.xml");
+            AutokartenDateiZugriff datenZugriff = new AutokartenDateiZugriff(@"..\..\TestDateien\TestKartenDatei.xml");
 
             //Act
             Autokarte[] ergebnis = datenZugriff.LadeKarten();
@@ -29,7 +29,7 @@ namespace Auto_Quartett_WindowsForms.Tests
         {
             //Arrange
             string dateiPfad = Path.Combine(Path.GetTempPath(), "SchreibTest.xml");
-            DatenZugriff datenZugriff = new DatenZugriff(dateiPfad);
+            AutokartenDateiZugriff datenZugriff = new AutokartenDateiZugriff(dateiPfad);
             Autokarte[] kartenZumSpeichern = new[]
             {
                 new Autokarte("Smart", "bla" , 1, 2, 3, 4, 5, 6, 7, 8),

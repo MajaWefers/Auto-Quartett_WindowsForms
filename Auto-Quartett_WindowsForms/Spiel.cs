@@ -4,18 +4,20 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class Spiel : Form
     {
         private Autokarte[] autos;
         private AutokartenVergleich vergleich;
-        private ChancenBerechner chancenBerechner;
+        private GewinnChancenBerechner chancenBerechner;
         private ToolTip toolTip;
 
-        private AutokarteAnzeige autokarteAnzeige1;
-        private AutokarteAnzeige autokarteAnzeige2;
+        private AutokarteAnsicht autokarteAnzeige1;
+        private AutokarteAnsicht autokarteAnzeige2;
 
-        //Variablen für den VERGLEICH
-        //Zufallszahlen für die beim Vergleich angezeigten Autos
+        /// <summary>
+        /// Variablen für den VERGLEICH
+        /// Variablen für Zufallszahlen, um beim Vergleich ein zufälliges Auto zu wählen
+        /// </summary>
         public static Random nr = new Random();
         public static int zufall1;
         public static int zufall2;
@@ -24,7 +26,13 @@ namespace Auto_Quartett_WindowsForms
         int gegnerpunkte;
         bool gewinnchancenSichtbar;
 
-        public Form1(Autokarte[] autokarten, AutokartenVergleich vergleich, ChancenBerechner chancenBerechner)
+        /// <summary>
+        /// Steuert die Erstellung der benötogten Komponenten des Spiels
+        /// </summary>
+        /// <param name="autokarten"></param>
+        /// <param name="vergleich"></param>
+        /// <param name="chancenBerechner"></param>
+        public Spiel(Autokarte[] autokarten, AutokartenVergleich vergleich, GewinnChancenBerechner chancenBerechner)
         {
             this.autos = autokarten;
             this.vergleich = vergleich;
@@ -50,17 +58,20 @@ namespace Auto_Quartett_WindowsForms
 
         private void zeigeAuto1(Autokarte auto)
         {
-            autokarteAnzeige1 = new AutokarteAnzeige(auto);
+            autokarteAnzeige1 = new AutokarteAnsicht(auto);
             PanelAuto1.Controls.Add(autokarteAnzeige1);
         }
-
+    
         private void zeigeAuto2(Autokarte auto)
         {
-            autokarteAnzeige2 = new AutokarteAnzeige(auto);
+            autokarteAnzeige2 = new AutokarteAnsicht(auto);
             PanelAuto2.Controls.Add(autokarteAnzeige2);
         }
 
-        //Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
+        /// <summary>
+        /// Wird bei Klick auf einen Button vor den Eigenschaften der eigenen Spielkarte aufgerufen
+        /// </summary>
+        /// <param name="vergleichsfeld"></param>
         private void Vergleich(int vergleichsfeld)
         {
             do
@@ -71,26 +82,26 @@ namespace Auto_Quartett_WindowsForms
             zeigeAuto2(autos[zufall2]);
 
             //Vergleich der Werte
-            Ergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
+            Vergleichsergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
             autokarteAnzeige1.SetzeErgebnisFarben(vergleichsErgebnis, vergleichsfeld);
             switch (vergleichsErgebnis)
             {
-                case Ergebnis.Gewinn:
-                    autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Niederlage, vergleichsfeld);
+                case Vergleichsergebnis.Gewinn:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Niederlage, vergleichsfeld);
                     Int32.TryParse(lblSpielerpunkte.Text, out spielerpunkte);
                     lblSpielerpunkte.Text = Convert.ToString(++spielerpunkte);
                     break;
-                case Ergebnis.Niederlage:
-                    autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gewinn, vergleichsfeld);
+                case Vergleichsergebnis.Niederlage:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Gewinn, vergleichsfeld);
                     Int32.TryParse(lblGegnerpunkte.Text, out gegnerpunkte);
                     lblGegnerpunkte.Text = Convert.ToString(++gegnerpunkte);
                     break;
-                case Ergebnis.Gleichstand:
-                    autokarteAnzeige2.SetzeErgebnisFarben(Ergebnis.Gleichstand, vergleichsfeld);
+                case Vergleichsergebnis.Gleichstand:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Gleichstand, vergleichsfeld);
                     break;
             }
 
-            //Je nach Punkteverhältnis wird die Schriftfarbe der Punkte gesetzt
+            //Je nach Punkteverhältnis wird die Schriftfarbe der Punktanzeige gesetzt
             if (spielerpunkte > gegnerpunkte)
             {
                 lblSpielerpunkte.ForeColor = Color.Green;
@@ -152,7 +163,11 @@ namespace Auto_Quartett_WindowsForms
             }
         }
         
-        //Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt.
+        /// <summary>
+        /// Der Wert des Vergleichsfeldes wird entsprechend dem angeklickten Button gesetzt. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGeschwindigkeit_Click(object sender, EventArgs e)
         {
             Vergleich(0);
@@ -186,8 +201,11 @@ namespace Auto_Quartett_WindowsForms
             Vergleich(7);
         }
 
-        //Setzt ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
-        //sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft
+        /// <summary>
+        /// Setzt ToolTips für die Anzeige der Eigenschaftszuweisung der Buttons
+        /// sowie die Gewinnchance bei Auswahl der jeweiligen Eigenschaft 
+        /// </summary>
+        /// <param name="auto"></param>
         private void setzeToolTips(Autokarte auto)
         {
 
@@ -203,6 +221,7 @@ namespace Auto_Quartett_WindowsForms
 
         }
 
+        //Es folgen die Events für das Ein- und Ausblenden der Chancenberechnung
         private void btnEinfach_Click(object sender, EventArgs e)
         {
             this.gewinnchancenSichtbar = true;
