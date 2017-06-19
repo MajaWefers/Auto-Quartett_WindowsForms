@@ -11,23 +11,23 @@ namespace Auto_Quartett_WindowsForms.Tests
         [TestMethod]
         public void VergleicheTests()
         {
-            this.testeVergleich(0, VergleichErgebnis.Gewinn);
-            this.testeVergleich(1, VergleichErgebnis.Gewinn);
-            this.testeVergleich(2, VergleichErgebnis.Gewinn);
-            this.testeVergleich(3, VergleichErgebnis.Gleichstand);
-            this.testeVergleich(4, VergleichErgebnis.Gleichstand);
-            this.testeVergleich(5, VergleichErgebnis.Niederlage);
-            this.testeVergleich(6, VergleichErgebnis.Niederlage);
-            this.testeVergleich(7, VergleichErgebnis.Niederlage);
+            this.testeVergleich(0, Vergleichsergebnis.Gewinn);
+            this.testeVergleich(1, Vergleichsergebnis.Gewinn);
+            this.testeVergleich(2, Vergleichsergebnis.Gewinn);
+            this.testeVergleich(3, Vergleichsergebnis.Gleichstand);
+            this.testeVergleich(4, Vergleichsergebnis.Gleichstand);
+            this.testeVergleich(5, Vergleichsergebnis.Niederlage);
+            this.testeVergleich(6, Vergleichsergebnis.Niederlage);
+            this.testeVergleich(7, Vergleichsergebnis.Niederlage);
         }
 
-        private void testeVergleich(int vergleichsfeld, VergleichErgebnis erwartetesErgebnis)
+        private void testeVergleich(int vergleichsfeld, Vergleichsergebnis erwartetesErgebnis)
         {
             //Arrange
-            VergleichAutokarten autokartenVergleich = new VergleichAutokarten();
+            AutokartenVergleich autokartenVergleich = new AutokartenVergleich();
 
             //Act
-            VergleichErgebnis ergebnis = autokartenVergleich.Vergleiche(this.auto1, this.auto2, vergleichsfeld);
+            Vergleichsergebnis ergebnis = autokartenVergleich.Vergleiche(this.auto1, this.auto2, vergleichsfeld);
 
             //Assert
             Assert.AreEqual(erwartetesErgebnis, ergebnis);

@@ -20,8 +20,8 @@ namespace Auto_Quartett_WindowsForms
         }
 
         /// <summary>
-        /// Instanziiert die für die Erstellung von <see cref="QuartettSpiel"/> benötigten Klassen
-        /// <see cref="VergleichAutokarten"/> und <see cref="GewinnChancenBerechner"/>,
+        /// Instanziiert die für die Erstellung von <see cref="Spiel"/> benötigten Klassen
+        /// <see cref="AutokartenVergleich"/> und <see cref="GewinnChancenBerechner"/>,
         /// lädt die Autokarten aus einer Datei und übergibt das alles an den Konstruktor.
         /// Anschließend wird das Fenster mit Hilfe der Methode <see cref="zeigeForm"/> angezeigt
         /// </summary>
@@ -29,10 +29,10 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="e"></param>
         private void SpielButton_Click(object sender, EventArgs e)
         {
-            VergleichAutokarten vergleich = new VergleichAutokarten();
+            AutokartenVergleich vergleich = new AutokartenVergleich();
             GewinnChancenBerechner chancenBerechner = new GewinnChancenBerechner(vergleich);
             Autokarte[] autokarten = this.ladeKarten();
-            QuartettSpiel spielForm = new QuartettSpiel(autokarten, vergleich, chancenBerechner);
+            Spiel spielForm = new Spiel(autokarten, vergleich, chancenBerechner);
             this.zeigeForm(spielForm);
         }
 

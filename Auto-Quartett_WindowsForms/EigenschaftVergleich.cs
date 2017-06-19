@@ -5,7 +5,7 @@ namespace Auto_Quartett_WindowsForms
     /// <summary>
     /// Dient dem Vergleich zweier <see cref="Autokarte"/>n anhand einer festgelegten Eigenschaft.
     /// </summary>
-    public class VergleichEigenschaft
+    public class EigenschaftVergleich
     {
         private readonly Func<Autokarte, double> eigenschaftZugriff;
         private readonly bool groesserGewinnt;
@@ -19,7 +19,7 @@ namespace Auto_Quartett_WindowsForms
         /// </summary>
         /// <param name="eigenschaftZugriff"></param>
         /// <param name="groesserGewinnt"></param>
-        public VergleichEigenschaft(Func<Autokarte, double> eigenschaftZugriff, bool groesserGewinnt = true)
+        public EigenschaftVergleich(Func<Autokarte, double> eigenschaftZugriff, bool groesserGewinnt = true)
         {
             this.eigenschaftZugriff = eigenschaftZugriff;
             this.groesserGewinnt = groesserGewinnt;
@@ -33,7 +33,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="auto1"></param>
         /// <param name="auto2"></param>
         /// <returns></returns>
-        public VergleichErgebnis Vergleiche(Autokarte auto1, Autokarte auto2)
+        public Vergleichsergebnis Vergleiche(Autokarte auto1, Autokarte auto2)
         {
             //Lese den Wert der zu vergleichenden Eigenschaft der beiden Karten aus
             double wert1 = this.eigenschaftZugriff(auto1);
@@ -42,15 +42,15 @@ namespace Auto_Quartett_WindowsForms
             //Vergleiche diese Werte und gebe einen der 3 Möglichen Werte des Ergebnis enums zurück
             if (wert1 == wert2)
             {
-                return VergleichErgebnis.Gleichstand;
+                return Vergleichsergebnis.Gleichstand;
             }
             else if (this.groesserGewinnt == (wert1 > wert2))
             {
-                return VergleichErgebnis.Gewinn;
+                return Vergleichsergebnis.Gewinn;
             }
             else
             {
-                return VergleichErgebnis.Niederlage;
+                return Vergleichsergebnis.Niederlage;
             }
         }
     }

@@ -32,7 +32,7 @@ namespace Auto_Quartett_WindowsForms.Tests
         private void teste(Autokarte eigenesAuto, int vergleichsfeld, double erwarteteGewinnchance)
         {
             //Arrange
-            GewinnChancenBerechner chancenBerechner = new GewinnChancenBerechner(new VergleichAutokarten());
+            GewinnChancenBerechner chancenBerechner = new GewinnChancenBerechner(new AutokartenVergleich());
 
             //Act
             double ergebnis = chancenBerechner.BerechneGewinnchance(eigenesAuto, this.autos, vergleichsfeld);

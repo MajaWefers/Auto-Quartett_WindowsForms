@@ -2,25 +2,25 @@
 {
     /// <summary>
     /// Dient dem Vergleichen zweier <see cref="Autokarte"/>n anhand einer wählbaren Eigenschaft.
-    /// Verwendet dazu für jede Eigenschaft eine Instanz von <see cref="VergleichEigenschaft"/>.
+    /// Verwendet dazu für jede Eigenschaft eine Instanz von <see cref="EigenschaftVergleich"/>.
     /// </summary>
-    public class VergleichAutokarten
+    public class AutokartenVergleich
     {
         /// <summary>
-        /// Beinhaltet für jede zu vergleichende Eigenschaft eine Instanz der Klasse <see cref="VergleichEigenschaft"/>.
+        /// Beinhaltet für jede zu vergleichende Eigenschaft eine Instanz der Klasse <see cref="EigenschaftVergleich"/>.
         /// Der an den Konstruktor übergebene Lambda-Ausdruck gibt dieser die Möglichkeit, den Wert dieser Eigenschaft
         /// von einer beliebigen <see cref="Autokarte"/> abzurufen.
         /// </summary>
-        private readonly VergleichEigenschaft[] eigenschaften = new[]
+        private readonly EigenschaftVergleich[] eigenschaften = new[]
         {
-            new VergleichEigenschaft(karte => karte.geschwindigkeit),
-            new VergleichEigenschaft(karte => karte.leistung),
-            new VergleichEigenschaft(karte => karte.verbrauch, false),
-            new VergleichEigenschaft(karte => karte.zylinder),
-            new VergleichEigenschaft(karte => karte.hubraum),
-            new VergleichEigenschaft(karte => karte.beschleunigung, false),
-            new VergleichEigenschaft(karte => karte.zuladung),
-            new VergleichEigenschaft(karte => karte.ladevolumen),
+            new EigenschaftVergleich(karte => karte.geschwindigkeit),
+            new EigenschaftVergleich(karte => karte.leistung),
+            new EigenschaftVergleich(karte => karte.verbrauch, false),
+            new EigenschaftVergleich(karte => karte.zylinder),
+            new EigenschaftVergleich(karte => karte.hubraum),
+            new EigenschaftVergleich(karte => karte.beschleunigung, false),
+            new EigenschaftVergleich(karte => karte.zuladung),
+            new EigenschaftVergleich(karte => karte.ladevolumen),
         };
 
         /// <summary>
@@ -31,11 +31,11 @@
         /// <param name="auto2"></param>
         /// <param name="vergleichsfeld"></param>
         /// <returns></returns>
-        public VergleichErgebnis Vergleiche(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
+        public Vergleichsergebnis Vergleiche(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {
             //Rufe den zum übergebenen vergleichsfeld passenden EigenschaftVergleich ab,
             //nutze diesen anschließend, um den Vergleich durchzuführen
-            VergleichEigenschaft eigenschaftVergleich = this.eigenschaften[vergleichsfeld];
+            EigenschaftVergleich eigenschaftVergleich = this.eigenschaften[vergleichsfeld];
             return eigenschaftVergleich.Vergleiche(auto1, auto2);
         }
     }

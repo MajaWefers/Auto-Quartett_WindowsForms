@@ -54,7 +54,7 @@
     <Compile Include="AutokarteAnsicht.Designer.cs">
       <DependentUpon>AutokarteAnsicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="VergleichAutokarten.cs" />
+    <Compile Include="AutokartenVergleich.cs" />
     <Compile Include="GewinnChancenBerechner.cs" />
     <Compile Include="AutokartenDateiZugriff.cs" />
     <Compile Include="Editor.cs">
@@ -63,13 +63,13 @@
     <Compile Include="Editor.Designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
-    <Compile Include="VergleichEigenschaft.cs" />
-    <Compile Include="VergleichErgebnis.cs" />
-    <Compile Include="QuartettSpiel.cs">
+    <Compile Include="EigenschaftVergleich.cs" />
+    <Compile Include="Vergleichsergebnis.cs" />
+    <Compile Include="Spiel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuartettSpiel.Designer.cs">
-      <DependentUpon>QuartettSpiel.cs</DependentUpon>
+    <Compile Include="Spiel.Designer.cs">
+      <DependentUpon>Spiel.cs</DependentUpon>
     </Compile>
     <Compile Include="KartenGallerie.cs">
       <SubType>Form</SubType>
@@ -91,8 +91,8 @@
     <EmbeddedResource Include="Editor.resx">
       <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuartettSpiel.resx">
-      <DependentUpon>QuartettSpiel.cs</DependentUpon>
+    <EmbeddedResource Include="Spiel.resx">
+      <DependentUpon>Spiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KartenGallerie.resx">
       <DependentUpon>KartenGallerie.cs</DependentUpon>

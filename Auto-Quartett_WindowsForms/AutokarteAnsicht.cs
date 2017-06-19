@@ -16,19 +16,19 @@ namespace Auto_Quartett_WindowsForms
             this.BildEinfuegen(autokarte);
         }
 
-        public void SetzeErgebnisFarben(VergleichErgebnis vergleichsErgebnis,int vergleichsfeld)
+        public void SetzeErgebnisFarben(Vergleichsergebnis vergleichsErgebnis,int vergleichsfeld)
         {
             switch (vergleichsErgebnis)
             {
-                case VergleichErgebnis.Gewinn:
+                case Vergleichsergebnis.Gewinn:
                     this.labels[vergleichsfeld].BackColor = Color.Chartreuse;
                     this.BackColor = Color.LightGreen;
                     break;
-                case VergleichErgebnis.Niederlage:
+                case Vergleichsergebnis.Niederlage:
                     this.labels[vergleichsfeld].BackColor = Color.LightCoral;
                     this.BackColor = Color.Salmon;
                     break;
-                case VergleichErgebnis.Gleichstand:
+                case Vergleichsergebnis.Gleichstand:
                     this.labels[vergleichsfeld].BackColor = Color.LightBlue;
                     this.BackColor = Color.Blue;
                     break;

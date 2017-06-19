@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace Auto_Quartett_WindowsForms
 {
-    public partial class QuartettSpiel : Form
+    public partial class Spiel : Form
     {
         private Autokarte[] autos;
-        private VergleichAutokarten vergleich;
+        private AutokartenVergleich vergleich;
         private GewinnChancenBerechner chancenBerechner;
         private ToolTip toolTip;
 
@@ -32,7 +32,7 @@ namespace Auto_Quartett_WindowsForms
         /// <param name="autokarten"></param>
         /// <param name="vergleich"></param>
         /// <param name="chancenBerechner"></param>
-        public QuartettSpiel(Autokarte[] autokarten, VergleichAutokarten vergleich, GewinnChancenBerechner chancenBerechner)
+        public Spiel(Autokarte[] autokarten, AutokartenVergleich vergleich, GewinnChancenBerechner chancenBerechner)
         {
             this.autos = autokarten;
             this.vergleich = vergleich;
@@ -82,22 +82,22 @@ namespace Auto_Quartett_WindowsForms
             zeigeAuto2(autos[zufall2]);
 
             //Vergleich der Werte
-            VergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
+            Vergleichsergebnis vergleichsErgebnis = this.vergleich.Vergleiche(autos[zufall1], autos[zufall2], vergleichsfeld);
             autokarteAnzeige1.SetzeErgebnisFarben(vergleichsErgebnis, vergleichsfeld);
             switch (vergleichsErgebnis)
             {
-                case VergleichErgebnis.Gewinn:
-                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Niederlage, vergleichsfeld);
+                case Vergleichsergebnis.Gewinn:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Niederlage, vergleichsfeld);
                     Int32.TryParse(lblSpielerpunkte.Text, out spielerpunkte);
                     lblSpielerpunkte.Text = Convert.ToString(++spielerpunkte);
                     break;
-                case VergleichErgebnis.Niederlage:
-                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Gewinn, vergleichsfeld);
+                case Vergleichsergebnis.Niederlage:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Gewinn, vergleichsfeld);
                     Int32.TryParse(lblGegnerpunkte.Text, out gegnerpunkte);
                     lblGegnerpunkte.Text = Convert.ToString(++gegnerpunkte);
                     break;
-                case VergleichErgebnis.Gleichstand:
-                    autokarteAnzeige2.SetzeErgebnisFarben(VergleichErgebnis.Gleichstand, vergleichsfeld);
+                case Vergleichsergebnis.Gleichstand:
+                    autokarteAnzeige2.SetzeErgebnisFarben(Vergleichsergebnis.Gleichstand, vergleichsfeld);
                     break;
             }
 

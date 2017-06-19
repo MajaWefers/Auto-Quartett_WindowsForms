@@ -6,9 +6,9 @@
     /// </summary>
     public class GewinnChancenBerechner
     {
-        private readonly VergleichAutokarten vergleich;
+        private readonly AutokartenVergleich vergleich;
 
-        public GewinnChancenBerechner(VergleichAutokarten vergleich)
+        public GewinnChancenBerechner(AutokartenVergleich vergleich)
         {
             this.vergleich = vergleich;
         }
@@ -55,8 +55,8 @@
         /// <returns></returns>
         private bool gewinntAuto1(Autokarte auto1, Autokarte auto2, int vergleichsfeld)
         {
-            VergleichErgebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
-            return vergleichsErgebnis == VergleichErgebnis.Gewinn;
+            Vergleichsergebnis vergleichsErgebnis = this.vergleich.Vergleiche(auto1, auto2, vergleichsfeld);
+            return vergleichsErgebnis == Vergleichsergebnis.Gewinn;
         }
     }
 }
