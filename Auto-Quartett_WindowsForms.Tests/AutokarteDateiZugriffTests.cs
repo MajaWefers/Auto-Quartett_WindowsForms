@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Auto_Quartett_WindowsForms.Tests
 {
     [TestClass]
-    public class DatenZugriffTests
+    public class AutokarteDateiZugriffTests
     {
         [TestMethod]
         public void LadeKartenTest()

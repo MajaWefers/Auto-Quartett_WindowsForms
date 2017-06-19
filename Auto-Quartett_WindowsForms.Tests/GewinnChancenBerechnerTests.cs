@@ -3,7 +3,7 @@
 namespace Auto_Quartett_WindowsForms.Tests
 {
     [TestClass]
-    public class ChancenBerechnerTests
+    public class GewinnChancenBerechnerTests
     {
         private readonly Autokarte[] autos = new[]
         {
